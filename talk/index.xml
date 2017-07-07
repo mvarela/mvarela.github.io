@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recent &amp; Upcoming Talks on </title>
+    <link>https://mvarela.github.io/talk/</link>
+    <description>Recent content in Recent &amp; Upcoming Talks on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/talk/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>QoE Management Out of the Lab and Into the Real World (invited lecture)</title>
+      <link>https://mvarela.github.io/talk/talk-25/</link>
+      <pubDate>Mon, 05 Sep 2016 13:54:53 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/talk/talk-25/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quality of Experience in OTT Video Services</title>
+      <link>https://mvarela.github.io/talk/talk-23/</link>
+      <pubDate>Thu, 05 May 2016 13:54:53 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/talk/talk-23/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Road to QoE Management (keynote speech)</title>
+      <link>https://mvarela.github.io/talk/talk-24/</link>
+      <pubDate>Thu, 05 May 2016 13:54:53 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/talk/talk-24/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quality of Experience - Basic Concepts and Advanced Applications (invited talk at the Computer Science Institute (InCo), Universidad de la República)</title>
+      <link>https://mvarela.github.io/talk/talk-22/</link>
+      <pubDate>Sat, 05 Dec 2015 13:54:53 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/talk/talk-22/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Towards an Open Architecture for QoE Management</title>
+      <link>https://mvarela.github.io/talk/talk-21/</link>
+      <pubDate>Mon, 05 Oct 2015 13:54:53 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/talk/talk-21/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE for Cloud Services (invited talk)</title>
+      <link>https://mvarela.github.io/talk/talk-20/</link>
+      <pubDate>Sat, 05 Sep 2015 13:54:53 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/talk/talk-20/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE: from Measurements to Business (keynote speech)</title>
+      <link>https://mvarela.github.io/talk/talk-19/</link>
+      <pubDate>Wed, 05 Aug 2015 13:54:53 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/talk/talk-19/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE-driven Management: from Modelling to Operation</title>
+      <link>https://mvarela.github.io/talk/talk-18/</link>
+      <pubDate>Thu, 05 Feb 2015 13:54:53 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/talk/talk-18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE - Why bother? (invited talks at U. Vienna and U. Alpen-Adria in Klagenfurt)</title>
+      <link>https://mvarela.github.io/talk/talk-17/</link>
+      <pubDate>Sun, 05 Oct 2014 13:54:53 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/talk/talk-17/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quality-driven Network and Application Control (invited talk at University of Oulu)</title>
+      <link>https://mvarela.github.io/talk/talk-16/</link>
+      <pubDate>Sat, 05 Jul 2014 13:54:53 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/talk/talk-16/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>First Steps Towards an Understanding of Web QoE</title>
+      <link>https://mvarela.github.io/talk/talk-15/</link>
+      <pubDate>Fri, 05 Jul 2013 13:54:53 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/talk/talk-15/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE: Beyond QoS, and Beyond Media (invited talk)</title>
+      <link>https://mvarela.github.io/talk/talk-14/</link>
+      <pubDate>Fri, 05 Jul 2013 13:54:53 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/talk/talk-14/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Users: A Key Missing Piece in the QoE Puzzle</title>
+      <link>https://mvarela.github.io/talk/talk-13/</link>
+      <pubDate>Sun, 05 May 2013 13:54:53 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/talk/talk-13/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Applications of Perceptual Quality Estimation to Cross-Layer Optimization Techniques</title>
+      <link>https://mvarela.github.io/talk/talk-11/</link>
+      <pubDate>Thu, 05 Jul 2012 13:54:52 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/talk/talk-11/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE y Cloud: Problemas Técnicos y Perspectivas de Negocio (invited talk)</title>
+      <link>https://mvarela.github.io/talk/talk-10/</link>
+      <pubDate>Tue, 05 Jun 2012 13:54:52 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/talk/talk-10/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

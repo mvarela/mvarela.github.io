@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4 on </title>
+    <link>https://mvarela.github.io/publication_types/4/</link>
+    <description>Recent content in 4 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 04 May 2015 14:51:46 +0300</lastBuildDate>
+    <atom:link href="/publication_types/4/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Quality of Experience: From Assessment to Application (Dagstuhl Seminar 15022)</title>
+      <link>https://mvarela.github.io/publication/dagstuhl_report/</link>
+      <pubDate>Mon, 04 May 2015 14:51:46 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/publication/dagstuhl_report/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gilbert-model Loss Trace Generator for Instrumentation of Subjective Assessment Campaigns</title>
+      <link>https://mvarela.github.io/publication/varela-gilbert/</link>
+      <pubDate>Tue, 03 Jan 2012 06:40:40 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/publication/varela-gilbert/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on </title>
+    <link>https://mvarela.github.io/publication/</link>
+    <description>Recent content in Publications on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/publication/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>No Silver Bullet: QoE Metrics, QoE Fairness, and User Diversity in the Context of QoE Management</title>
+      <link>https://mvarela.github.io/publication/varela-qomex17/</link>
+      <pubDate>Wed, 03 May 2017 06:40:43 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/publication/varela-qomex17/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Embracing Uncertainty: A Probabilistic View of HTTP Video Quality</title>
+      <link>https://mvarela.github.io/publication/varela-qoem-2017/</link>
+      <pubDate>Wed, 03 May 2017 06:40:42 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/publication/varela-qoem-2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Definition of QoE Fairness in Shared Systems</title>
+      <link>https://mvarela.github.io/publication/varela-qoe-fairness/</link>
+      <pubDate>Tue, 03 Jan 2017 06:40:42 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/publication/varela-qoe-fairness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE beyond the MOS: an in-depth look at QoE via better metrics and their relation to MOS</title>
+      <link>https://mvarela.github.io/publication/varela-quex-beyond-the-mos/</link>
+      <pubDate>Sat, 03 Sep 2016 06:40:44 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/publication/varela-quex-beyond-the-mos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On Additive and Multiplicative QoS-QoE Models for Multiple QoS Parameters</title>
+      <link>https://mvarela.github.io/publication/varela-pqs16/</link>
+      <pubDate>Wed, 03 Aug 2016 06:40:42 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/publication/varela-pqs16/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Generating Realistic YouTube-like Stall Patterns for HTTP Video Streaming Assessment</title>
+      <link>https://mvarela.github.io/publication/varela-qomex16/</link>
+      <pubDate>Fri, 03 Jun 2016 06:40:43 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/publication/varela-qomex16/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Network Quality Differentiation: Regional Effects, Market Entrance, and Empirical Testability</title>
+      <link>https://mvarela.github.io/publication/varela-networking16/</link>
+      <pubDate>Sun, 03 Apr 2016 06:40:41 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/publication/varela-networking16/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE - Defining a User-centric Concept for Service Quality</title>
+      <link>https://mvarela.github.io/publication/chapter-qoe-defining/</link>
+      <pubDate>Fri, 04 Dec 2015 15:25:39 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/publication/chapter-qoe-defining/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Layered Model for Quality Estimation of HTTP Video from QoS Measurements</title>
+      <link>https://mvarela.github.io/publication/varela-quamus15/</link>
+      <pubDate>Tue, 03 Nov 2015 06:40:43 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/publication/varela-quamus15/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On the Analysis of QoE in Cellular Networks: from Subjective Tests to Large-scale Traffic Measurements</title>
+      <link>https://mvarela.github.io/publication/varela-trac2015/</link>
+      <pubDate>Mon, 03 Aug 2015 06:40:44 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/publication/varela-trac2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dagstuhl Manifesto: Quality of Experience: from Assessment to Application</title>
+      <link>https://mvarela.github.io/publication/varela-dagstuhl/</link>
+      <pubDate>Mon, 03 Aug 2015 06:40:40 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/publication/varela-dagstuhl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE-Driven Admission Control for Video Streams</title>
+      <link>https://mvarela.github.io/publication/varela-iisa2015/</link>
+      <pubDate>Fri, 03 Jul 2015 06:40:40 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/publication/varela-iisa2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>From Service Level Agreements (SLA) to Experience Level Agreements (ELA): The Challenges of Selling QoE to the User</title>
+      <link>https://mvarela.github.io/publication/varela-qoe-fi-2015/</link>
+      <pubDate>Wed, 03 Jun 2015 06:40:42 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/publication/varela-qoe-fi-2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE-Aware Routing for Video Streaming (short paper)</title>
+      <link>https://mvarela.github.io/publication/varela-iwqos2015/</link>
+      <pubDate>Wed, 03 Jun 2015 06:40:40 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/publication/varela-iwqos2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quality of Experience: From Assessment to Application (Dagstuhl Seminar 15022)</title>
+      <link>https://mvarela.github.io/publication/dagstuhl_report/</link>
+      <pubDate>Mon, 04 May 2015 14:51:46 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/publication/dagstuhl_report/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
