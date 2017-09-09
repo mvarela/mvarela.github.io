@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>https://mvarela.github.io/post/simple-binary-data-visualization/</loc>
+      <lastmod>2017-09-09T09:33:46+03:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://mvarela.github.io/publication/varela-qomex17/</loc>
       <lastmod>2017-05-03T06:40:43+03:00</lastmod>
     </url>
@@ -911,6 +920,16 @@
     
     <url>
     
+      <loc>https://mvarela.github.io/tags/data-analysis/</loc>
+      <lastmod>2017-09-09T09:33:46+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://mvarela.github.io/publication_types/</loc>
       <lastmod>2014-12-04T15:00:19+03:00</lastmod>
       <priority>0</priority>
@@ -921,8 +940,28 @@
     
     <url>
     
+      <loc>https://mvarela.github.io/tags/r/</loc>
+      <lastmod>2017-09-09T09:33:46+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://mvarela.github.io/tags/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://mvarela.github.io/tags/visualization/</loc>
+      <lastmod>2017-09-09T09:33:46+03:00</lastmod>
       <priority>0</priority>
     </url>
     

@@ -9,5 +9,605 @@
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
+    <item>
+      <title>Simple Binary Data Visualization</title>
+      <link>https://mvarela.github.io/post/simple-binary-data-visualization/</link>
+      <pubDate>Sat, 09 Sep 2017 09:33:46 +0300</pubDate>
+      
+      <guid>https://mvarela.github.io/post/simple-binary-data-visualization/</guid>
+      <description>&lt;!-- -*- org-export-babel-evaluate: nil -*- --&gt;
+
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;A few days ago I ran across &lt;a href=&#34;https://news.ycombinator.com/item?id=15164166&#34; title=&#34;this discussion on Hacker News&#34; target=&#34;_blank&#34;&gt;this discussion on Hacker News&lt;/a&gt;, which referred to
+&lt;a href=&#34;https://codisec.com/binary-visualization-explained/&#34; title=&#34;this article&#34; target=&#34;_blank&#34;&gt;this article&lt;/a&gt; on binary data visualization. The folks at &lt;a href=&#34;https://codisec.com&#34; title=&#34;Codisec&#34; target=&#34;_blank&#34;&gt;Codisec&lt;/a&gt; have developed a
+tool called Veles for visualizing binary files. The idea is to help detect
+patterns in the data, which in some cases are useful for e.g,. security-related
+analysis.&lt;/p&gt;
+
+&lt;p&gt;The technique described was surprisingly simple, in that it looks at digrams or
+trigrams in the file, and then it analyses their frequency and spatial
+distribution within the data. This is not unlike the use of &lt;em&gt;n-grams&lt;/em&gt; in
+computational linguistics, or &lt;em&gt;k-mers&lt;/em&gt; in computational genomics. The idea is to
+analyze and model sequences of elements (be it words, phonemes, or DNA bases). A
+fun application of this type of analysis is the creation of Markov chain text
+generators, which use the probability distribution of n-grams in a text corpus to
+synthesize text with similar characteristics. A couple of popular examples of
+these generators is the creation of &lt;a href=&#34;http://www.elsewhere.org/pomo/&#34; title=&#34;parody post-modernist writings&#34; target=&#34;_blank&#34;&gt;parody post-modernist writings&lt;/a&gt;, or &lt;a href=&#34;https://pdos.csail.mit.edu/archive/scigen/#about&#34; title=&#34;bogus
+scientific papers&#34; target=&#34;_blank&#34;&gt;bogus
+scientific papers&lt;/a&gt; (many of which have been accepted to predatory conferences and
+journals, to the amusement and dismay of many).&lt;/p&gt;
+
+&lt;p&gt;Basically, the approach taken in Veles is to take byte trigrams of the form $(i,
+i+1, i+2)$ from the file, and use them to represent points in a 3D space (a
+digram-based 2D version is also described). Being sequences of bytes, the space
+is limited to a 255x255x255 cube. The Veles visualization uses luminance to
+represent the (normalized) frequency of each point in the file, resulting in
+very nice-looking, and surprisingly structured visualizations. The tool also
+assigns different hues to points, based on their position in the file (which is
+divided into 256 equally-sized bins for this purpose).&lt;/p&gt;
+
+&lt;h1 id=&#34;a-simple-take-on-binary-visualization&#34;&gt;A Simple Take on Binary Visualization&lt;/h1&gt;
+
+&lt;p&gt;In this post, I&#39;ll show how a similar type of visualization can be simply
+created in a few lines of R, using &lt;code&gt;ggplot2&lt;/code&gt;. We&#39;ll make 2d plots instead of the
+(admittedly nicer looking) 3d ones that Veles does, but similar information
+about the structure of the files can be gleaned from them.&lt;/p&gt;
+
+&lt;h2 id=&#34;getting-our-data-in-shape&#34;&gt;Getting Our Data in Shape&lt;/h2&gt;
+
+&lt;p&gt;Our data will be the bytes in the file, repeated twice next to each other with
+an offset of one for each repetition. This is a common pattern for example in
+Haskell and Lisp, basically &lt;code&gt;zip=&#39;ping a list with its own tail. In R, we can
+use the =lead&lt;/code&gt; or &lt;code&gt;lag&lt;/code&gt; functions provided in Hadley Wickham&#39;s &lt;code&gt;dplyr&lt;/code&gt; package.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
+  library(tidyverse)
+
+  a &amp;lt;- 1:10
+  lead(a)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;example&#34;&gt;
+Loading tidyverse: ggplot2
+Loading tidyverse: tibble
+Loading tidyverse: tidyr
+Loading tidyverse: readr
+Loading tidyverse: purrr
+Loading tidyverse: dplyr
+Conflicts with tidy packages ---------------------------------------------------
+filter(): dplyr, stats
+lag():    dplyr, stats
+ [1]  2  3  4  5  6  7  8  9 10 NA
+&lt;/pre&gt;
+
+&lt;p&gt;We can see that &lt;code&gt;lead&lt;/code&gt; has shifted &lt;code&gt;a&lt;/code&gt; to the left, introducing a &lt;code&gt;NA&lt;/code&gt; value at
+the end. If we create a dataframe of tibble with &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;lead(a)&lt;/code&gt; and &lt;code&gt;lead(lead(a))&lt;/code&gt; , we will obtain a table of trigrams.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
+ zipped &amp;lt;- as.tibble(cbind(a, lead(a), lead(a,2)))
+ glimpse(zipped)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;example&#34;&gt;
+Observations: 10
+Variables: 3
+$ a  &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+$ `` &lt;int&gt; 2, 3, 4, 5, 6, 7, 8, 9, 10, NA
+$ `` &lt;int&gt; 3, 4, 5, 6, 7, 8, 9, 10, NA, NA
+&lt;/pre&gt;
+
+&lt;p&gt;This is close to what we need, except for the &lt;code&gt;NA&lt;/code&gt; values, which we can easily
+remove with &lt;code&gt;drop_na&lt;/code&gt;, &lt;code&gt;na.omit&lt;/code&gt;, or &lt;code&gt;filter&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
+ zipped %&amp;gt;% drop_na()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;example&#34;&gt;
+# A tibble: 8 x 3
+      a    ``    ``
+  &lt;int&gt; &lt;int&gt; &lt;int&gt;
+1     1     2     3
+2     2     3     4
+3     3     4     5
+4     4     5     6
+5     5     6     7
+6     6     7     8
+7     7     8     9
+8     8     9    10
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;plotting&#34;&gt;Plotting&lt;/h2&gt;
+
+&lt;p&gt;We will use a basic scatter plot to visualize our data. In order to make up for
+the lack of a third dimension in the plots, we will use a couple of tricks to
+add more information. First, we&#39;ll use a low alpha value, which will help us get
+a notion of density in the plot (we&#39;ll later add actual density plots, too). The
+more times an $(x,y)$ pair (corresponding to bytes $(i,i+1)$ in the file) is
+found in the data, the more opaque it&#39;ll show on the scatter plot. Second, we&#39;ll
+use the $z$ (corresponding to byte $i+2$) to determine the color of the point.
+In this way, we will pack more information into the plot. We will also discuss
+other possible alternatives for visualizing this information at the end of the post.&lt;/p&gt;
+
+&lt;p&gt;For the time being, we won&#39;t consider the location within the file, though as we
+will see, it would be simple to add this information as well.&lt;/p&gt;
+
+&lt;p&gt;Let us quickly see how we can setup the visualization.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
+  x &amp;lt;- sample(1:255, size=50000, replace = TRUE)
+  y &amp;lt;- lead(x)
+  z &amp;lt;- lead(x,2)
+  data &amp;lt;- as.tibble(cbind(x,y,z)) %&amp;gt;% na.omit()
+  binplot &amp;lt;- data %&amp;gt;% ggplot(aes(x=x, y=y)) +
+             geom_point(mapping = aes(color = z), alpha = 1/20) + 
+             scale_color_gradient(low=&amp;quot;blue&amp;quot;, high=&amp;quot;orange&amp;quot;) +
+  ggsave(&amp;quot;testplot.png&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;example&#34;&gt;
+Saving 7 x 7 in image
+&lt;/pre&gt;
+
+&lt;p&gt;We can now look at the resulting plot:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/testplot.png&#34; alt=&#34;/img/binViz/testplot.png&#34; title=&#34;/img/binViz/testplot.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The plot does not look like much, because we sampled uniformly distributed
+random data. However, if we read a file with some structure, we will see
+something more interesting. For some extra &#34;meta-ness&#34;, we&#39;ll use the source for
+this post as an input.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
+  filesize &amp;lt;- file.size(&amp;quot;post_draft.org&amp;quot;)
+  x &amp;lt;- readBin(&amp;quot;post_draft.org&amp;quot;, integer(), n=filesize, size = 1, signed = FALSE)
+  y &amp;lt;- lead(x)
+  z &amp;lt;- lead(x,2)
+  data &amp;lt;- as.tibble(cbind(x,y,z)) %&amp;gt;% na.omit()
+  binplot &amp;lt;- data %&amp;gt;% ggplot(aes(x=x, y=y)) +
+             geom_point(mapping = aes(color = z), alpha = 1/20) + 
+             scale_color_gradient(low=&amp;quot;blue&amp;quot;, high=&amp;quot;orange&amp;quot;, limits = c(0,255)) +
+             coord_cartesian(xlim = c(0,255), ylim = c(0, 255))
+  ggsave(&amp;quot;testplot2.png&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;example&#34;&gt;
+Saving 7 x 7 in image
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/testplot2.png&#34; alt=&#34;/img/binViz/testplot2.png&#34; title=&#34;/img/binViz/testplot2.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now this is a bit more interesting! What we can see here, is that most of the
+data is confined to a small section of our space. In particular, we can see both
+from the points&#39; color, and areas where points appear, that most values are in
+the ASCII range (which is to be expected, this mostly being English text, and
+ASCII codes stay the same even in an UTF-8 encoded file), with most trigrams
+comprising characters in the (97—122) range, corresponding to &lt;code&gt;[a-z]&lt;/code&gt; (and to a
+lesser degree those in &lt;code&gt;[A-z]&lt;/code&gt; ) and spaces (32). Where we see more transparent
+points, we can infer the presence of punctuation and tokens found in the R code
+and org-mode mark-up.&lt;/p&gt;
+
+&lt;p&gt;In some cases, using a different coordinate system may be useful in
+distinguishing structure. We can use, for instance, polar coordinates.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
+   polar_plot &amp;lt;- binplot + coord_polar()
+   ggsave(&amp;quot;testplot2_polar.png&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;example&#34;&gt;
+Saving 7 x 7 in image
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/testplot2_polar.png&#34; alt=&#34;/img/binViz/testplot2_polar.png&#34; title=&#34;/img/binViz/testplot2_polar.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here we can also clearly see the predominance of digrams in the &lt;code&gt;[A-z]&lt;/code&gt; range,
+and of combinations of those and spaces (the line pointing towards 32 in the NE
+quadrant, and the segment of arc at 32 in the NW quadrant).&lt;/p&gt;
+
+&lt;p&gt;We can also think about looking purely at the density of digrams. To this end,
+ we use a different geometry and stat in our plot.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
+
+  dens_plot &amp;lt;- data %&amp;gt;% ggplot(mapping = aes(x,y)) +
+               stat_density2d(aes(fill = ..density..), geom=&amp;quot;raster&amp;quot;, contour = FALSE) +
+               scale_fill_gradient(low=&amp;quot;steelblue4&amp;quot;, high=&amp;quot;sienna2&amp;quot;) +
+               coord_fixed(ratio = 1)
+  ggsave(&amp;quot;testplot2_density.png&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;example&#34;&gt;
+Saving 7 x 7 in image
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/testplot2_density.png&#34; alt=&#34;/img/binViz/testplot2_density.png&#34; title=&#34;/img/binViz/testplot2_density.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this case, the density plot does not provide much additional information, but
+it could be useful if we were for instance to facet the plot based on where in
+the file the digrams occur, or in more complex files, where the trigram-based
+coloring may obscure some of the structure.&lt;/p&gt;
+
+&lt;p&gt;The density plot is also more resource-intensive, and when dealing with large
+files, it may be desirable to work only on parts of the data, even for the basic
+trigram-based plots. In order to do this, we can uniformly sample the data, and
+thus obtain a lower resolution, but still informative view of it.&lt;/p&gt;
+
+&lt;h1 id=&#34;a-more-complete-solution&#34;&gt;A More Complete Solution&lt;/h1&gt;
+
+&lt;p&gt;Before putting this to practice with larger, more complex files, let us put the
+ideas for processing and visualizing the data into a bit more complete form in R code.&lt;/p&gt;
+
+&lt;p&gt;We will create a small set of functions that allow us to play around with these
+kinds of visualizations, and output the plots with an automated and systematic
+naming scheme, which we could use for automatic report generation or some such
+at a later stage.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
+library(tidyverse)
+
+# binviz Veles-like binary visualizaiton
+binViz2d &amp;lt;- function(filename, alpha = 1/100, maxsize = 5000000,
+                    save = TRUE, polar = FALSE, sample = FALSE,
+                    sample_size = 2000000, do_density = FALSE){
+
+  # setting dens_plot as NA simplifies the logic below a bit
+  dens_plot = NA
+
+  # we read the file as a stream of bytes, and prepare our tibble
+  # We&#39;ll add a column indexing the trigram position in the file
+  # This will come in handy later if we want to facet the plot by position
+  # as done in the Veles article. We&#39;ll just mutate binViz here, to save memory.
+  rawdata          &amp;lt;- readBin(filename, integer(), n=maxsize, size = 1, signed = FALSE)
+  size             &amp;lt;- rawdata %&amp;gt;% as.tibble %&amp;gt;% nrow
+  binViz           &amp;lt;- cbind(0:(size - 1),rawdata, lead(rawdata), lead(rawdata,n=2L))
+  colnames(binViz) &amp;lt;- c(&#39;idx&#39;, &#39;x&#39;, &#39;y&#39;, &#39;z&#39;)
+
+
+  # We then remove any missing values from the dataset
+  toplot &amp;lt;- binViz %&amp;gt;% as.tibble %&amp;gt;% na.omit
+
+  # If sampling is required, we do it now. Sampling is important
+  # if doing the density plots, as going beyond 1M points gets SLOW
+  if(sample){
+   toplot &amp;lt;- toplot %&amp;gt;% sample_n(min(count(toplot), sample_size))
+  }
+
+  # The actual plotting
+  theplot &amp;lt;- binViz2d_do_plot(toplot, alpha, polar) +
+    ggtitle(title_spec(filename, sample, sample_size))
+  if(do_density){
+    dens_plot &amp;lt;- binViz2d_do_density_plot(toplot, polar)
+  }
+
+  # Saving the plots
+  if(save){
+    namespec &amp;lt;- name_spec(filename, sample, sample_size, polar)
+    binViz2d_save(namespec, theplot, dens_plot)
+  }
+  return(list(binViz_plot = theplot, dens_plot = dens_plot))
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The main functionality of our code is succinctly described in the &lt;code&gt;binViz2d&lt;/code&gt; function above. It takes a number of parameters, summarized in the table below:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter Name&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;filename&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;File to visualize&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;alpha&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Alpha level (transparency) of the dots (lower values are useful for larger files)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;maxsize&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Maximum number of bytes to read from the file, if not sampling&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;save&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Determines whether the plot should be saved to a file&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;polar&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Determines whether the plot should use polar coordinates&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;sample&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Determines whether the file should be sampled&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;sample_size&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The number of samples to take, if sampling&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;do_density&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Whether to do an additional density plot (sampling is &lt;em&gt;strongly advised&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The function returns the visualization and density plots (note that the density
+plot may be &lt;code&gt;NA&lt;/code&gt;) in a list (this list can be easily destructured using the
+ &lt;code&gt;zeallot&lt;/code&gt; package).&lt;/p&gt;
+
+&lt;p&gt;The main plotting functions are as follows.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
+binViz2d_do_plot &amp;lt;- function(data, alpha, polar){
+  theplot &amp;lt;- data  %&amp;gt;% ggplot(mapping = aes(x,y)) +
+    geom_point(mapping = aes(color=z), alpha = alpha, size = 0.75) +
+    scale_color_gradient(low=&amp;quot;blue&amp;quot;, high=&amp;quot;orange&amp;quot;) +
+    coord_fixed(ratio = 1)+
+    labs(x=&amp;quot;i&amp;quot;, y=&amp;quot;i+1&amp;quot;, z=&amp;quot;i+2&amp;quot;)
+
+  if(polar){
+    theplot &amp;lt;- theplot + coord_polar()
+  }
+  return(theplot)
+}
+
+binViz2d_do_density_plot &amp;lt;- function(toplot, polar){
+  dens_plot &amp;lt;- toplot  %&amp;gt;% ggplot(mapping = aes(x,y)) +
+    stat_density2d(aes(fill = ..density..), geom=&amp;quot;raster&amp;quot;, contour = FALSE) +
+    scale_fill_gradient(low=&amp;quot;steelblue4&amp;quot;, high=&amp;quot;sienna2&amp;quot;) +
+    coord_fixed(ratio = 1)+
+    labs(x=&amp;quot;i&amp;quot;, y=&amp;quot;i+1&amp;quot;)
+  return(dens_plot)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;These are pretty much the same as we had done above, only in function form.&lt;/p&gt;
+
+&lt;p&gt;The remaining auxiliary functions take care of generating suitable titles and
+filenames, as well as saving the plots.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
+
+title_spec &amp;lt;- function(name, sampled, nsamples){
+  if(sampled){
+    title &amp;lt;- paste(name, &amp;quot;-&amp;quot;, nsamples, &amp;quot;samples.&amp;quot;)
+  }else{
+    title &amp;lt;- name
+  }
+  return(title)
+}
+
+# We create a name separated by underscores, this simplifies later parsing
+# of file names, if needed, to automate e.g., reports creation
+name_spec &amp;lt;- function(name, sampled, nsamples, polar){
+  polar_str     &amp;lt;- &amp;quot;&amp;quot;
+  if(polar){
+    polar_str   &amp;lt;- &amp;quot;polar&amp;quot;
+  }
+  sampled_str   &amp;lt;- &amp;quot;&amp;quot;
+  if(sampled){
+    sampled_str &amp;lt;- paste(&amp;quot;sampled&amp;quot;, nsamples, sep=&amp;quot;_&amp;quot;)
+  }
+  basename &amp;lt;- chartr(&#39;/.&#39;, &#39;::&#39;,
+                     paste(&amp;quot;plot&amp;quot;, polar_str, sampled_str, name, sep = &amp;quot;_&amp;quot;))
+  return(paste(basename, &amp;quot;.png&amp;quot;, sep=&amp;quot;&amp;quot;))
+}
+
+binViz2d_save &amp;lt;- function(namespec, binViz_plot, dens_plot){
+    png(namespec, width = 15, height = 15, units = &amp;quot;cm&amp;quot;, res = 300)
+    print(binViz_plot)
+    dev.off()
+    if(!is.na(dens_plot)){
+      png(paste(&amp;quot;density&amp;quot;,namespec,sep=&amp;quot;_&amp;quot;), width = 15, height = 15,
+          units = &amp;quot;cm&amp;quot;, res = 300)
+      print(dens_plot)
+      dev.off()
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Like this, in under 100 lines of R (under 75 if removing comments and blank
+lines), we can create nice and informative visualization for binary data.&lt;/p&gt;
+
+&lt;h1 id=&#34;going-a-bit-further&#34;&gt;Going a Bit Further&lt;/h1&gt;
+
+&lt;p&gt;As mentioned above, the Veles solution does some nice things, such as coloring
+points based on their location in the file, and also they do a tomography-like
+view of the 2d digram plot, by layering the plots for different parts of the
+file on top of each other.&lt;/p&gt;
+
+&lt;p&gt;We can achieve comparable effects by adding facets to our plots. In the code
+above, we have added some meta-data in the form of an index column. We can use
+that column to create a &lt;em&gt;cut&lt;/em&gt; of the data, and then facet on this.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
+#let&#39;s load the code we wrote above 
+source(&amp;quot;binViz2d/binViz2d.r&amp;quot;)
+library(zeallot)
+c(p,d) %&amp;lt;-% binViz2d(&amp;quot;post_draft.org&amp;quot;, save=FALSE)
+fp &amp;lt;- p + facet_wrap(~cut(idx, 10, labels=FALSE))
+ggsave(&amp;quot;testplot2_faceted_idx.png&amp;quot;, width = 20, height = 20, units = &amp;quot;cm&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;example&#34;&gt;
+Loading tidyverse: ggplot2
+Loading tidyverse: tibble
+Loading tidyverse: tidyr
+Loading tidyverse: readr
+Loading tidyverse: purrr
+Loading tidyverse: dplyr
+Conflicts with tidy packages ---------------------------------------------------
+filter(): dplyr, stats
+lag():    dplyr, stats
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/testplot2_faceted_idx.png&#34; alt=&#34;/img/binViz/testplot2_faceted_idx.png&#34; title=&#34;/img/binViz/testplot2_faceted_idx.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Adding the facets to the plot allows us to see how the structure of the file
+varies along its length. For this case, there isn&#39;t a noticeable difference,
+since the file is just text.&lt;/p&gt;
+
+&lt;p&gt;We can do another neat thing, which is to facet on the value of the &lt;code&gt;z&lt;/code&gt; byte in
+the trigram, and that will show us the densities of different levels in the file
+contents. In the case of this post draft, we should be able to see areas with&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
+c(p,d) %&amp;lt;-% binViz2d(&amp;quot;post_draft.org&amp;quot;, save=FALSE)
+lp &amp;lt;- p + facet_wrap(~cut(z, 10))
+ggsave(&amp;quot;testplot2_faceted_value.png&amp;quot;, width = 20, height = 20, units = &amp;quot;cm&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/testplot2_faceted_value.png&#34; alt=&#34;/img/binViz/testplot2_faceted_value.png&#34; title=&#34;/img/binViz/testplot2_faceted_value.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here we can clearly see again that most of the file&#39;s contents seems to fall in the
+ASCII range, with concentrations of space characters, and other characters in
+the &lt;code&gt;[A-z]&lt;/code&gt; range, plus some occurrences of punctuation.&lt;/p&gt;
+
+&lt;h1 id=&#34;more-interesting-examples&#34;&gt;More Interesting Examples&lt;/h1&gt;
+
+&lt;p&gt;More interesting examples of this type of visualization are possible when
+looking at more complex files. Below we show a few of these.&lt;/p&gt;
+
+&lt;h2 id=&#34;executable-code-and-libraries&#34;&gt;Executable Code and Libraries&lt;/h2&gt;
+
+&lt;p&gt;The plots below show the structure of (Darwin) executable and library files.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
+ binViz2d(&amp;quot;emacsclient&amp;quot;, alpha=1/20)
+ binViz2d(&amp;quot;libasan.4.dylib&amp;quot;, alpha=1/150)
+ binViz2d(&amp;quot;libR.dylib&amp;quot;, alpha=1/150)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/plot___emacsclient.png&#34; alt=&#34;/img/binViz/plot___emacsclient.png&#34; title=&#34;/img/binViz/plot___emacsclient.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/plot___libR:dylib.png&#34; alt=&#34;/img/binViz/plot___libR:dylib.png&#34; title=&#34;/img/binViz/plot___libR:dylib.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/plot___libasan:4:dylib.png&#34; alt=&#34;/img/binViz/plot___libasan:4:dylib.png&#34; title=&#34;/img/binViz/plot___libasan:4:dylib.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can see that these files have more structure to them, and exhibit some common
+patterns, such as much higher frequencies for low values and values
+corresponding to upper-case ASCII characters, as well as a significant amount of
+points in the &lt;code&gt;[a-z]&lt;/code&gt; range, as well. Looking at the strings in those binaries,
+we can find very many upper-case constant names, along with e.g., error
+messages, which help explain the observed value distribution.&lt;/p&gt;
+
+&lt;p&gt;For a different perspective, we can look at the polar projection of one of these
+plots.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
+ binViz2d(&amp;quot;libR.dylib&amp;quot;, alpha=1/150, polar=TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/plot_polar__libR:dylib.png&#34; alt=&#34;/img/binViz/plot_polar__libR:dylib.png&#34; title=&#34;/img/binViz/plot_polar__libR:dylib.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can also look at a faceted version of a plot, looking at how the trigrams
+change throughout the file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
+c(p,d) %&amp;lt;-% binViz2d(&amp;quot;emacsclient&amp;quot;, save=FALSE)
+lp &amp;lt;- p + facet_wrap(~cut(idx, 20))
+ggsave(&amp;quot;emacsclient_faceted_idx.png&amp;quot;, width = 20, height = 20, units = &amp;quot;cm&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/emacsclient_faceted_idx.png&#34; alt=&#34;/img/binViz/emacsclient_faceted_idx.png&#34; title=&#34;/img/binViz/emacsclient_faceted_idx.png&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;pdf-content&#34;&gt;PDF Content&lt;/h2&gt;
+
+&lt;p&gt;PDF files show very distinctive properties as well. Here we look at a
+scientific paper and a programming book.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
+ binViz2d(&amp;quot;tommSurvey.pdf&amp;quot;, alpha=1/150)
+ binViz2d(&amp;quot;cookbook.pdf&amp;quot;, alpha=1/150)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/plot___tommSurvey:pdf.png&#34; alt=&#34;/img/binViz/plot___tommSurvey:pdf.png&#34; title=&#34;/img/binViz/plot___tommSurvey:pdf.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/plot___cookbook:pdf.png&#34; alt=&#34;/img/binViz/plot___cookbook:pdf.png&#34; title=&#34;/img/binViz/plot___cookbook:pdf.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We notice that there are quite striking
+similarities among the plots. In particular, a set of &#34;lines&#34; appear along the
+main diagonal of the plot, and from the (0,0) and (255,255) points towards the
+mid-range of each axis. As expected, there&#39;s also a large concentration of
+trigrams in the character parts of the ASCII range.&lt;/p&gt;
+
+&lt;p&gt;We can look at a faceted view of the plot to see if the distribution changes
+either on the index or the values observed.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
+c(p,d) %&amp;lt;-% binViz2d(&amp;quot;tommSurvey.pdf&amp;quot;, save=FALSE)
+lp &amp;lt;- p + facet_wrap(~cut(z, 12))
+ggsave(&amp;quot;tommSurvey_faceted_value.png&amp;quot;, width = 20, height = 20, units = &amp;quot;cm&amp;quot;)
+ip &amp;lt;- p + facet_wrap(~cut(idx, 12))
+ggsave(&amp;quot;tommSurvey_faceted_idx.png&amp;quot;, width = 20, height = 20, units = &amp;quot;cm&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/tommSurvey_faceted_idx.png&#34; alt=&#34;/img/binViz/tommSurvey_faceted_idx.png&#34; title=&#34;/img/binViz/tommSurvey_faceted_idx.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When looking at how the line structure is noticeable throughout the file, we can see
+that there are portions of the file in which it vanishes, whereas in others it
+(or a part of it) becomes more prominent.&lt;/p&gt;
+
+&lt;p&gt;Looking at the values below, however, shows that a) all the range of values is
+nearly uniformly represented throughout the file, and b) the main diagonal line structure is
+noticeable for all the value ranges, but the secondary ones are visible only in
+certain value ranges. Finding out the actual meaning of this would probably be a
+non-trivial task, left as an exercise to the reader ;).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/tommSurvey_faceted_value.png&#34; alt=&#34;/img/binViz/tommSurvey_faceted_value.png&#34; title=&#34;/img/binViz/tommSurvey_faceted_value.png&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;audio&#34;&gt;Audio&lt;/h2&gt;
+
+&lt;p&gt;When looking at media files, which tend to be large, it is good to try sampling
+the content, in order to reduce the time (and memory) required for creating the
+visualizations. We will look at a music clip, uncompressed, and then encoded as
+MP3 and FLAC.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
+ binViz2d(&amp;quot;Test_File_2_0_STEREO_PCM.wav&amp;quot;, alpha=1/100,
+                                          sample = TRUE, sample_size = 400000)
+ binViz2d(&amp;quot;Test_File_2_0_STEREO_MP3.mp3&amp;quot;, alpha=1/100,
+                                          sample = TRUE, sample_size = 400000)
+ binViz2d(&amp;quot;Test_File_2_0_STEREO_FLAC.flac&amp;quot;, alpha=1/100, 
+                                          sample = TRUE, sample_size = 400000)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We note that the relative resolution of each plot will be different, as we are
+sampling the same amount of data out of files of very different size. In the
+case of the uncompressed audio, the sample is less than 1% of the total file,
+whereas for the FLAC it&#39;s a bit under 5 percent, and for the MP3 version it is
+almost 20 percent. Still, the patterns observed in the plots are quite constant,
+even varying the sampling size between 25% and 500% of the value chosen here.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_PCM:wav.png&#34; alt=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_PCM:wav.png&#34; title=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_PCM:wav.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_FLAC:flac.png&#34; alt=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_FLAC:flac.png&#34; title=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_FLAC:flac.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_MP3:mp3.png&#34; alt=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_MP3:mp3.png&#34; title=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_MP3:mp3.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It&#39;s interesting to note that while the uncompressed file has a very clear
+structure, the compressed versions seem almost random. This pattern is also
+visible for compressed images, and of course, for encrypted files. Between the
+compressed versions, it seems like the FLAC-encoded one shows less structure
+than the MP3-encoded one, where some patches of the space are denser. I suspect
+that this is probably related to the lossy nature of MP3 encoding, but haven&#39;t
+yet delved into it.&lt;/p&gt;
+
+&lt;h1 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h1&gt;
+
+&lt;p&gt;I hope you have found this post interesting, and maybe caught an idea or two
+about how this type of approach could be useful, and more importantly, how a
+simple visualization technique can yield interesting plots that reveal &#34;hidden&#34;
+structure in data.&lt;/p&gt;
+
+&lt;p&gt;The code used to generate the plots can be found in the gist below, and it&#39;s
+free to be used.
+&lt;script src=&#34;https://gist.github.com/mvarela/e3b868fe36d232a39bf5d87796c8ac28.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
