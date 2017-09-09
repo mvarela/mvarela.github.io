@@ -136,7 +136,7 @@ will see, it would be simple to add this information as well.&lt;/p&gt;
   x &amp;lt;- sample(0:255, size=50000, replace = TRUE)
   y &amp;lt;- lead(x)
   z &amp;lt;- lead(x,2)
-  data &amp;lt;- as.tibble(cbind(x,y,z)) %&amp;gt;% na.omit()
+  data &amp;lt;- cbind(x,y,z) %&amp;gt;% as.tibble() %&amp;gt;% na.omit()
   binplot &amp;lt;- data %&amp;gt;% ggplot(aes(x=x, y=y)) +
              geom_point(mapping = aes(color = z), alpha = 1/20) + 
              scale_color_gradient(low=&amp;quot;blue&amp;quot;, high=&amp;quot;orange&amp;quot;) +
