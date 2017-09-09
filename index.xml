@@ -41,7 +41,7 @@ journals, to the amusement and dismay of many).&lt;/p&gt;
 &lt;p&gt;Basically, the approach taken in Veles is to take byte trigrams of the form $(i,
 i+1, i+2)$ from the file, and use them to represent points in a 3D space (a
 digram-based 2D version is also described). Being sequences of bytes, the space
-is limited to a 255x255x255 cube. The Veles visualization uses luminance to
+is limited to a 256x256x256 cube. The Veles visualization uses luminance to
 represent the (normalized) frequency of each point in the file, resulting in
 very nice-looking, and surprisingly structured visualizations. The tool also
 assigns different hues to points, based on their position in the file (which is
@@ -133,7 +133,7 @@ will see, it would be simple to add this information as well.&lt;/p&gt;
 &lt;p&gt;Let us quickly see how we can setup the visualization.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
-  x &amp;lt;- sample(1:255, size=50000, replace = TRUE)
+  x &amp;lt;- sample(0:255, size=50000, replace = TRUE)
   y &amp;lt;- lead(x)
   z &amp;lt;- lead(x,2)
   data &amp;lt;- as.tibble(cbind(x,y,z)) %&amp;gt;% na.omit()
