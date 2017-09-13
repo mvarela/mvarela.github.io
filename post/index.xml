@@ -81,7 +81,7 @@ lag():    dplyr, stats
 &lt;/pre&gt;
 
 &lt;p&gt;We can see that &lt;code&gt;lead&lt;/code&gt; has shifted &lt;code&gt;a&lt;/code&gt; to the left, introducing a &lt;code&gt;NA&lt;/code&gt; value at
-the end. If we create a dataframe of tibble with &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;lead(a)&lt;/code&gt; and &lt;code&gt;lead(lead(a))&lt;/code&gt; , we will obtain a table of trigrams.&lt;/p&gt;
+the end. If we create a dataframe or tibble with &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;lead(a)&lt;/code&gt; and &lt;code&gt;lead(lead(a))&lt;/code&gt; , we will obtain a table of trigrams.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
  zipped &amp;lt;- as.tibble(cbind(a, lead(a), lead(a,2)))

@@ -306,7 +306,7 @@ lag():    dplyr, stats
 </pre>
 
 <p>We can see that <code>lead</code> has shifted <code>a</code> to the left, introducing a <code>NA</code> value at
-the end. If we create a dataframe of tibble with <code>a</code>, <code>lead(a)</code> and <code>lead(lead(a))</code> , we will obtain a table of trigrams.</p>
+the end. If we create a dataframe or tibble with <code>a</code>, <code>lead(a)</code> and <code>lead(lead(a))</code> , we will obtain a table of trigrams.</p>
 
 <pre><code class="language-R">
  zipped &lt;- as.tibble(cbind(a, lead(a), lead(a,2)))
