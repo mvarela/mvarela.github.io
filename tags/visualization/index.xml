@@ -58,8 +58,8 @@ about the structure of the files can be gleaned from them.&lt;/p&gt;
 
 &lt;p&gt;Our data will be the bytes in the file, repeated twice next to each other with
 an offset of one for each repetition. This is a common pattern for example in
-Haskell and Lisp, basically &lt;code&gt;zip=&#39;ping a list with its own tail. In R, we can
-use the =lead&lt;/code&gt; or &lt;code&gt;lag&lt;/code&gt; functions provided in Hadley Wickham&#39;s &lt;code&gt;dplyr&lt;/code&gt; package.&lt;/p&gt;
+Haskell and Lisp, basically &lt;code&gt;zip&lt;/code&gt; &#39;ping a list with its own tail. In R, we can
+use the &lt;code&gt;lead&lt;/code&gt; or &lt;code&gt;lag&lt;/code&gt; functions provided in Hadley Wickham&#39;s &lt;code&gt;dplyr&lt;/code&gt; package.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
   library(tidyverse)
