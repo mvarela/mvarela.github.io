@@ -6,13 +6,13 @@
     <description>Recent content in Just for Fun on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Sep 2017 09:33:46 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 26 Sep 2017 09:43:43 +0300</lastBuildDate>
     <atom:link href="/tags/just-for-fun/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Fractals — Complexity from Simplicity (and a bit of Clojure)</title>
       <link>https://mvarela.github.io/post/fractals-complexity-from-simplicity/</link>
-      <pubDate>Sat, 09 Sep 2017 09:33:46 +0300</pubDate>
+      <pubDate>Tue, 26 Sep 2017 09:43:43 +0300</pubDate>
       
       <guid>https://mvarela.github.io/post/fractals-complexity-from-simplicity/</guid>
       <description>&lt;!-- -*- org-export-babel-evaluate: nil -*- --&gt;
