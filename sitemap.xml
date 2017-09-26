@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>https://mvarela.github.io/post/fractals-complexity-from-simplicity/</loc>
+      <lastmod>2017-09-09T09:33:46+03:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://mvarela.github.io/post/simple-binary-data-visualization/</loc>
       <lastmod>2017-09-09T09:33:46+03:00</lastmod>
     </url>
@@ -920,7 +929,47 @@
     
     <url>
     
+      <loc>https://mvarela.github.io/tags/clojure/</loc>
+      <lastmod>2017-09-09T09:33:46+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://mvarela.github.io/tags/data-analysis/</loc>
+      <lastmod>2017-09-09T09:33:46+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://mvarela.github.io/tags/fractals/</loc>
+      <lastmod>2017-09-09T09:33:46+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://mvarela.github.io/tags/just-for-fun/</loc>
+      <lastmod>2017-09-09T09:33:46+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://mvarela.github.io/tags/math/</loc>
       <lastmod>2017-09-09T09:33:46+03:00</lastmod>
       <priority>0</priority>
     </url>
