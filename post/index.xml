@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on </title>
-    <link>https://mvarela.github.io/post/</link>
+    <link>https://martin.varela.fi/post/</link>
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,10 +11,10 @@
     
     <item>
       <title>Fractals — Complexity from Simplicity (and a bit of Clojure)</title>
-      <link>https://mvarela.github.io/post/fractals-complexity-from-simplicity/</link>
+      <link>https://martin.varela.fi/post/fractals-complexity-from-simplicity/</link>
       <pubDate>Tue, 26 Sep 2017 09:43:43 +0300</pubDate>
       
-      <guid>https://mvarela.github.io/post/fractals-complexity-from-simplicity/</guid>
+      <guid>https://martin.varela.fi/post/fractals-complexity-from-simplicity/</guid>
       <description>&lt;!-- -*- org-export-babel-evaluate: nil -*- --&gt;
 
 &lt;h1 id=&#34;enter-the-dragon&#34;&gt;Enter the Dragon&lt;/h1&gt;
@@ -208,7 +208,7 @@ above.&lt;/p&gt;
     (spit &amp;quot;dragon15.html&amp;quot; html)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/fractals/dragon15.png&#34; alt=&#34;/img/fractals/dragon15.png&#34; title=&#34;/img/fractals/dragon15.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/dragon15.png&#34; alt=&#34;/img/fractals/dragon15.png&#34; title=&#34;/img/fractals/dragon15.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;If you are reading this in a modern browser with proper SVG support, you can
 also open the generated &lt;a href=&#34;http:/html/fractals/dragon15.html&#34; title=&#34;HTML output&#34; target=&#34;_blank&#34;&gt;HTML output&lt;/a&gt;.&lt;/p&gt;
@@ -239,7 +239,7 @@ rules : F → FF+F+F+F+FF
 
 &lt;p&gt;Five iterations of this system yield this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/fractals/box5.png&#34; alt=&#34;/img/fractals/box5.png&#34; title=&#34;/img/fractals/box5.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/box5.png&#34; alt=&#34;/img/fractals/box5.png&#34; title=&#34;/img/fractals/box5.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http:/html/fractals/box-05.html&#34; title=&#34;HTML/SVG version&#34; target=&#34;_blank&#34;&gt;HTML/SVG version&lt;/a&gt;&lt;/p&gt;
 
@@ -253,7 +253,7 @@ rules : F → FF+F++F+F
 &lt;p&gt;Like the Box above, this one also starts with a square (F+F+F+F).
 Six iterations yield:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/fractals/crystal6.png&#34; alt=&#34;/img/fractals/crystal6.png&#34; title=&#34;/img/fractals/crystal6.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/crystal6.png&#34; alt=&#34;/img/fractals/crystal6.png&#34; title=&#34;/img/fractals/crystal6.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http:/html/fractals/crystal-06.html&#34; title=&#34;HTML/SVG version&#34; target=&#34;_blank&#34;&gt;HTML/SVG version&lt;/a&gt;&lt;/p&gt;
 
@@ -268,13 +268,13 @@ rules : X → +YF-XFX-FY+
 &lt;p&gt;The &lt;a href=&#34;https://en.wikipedia.org/wiki/Hilbert_curve&#34; title=&#34;Hilbert curve&#34; target=&#34;_blank&#34;&gt;Hilbert curve&lt;/a&gt; is a well-known space-filling fractal. It does get quite dense
 rather quickly. After only 9 iterations, it looks like this.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/fractals/hilbert9.png&#34; alt=&#34;/img/fractals/hilbert9.png&#34; title=&#34;/img/fractals/hilbert9.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/hilbert9.png&#34; alt=&#34;/img/fractals/hilbert9.png&#34; title=&#34;/img/fractals/hilbert9.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http:/html/fractals/hilbert-09.html&#34; title=&#34;HTML/SVG version (LARGE FILE!)&#34; target=&#34;_blank&#34;&gt;HTML/SVG version (LARGE FILE!)&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Zooming in a bit, we can better discern the structure:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/fractals/hilbert9zoom.png&#34; alt=&#34;/img/fractals/hilbert9zoom.png&#34; title=&#34;/img/fractals/hilbert9zoom.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/hilbert9zoom.png&#34; alt=&#34;/img/fractals/hilbert9zoom.png&#34; title=&#34;/img/fractals/hilbert9zoom.png&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;koch-curve&#34;&gt;Koch Curve&lt;/h2&gt;
 
@@ -285,7 +285,7 @@ rules : F → FF+F+F+F+FF
 
 &lt;p&gt;This one also becomes complex very quickly. At four iterations, it looks like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/fractals/koch4.png&#34; alt=&#34;/img/fractals/koch4.png&#34; title=&#34;/img/fractals/koch4.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/koch4.png&#34; alt=&#34;/img/fractals/koch4.png&#34; title=&#34;/img/fractals/koch4.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http:/html/fractals/koch-curve-04.html&#34; title=&#34;HTML/SVG version&#34; target=&#34;_blank&#34;&gt;HTML/SVG version&lt;/a&gt;&lt;/p&gt;
 
@@ -298,7 +298,7 @@ rules : F → F+F--F+F
 
 &lt;p&gt;This is another well-known fractal.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/fractals/snowflake9.png&#34; alt=&#34;/img/fractals/snowflake9.png&#34; title=&#34;/img/fractals/snowflake9.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/snowflake9.png&#34; alt=&#34;/img/fractals/snowflake9.png&#34; title=&#34;/img/fractals/snowflake9.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http:/html/fractals/koch-snowflake-09.html&#34; title=&#34;HTML/SVG version&#34; target=&#34;_blank&#34;&gt;HTML/SVG version&lt;/a&gt;&lt;/p&gt;
 
@@ -311,7 +311,7 @@ rules : F → FF+F+F+F+F+F-F
 
 &lt;p&gt;This one is quite eye-catching. After six itertations, we get:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/fractals/rings6.png&#34; alt=&#34;/img/fractals/rings6.png&#34; title=&#34;/img/fractals/rings6.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/rings6.png&#34; alt=&#34;/img/fractals/rings6.png&#34; title=&#34;/img/fractals/rings6.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http:/html/fractals/rings-06.html&#34; title=&#34;HTML/SVG version&#34; target=&#34;_blank&#34;&gt;HTML/SVG version&lt;/a&gt;&lt;/p&gt;
 
@@ -327,7 +327,7 @@ rules : F → F-G+F+G-F
 above, it has two &lt;code&gt;forward&lt;/code&gt; variables, &lt;code&gt;F&lt;/code&gt; and &lt;code&gt;G&lt;/code&gt;. After 8 iterations, it
 results in this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/fractals/sierpinski8.png&#34; alt=&#34;/img/fractals/sierpinski8.png&#34; title=&#34;/img/fractals/sierpinski8.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/sierpinski8.png&#34; alt=&#34;/img/fractals/sierpinski8.png&#34; title=&#34;/img/fractals/sierpinski8.png&#34; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;more-to-come&#34;&gt;More to Come!&lt;/h1&gt;
 
@@ -347,10 +347,10 @@ transformations and stochastic processes, and the second one is the famous
     
     <item>
       <title>Simple Binary Data Visualization</title>
-      <link>https://mvarela.github.io/post/simple-binary-data-visualization/</link>
+      <link>https://martin.varela.fi/post/simple-binary-data-visualization/</link>
       <pubDate>Sat, 09 Sep 2017 09:33:46 +0300</pubDate>
       
-      <guid>https://mvarela.github.io/post/simple-binary-data-visualization/</guid>
+      <guid>https://martin.varela.fi/post/simple-binary-data-visualization/</guid>
       <description>&lt;!-- -*- org-export-babel-evaluate: nil -*- --&gt;
 
 &lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
@@ -484,7 +484,7 @@ Saving 7 x 7 in image
 
 &lt;p&gt;We can now look at the resulting plot:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/testplot.png&#34; alt=&#34;/img/binViz/testplot.png&#34; title=&#34;/img/binViz/testplot.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/testplot.png&#34; alt=&#34;/img/binViz/testplot.png&#34; title=&#34;/img/binViz/testplot.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The plot does not look like much, because we sampled uniformly distributed
 random data. However, if we read a file with some structure, we will see
@@ -507,7 +507,7 @@ this post as an input.&lt;/p&gt;
 Saving 7 x 7 in image
 &lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/testplot2.png&#34; alt=&#34;/img/binViz/testplot2.png&#34; title=&#34;/img/binViz/testplot2.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/testplot2.png&#34; alt=&#34;/img/binViz/testplot2.png&#34; title=&#34;/img/binViz/testplot2.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now this is a bit more interesting! What we can see here, is that most of the
 data is confined to a small section of our space. In particular, we can see both
@@ -530,7 +530,7 @@ distinguishing structure. We can use, for instance, polar coordinates.&lt;/p&gt;
 Saving 7 x 7 in image
 &lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/testplot2_polar.png&#34; alt=&#34;/img/binViz/testplot2_polar.png&#34; title=&#34;/img/binViz/testplot2_polar.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/testplot2_polar.png&#34; alt=&#34;/img/binViz/testplot2_polar.png&#34; title=&#34;/img/binViz/testplot2_polar.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Here we can also clearly see the predominance of digrams in the &lt;code&gt;[A-z]&lt;/code&gt; range,
 and of combinations of those and spaces (the line pointing towards 32 in the NE
@@ -551,7 +551,7 @@ quadrant, and the segment of arc at 32 in the NW quadrant).&lt;/p&gt;
 Saving 7 x 7 in image
 &lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/testplot2_density.png&#34; alt=&#34;/img/binViz/testplot2_density.png&#34; title=&#34;/img/binViz/testplot2_density.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/testplot2_density.png&#34; alt=&#34;/img/binViz/testplot2_density.png&#34; title=&#34;/img/binViz/testplot2_density.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In this case, the density plot does not provide much additional information, but
 it could be useful if we were for instance to facet the plot based on where in
@@ -780,7 +780,7 @@ filter(): dplyr, stats
 lag():    dplyr, stats
 &lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/testplot2_faceted_idx.png&#34; alt=&#34;/img/binViz/testplot2_faceted_idx.png&#34; title=&#34;/img/binViz/testplot2_faceted_idx.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/testplot2_faceted_idx.png&#34; alt=&#34;/img/binViz/testplot2_faceted_idx.png&#34; title=&#34;/img/binViz/testplot2_faceted_idx.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Adding the facets to the plot allows us to see how the structure of the file
 varies along its length. For this case, there isn&#39;t a noticeable difference,
@@ -796,7 +796,7 @@ lp &amp;lt;- p + facet_wrap(~cut(z, 10))
 ggsave(&amp;quot;testplot2_faceted_value.png&amp;quot;, width = 20, height = 20, units = &amp;quot;cm&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/testplot2_faceted_value.png&#34; alt=&#34;/img/binViz/testplot2_faceted_value.png&#34; title=&#34;/img/binViz/testplot2_faceted_value.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/testplot2_faceted_value.png&#34; alt=&#34;/img/binViz/testplot2_faceted_value.png&#34; title=&#34;/img/binViz/testplot2_faceted_value.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Here we can clearly see again that most of the file&#39;s contents seems to fall in the
 ASCII range, with concentrations of space characters, and other characters in
@@ -817,11 +817,11 @@ looking at more complex files. Below we show a few of these.&lt;/p&gt;
  binViz2d(&amp;quot;libR.dylib&amp;quot;, alpha=1/150)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/plot___emacsclient.png&#34; alt=&#34;/img/binViz/plot___emacsclient.png&#34; title=&#34;/img/binViz/plot___emacsclient.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/plot___emacsclient.png&#34; alt=&#34;/img/binViz/plot___emacsclient.png&#34; title=&#34;/img/binViz/plot___emacsclient.png&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/plot___libR:dylib.png&#34; alt=&#34;/img/binViz/plot___libR:dylib.png&#34; title=&#34;/img/binViz/plot___libR:dylib.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/plot___libR:dylib.png&#34; alt=&#34;/img/binViz/plot___libR:dylib.png&#34; title=&#34;/img/binViz/plot___libR:dylib.png&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/plot___libasan:4:dylib.png&#34; alt=&#34;/img/binViz/plot___libasan:4:dylib.png&#34; title=&#34;/img/binViz/plot___libasan:4:dylib.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/plot___libasan:4:dylib.png&#34; alt=&#34;/img/binViz/plot___libasan:4:dylib.png&#34; title=&#34;/img/binViz/plot___libasan:4:dylib.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We can see that these files have more structure to them, and exhibit some common
 patterns, such as much higher frequencies for low values and values
@@ -837,7 +837,7 @@ plots.&lt;/p&gt;
  binViz2d(&amp;quot;libR.dylib&amp;quot;, alpha=1/150, polar=TRUE)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/plot_polar__libR:dylib.png&#34; alt=&#34;/img/binViz/plot_polar__libR:dylib.png&#34; title=&#34;/img/binViz/plot_polar__libR:dylib.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/plot_polar__libR:dylib.png&#34; alt=&#34;/img/binViz/plot_polar__libR:dylib.png&#34; title=&#34;/img/binViz/plot_polar__libR:dylib.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We can also look at a faceted version of a plot, looking at how the trigrams
 change throughout the file.&lt;/p&gt;
@@ -848,7 +848,7 @@ lp &amp;lt;- p + facet_wrap(~cut(idx, 20))
 ggsave(&amp;quot;emacsclient_faceted_idx.png&amp;quot;, width = 20, height = 20, units = &amp;quot;cm&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/emacsclient_faceted_idx.png&#34; alt=&#34;/img/binViz/emacsclient_faceted_idx.png&#34; title=&#34;/img/binViz/emacsclient_faceted_idx.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/emacsclient_faceted_idx.png&#34; alt=&#34;/img/binViz/emacsclient_faceted_idx.png&#34; title=&#34;/img/binViz/emacsclient_faceted_idx.png&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;pdf-content&#34;&gt;PDF Content&lt;/h2&gt;
 
@@ -860,9 +860,9 @@ scientific paper and a programming book.&lt;/p&gt;
  binViz2d(&amp;quot;cookbook.pdf&amp;quot;, alpha=1/150)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/plot___tommSurvey:pdf.png&#34; alt=&#34;/img/binViz/plot___tommSurvey:pdf.png&#34; title=&#34;/img/binViz/plot___tommSurvey:pdf.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/plot___tommSurvey:pdf.png&#34; alt=&#34;/img/binViz/plot___tommSurvey:pdf.png&#34; title=&#34;/img/binViz/plot___tommSurvey:pdf.png&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/plot___cookbook:pdf.png&#34; alt=&#34;/img/binViz/plot___cookbook:pdf.png&#34; title=&#34;/img/binViz/plot___cookbook:pdf.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/plot___cookbook:pdf.png&#34; alt=&#34;/img/binViz/plot___cookbook:pdf.png&#34; title=&#34;/img/binViz/plot___cookbook:pdf.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We notice that there are quite striking
 similarities among the plots. In particular, a set of &#34;lines&#34; appear along the
@@ -881,7 +881,7 @@ ip &amp;lt;- p + facet_wrap(~cut(idx, 12))
 ggsave(&amp;quot;tommSurvey_faceted_idx.png&amp;quot;, width = 20, height = 20, units = &amp;quot;cm&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/tommSurvey_faceted_idx.png&#34; alt=&#34;/img/binViz/tommSurvey_faceted_idx.png&#34; title=&#34;/img/binViz/tommSurvey_faceted_idx.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/tommSurvey_faceted_idx.png&#34; alt=&#34;/img/binViz/tommSurvey_faceted_idx.png&#34; title=&#34;/img/binViz/tommSurvey_faceted_idx.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;When looking at how the line structure is noticeable throughout the file, we can see
 that there are portions of the file in which it vanishes, whereas in others it
@@ -893,7 +893,7 @@ noticeable for all the value ranges, but the secondary ones are visible only in
 certain value ranges. Finding out the actual meaning of this would probably be a
 non-trivial task, left as an exercise to the reader ;).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/tommSurvey_faceted_value.png&#34; alt=&#34;/img/binViz/tommSurvey_faceted_value.png&#34; title=&#34;/img/binViz/tommSurvey_faceted_value.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/tommSurvey_faceted_value.png&#34; alt=&#34;/img/binViz/tommSurvey_faceted_value.png&#34; title=&#34;/img/binViz/tommSurvey_faceted_value.png&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;audio&#34;&gt;Audio&lt;/h2&gt;
 
@@ -918,11 +918,11 @@ whereas for the FLAC it&#39;s a bit under 5 percent, and for the MP3 version it 
 almost 20 percent. Still, the patterns observed in the plots are quite constant,
 even varying the sampling size between 25% and 500% of the value chosen here.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_PCM:wav.png&#34; alt=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_PCM:wav.png&#34; title=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_PCM:wav.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_PCM:wav.png&#34; alt=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_PCM:wav.png&#34; title=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_PCM:wav.png&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_FLAC:flac.png&#34; alt=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_FLAC:flac.png&#34; title=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_FLAC:flac.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_FLAC:flac.png&#34; alt=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_FLAC:flac.png&#34; title=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_FLAC:flac.png&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mvarela.github.io/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_MP3:mp3.png&#34; alt=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_MP3:mp3.png&#34; title=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_MP3:mp3.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_MP3:mp3.png&#34; alt=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_MP3:mp3.png&#34; title=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_MP3:mp3.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;It&#39;s interesting to note that while the uncompressed file has a very clear
 structure, the compressed versions seem almost random. This pattern is also

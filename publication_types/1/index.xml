@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>1 on </title>
-    <link>https://mvarela.github.io/publication_types/1/</link>
+    <link>https://martin.varela.fi/publication_types/1/</link>
     <description>Recent content in 1 on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,136 +11,136 @@
     
     <item>
       <title>No Silver Bullet: QoE Metrics, QoE Fairness, and User Diversity in the Context of QoE Management</title>
-      <link>https://mvarela.github.io/publication/varela-qomex17/</link>
+      <link>https://martin.varela.fi/publication/varela-qomex17/</link>
       <pubDate>Wed, 03 May 2017 06:40:43 +0300</pubDate>
       
-      <guid>https://mvarela.github.io/publication/varela-qomex17/</guid>
+      <guid>https://martin.varela.fi/publication/varela-qomex17/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Embracing Uncertainty: A Probabilistic View of HTTP Video Quality</title>
-      <link>https://mvarela.github.io/publication/varela-qoem-2017/</link>
+      <link>https://martin.varela.fi/publication/varela-qoem-2017/</link>
       <pubDate>Wed, 03 May 2017 06:40:42 +0300</pubDate>
       
-      <guid>https://mvarela.github.io/publication/varela-qoem-2017/</guid>
+      <guid>https://martin.varela.fi/publication/varela-qoem-2017/</guid>
       <description></description>
     </item>
     
     <item>
       <title>On Additive and Multiplicative QoS-QoE Models for Multiple QoS Parameters</title>
-      <link>https://mvarela.github.io/publication/varela-pqs16/</link>
+      <link>https://martin.varela.fi/publication/varela-pqs16/</link>
       <pubDate>Wed, 03 Aug 2016 06:40:42 +0300</pubDate>
       
-      <guid>https://mvarela.github.io/publication/varela-pqs16/</guid>
+      <guid>https://martin.varela.fi/publication/varela-pqs16/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Generating Realistic YouTube-like Stall Patterns for HTTP Video Streaming Assessment</title>
-      <link>https://mvarela.github.io/publication/varela-qomex16/</link>
+      <link>https://martin.varela.fi/publication/varela-qomex16/</link>
       <pubDate>Fri, 03 Jun 2016 06:40:43 +0300</pubDate>
       
-      <guid>https://mvarela.github.io/publication/varela-qomex16/</guid>
+      <guid>https://martin.varela.fi/publication/varela-qomex16/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Network Quality Differentiation: Regional Effects, Market Entrance, and Empirical Testability</title>
-      <link>https://mvarela.github.io/publication/varela-networking16/</link>
+      <link>https://martin.varela.fi/publication/varela-networking16/</link>
       <pubDate>Sun, 03 Apr 2016 06:40:41 +0300</pubDate>
       
-      <guid>https://mvarela.github.io/publication/varela-networking16/</guid>
+      <guid>https://martin.varela.fi/publication/varela-networking16/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A Layered Model for Quality Estimation of HTTP Video from QoS Measurements</title>
-      <link>https://mvarela.github.io/publication/varela-quamus15/</link>
+      <link>https://martin.varela.fi/publication/varela-quamus15/</link>
       <pubDate>Tue, 03 Nov 2015 06:40:43 +0300</pubDate>
       
-      <guid>https://mvarela.github.io/publication/varela-quamus15/</guid>
+      <guid>https://martin.varela.fi/publication/varela-quamus15/</guid>
       <description></description>
     </item>
     
     <item>
       <title>On the Analysis of QoE in Cellular Networks: from Subjective Tests to Large-scale Traffic Measurements</title>
-      <link>https://mvarela.github.io/publication/varela-trac2015/</link>
+      <link>https://martin.varela.fi/publication/varela-trac2015/</link>
       <pubDate>Mon, 03 Aug 2015 06:40:44 +0300</pubDate>
       
-      <guid>https://mvarela.github.io/publication/varela-trac2015/</guid>
+      <guid>https://martin.varela.fi/publication/varela-trac2015/</guid>
       <description></description>
     </item>
     
     <item>
       <title>QoE-Driven Admission Control for Video Streams</title>
-      <link>https://mvarela.github.io/publication/varela-iisa2015/</link>
+      <link>https://martin.varela.fi/publication/varela-iisa2015/</link>
       <pubDate>Fri, 03 Jul 2015 06:40:40 +0300</pubDate>
       
-      <guid>https://mvarela.github.io/publication/varela-iisa2015/</guid>
+      <guid>https://martin.varela.fi/publication/varela-iisa2015/</guid>
       <description></description>
     </item>
     
     <item>
       <title>From Service Level Agreements (SLA) to Experience Level Agreements (ELA): The Challenges of Selling QoE to the User</title>
-      <link>https://mvarela.github.io/publication/varela-qoe-fi-2015/</link>
+      <link>https://martin.varela.fi/publication/varela-qoe-fi-2015/</link>
       <pubDate>Wed, 03 Jun 2015 06:40:42 +0300</pubDate>
       
-      <guid>https://mvarela.github.io/publication/varela-qoe-fi-2015/</guid>
+      <guid>https://martin.varela.fi/publication/varela-qoe-fi-2015/</guid>
       <description></description>
     </item>
     
     <item>
       <title>QoE-Aware Routing for Video Streaming (short paper)</title>
-      <link>https://mvarela.github.io/publication/varela-iwqos2015/</link>
+      <link>https://martin.varela.fi/publication/varela-iwqos2015/</link>
       <pubDate>Wed, 03 Jun 2015 06:40:40 +0300</pubDate>
       
-      <guid>https://mvarela.github.io/publication/varela-iwqos2015/</guid>
+      <guid>https://martin.varela.fi/publication/varela-iwqos2015/</guid>
       <description></description>
     </item>
     
     <item>
       <title>QoE Beyond the MOS: Added Value Using Quantiles and Distributions</title>
-      <link>https://mvarela.github.io/publication/varela-qomex2015-2/</link>
+      <link>https://martin.varela.fi/publication/varela-qomex2015-2/</link>
       <pubDate>Sun, 03 May 2015 06:40:43 +0300</pubDate>
       
-      <guid>https://mvarela.github.io/publication/varela-qomex2015-2/</guid>
+      <guid>https://martin.varela.fi/publication/varela-qomex2015-2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>QoE in the Web: A Dance of Design and Performance</title>
-      <link>https://mvarela.github.io/publication/varela-qomex2015-1/</link>
+      <link>https://martin.varela.fi/publication/varela-qomex2015-1/</link>
       <pubDate>Sun, 03 May 2015 06:40:43 +0300</pubDate>
       
-      <guid>https://mvarela.github.io/publication/varela-qomex2015-1/</guid>
+      <guid>https://martin.varela.fi/publication/varela-qomex2015-1/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A Network Information Service for Quality-Driven Mobility</title>
-      <link>https://mvarela.github.io/publication/varela-ccnc15/</link>
+      <link>https://martin.varela.fi/publication/varela-ccnc15/</link>
       <pubDate>Sat, 03 Jan 2015 06:40:39 +0300</pubDate>
       
-      <guid>https://mvarela.github.io/publication/varela-ccnc15/</guid>
+      <guid>https://martin.varela.fi/publication/varela-ccnc15/</guid>
       <description></description>
     </item>
     
     <item>
       <title>QuoTe — An Extensible Platform for QoE Monitoring and Benchmarking of Telemedicine Applications</title>
-      <link>https://mvarela.github.io/publication/varela-ssh14/</link>
+      <link>https://martin.varela.fi/publication/varela-ssh14/</link>
       <pubDate>Fri, 03 Oct 2014 06:40:44 +0300</pubDate>
       
-      <guid>https://mvarela.github.io/publication/varela-ssh14/</guid>
+      <guid>https://martin.varela.fi/publication/varela-ssh14/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quality-Driven Optimal SLA Selection for Enterprise Cloud Communications</title>
-      <link>https://mvarela.github.io/publication/varela-qoenam14/</link>
+      <link>https://martin.varela.fi/publication/varela-qoenam14/</link>
       <pubDate>Tue, 03 Jun 2014 06:40:42 +0300</pubDate>
       
-      <guid>https://mvarela.github.io/publication/varela-qoenam14/</guid>
+      <guid>https://martin.varela.fi/publication/varela-qoenam14/</guid>
       <description></description>
     </item>
     
