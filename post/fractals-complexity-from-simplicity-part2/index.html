@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.27.1" />
+  <meta name="author" content="Martín Varela">
+  <meta name="description" content="QoE Guy">
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/zenburn.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.0/css/academicons.min.css" integrity="sha512-GGGNUPDhnG8LEAEDsjqYIQns+Gu8RBs4j5XGlxl7UfRaZBhCCm5jenJkeJL8uPuOXGqgl8/H1gjlWQDRjd3cUQ==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-107269456-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  <link rel="alternate" href="https://martin.varela.fi/index.xml" type="application/rss+xml" title="">
+  <link rel="feed" href="https://martin.varela.fi/index.xml" type="application/rss+xml" title="">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="https://martin.varela.fi/post/fractals-complexity-from-simplicity-part2/">
+
+  
+
+  <title>Fractals — Complexity from Simplicity — Part 2 | </title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"></a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#talks">
+            
+            <span>Talks</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#personal">
+            
+            <span>Personal</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+<div class="article-header">
+  <img src="/img/headers/fractals2.png" class="article-banner" itemprop="image">
+  
+</div>
+
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Fractals — Complexity from Simplicity — Part 2</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-10-02 19:23:43 &#43;0300 EEST" itemprop="datePublished">
+      2017-10-02
+    </time>
+  </span>
+
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/math">math</a
+    >, 
+    
+    <a href="/tags/fractals">fractals</a
+    >, 
+    
+    <a href="/tags/clojure">Clojure</a
+    >, 
+    
+    <a href="/tags/just-for-fun">just for fun</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmartin.varela.fi%2fpost%2ffractals-complexity-from-simplicity-part2%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Fractals%20%e2%80%94%20Complexity%20from%20Simplicity%20%e2%80%94%20Part%202&amp;url=https%3a%2f%2fmartin.varela.fi%2fpost%2ffractals-complexity-from-simplicity-part2%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmartin.varela.fi%2fpost%2ffractals-complexity-from-simplicity-part2%2f&amp;title=Fractals%20%e2%80%94%20Complexity%20from%20Simplicity%20%e2%80%94%20Part%202"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fmartin.varela.fi%2fpost%2ffractals-complexity-from-simplicity-part2%2f&amp;title=Fractals%20%e2%80%94%20Complexity%20from%20Simplicity%20%e2%80%94%20Part%202"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Fractals%20%e2%80%94%20Complexity%20from%20Simplicity%20%e2%80%94%20Part%202&amp;body=https%3a%2f%2fmartin.varela.fi%2fpost%2ffractals-complexity-from-simplicity-part2%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      <!-- -*- org-export-babel-evaluate: nil -*- -->
+
+<h1 id="beyond-l-systems">Beyond L-Systems</h1>
+
+<p>In the <a href="http://martin.varela.fi/post/fractals-complexity-from-simplicity/" title="first part of this post" target="_blank">first part of this post</a>, we went over Lindenmayer systems, and saw how
+from small sets of very simple rules, complexity emerged in the form of
+intricate patterns. In this part, we will look at two other types of fractals.
+The first one, is called the <a href="https://en.wikipedia.org/wiki/Barnsley_fern" title="Barnsley fern" target="_blank">Barnsley fern</a>, and unlike the L-systems in the
+previous post, it is based not on string substitution, but on the repeated
+iteration of affine transformations to a starting point. The second fractal
+we'll cover in this post is the <a href="https://en.wikipedia.org/wiki/Mandelbrot_set" title="Mandelbrot set" target="_blank">Mandelbrot set</a>, which may well be the "most
+famous" fractal out there, and for good reason, as it it really fascinating.</p>
+
+<h1 id="between-many-ferns">Between Many Ferns</h1>
+
+<p>The Barnsley fern is built by applying, in an iterative fashion, a series of
+  affine transformations to a point. The transformations are chosen randomly
+  between four possible ones, and the probability of choosing each one at each
+  iteration is given by a fixed distribution, as follows.</p>
+
+<table>
+<tbody>
+<tr>
+<td>Transformation</td>
+<td>Probability</td>
+</tr>
+
+<tr>
+<td>$f1$</td>
+<td>0.01</td>
+</tr>
+
+<tr>
+<td>$f2$</td>
+<td>0.85</td>
+</tr>
+
+<tr>
+<td>$f3$</td>
+<td>0.07</td>
+</tr>
+
+<tr>
+<td>$f4$</td>
+<td>0.07</td>
+</tr>
+</tbody>
+</table>
+
+<p>Each transformation corresponds has the form $Ax + y$, where $A$ is a $2\times2$
+  matrix, $x$ is the point being transformed, and $y$ is a constant vector. If
+  $A$ is of the form $$ \begin{pmatrix} a&b \\ c&d \end{pmatrix}$$ and $y$ is
+  of the form $$ \begin{pmatrix} e \\ f\end{pmatrix}$$ then we have 
+$$f(x,y) = \begin{pmatrix} ax + by + e \\ cx + dy + f \end{pmatrix} $$</p>
+
+<p>The coefficients for the $f1\cdots f4$ transformations are as follows:</p>
+
+<table>
+<tbody>
+<tr>
+<td>Transforms</td>
+<td></td>
+<td></td>
+<td>Coeff.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>a</td>
+<td>b</td>
+<td>c</td>
+<td>d</td>
+<td>e</td>
+<td>f</td>
+</tr>
+
+<tr>
+<td>$f1$</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.16</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>$f2$</td>
+<td>0.85</td>
+<td>0.04</td>
+<td>-0.04</td>
+<td>0.85</td>
+<td>0</td>
+<td>1.6</td>
+</tr>
+
+<tr>
+<td>$f3$</td>
+<td>0.2</td>
+<td>-0.26</td>
+<td>0.23</td>
+<td>0.22</td>
+<td>0</td>
+<td>1.6</td>
+</tr>
+
+<tr>
+<td>$f4$</td>
+<td>-0.15</td>
+<td>0.28</td>
+<td>0.26</td>
+<td>0.24</td>
+<td>0</td>
+<td>0.44</td>
+</tr>
+</tbody>
+</table>
+
+<p>We can start putting this to code, by defining the transformations and their
+application:</p>
+
+<pre><code class="language-clojure">
+(ns fractals.barnsley
+  (:require [fractals.util :as util]    ;; We'll use a helper to scale the plot to the canvas
+            [hiccup.core :as hiccup]))  ;; And hiccup to generate the HTML/SVG
+
+(def transforms {:f1 [0 0 0 0.16 0 0]
+                 :f2 [0.85 0.04 -0.04 0.85 0 1.6]
+                 :f3 [0.2 -0.26 0.23 0.22 0 1.6]
+                 :f4 [-0.15 0.28 0.26 0.24 0 0.44]})
+
+
+(defn- apply-transform [point coeffs]
+  (if (empty? coeffs)
+    [0 0]
+    (let [[x y] point
+          [a b c d e f] coeffs
+          xx  (+ (* a x) (* b y) e)
+          yy  (+ (* c x) (* d y) f)]
+      [xx yy])))
+</code></pre>
+
+<p>With that done, we can proceed to implement the actual Barnsley fern fractal.
+First, we pick the transformations with the given probability distribution</p>
+
+<pre><code class="language-clojure">
+(defn- transform-probs [i]
+  (cond
+    (&lt;= i 0.01) :f1
+    (&lt;= i (+ 0.01 0.85)) :f2
+    (&lt;= i (+ 0.01 0.85 0.07)) :f3
+    :true :f4))
+</code></pre>
+
+<p>We can now iterate on our starting point, for however many iterations we want to
+do.</p>
+
+<pre><code class="language-clojure">
+(defn barnsley-fern [num-points]
+  (let [probs (repeatedly num-points rand)
+        coeflist (map (comp transforms transform-probs) probs)]
+    (reductions apply-transform [0 0] coeflist)))
+</code></pre>
+
+<p>Basically, what we are doing is choosing a sequence of transformations to apply
+(randomly, according to the given distribution), and then reducing the actual
+transformation, starting on the origin, and keeping all intermediate results.
+This gives us a list of points of the form $(f_{i_1}(0,0),f_{i_2}(f_{i_1}(0,0)),
+f_{i_3}(f_{i_2}(f_{i_1}(0,0))), \cdots)$, where each $i_j \in {1,2,3,4}$.</p>
+
+<p>All that is left to do now is render this series of points. We'll do them as
+tiny SVG circles, similar to how we did with polylines for the L-system fractals
+in the previous post.</p>
+
+<pre><code class="language-clojure">
+(defn- render-svg-points [plot-points size]
+  (let [xmlns &quot;http://www.w3.org/2000/svg&quot;
+        style &quot;stroke:#5f7f5fBB; fill:#5f7f5fBB;&quot;
+        scale-bf (fn [[x y]] [(* 100 x) (* 100 y)])
+        points (util/fix-coords (map scale-bf plot-points) size)
+        do-circle (fn [pt] (let [[x y] pt]
+                             [:circle {:cx (str x)
+                                       :cy (str y)
+                                       :r &quot;0.2&quot;
+                                       :style style}]))
+        circles (vec (conj (map do-circle  points) :g))]
+    (hiccup/html [:html
+                  [:div {:padding 25}
+                   [:svg {:width size
+                          :height size
+                          :xmlns xmlns}
+                    circles]]])))
+
+(defn do-BF [num-points]
+  (spit &quot;barnsley-fern.html&quot; (render-svg-points (barnsley-fern num-points) 40000)))
+</code></pre>
+
+<p>Running this with 40K points renders the following.</p>
+
+<p><img src="/img/fractals/barnsley.png" alt="/img/fractals/barnsley.png" title="/img/fractals/barnsley.png" /></p>
+
+<p>The actual SVG can be found <a href="http:/html/fractals/barnsley-fern.html" title="here" target="_blank">here</a>.</p>
+
+<p>It is interesting to see how the whole pattern repeats in each leaf portion.
+Looking closer, we can find the whole fern leaf repeated in each part of itself.</p>
+
+<h1 id="and-now-for-the-main-attraction">And Now for the Main Attraction...</h1>
+
+<p>The Mandelbrot set is a favorite of mine, and I have to admit that when writing
+the code for this renderer, I spent much more time than I had expected just
+playing with it, really fascinated by its complexity and beauty.</p>
+
+<p>The Mandelbrot set $M$ is defined on the complex plane, as those points $c$ for which
+the following recurrence remains bounded:
+$$ z_{n+1} = z^2_n + c$$ with $z_0 = 0$.</p>
+
+<p>In particular, $c \in M$ if $\limsup\limits_{n\rightarrow
+\infty}\left|z_n\right| \leq 2$.</p>
+
+<p>In software, we can only approximate the limit of this recurrence with a given
+number of iterations, which we refer to as <em>depth</em>. The deeper we iterate, the
+more detail we will obtain in our rendering of the set. A basic approach to
+generating the set would consist of defining a depth, a section of the complex
+plane where the points we consider will be, and a mapping from a set of pixels
+to these points. We then calculate, for each pixel, whether the recurrence
+diverges or remains bounded within the given number of iterations, and then
+assign a boolean value to whether the point represented by the pixel belongs to
+the set.</p>
+
+<p>We can do a bit better, by considering, instead of a binary value, the number of
+iterations that it took for the recurrence to diverge at each point not in the
+set. This allows for a bit more nuanced representation when we render it.</p>
+
+<p>In code:</p>
+
+<pre><code class="language-clojure">
+(ns fractals.mandelbrot
+  (:require [com.evocomputing.colors :as c]  ;; we'll use the HSV space for coloring
+            [clojure.string :refer [join]])
+  (:import [java.io File]
+           [javax.imageio ImageIO]
+           [java.awt Color]
+           [java.awt.image BufferedImage]))  ;; some java interop for rendering PNGs
+
+(defn- square-z [r i]
+  [(- (* r r) (* i i)) (* 2 r i)])
+
+(defn- in-mandelbrot? [point iter]
+  &quot;This function will return 0 if the point is in the set, and otherwise, the
+  number of remaining iterations remaining (out of the original maximum), if the
+  point 'escapes' from the set&quot;
+  (let [values (iterate #(map + point (square-z (first %) (second %))) [0 0])
+        test  (fn[acc [r i]]
+                (if (or (&gt;= acc iter) (&gt; (+ (* r r)(* i i)) 4))
+                  (reduced acc)
+                  (inc acc)))
+        counted (reduce test 0 values)]
+    (- iter counted)))
+</code></pre>
+
+<p>In order to actually render the set, we need a bit more work, as we need to
+define the mapping of our view-port to a section of the complex plane.</p>
+
+<pre><code class="language-clojure">
+
+(defn- scale-to-bounds
+&quot;This function takes a point [x y] in an plot area [[0 0] [xmax ymax]],
+  and maps it to a bounding box in the real plane where the plotting will be
+  done. The bounding box is defined by its lower left and upper right corners,
+  and in practice, should not be much larger than [[-2.5 -1] [1 1]], which is
+  where the fun stuff happens&quot;
+  [point img-size bounding-box]
+  (let [[x y] point
+        [xmax ymax] img-size
+        [[b-x-min b-y-min][b-x-max b-y-max]] bounding-box
+        bx-span (- b-x-max b-x-min)
+        by-span (- b-y-max b-y-min)
+        xx (- (* bx-span (/ x xmax)) (Math/abs b-x-min))
+        yy (- (* by-span (/ y ymax)) (Math/abs b-y-min))]
+    [xx yy]))
+
+(defn mandelbrot [size bounding-box depth]
+  (let [[xmax ymax] size
+        points (for [y (range ymax)
+                     x (range xmax)]
+                 [x y])
+        f (fn[i](-&gt; i
+                   (scale-to-bounds size bounding-box)
+                   (in-mandelbrot? depth)))]
+    (pmap f points)))
+</code></pre>
+
+<p>With these two functions, we have now a representation we can use for plotting.
+We can map the view-port to a section of the plane with the <code>scale-to-bounds</code> 
+function, and then for each point in the view-port, calculate the number of
+iterations it took to diverge. This code is simple to understand, but not really efficient. I
+suspect there's a bit of stream fusion that could be applied here (possibly
+using transducers in Clojure, or using mutable state), but for the sake of
+simplicity, I'd rather have this pure version for now.</p>
+
+<p>Now we can render our set. As a first approach, we could simply use the <a href="https://en.wikipedia.org/wiki/Netpbm_format" title="PPM
+ASCII format" target="_blank">PPM
+ASCII format</a>, which is trivial to implement without any external library:</p>
+
+<pre><code class="language-clojure">
+(defn do-ppm [points size depth name]
+  (let [[x y] size
+        contents (-&gt;&gt; points
+                      (partition x)
+                      (reverse) ;; otherwise we mirror on the x axis
+                      (map #(join &quot; &quot; (map str %)))
+                      (interpose &quot;\n&quot;)
+                      (apply str)
+                      )
+        header (str &quot;P2\n&quot; (str x) &quot; &quot;
+                    (str y) &quot;\n&quot;
+                    (str depth) &quot;\n&quot;)]
+    (spit name (str header contents))))
+</code></pre>
+
+<p>The above code is nothing fancy, but it gets us something to look at (and even
+within Emacs!):</p>
+
+<p><img src="/img/fractals/full-ppm.png" alt="/img/fractals/full-ppm.png" title="/img/fractals/full-ppm.png" /></p>
+
+<p>This is pretty cool! However, we can do easily better. We will use a bit of our
+host platform to render color PNGs. This will require two things, firstly,
+mapping the values we have to color values, and secondly, rendering the PNG
+itself. Since we have a sort of "intensity" value for each pixel, in the form of
+the number of iterations, we will calculate the color in the HSV space, using a
+fixed hue and saturation, and scaling the number of iterations to the value of
+the color. This will render the points in the set in black, and those not in it
+in different shades.</p>
+
+<pre><code class="language-clojure">
+(defn do-color [i depth]
+  (let [icorr (/ (* i 100.0) depth)
+        [r g b] (c/hsl-to-rgb 205 100 icorr)]
+    (bit-or (bit-shift-left r 16)
+            (bit-shift-left g 8)
+            b)))
+
+
+(defn do-png [points size depth name]
+  (ImageIO/write
+   (let [width (first size)
+         height (second size)
+         pts (-&gt;&gt; points
+                  (partition width)
+                  (reverse)  ;; the y axies grows &quot;downwards&quot; in the PNG
+                  (map vec)
+                  (vec))
+         out (new BufferedImage width height  BufferedImage/TYPE_3BYTE_BGR)]
+     (doseq [x (range width)
+             y (range height)]
+       (.setRGB out x y (do-color (get-in pts [y x]) depth)))
+     out)
+   &quot;png&quot;
+   (new File name )))
+</code></pre>
+
+<p>Now we have some colors, but to be honest, the result is a bit underwhelming...</p>
+
+<p><img src="/img/fractals/full-simple.png" alt="/img/fractals/full-simple.png" title="/img/fractals/full-simple.png" /></p>
+
+<p>One thing we can realize, is that most of the "interesting" parts of the render
+happen around the limits of the set, so we can modify our coloring function to
+reflect that. We do this by making the middle of the iteration range the
+brightest, and then decrease the value as we move towards the edges of the
+range. For a bit more "drama", we also treat the saturation similarly. We redefine
+then our <code>do-color</code> function:</p>
+
+<pre><code class="language-clojure">
+(defn do-color
+  &quot;Maps a new color with the value based on the number of iterations it took
+  for the point to escape the set. The plain mapping is rather dull, so here we
+  focus on the points which are in the boundaries (intuitively, those that took
+  long to escape, but not longest). We calculate the value as the distance
+  to the middle value, which results in a nice 'electric' look around the edges
+  of the set&quot;
+  [i depth]
+  (let [ icorr (/ (* i 100.0) depth)
+        l (- 100 (* 2 (Math/abs (- 50 icorr))))
+        s (- 100 (* 1.3 (Math/abs (- 50 icorr))))
+        [r g b] (c/hsl-to-rgb 205 s l)]
+    (bit-or (bit-shift-left r 16)
+            (bit-shift-left g 8)
+            b)))
+</code></pre>
+
+<p>Now this looks much better!</p>
+
+<p><img src="/img/fractals/full.png" alt="/img/fractals/full.png" title="/img/fractals/full.png" /></p>
+
+<p>With a suitable rendering mechanism, now we can explore a bit the set, and start
+looking into interesting portions. We can "zoom in" as much as we want, by
+defining suitable bounding boxes, and we can increase the detail by increasing
+the depth. For example, we can take a closer look at the so-called <em>Seahorse
+valley</em>.</p>
+
+<p><img src="/img/fractals/seahorse-left.png" alt="/img/fractals/seahorse-left.png" title="/img/fractals/seahorse-left.png" /></p>
+
+<p>I find this area of the plane truly fascinating, the patterns and depth of it
+are quite something. To give you an idea, here is a 24 megapixel render, with a
+depth of 2000 iterations. Go on, click on it, and zoom in to its full size. I'll
+wait for you here.</p>
+
+<p><a href="/img/fractals/seahorse.png" target="_blank"> <img src="/img/fractals/seahorse.png"></a></p>
+
+<p>Is that wonderful, or what?</p>
+
+<h1 id="just-one-more-thing">Just One More Thing</h1>
+
+<p>In order to appreciate the Mandelbrot set in all its splendor, it would be nice
+to be able to "fall" into it, with an animation. Given that we have a way to
+render a view-port onto any area of the plane, it's not much more effort to
+do it for a set of areas along a path, with different magnification levels.</p>
+
+<p>We will basically start with a target image size (and implied aspect ratio),
+centered around a point, and with a given surface area on the complex plane. We
+will then choose another point and another target surface area where the last
+frame will be centered. All we need to do now is to create the required number
+of bounding boxes, interpolating position and size over the number of frames to
+render. Going back to our code:</p>
+
+<pre><code class="language-clojure">
+(ns fractals.animate
+  (:require [fractals.mandelbrot :as m]
+            [clojure.math.numeric-tower :as nt]))
+
+(defn interpolate-centers [start-point end-point nframes]
+  (let [[xs ys] start-point
+        [xe ye] end-point
+        delta-x (- xe xs)
+        delta-y (- ye ys)
+        step (/ (Math/sqrt (+ (nt/expt delta-x 2)
+                              (nt/expt delta-y 2)))
+                nframes)
+        theta (Math/atan2  delta-y delta-x)
+        next-center (fn [[x y]] [(+ x (* step (Math/cos theta)))
+                                 (+ y (* step (Math/sin theta)))])]
+    (take (inc nframes) (iterate next-center start-point))))
+
+(defn interpolate-areas [start-area ratio nframes]
+  (let [step (nt/expt ratio (/ 1.0 nframes))]
+    (take (inc nframes)
+          (iterate #(/ % step) start-area))))
+
+(defn bounding-box [aspect-ratio area center]
+  (let [[x y] center
+        dim-y (nt/sqrt (/ area aspect-ratio))
+        dim-x (* dim-y aspect-ratio)
+        delta-y (/ dim-y 2)
+        delta-x (/ dim-x 2)]
+    [[(- x delta-x) (- y delta-y)]
+     [(+ x delta-x) (+ y delta-y)]]))
+
+(defn animate-mandelbrot [img-width
+                          img-height
+                          depth
+                          start-point
+                          end-point
+                          start-area
+                          zoom-factor
+                          nframes]
+  (let [centers (interpolate-centers start-point end-point nframes)
+        areas (interpolate-areas start-area zoom-factor nframes)
+        aspect-ratio (/ img-width img-height)
+        size [img-width img-height]
+        b-boxes (map (partial bounding-box aspect-ratio) areas centers)
+        names (map (partial format &quot;mb-frame-%04d.png&quot;) (range))
+        fracs (map #(m/mandelbrot size % depth) b-boxes)]
+    (dorun (pmap #(m/do-png %1 size depth %2) fracs names))))
+</code></pre>
+
+<p>This code technically has a bug, in that when the center position moves across
+the x axis, the movement mirrors in the rendering (because of how the y axis
+increases "downwards" on the PNG render), resulting in an angled path,
+instead of a straight one. Despite this being simple to fix, I'll call this a
+feature, and leave it in, as it allows for some interesting zooms that would
+otherwise require a more generic approach to constructing paths .</p>
+
+<p>Here is a full-HD clip of us "falling into the Seahorse Valley".
+<iframe width="853" height="480" src="https://www.youtube.com/embed/FptVUuB4qWI" frameborder="0" allowfullscreen></iframe></p>
+
+<h1 id="that-s-all-folks">That's All, Folks!</h1>
+
+<p>I hope you have enjoyed these posts on fractals as much as I enjoyed writing
+them, they were really a lot of fun to play with! The code can be found <a href="https://github.com/mvarela/Fractal-Playground" title="on
+GitHub" target="_blank">on
+GitHub</a> if you want to play with it.</p>
+
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://martin.varela.fi/post/fractals-complexity-from-simplicity/"><span
+      aria-hidden="true">&larr;</span> Fractals — Complexity from Simplicity (and a bit of Clojure)</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min.js" integrity="sha512-iHzEu7GbSc705hE2skyH6/AlTpOfBmkx7nUqTLGzPYR+C1tRaItbRlJ7hT/D3YQ9SV0fqLKzp4XY9wKulTBGTw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" integrity="sha512-Z5heTz36xTemt1TbtbfXtTq5lMfYnOkXM2/eWcTTiLU01+Sw4ku1i7vScDc8fWhrP2abz9GQzgKH5NGBLoYlAw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js" integrity="sha512-CDeU7pRtkPX6XJtF/gcFWlEwyaX7mcAp5sO3VIu/ylsdR74wEw4wmBpD5yYTrmMAiAboi9thyBUr1vXRPA7t0Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/ruby.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/haskell.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/r.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/lisp.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/emacs-lisp.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/shell.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/clojure.min.js"></script>
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+

@@ -10,6 +10,509 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Fractals — Complexity from Simplicity — Part 2</title>
+      <link>https://martin.varela.fi/post/fractals-complexity-from-simplicity-part2/</link>
+      <pubDate>Mon, 02 Oct 2017 19:23:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/post/fractals-complexity-from-simplicity-part2/</guid>
+      <description>&lt;!-- -*- org-export-babel-evaluate: nil -*- --&gt;
+
+&lt;h1 id=&#34;beyond-l-systems&#34;&gt;Beyond L-Systems&lt;/h1&gt;
+
+&lt;p&gt;In the &lt;a href=&#34;http://martin.varela.fi/post/fractals-complexity-from-simplicity/&#34; title=&#34;first part of this post&#34; target=&#34;_blank&#34;&gt;first part of this post&lt;/a&gt;, we went over Lindenmayer systems, and saw how
+from small sets of very simple rules, complexity emerged in the form of
+intricate patterns. In this part, we will look at two other types of fractals.
+The first one, is called the &lt;a href=&#34;https://en.wikipedia.org/wiki/Barnsley_fern&#34; title=&#34;Barnsley fern&#34; target=&#34;_blank&#34;&gt;Barnsley fern&lt;/a&gt;, and unlike the L-systems in the
+previous post, it is based not on string substitution, but on the repeated
+iteration of affine transformations to a starting point. The second fractal
+we&#39;ll cover in this post is the &lt;a href=&#34;https://en.wikipedia.org/wiki/Mandelbrot_set&#34; title=&#34;Mandelbrot set&#34; target=&#34;_blank&#34;&gt;Mandelbrot set&lt;/a&gt;, which may well be the &#34;most
+famous&#34; fractal out there, and for good reason, as it it really fascinating.&lt;/p&gt;
+
+&lt;h1 id=&#34;between-many-ferns&#34;&gt;Between Many Ferns&lt;/h1&gt;
+
+&lt;p&gt;The Barnsley fern is built by applying, in an iterative fashion, a series of
+  affine transformations to a point. The transformations are chosen randomly
+  between four possible ones, and the probability of choosing each one at each
+  iteration is given by a fixed distribution, as follows.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Transformation&lt;/td&gt;
+&lt;td&gt;Probability&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;$f1$&lt;/td&gt;
+&lt;td&gt;0.01&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;$f2$&lt;/td&gt;
+&lt;td&gt;0.85&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;$f3$&lt;/td&gt;
+&lt;td&gt;0.07&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;$f4$&lt;/td&gt;
+&lt;td&gt;0.07&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Each transformation corresponds has the form $Ax + y$, where $A$ is a $2\times2$
+  matrix, $x$ is the point being transformed, and $y$ is a constant vector. If
+  $A$ is of the form $$ \begin{pmatrix} a&amp;b \\ c&amp;d \end{pmatrix}$$ and $y$ is
+  of the form $$ \begin{pmatrix} e \\ f\end{pmatrix}$$ then we have 
+$$f(x,y) = \begin{pmatrix} ax + by + e \\ cx + dy + f \end{pmatrix} $$&lt;/p&gt;
+
+&lt;p&gt;The coefficients for the $f1\cdots f4$ transformations are as follows:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Transforms&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Coeff.&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;a&lt;/td&gt;
+&lt;td&gt;b&lt;/td&gt;
+&lt;td&gt;c&lt;/td&gt;
+&lt;td&gt;d&lt;/td&gt;
+&lt;td&gt;e&lt;/td&gt;
+&lt;td&gt;f&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;$f1$&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0.16&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;$f2$&lt;/td&gt;
+&lt;td&gt;0.85&lt;/td&gt;
+&lt;td&gt;0.04&lt;/td&gt;
+&lt;td&gt;-0.04&lt;/td&gt;
+&lt;td&gt;0.85&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1.6&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;$f3$&lt;/td&gt;
+&lt;td&gt;0.2&lt;/td&gt;
+&lt;td&gt;-0.26&lt;/td&gt;
+&lt;td&gt;0.23&lt;/td&gt;
+&lt;td&gt;0.22&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1.6&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;$f4$&lt;/td&gt;
+&lt;td&gt;-0.15&lt;/td&gt;
+&lt;td&gt;0.28&lt;/td&gt;
+&lt;td&gt;0.26&lt;/td&gt;
+&lt;td&gt;0.24&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0.44&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;We can start putting this to code, by defining the transformations and their
+application:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
+(ns fractals.barnsley
+  (:require [fractals.util :as util]    ;; We&#39;ll use a helper to scale the plot to the canvas
+            [hiccup.core :as hiccup]))  ;; And hiccup to generate the HTML/SVG
+
+(def transforms {:f1 [0 0 0 0.16 0 0]
+                 :f2 [0.85 0.04 -0.04 0.85 0 1.6]
+                 :f3 [0.2 -0.26 0.23 0.22 0 1.6]
+                 :f4 [-0.15 0.28 0.26 0.24 0 0.44]})
+
+
+(defn- apply-transform [point coeffs]
+  (if (empty? coeffs)
+    [0 0]
+    (let [[x y] point
+          [a b c d e f] coeffs
+          xx  (+ (* a x) (* b y) e)
+          yy  (+ (* c x) (* d y) f)]
+      [xx yy])))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With that done, we can proceed to implement the actual Barnsley fern fractal.
+First, we pick the transformations with the given probability distribution&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
+(defn- transform-probs [i]
+  (cond
+    (&amp;lt;= i 0.01) :f1
+    (&amp;lt;= i (+ 0.01 0.85)) :f2
+    (&amp;lt;= i (+ 0.01 0.85 0.07)) :f3
+    :true :f4))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We can now iterate on our starting point, for however many iterations we want to
+do.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
+(defn barnsley-fern [num-points]
+  (let [probs (repeatedly num-points rand)
+        coeflist (map (comp transforms transform-probs) probs)]
+    (reductions apply-transform [0 0] coeflist)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Basically, what we are doing is choosing a sequence of transformations to apply
+(randomly, according to the given distribution), and then reducing the actual
+transformation, starting on the origin, and keeping all intermediate results.
+This gives us a list of points of the form $(f_{i_1}(0,0),f_{i_2}(f_{i_1}(0,0)),
+f_{i_3}(f_{i_2}(f_{i_1}(0,0))), \cdots)$, where each $i_j \in {1,2,3,4}$.&lt;/p&gt;
+
+&lt;p&gt;All that is left to do now is render this series of points. We&#39;ll do them as
+tiny SVG circles, similar to how we did with polylines for the L-system fractals
+in the previous post.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
+(defn- render-svg-points [plot-points size]
+  (let [xmlns &amp;quot;http://www.w3.org/2000/svg&amp;quot;
+        style &amp;quot;stroke:#5f7f5fBB; fill:#5f7f5fBB;&amp;quot;
+        scale-bf (fn [[x y]] [(* 100 x) (* 100 y)])
+        points (util/fix-coords (map scale-bf plot-points) size)
+        do-circle (fn [pt] (let [[x y] pt]
+                             [:circle {:cx (str x)
+                                       :cy (str y)
+                                       :r &amp;quot;0.2&amp;quot;
+                                       :style style}]))
+        circles (vec (conj (map do-circle  points) :g))]
+    (hiccup/html [:html
+                  [:div {:padding 25}
+                   [:svg {:width size
+                          :height size
+                          :xmlns xmlns}
+                    circles]]])))
+
+(defn do-BF [num-points]
+  (spit &amp;quot;barnsley-fern.html&amp;quot; (render-svg-points (barnsley-fern num-points) 40000)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Running this with 40K points renders the following.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/barnsley.png&#34; alt=&#34;/img/fractals/barnsley.png&#34; title=&#34;/img/fractals/barnsley.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The actual SVG can be found &lt;a href=&#34;http:/html/fractals/barnsley-fern.html&#34; title=&#34;here&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It is interesting to see how the whole pattern repeats in each leaf portion.
+Looking closer, we can find the whole fern leaf repeated in each part of itself.&lt;/p&gt;
+
+&lt;h1 id=&#34;and-now-for-the-main-attraction&#34;&gt;And Now for the Main Attraction...&lt;/h1&gt;
+
+&lt;p&gt;The Mandelbrot set is a favorite of mine, and I have to admit that when writing
+the code for this renderer, I spent much more time than I had expected just
+playing with it, really fascinated by its complexity and beauty.&lt;/p&gt;
+
+&lt;p&gt;The Mandelbrot set $M$ is defined on the complex plane, as those points $c$ for which
+the following recurrence remains bounded:
+$$ z_{n+1} = z^2_n + c$$ with $z_0 = 0$.&lt;/p&gt;
+
+&lt;p&gt;In particular, $c \in M$ if $\limsup\limits_{n\rightarrow
+\infty}\left|z_n\right| \leq 2$.&lt;/p&gt;
+
+&lt;p&gt;In software, we can only approximate the limit of this recurrence with a given
+number of iterations, which we refer to as &lt;em&gt;depth&lt;/em&gt;. The deeper we iterate, the
+more detail we will obtain in our rendering of the set. A basic approach to
+generating the set would consist of defining a depth, a section of the complex
+plane where the points we consider will be, and a mapping from a set of pixels
+to these points. We then calculate, for each pixel, whether the recurrence
+diverges or remains bounded within the given number of iterations, and then
+assign a boolean value to whether the point represented by the pixel belongs to
+the set.&lt;/p&gt;
+
+&lt;p&gt;We can do a bit better, by considering, instead of a binary value, the number of
+iterations that it took for the recurrence to diverge at each point not in the
+set. This allows for a bit more nuanced representation when we render it.&lt;/p&gt;
+
+&lt;p&gt;In code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
+(ns fractals.mandelbrot
+  (:require [com.evocomputing.colors :as c]  ;; we&#39;ll use the HSV space for coloring
+            [clojure.string :refer [join]])
+  (:import [java.io File]
+           [javax.imageio ImageIO]
+           [java.awt Color]
+           [java.awt.image BufferedImage]))  ;; some java interop for rendering PNGs
+
+(defn- square-z [r i]
+  [(- (* r r) (* i i)) (* 2 r i)])
+
+(defn- in-mandelbrot? [point iter]
+  &amp;quot;This function will return 0 if the point is in the set, and otherwise, the
+  number of remaining iterations remaining (out of the original maximum), if the
+  point &#39;escapes&#39; from the set&amp;quot;
+  (let [values (iterate #(map + point (square-z (first %) (second %))) [0 0])
+        test  (fn[acc [r i]]
+                (if (or (&amp;gt;= acc iter) (&amp;gt; (+ (* r r)(* i i)) 4))
+                  (reduced acc)
+                  (inc acc)))
+        counted (reduce test 0 values)]
+    (- iter counted)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In order to actually render the set, we need a bit more work, as we need to
+define the mapping of our view-port to a section of the complex plane.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
+
+(defn- scale-to-bounds
+&amp;quot;This function takes a point [x y] in an plot area [[0 0] [xmax ymax]],
+  and maps it to a bounding box in the real plane where the plotting will be
+  done. The bounding box is defined by its lower left and upper right corners,
+  and in practice, should not be much larger than [[-2.5 -1] [1 1]], which is
+  where the fun stuff happens&amp;quot;
+  [point img-size bounding-box]
+  (let [[x y] point
+        [xmax ymax] img-size
+        [[b-x-min b-y-min][b-x-max b-y-max]] bounding-box
+        bx-span (- b-x-max b-x-min)
+        by-span (- b-y-max b-y-min)
+        xx (- (* bx-span (/ x xmax)) (Math/abs b-x-min))
+        yy (- (* by-span (/ y ymax)) (Math/abs b-y-min))]
+    [xx yy]))
+
+(defn mandelbrot [size bounding-box depth]
+  (let [[xmax ymax] size
+        points (for [y (range ymax)
+                     x (range xmax)]
+                 [x y])
+        f (fn[i](-&amp;gt; i
+                   (scale-to-bounds size bounding-box)
+                   (in-mandelbrot? depth)))]
+    (pmap f points)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With these two functions, we have now a representation we can use for plotting.
+We can map the view-port to a section of the plane with the &lt;code&gt;scale-to-bounds&lt;/code&gt; 
+function, and then for each point in the view-port, calculate the number of
+iterations it took to diverge. This code is simple to understand, but not really efficient. I
+suspect there&#39;s a bit of stream fusion that could be applied here (possibly
+using transducers in Clojure, or using mutable state), but for the sake of
+simplicity, I&#39;d rather have this pure version for now.&lt;/p&gt;
+
+&lt;p&gt;Now we can render our set. As a first approach, we could simply use the &lt;a href=&#34;https://en.wikipedia.org/wiki/Netpbm_format&#34; title=&#34;PPM
+ASCII format&#34; target=&#34;_blank&#34;&gt;PPM
+ASCII format&lt;/a&gt;, which is trivial to implement without any external library:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
+(defn do-ppm [points size depth name]
+  (let [[x y] size
+        contents (-&amp;gt;&amp;gt; points
+                      (partition x)
+                      (reverse) ;; otherwise we mirror on the x axis
+                      (map #(join &amp;quot; &amp;quot; (map str %)))
+                      (interpose &amp;quot;\n&amp;quot;)
+                      (apply str)
+                      )
+        header (str &amp;quot;P2\n&amp;quot; (str x) &amp;quot; &amp;quot;
+                    (str y) &amp;quot;\n&amp;quot;
+                    (str depth) &amp;quot;\n&amp;quot;)]
+    (spit name (str header contents))))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The above code is nothing fancy, but it gets us something to look at (and even
+within Emacs!):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/full-ppm.png&#34; alt=&#34;/img/fractals/full-ppm.png&#34; title=&#34;/img/fractals/full-ppm.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is pretty cool! However, we can do easily better. We will use a bit of our
+host platform to render color PNGs. This will require two things, firstly,
+mapping the values we have to color values, and secondly, rendering the PNG
+itself. Since we have a sort of &#34;intensity&#34; value for each pixel, in the form of
+the number of iterations, we will calculate the color in the HSV space, using a
+fixed hue and saturation, and scaling the number of iterations to the value of
+the color. This will render the points in the set in black, and those not in it
+in different shades.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
+(defn do-color [i depth]
+  (let [icorr (/ (* i 100.0) depth)
+        [r g b] (c/hsl-to-rgb 205 100 icorr)]
+    (bit-or (bit-shift-left r 16)
+            (bit-shift-left g 8)
+            b)))
+
+
+(defn do-png [points size depth name]
+  (ImageIO/write
+   (let [width (first size)
+         height (second size)
+         pts (-&amp;gt;&amp;gt; points
+                  (partition width)
+                  (reverse)  ;; the y axies grows &amp;quot;downwards&amp;quot; in the PNG
+                  (map vec)
+                  (vec))
+         out (new BufferedImage width height  BufferedImage/TYPE_3BYTE_BGR)]
+     (doseq [x (range width)
+             y (range height)]
+       (.setRGB out x y (do-color (get-in pts [y x]) depth)))
+     out)
+   &amp;quot;png&amp;quot;
+   (new File name )))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we have some colors, but to be honest, the result is a bit underwhelming...&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/full-simple.png&#34; alt=&#34;/img/fractals/full-simple.png&#34; title=&#34;/img/fractals/full-simple.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;One thing we can realize, is that most of the &#34;interesting&#34; parts of the render
+happen around the limits of the set, so we can modify our coloring function to
+reflect that. We do this by making the middle of the iteration range the
+brightest, and then decrease the value as we move towards the edges of the
+range. For a bit more &#34;drama&#34;, we also treat the saturation similarly. We redefine
+then our &lt;code&gt;do-color&lt;/code&gt; function:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
+(defn do-color
+  &amp;quot;Maps a new color with the value based on the number of iterations it took
+  for the point to escape the set. The plain mapping is rather dull, so here we
+  focus on the points which are in the boundaries (intuitively, those that took
+  long to escape, but not longest). We calculate the value as the distance
+  to the middle value, which results in a nice &#39;electric&#39; look around the edges
+  of the set&amp;quot;
+  [i depth]
+  (let [ icorr (/ (* i 100.0) depth)
+        l (- 100 (* 2 (Math/abs (- 50 icorr))))
+        s (- 100 (* 1.3 (Math/abs (- 50 icorr))))
+        [r g b] (c/hsl-to-rgb 205 s l)]
+    (bit-or (bit-shift-left r 16)
+            (bit-shift-left g 8)
+            b)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now this looks much better!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/full.png&#34; alt=&#34;/img/fractals/full.png&#34; title=&#34;/img/fractals/full.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;With a suitable rendering mechanism, now we can explore a bit the set, and start
+looking into interesting portions. We can &#34;zoom in&#34; as much as we want, by
+defining suitable bounding boxes, and we can increase the detail by increasing
+the depth. For example, we can take a closer look at the so-called &lt;em&gt;Seahorse
+valley&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/seahorse-left.png&#34; alt=&#34;/img/fractals/seahorse-left.png&#34; title=&#34;/img/fractals/seahorse-left.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I find this area of the plane truly fascinating, the patterns and depth of it
+are quite something. To give you an idea, here is a 24 megapixel render, with a
+depth of 2000 iterations. Go on, click on it, and zoom in to its full size. I&#39;ll
+wait for you here.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://martin.varela.fi/img/fractals/seahorse.png&#34; target=&#34;_blank&#34;&gt; &lt;img src=&#34;https://martin.varela.fi/img/fractals/seahorse.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Is that wonderful, or what?&lt;/p&gt;
+
+&lt;h1 id=&#34;just-one-more-thing&#34;&gt;Just One More Thing&lt;/h1&gt;
+
+&lt;p&gt;In order to appreciate the Mandelbrot set in all its splendor, it would be nice
+to be able to &#34;fall&#34; into it, with an animation. Given that we have a way to
+render a view-port onto any area of the plane, it&#39;s not much more effort to
+do it for a set of areas along a path, with different magnification levels.&lt;/p&gt;
+
+&lt;p&gt;We will basically start with a target image size (and implied aspect ratio),
+centered around a point, and with a given surface area on the complex plane. We
+will then choose another point and another target surface area where the last
+frame will be centered. All we need to do now is to create the required number
+of bounding boxes, interpolating position and size over the number of frames to
+render. Going back to our code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
+(ns fractals.animate
+  (:require [fractals.mandelbrot :as m]
+            [clojure.math.numeric-tower :as nt]))
+
+(defn interpolate-centers [start-point end-point nframes]
+  (let [[xs ys] start-point
+        [xe ye] end-point
+        delta-x (- xe xs)
+        delta-y (- ye ys)
+        step (/ (Math/sqrt (+ (nt/expt delta-x 2)
+                              (nt/expt delta-y 2)))
+                nframes)
+        theta (Math/atan2  delta-y delta-x)
+        next-center (fn [[x y]] [(+ x (* step (Math/cos theta)))
+                                 (+ y (* step (Math/sin theta)))])]
+    (take (inc nframes) (iterate next-center start-point))))
+
+(defn interpolate-areas [start-area ratio nframes]
+  (let [step (nt/expt ratio (/ 1.0 nframes))]
+    (take (inc nframes)
+          (iterate #(/ % step) start-area))))
+
+(defn bounding-box [aspect-ratio area center]
+  (let [[x y] center
+        dim-y (nt/sqrt (/ area aspect-ratio))
+        dim-x (* dim-y aspect-ratio)
+        delta-y (/ dim-y 2)
+        delta-x (/ dim-x 2)]
+    [[(- x delta-x) (- y delta-y)]
+     [(+ x delta-x) (+ y delta-y)]]))
+
+(defn animate-mandelbrot [img-width
+                          img-height
+                          depth
+                          start-point
+                          end-point
+                          start-area
+                          zoom-factor
+                          nframes]
+  (let [centers (interpolate-centers start-point end-point nframes)
+        areas (interpolate-areas start-area zoom-factor nframes)
+        aspect-ratio (/ img-width img-height)
+        size [img-width img-height]
+        b-boxes (map (partial bounding-box aspect-ratio) areas centers)
+        names (map (partial format &amp;quot;mb-frame-%04d.png&amp;quot;) (range))
+        fracs (map #(m/mandelbrot size % depth) b-boxes)]
+    (dorun (pmap #(m/do-png %1 size depth %2) fracs names))))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This code technically has a bug, in that when the center position moves across
+the x axis, the movement mirrors in the rendering (because of how the y axis
+increases &#34;downwards&#34; on the PNG render), resulting in an angled path,
+instead of a straight one. Despite this being simple to fix, I&#39;ll call this a
+feature, and leave it in, as it allows for some interesting zooms that would
+otherwise require a more generic approach to constructing paths .&lt;/p&gt;
+
+&lt;p&gt;Here is a full-HD clip of us &#34;falling into the Seahorse Valley&#34;.
+&lt;iframe width=&#34;853&#34; height=&#34;480&#34; src=&#34;https://www.youtube.com/embed/FptVUuB4qWI&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;that-s-all-folks&#34;&gt;That&#39;s All, Folks!&lt;/h1&gt;
+
+&lt;p&gt;I hope you have enjoyed these posts on fractals as much as I enjoyed writing
+them, they were really a lot of fun to play with! The code can be found &lt;a href=&#34;https://github.com/mvarela/Fractal-Playground&#34; title=&#34;on
+GitHub&#34; target=&#34;_blank&#34;&gt;on
+GitHub&lt;/a&gt; if you want to play with it.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Fractals — Complexity from Simplicity (and a bit of Clojure)</title>
       <link>https://martin.varela.fi/post/fractals-complexity-from-simplicity/</link>
       <pubDate>Tue, 26 Sep 2017 09:43:43 +0300</pubDate>
@@ -338,7 +841,7 @@ stack, to allow for the generation of more complex patterns. The L-system
 processing code on Github has some partial support for those, but the renderer
 doesn&#39;t, so some further work is needed there.&lt;/p&gt;
 
-&lt;p&gt;A second part to this incursion into fractals is upcoming. There we&#39;ll look into
+&lt;p&gt;A &lt;a href=&#34;http://martin.varela.fi/post/fractals-complexity-from-simplicity-part2/&#34; title=&#34;second part&#34; target=&#34;_blank&#34;&gt;second part&lt;/a&gt; to this incursion into fractals is upcoming. There we&#39;ll look into
 two different types of fractals. The first type is based on affine
 transformations and stochastic processes, and the second one is the famous
 &lt;a href=&#34;https://en.wikipedia.org/wiki/Mandelbrot_set&#34; title=&#34;Mandelbrot set&#34; target=&#34;_blank&#34;&gt;Mandelbrot set&lt;/a&gt;.&lt;/p&gt;
@@ -1050,15 +1553,6 @@ free to be used.
       <pubDate>Fri, 04 Dec 2015 15:25:39 +0300</pubDate>
       
       <guid>https://martin.varela.fi/publication/chapter-qoe-defining/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>A Layered Model for Quality Estimation of HTTP Video from QoS Measurements</title>
-      <link>https://martin.varela.fi/publication/varela-quamus15/</link>
-      <pubDate>Tue, 03 Nov 2015 06:40:43 +0300</pubDate>
-      
-      <guid>https://martin.varela.fi/publication/varela-quamus15/</guid>
       <description></description>
     </item>
     
