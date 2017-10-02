@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Clojure on </title>
-    <link>https://martin.varela.fi/tags/clojure/</link>
+    <link>http://martin.varela.fi/tags/clojure/</link>
     <description>Recent content in Clojure on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,10 +11,10 @@
     
     <item>
       <title>Fractals — Complexity from Simplicity — Part 2</title>
-      <link>https://martin.varela.fi/post/fractals-complexity-from-simplicity-part2/</link>
+      <link>http://martin.varela.fi/post/fractals-complexity-from-simplicity-part2/</link>
       <pubDate>Mon, 02 Oct 2017 19:23:43 +0300</pubDate>
       
-      <guid>https://martin.varela.fi/post/fractals-complexity-from-simplicity-part2/</guid>
+      <guid>http://martin.varela.fi/post/fractals-complexity-from-simplicity-part2/</guid>
       <description>&lt;!-- -*- org-export-babel-evaluate: nil -*- --&gt;
 
 &lt;h1 id=&#34;beyond-l-systems&#34;&gt;Beyond L-Systems&lt;/h1&gt;
@@ -217,7 +217,7 @@ in the previous post.&lt;/p&gt;
 
 &lt;p&gt;Running this with 40K points renders the following.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/barnsley.png&#34; alt=&#34;/img/fractals/barnsley.png&#34; title=&#34;/img/fractals/barnsley.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/barnsley.png&#34; alt=&#34;/img/fractals/barnsley.png&#34; title=&#34;/img/fractals/barnsley.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The actual SVG can be found &lt;a href=&#34;http:/html/fractals/barnsley-fern.html&#34; title=&#34;here&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
@@ -341,7 +341,7 @@ ASCII format&lt;/a&gt;, which is trivial to implement without any external libra
 &lt;p&gt;The above code is nothing fancy, but it gets us something to look at (and even
 within Emacs!):&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/full-ppm.png&#34; alt=&#34;/img/fractals/full-ppm.png&#34; title=&#34;/img/fractals/full-ppm.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/full-ppm.png&#34; alt=&#34;/img/fractals/full-ppm.png&#34; title=&#34;/img/fractals/full-ppm.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This is pretty cool! However, we can do easily better. We will use a bit of our
 host platform to render color PNGs. This will require two things, firstly,
@@ -381,7 +381,7 @@ in different shades.&lt;/p&gt;
 
 &lt;p&gt;Now we have some colors, but to be honest, the result is a bit underwhelming...&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/full-simple.png&#34; alt=&#34;/img/fractals/full-simple.png&#34; title=&#34;/img/fractals/full-simple.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/full-simple.png&#34; alt=&#34;/img/fractals/full-simple.png&#34; title=&#34;/img/fractals/full-simple.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;One thing we can realize, is that most of the &#34;interesting&#34; parts of the render
 happen around the limits of the set, so we can modify our coloring function to
@@ -410,7 +410,7 @@ then our &lt;code&gt;do-color&lt;/code&gt; function:&lt;/p&gt;
 
 &lt;p&gt;Now this looks much better!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/full.png&#34; alt=&#34;/img/fractals/full.png&#34; title=&#34;/img/fractals/full.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/full.png&#34; alt=&#34;/img/fractals/full.png&#34; title=&#34;/img/fractals/full.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;With a suitable rendering mechanism, now we can explore a bit the set, and start
 looking into interesting portions. We can &#34;zoom in&#34; as much as we want, by
@@ -418,14 +418,14 @@ defining suitable bounding boxes, and we can increase the detail by increasing
 the depth. For example, we can take a closer look at the so-called &lt;em&gt;Seahorse
 valley&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/seahorse-left.png&#34; alt=&#34;/img/fractals/seahorse-left.png&#34; title=&#34;/img/fractals/seahorse-left.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/seahorse-left.png&#34; alt=&#34;/img/fractals/seahorse-left.png&#34; title=&#34;/img/fractals/seahorse-left.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I find this area of the plane truly fascinating, the patterns and depth of it
 are quite something. To give you an idea, here is a 24 megapixel render, with a
 depth of 2000 iterations. Go on, click on it, and zoom in to its full size. I&#39;ll
 wait for you here.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://martin.varela.fi/img/fractals/seahorse.png&#34; target=&#34;_blank&#34;&gt; &lt;img src=&#34;https://martin.varela.fi/img/fractals/seahorse.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://martin.varela.fi/img/fractals/seahorse.png&#34; target=&#34;_blank&#34;&gt; &lt;img src=&#34;http://martin.varela.fi/img/fractals/seahorse.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Is that wonderful, or what?&lt;/p&gt;
 
@@ -514,10 +514,10 @@ GitHub&lt;/a&gt; if you want to play with it.&lt;/p&gt;
     
     <item>
       <title>Fractals — Complexity from Simplicity (and a bit of Clojure)</title>
-      <link>https://martin.varela.fi/post/fractals-complexity-from-simplicity/</link>
+      <link>http://martin.varela.fi/post/fractals-complexity-from-simplicity/</link>
       <pubDate>Tue, 26 Sep 2017 09:43:43 +0300</pubDate>
       
-      <guid>https://martin.varela.fi/post/fractals-complexity-from-simplicity/</guid>
+      <guid>http://martin.varela.fi/post/fractals-complexity-from-simplicity/</guid>
       <description>&lt;!-- -*- org-export-babel-evaluate: nil -*- --&gt;
 
 &lt;h1 id=&#34;enter-the-dragon&#34;&gt;Enter the Dragon&lt;/h1&gt;
@@ -711,7 +711,7 @@ above.&lt;/p&gt;
     (spit &amp;quot;dragon15.html&amp;quot; html)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/dragon15.png&#34; alt=&#34;/img/fractals/dragon15.png&#34; title=&#34;/img/fractals/dragon15.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/dragon15.png&#34; alt=&#34;/img/fractals/dragon15.png&#34; title=&#34;/img/fractals/dragon15.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;If you are reading this in a modern browser with proper SVG support, you can
 also open the generated &lt;a href=&#34;http:/html/fractals/dragon15.html&#34; title=&#34;HTML output&#34; target=&#34;_blank&#34;&gt;HTML output&lt;/a&gt;.&lt;/p&gt;
@@ -742,7 +742,7 @@ rules : F → FF+F+F+F+FF
 
 &lt;p&gt;Five iterations of this system yield this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/box5.png&#34; alt=&#34;/img/fractals/box5.png&#34; title=&#34;/img/fractals/box5.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/box5.png&#34; alt=&#34;/img/fractals/box5.png&#34; title=&#34;/img/fractals/box5.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http:/html/fractals/box-05.html&#34; title=&#34;HTML/SVG version&#34; target=&#34;_blank&#34;&gt;HTML/SVG version&lt;/a&gt;&lt;/p&gt;
 
@@ -756,7 +756,7 @@ rules : F → FF+F++F+F
 &lt;p&gt;Like the Box above, this one also starts with a square (F+F+F+F).
 Six iterations yield:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/crystal6.png&#34; alt=&#34;/img/fractals/crystal6.png&#34; title=&#34;/img/fractals/crystal6.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/crystal6.png&#34; alt=&#34;/img/fractals/crystal6.png&#34; title=&#34;/img/fractals/crystal6.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http:/html/fractals/crystal-06.html&#34; title=&#34;HTML/SVG version&#34; target=&#34;_blank&#34;&gt;HTML/SVG version&lt;/a&gt;&lt;/p&gt;
 
@@ -771,13 +771,13 @@ rules : X → +YF-XFX-FY+
 &lt;p&gt;The &lt;a href=&#34;https://en.wikipedia.org/wiki/Hilbert_curve&#34; title=&#34;Hilbert curve&#34; target=&#34;_blank&#34;&gt;Hilbert curve&lt;/a&gt; is a well-known space-filling fractal. It does get quite dense
 rather quickly. After only 9 iterations, it looks like this.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/hilbert9.png&#34; alt=&#34;/img/fractals/hilbert9.png&#34; title=&#34;/img/fractals/hilbert9.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/hilbert9.png&#34; alt=&#34;/img/fractals/hilbert9.png&#34; title=&#34;/img/fractals/hilbert9.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http:/html/fractals/hilbert-09.html&#34; title=&#34;HTML/SVG version (LARGE FILE!)&#34; target=&#34;_blank&#34;&gt;HTML/SVG version (LARGE FILE!)&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Zooming in a bit, we can better discern the structure:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/hilbert9zoom.png&#34; alt=&#34;/img/fractals/hilbert9zoom.png&#34; title=&#34;/img/fractals/hilbert9zoom.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/hilbert9zoom.png&#34; alt=&#34;/img/fractals/hilbert9zoom.png&#34; title=&#34;/img/fractals/hilbert9zoom.png&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;koch-curve&#34;&gt;Koch Curve&lt;/h2&gt;
 
@@ -788,7 +788,7 @@ rules : F → FF+F+F+F+FF
 
 &lt;p&gt;This one also becomes complex very quickly. At four iterations, it looks like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/koch4.png&#34; alt=&#34;/img/fractals/koch4.png&#34; title=&#34;/img/fractals/koch4.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/koch4.png&#34; alt=&#34;/img/fractals/koch4.png&#34; title=&#34;/img/fractals/koch4.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http:/html/fractals/koch-curve-04.html&#34; title=&#34;HTML/SVG version&#34; target=&#34;_blank&#34;&gt;HTML/SVG version&lt;/a&gt;&lt;/p&gt;
 
@@ -801,7 +801,7 @@ rules : F → F+F--F+F
 
 &lt;p&gt;This is another well-known fractal.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/snowflake9.png&#34; alt=&#34;/img/fractals/snowflake9.png&#34; title=&#34;/img/fractals/snowflake9.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/snowflake9.png&#34; alt=&#34;/img/fractals/snowflake9.png&#34; title=&#34;/img/fractals/snowflake9.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http:/html/fractals/koch-snowflake-09.html&#34; title=&#34;HTML/SVG version&#34; target=&#34;_blank&#34;&gt;HTML/SVG version&lt;/a&gt;&lt;/p&gt;
 
@@ -814,7 +814,7 @@ rules : F → FF+F+F+F+F+F-F
 
 &lt;p&gt;This one is quite eye-catching. After six itertations, we get:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/rings6.png&#34; alt=&#34;/img/fractals/rings6.png&#34; title=&#34;/img/fractals/rings6.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/rings6.png&#34; alt=&#34;/img/fractals/rings6.png&#34; title=&#34;/img/fractals/rings6.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http:/html/fractals/rings-06.html&#34; title=&#34;HTML/SVG version&#34; target=&#34;_blank&#34;&gt;HTML/SVG version&lt;/a&gt;&lt;/p&gt;
 
@@ -830,7 +830,7 @@ rules : F → F-G+F+G-F
 above, it has two &lt;code&gt;forward&lt;/code&gt; variables, &lt;code&gt;F&lt;/code&gt; and &lt;code&gt;G&lt;/code&gt;. After 8 iterations, it
 results in this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/sierpinski8.png&#34; alt=&#34;/img/fractals/sierpinski8.png&#34; title=&#34;/img/fractals/sierpinski8.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/sierpinski8.png&#34; alt=&#34;/img/fractals/sierpinski8.png&#34; title=&#34;/img/fractals/sierpinski8.png&#34; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;more-to-come&#34;&gt;More to Come!&lt;/h1&gt;
 

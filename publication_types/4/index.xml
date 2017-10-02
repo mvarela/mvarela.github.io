@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>4 on </title>
-    <link>https://martin.varela.fi/publication_types/4/</link>
+    <link>http://martin.varela.fi/publication_types/4/</link>
     <description>Recent content in 4 on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,19 +11,19 @@
     
     <item>
       <title>Quality of Experience: From Assessment to Application (Dagstuhl Seminar 15022)</title>
-      <link>https://martin.varela.fi/publication/dagstuhl_report/</link>
+      <link>http://martin.varela.fi/publication/dagstuhl_report/</link>
       <pubDate>Mon, 04 May 2015 14:51:46 +0300</pubDate>
       
-      <guid>https://martin.varela.fi/publication/dagstuhl_report/</guid>
+      <guid>http://martin.varela.fi/publication/dagstuhl_report/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gilbert-model Loss Trace Generator for Instrumentation of Subjective Assessment Campaigns</title>
-      <link>https://martin.varela.fi/publication/varela-gilbert/</link>
+      <link>http://martin.varela.fi/publication/varela-gilbert/</link>
       <pubDate>Tue, 03 Jan 2012 06:40:40 +0300</pubDate>
       
-      <guid>https://martin.varela.fi/publication/varela-gilbert/</guid>
+      <guid>http://martin.varela.fi/publication/varela-gilbert/</guid>
       <description></description>
     </item>
     
