@@ -552,12 +552,13 @@ define the mapping of our view-port to a section of the complex plane.</p>
 </code></pre>
 
 <p>With these two functions, we have now a representation we can use for plotting.
-We can map the view-port to a section of the plane with the <code>scale-to-bounds</code> 
+We can map the view-port to a section of the plane with the ~scale-to-bounds~
 function, and then for each point in the view-port, calculate the number of
-iterations it took to diverge. This code is simple to understand, but not really efficient. I
-suspect there's a bit of stream fusion that could be applied here (possibly
-using transducers in Clojure, or using mutable state), but for the sake of
-simplicity, I'd rather have this pure version for now.</p>
+iterations it took to diverge. This code is simple to understand, but not really
+efficient. I suspect there's a bit of stream fusion that could be applied here
+(possibly using transducers in Clojure), or otherwise switch to using mutable
+state, but for the sake of simplicity, I'd rather have this pure version for
+now.</p>
 
 <p>Now we can render our set. As a first approach, we could simply use the <a href="https://en.wikipedia.org/wiki/Netpbm_format" title="PPM
 ASCII format" target="_blank">PPM
@@ -584,7 +585,7 @@ within Emacs!):</p>
 
 <p><img src="/img/fractals/full-ppm.png" alt="/img/fractals/full-ppm.png" title="/img/fractals/full-ppm.png" /></p>
 
-<p>This is pretty cool! However, we can do easily better. We will use a bit of our
+<p>This is pretty cool! However, we can easily do better. We will use a bit of our
 host platform to render color PNGs. This will require two things, firstly,
 mapping the values we have to color values, and secondly, rendering the PNG
 itself. Since we have a sort of "intensity" value for each pixel, in the form of
@@ -649,7 +650,9 @@ then our <code>do-color</code> function:</p>
             b)))
 </code></pre>
 
-<p>Now this looks much better!</p>
+<p>Now this looks much better! Arguably, the color of the points that diverge very
+early could be made lighter, but I like the aesthetics this coloring function
+gives. In any case, there are a huge number of possible ways to apply color.</p>
 
 <p><img src="/img/fractals/full.png" alt="/img/fractals/full.png" title="/img/fractals/full.png" /></p>
 
@@ -741,7 +744,8 @@ instead of a straight one. Despite this being simple to fix, I'll call this a
 feature, and leave it in, as it allows for some interesting zooms that would
 otherwise require a more generic approach to constructing paths .</p>
 
-<p>Here is a full-HD clip of us "falling into the Seahorse Valley".
+<p>Here is a full-HD clip of us "falling into the Seahorse Valley". The
+magnification factor here is 2400x.
 <iframe width="853" height="480" src="https://www.youtube.com/embed/FptVUuB4qWI" frameborder="0" allowfullscreen></iframe></p>
 
 <h1 id="that-s-all-folks">That's All, Folks!</h1>

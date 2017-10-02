@@ -311,12 +311,13 @@ define the mapping of our view-port to a section of the complex plane.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;With these two functions, we have now a representation we can use for plotting.
-We can map the view-port to a section of the plane with the &lt;code&gt;scale-to-bounds&lt;/code&gt; 
+We can map the view-port to a section of the plane with the ~scale-to-bounds~
 function, and then for each point in the view-port, calculate the number of
-iterations it took to diverge. This code is simple to understand, but not really efficient. I
-suspect there&#39;s a bit of stream fusion that could be applied here (possibly
-using transducers in Clojure, or using mutable state), but for the sake of
-simplicity, I&#39;d rather have this pure version for now.&lt;/p&gt;
+iterations it took to diverge. This code is simple to understand, but not really
+efficient. I suspect there&#39;s a bit of stream fusion that could be applied here
+(possibly using transducers in Clojure), or otherwise switch to using mutable
+state, but for the sake of simplicity, I&#39;d rather have this pure version for
+now.&lt;/p&gt;
 
 &lt;p&gt;Now we can render our set. As a first approach, we could simply use the &lt;a href=&#34;https://en.wikipedia.org/wiki/Netpbm_format&#34; title=&#34;PPM
 ASCII format&#34; target=&#34;_blank&#34;&gt;PPM
@@ -343,7 +344,7 @@ within Emacs!):&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/full-ppm.png&#34; alt=&#34;/img/fractals/full-ppm.png&#34; title=&#34;/img/fractals/full-ppm.png&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is pretty cool! However, we can do easily better. We will use a bit of our
+&lt;p&gt;This is pretty cool! However, we can easily do better. We will use a bit of our
 host platform to render color PNGs. This will require two things, firstly,
 mapping the values we have to color values, and secondly, rendering the PNG
 itself. Since we have a sort of &#34;intensity&#34; value for each pixel, in the form of
@@ -408,7 +409,9 @@ then our &lt;code&gt;do-color&lt;/code&gt; function:&lt;/p&gt;
             b)))
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Now this looks much better!&lt;/p&gt;
+&lt;p&gt;Now this looks much better! Arguably, the color of the points that diverge very
+early could be made lighter, but I like the aesthetics this coloring function
+gives. In any case, there are a huge number of possible ways to apply color.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/full.png&#34; alt=&#34;/img/fractals/full.png&#34; title=&#34;/img/fractals/full.png&#34; /&gt;&lt;/p&gt;
 
@@ -500,7 +503,8 @@ instead of a straight one. Despite this being simple to fix, I&#39;ll call this 
 feature, and leave it in, as it allows for some interesting zooms that would
 otherwise require a more generic approach to constructing paths .&lt;/p&gt;
 
-&lt;p&gt;Here is a full-HD clip of us &#34;falling into the Seahorse Valley&#34;.
+&lt;p&gt;Here is a full-HD clip of us &#34;falling into the Seahorse Valley&#34;. The
+magnification factor here is 2400x.
 &lt;iframe width=&#34;853&#34; height=&#34;480&#34; src=&#34;https://www.youtube.com/embed/FptVUuB4qWI&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;that-s-all-folks&#34;&gt;That&#39;s All, Folks!&lt;/h1&gt;
