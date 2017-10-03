@@ -311,7 +311,7 @@ define the mapping of our view-port to a section of the complex plane.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;With these two functions, we have now a representation we can use for plotting.
-We can map the view-port to a section of the plane with the ~scale-to-bounds~
+We can map the view-port to a section of the plane with the &lt;code&gt;scale-to-bounds&lt;/code&gt; 
 function, and then for each point in the view-port, calculate the number of
 iterations it took to diverge. This code is simple to understand, but not really
 efficient. I suspect there&#39;s a bit of stream fusion that could be applied here
