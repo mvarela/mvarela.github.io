@@ -10,6 +10,24 @@
     <atom:link href="/publication/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>A Survey of Emerging Concepts and Challenges for QoE Management of Multimedia Services </title>
+      <link>http://martin.varela.fi/publication/varela-tomm18/</link>
+      <pubDate>Thu, 01 Mar 2018 06:40:42 +0300</pubDate>
+      
+      <guid>http://martin.varela.fi/publication/varela-tomm18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE Analysis of the Setup of Different Internet Services for FIFO Server Systems</title>
+      <link>http://martin.varela.fi/publication/varela-mmb18/</link>
+      <pubDate>Mon, 26 Feb 2018 06:40:42 +0300</pubDate>
+      
+      <guid>http://martin.varela.fi/publication/varela-mmb18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>No Silver Bullet: QoE Metrics, QoE Fairness, and User Diversity in the Context of QoE Management</title>
       <link>http://martin.varela.fi/publication/varela-qomex17/</link>
       <pubDate>Wed, 03 May 2017 06:40:43 +0300</pubDate>
@@ -123,24 +141,6 @@
       <pubDate>Wed, 03 Jun 2015 06:40:42 +0300</pubDate>
       
       <guid>http://martin.varela.fi/publication/varela-qoe-fi-2015/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>QoE-Aware Routing for Video Streaming (short paper)</title>
-      <link>http://martin.varela.fi/publication/varela-iwqos2015/</link>
-      <pubDate>Wed, 03 Jun 2015 06:40:40 +0300</pubDate>
-      
-      <guid>http://martin.varela.fi/publication/varela-iwqos2015/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Quality of Experience: From Assessment to Application (Dagstuhl Seminar 15022)</title>
-      <link>http://martin.varela.fi/publication/dagstuhl_report/</link>
-      <pubDate>Mon, 04 May 2015 14:51:46 +0300</pubDate>
-      
-      <guid>http://martin.varela.fi/publication/dagstuhl_report/</guid>
       <description></description>
     </item>
     

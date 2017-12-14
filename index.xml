@@ -10,6 +10,24 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>A Survey of Emerging Concepts and Challenges for QoE Management of Multimedia Services </title>
+      <link>http://martin.varela.fi/publication/varela-tomm18/</link>
+      <pubDate>Thu, 01 Mar 2018 06:40:42 +0300</pubDate>
+      
+      <guid>http://martin.varela.fi/publication/varela-tomm18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE Analysis of the Setup of Different Internet Services for FIFO Server Systems</title>
+      <link>http://martin.varela.fi/publication/varela-mmb18/</link>
+      <pubDate>Mon, 26 Feb 2018 06:40:42 +0300</pubDate>
+      
+      <guid>http://martin.varela.fi/publication/varela-mmb18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Fractals — Complexity from Simplicity — Part 2</title>
       <link>http://martin.varela.fi/post/fractals-complexity-from-simplicity-part2/</link>
       <pubDate>Mon, 02 Oct 2017 19:23:43 +0300</pubDate>
@@ -1539,24 +1557,6 @@ free to be used.
       <pubDate>Sun, 03 Apr 2016 06:40:41 +0300</pubDate>
       
       <guid>http://martin.varela.fi/publication/varela-networking16/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Quality of Experience - Basic Concepts and Advanced Applications (invited talk at the Computer Science Institute (InCo), Universidad de la República)</title>
-      <link>http://martin.varela.fi/talk/talk-22/</link>
-      <pubDate>Sat, 05 Dec 2015 13:54:53 +0300</pubDate>
-      
-      <guid>http://martin.varela.fi/talk/talk-22/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>QoE - Defining a User-centric Concept for Service Quality</title>
-      <link>http://martin.varela.fi/publication/chapter-qoe-defining/</link>
-      <pubDate>Fri, 04 Dec 2015 15:25:39 +0300</pubDate>
-      
-      <guid>http://martin.varela.fi/publication/chapter-qoe-defining/</guid>
       <description></description>
     </item>
     
