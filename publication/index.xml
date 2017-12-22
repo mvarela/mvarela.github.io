@@ -28,6 +28,15 @@
     </item>
     
     <item>
+      <title>A New QoE Fairness Index for QoE Management</title>
+      <link>http://martin.varela.fi/publication/varela-quex18/</link>
+      <pubDate>Thu, 11 Jan 2018 06:40:42 +0300</pubDate>
+      
+      <guid>http://martin.varela.fi/publication/varela-quex18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>No Silver Bullet: QoE Metrics, QoE Fairness, and User Diversity in the Context of QoE Management</title>
       <link>http://martin.varela.fi/publication/varela-qomex17/</link>
       <pubDate>Wed, 03 May 2017 06:40:43 +0300</pubDate>
@@ -132,15 +141,6 @@
       <pubDate>Fri, 03 Jul 2015 06:40:40 +0300</pubDate>
       
       <guid>http://martin.varela.fi/publication/varela-iisa2015/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>From Service Level Agreements (SLA) to Experience Level Agreements (ELA): The Challenges of Selling QoE to the User</title>
-      <link>http://martin.varela.fi/publication/varela-qoe-fi-2015/</link>
-      <pubDate>Wed, 03 Jun 2015 06:40:42 +0300</pubDate>
-      
-      <guid>http://martin.varela.fi/publication/varela-qoe-fi-2015/</guid>
       <description></description>
     </item>
     
