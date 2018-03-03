@@ -10,6 +10,15 @@
     <atom:link href="/publication/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>What You Pay Is What You Get? — Fundamentals of Charging Internet Services Based on End User Quality of Experience</title>
+      <link>http://martin.varela.fi/publication/varela-quex18-2/</link>
+      <pubDate>Mon, 09 Apr 2018 06:40:42 +0300</pubDate>
+      
+      <guid>http://martin.varela.fi/publication/varela-quex18-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>A Survey of Emerging Concepts and Challenges for QoE Management of Multimedia Services </title>
       <link>http://martin.varela.fi/publication/varela-tomm18/</link>
       <pubDate>Thu, 01 Mar 2018 06:40:42 +0300</pubDate>
@@ -132,15 +141,6 @@
       <pubDate>Mon, 03 Aug 2015 06:40:40 +0300</pubDate>
       
       <guid>http://martin.varela.fi/publication/varela-dagstuhl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>QoE-Driven Admission Control for Video Streams</title>
-      <link>http://martin.varela.fi/publication/varela-iisa2015/</link>
-      <pubDate>Fri, 03 Jul 2015 06:40:40 +0300</pubDate>
-      
-      <guid>http://martin.varela.fi/publication/varela-iisa2015/</guid>
       <description></description>
     </item>
     

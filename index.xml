@@ -10,6 +10,15 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>What You Pay Is What You Get? — Fundamentals of Charging Internet Services Based on End User Quality of Experience</title>
+      <link>http://martin.varela.fi/publication/varela-quex18-2/</link>
+      <pubDate>Mon, 09 Apr 2018 06:40:42 +0300</pubDate>
+      
+      <guid>http://martin.varela.fi/publication/varela-quex18-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>A Survey of Emerging Concepts and Challenges for QoE Management of Multimedia Services </title>
       <link>http://martin.varela.fi/publication/varela-tomm18/</link>
       <pubDate>Thu, 01 Mar 2018 06:40:42 +0300</pubDate>
@@ -1548,15 +1557,6 @@ free to be used.
       <pubDate>Thu, 05 May 2016 13:54:53 +0300</pubDate>
       
       <guid>http://martin.varela.fi/talk/talk-23/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>The Road to QoE Management (keynote speech)</title>
-      <link>http://martin.varela.fi/talk/talk-24/</link>
-      <pubDate>Thu, 05 May 2016 13:54:53 +0300</pubDate>
-      
-      <guid>http://martin.varela.fi/talk/talk-24/</guid>
       <description></description>
     </item>
     
