@@ -1,146 +1,248 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recent &amp; Upcoming Talks on </title>
-    <link>http://martin.varela.fi/talk/</link>
-    <description>Recent content in Recent &amp; Upcoming Talks on </description>
+    <title>Recent &amp; Upcoming Talks on Martín Varela</title>
+    <link>https://martin.varela.fi/talk/</link>
+    <description>Recent content in Recent &amp; Upcoming Talks on Martín Varela</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/talk/" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Mon, 18 Feb 2019 09:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/talk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Some things we might have missed along the way (keynote speech)</title>
+      <link>https://martin.varela.fi/talk/talk-26/</link>
+      <pubDate>Mon, 18 Feb 2019 09:00:00 +0100</pubDate>
+      
+      <guid>https://martin.varela.fi/talk/talk-26/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>QoE Management Out of the Lab and Into the Real World (invited lecture)</title>
-      <link>http://martin.varela.fi/talk/talk-25/</link>
+      <link>https://martin.varela.fi/talk/talk-25/</link>
       <pubDate>Mon, 05 Sep 2016 13:54:53 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/talk/talk-25/</guid>
+      <guid>https://martin.varela.fi/talk/talk-25/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quality of Experience in OTT Video Services</title>
-      <link>http://martin.varela.fi/talk/talk-23/</link>
+      <link>https://martin.varela.fi/talk/talk-23/</link>
       <pubDate>Thu, 05 May 2016 13:54:53 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/talk/talk-23/</guid>
+      <guid>https://martin.varela.fi/talk/talk-23/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The Road to QoE Management (keynote speech)</title>
-      <link>http://martin.varela.fi/talk/talk-24/</link>
+      <link>https://martin.varela.fi/talk/talk-24/</link>
       <pubDate>Thu, 05 May 2016 13:54:53 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/talk/talk-24/</guid>
+      <guid>https://martin.varela.fi/talk/talk-24/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quality of Experience - Basic Concepts and Advanced Applications (invited talk at the Computer Science Institute (InCo), Universidad de la República)</title>
-      <link>http://martin.varela.fi/talk/talk-22/</link>
+      <link>https://martin.varela.fi/talk/talk-22/</link>
       <pubDate>Sat, 05 Dec 2015 13:54:53 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/talk/talk-22/</guid>
+      <guid>https://martin.varela.fi/talk/talk-22/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Towards an Open Architecture for QoE Management</title>
-      <link>http://martin.varela.fi/talk/talk-21/</link>
+      <link>https://martin.varela.fi/talk/talk-21/</link>
       <pubDate>Mon, 05 Oct 2015 13:54:53 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/talk/talk-21/</guid>
+      <guid>https://martin.varela.fi/talk/talk-21/</guid>
       <description></description>
     </item>
     
     <item>
       <title>QoE for Cloud Services (invited talk)</title>
-      <link>http://martin.varela.fi/talk/talk-20/</link>
+      <link>https://martin.varela.fi/talk/talk-20/</link>
       <pubDate>Sat, 05 Sep 2015 13:54:53 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/talk/talk-20/</guid>
+      <guid>https://martin.varela.fi/talk/talk-20/</guid>
       <description></description>
     </item>
     
     <item>
       <title>QoE: from Measurements to Business (keynote speech)</title>
-      <link>http://martin.varela.fi/talk/talk-19/</link>
+      <link>https://martin.varela.fi/talk/talk-19/</link>
       <pubDate>Wed, 05 Aug 2015 13:54:53 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/talk/talk-19/</guid>
+      <guid>https://martin.varela.fi/talk/talk-19/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>QoE-driven Management: from Modelling to Operation</title>
-      <link>http://martin.varela.fi/talk/talk-18/</link>
+      <title>QoE-driven Management: from Modelling to Operation (invited lecture)</title>
+      <link>https://martin.varela.fi/talk/talk-18/</link>
       <pubDate>Thu, 05 Feb 2015 13:54:53 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/talk/talk-18/</guid>
+      <guid>https://martin.varela.fi/talk/talk-18/</guid>
       <description></description>
     </item>
     
     <item>
       <title>QoE - Why bother? (invited talks at U. Vienna and U. Alpen-Adria in Klagenfurt)</title>
-      <link>http://martin.varela.fi/talk/talk-17/</link>
+      <link>https://martin.varela.fi/talk/talk-17/</link>
       <pubDate>Sun, 05 Oct 2014 13:54:53 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/talk/talk-17/</guid>
+      <guid>https://martin.varela.fi/talk/talk-17/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quality-driven Network and Application Control (invited talk at University of Oulu)</title>
-      <link>http://martin.varela.fi/talk/talk-16/</link>
+      <link>https://martin.varela.fi/talk/talk-16/</link>
       <pubDate>Sat, 05 Jul 2014 13:54:53 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/talk/talk-16/</guid>
+      <guid>https://martin.varela.fi/talk/talk-16/</guid>
       <description></description>
     </item>
     
     <item>
       <title>First Steps Towards an Understanding of Web QoE</title>
-      <link>http://martin.varela.fi/talk/talk-15/</link>
+      <link>https://martin.varela.fi/talk/talk-15/</link>
       <pubDate>Fri, 05 Jul 2013 13:54:53 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/talk/talk-15/</guid>
+      <guid>https://martin.varela.fi/talk/talk-15/</guid>
       <description></description>
     </item>
     
     <item>
       <title>QoE: Beyond QoS, and Beyond Media (invited talk)</title>
-      <link>http://martin.varela.fi/talk/talk-14/</link>
+      <link>https://martin.varela.fi/talk/talk-14/</link>
       <pubDate>Fri, 05 Jul 2013 13:54:53 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/talk/talk-14/</guid>
+      <guid>https://martin.varela.fi/talk/talk-14/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Users: A Key Missing Piece in the QoE Puzzle</title>
-      <link>http://martin.varela.fi/talk/talk-13/</link>
+      <link>https://martin.varela.fi/talk/talk-13/</link>
       <pubDate>Sun, 05 May 2013 13:54:53 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/talk/talk-13/</guid>
+      <guid>https://martin.varela.fi/talk/talk-13/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Applications of Perceptual Quality Estimation to Cross-Layer Optimization Techniques</title>
-      <link>http://martin.varela.fi/talk/talk-11/</link>
+      <link>https://martin.varela.fi/talk/talk-11/</link>
       <pubDate>Thu, 05 Jul 2012 13:54:52 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/talk/talk-11/</guid>
+      <guid>https://martin.varela.fi/talk/talk-11/</guid>
       <description></description>
     </item>
     
     <item>
       <title>QoE y Cloud: Problemas Técnicos y Perspectivas de Negocio (invited talk)</title>
-      <link>http://martin.varela.fi/talk/talk-10/</link>
+      <link>https://martin.varela.fi/talk/talk-10/</link>
       <pubDate>Tue, 05 Jun 2012 13:54:52 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/talk/talk-10/</guid>
+      <guid>https://martin.varela.fi/talk/talk-10/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Current Trends on QoE Research and Some Application Results (invited talk at the Computer Science Institute (InCo), Universidad de la República)</title>
+      <link>https://martin.varela.fi/talk/talk-12/</link>
+      <pubDate>Sat, 05 Nov 2011 13:54:53 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/talk/talk-12/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quality in the Cloud - Business and Technical Challenges (invited talk)</title>
+      <link>https://martin.varela.fi/talk/talk-9/</link>
+      <pubDate>Mon, 05 Sep 2011 13:54:52 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/talk/talk-9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Calidad de Experiencia para Servicios Multimedia (invited talk for MSc course at Universidad de Málaga)</title>
+      <link>https://martin.varela.fi/talk/talk-8/</link>
+      <pubDate>Sat, 05 Dec 2009 13:54:52 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/talk/talk-8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Real-Time Assessment of Multimedia Quality (invited talk)</title>
+      <link>https://martin.varela.fi/talk/talk-7/</link>
+      <pubDate>Sat, 05 Apr 2008 13:54:52 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/talk/talk-7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quality Models for Multimedia Applications</title>
+      <link>https://martin.varela.fi/talk/talk-6/</link>
+      <pubDate>Tue, 05 Dec 2006 13:54:52 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/talk/talk-6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Évaluation Pseudo-Subjective de la Qualité de la Voix sur IP</title>
+      <link>https://martin.varela.fi/talk/talk-4/</link>
+      <pubDate>Sat, 05 Jul 2003 13:54:52 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/talk/talk-4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Réseaux de Neurones pour l&#39;Estimation de la Qualité d&#39;un Flux Audio ou Vidéo, Applications au Contrôle et à la Tarification (invited talk)</title>
+      <link>https://martin.varela.fi/talk/talk-5/</link>
+      <pubDate>Mon, 05 May 2003 13:54:52 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/talk/talk-5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Utility Function and Random Neural Networks</title>
+      <link>https://martin.varela.fi/talk/talk-3/</link>
+      <pubDate>Wed, 05 Mar 2003 13:54:52 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/talk/talk-3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mesure de la Qualité d&#39;un Flux Multimédia Transporté sur un Réseau de Paquets: Neurones, Mesures Subjectives, et d&#39;autres Aspects</title>
+      <link>https://martin.varela.fi/talk/talk-2/</link>
+      <pubDate>Sat, 05 Oct 2002 13:54:52 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/talk/talk-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Evaluación Pseudo-Subjetiva de un Flujo Multimedia Transportado sobre una Red de Paquetes</title>
+      <link>https://martin.varela.fi/talk/talk-1/</link>
+      <pubDate>Mon, 05 Aug 2002 13:54:52 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/talk/talk-1/</guid>
       <description></description>
     </item>
     

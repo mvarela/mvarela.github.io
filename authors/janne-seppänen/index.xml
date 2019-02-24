@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Janne Seppänen on Martín Varela</title>
+    <link>https://martin.varela.fi/authors/janne-sepp%C3%A4nen/</link>
+    <description>Recent content in Janne Seppänen on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Thu, 03 Apr 2014 06:40:40 +0300</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/authors/janne-sepp%C3%A4nen/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>An Autonomous QoE-driven Network Management Framework</title>
+      <link>https://martin.varela.fi/publication/varela-jvcir-preprint/</link>
+      <pubDate>Thu, 03 Apr 2014 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-jvcir-preprint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE-Driven Network Management For Real-Time Over-the-top Multimedia Services </title>
+      <link>https://martin.varela.fi/publication/varela-wcnc13/</link>
+      <pubDate>Wed, 03 Apr 2013 06:40:44 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-wcnc13/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Video Quality as a Driver for Traffic Management with Multiple Subscriber Classes</title>
+      <link>https://martin.varela.fi/publication/varela-mmtc/</link>
+      <pubDate>Sun, 03 Mar 2013 06:40:41 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-mmtc/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

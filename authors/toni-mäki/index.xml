@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Toni Mäki on Martín Varela</title>
+    <link>https://martin.varela.fi/authors/toni-m%C3%A4ki/</link>
+    <description>Recent content in Toni Mäki on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Wed, 03 May 2017 06:40:42 +0300</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/authors/toni-m%C3%A4ki/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Embracing Uncertainty: A Probabilistic View of HTTP Video Quality</title>
+      <link>https://martin.varela.fi/publication/varela-qoem-2017/</link>
+      <pubDate>Wed, 03 May 2017 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qoem-2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Generating Realistic YouTube-like Stall Patterns for HTTP Video Streaming Assessment</title>
+      <link>https://martin.varela.fi/publication/varela-qomex16/</link>
+      <pubDate>Fri, 03 Jun 2016 06:40:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qomex16/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Network Quality Differentiation: Regional Effects, Market Entrance, and Empirical Testability</title>
+      <link>https://martin.varela.fi/publication/varela-networking16/</link>
+      <pubDate>Sun, 03 Apr 2016 06:40:41 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-networking16/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Layered Model for Quality Estimation of HTTP Video from QoS Measurements</title>
+      <link>https://martin.varela.fi/publication/varela-quamus15/</link>
+      <pubDate>Tue, 03 Nov 2015 06:40:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-quamus15/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE in the Web: A Dance of Design and Performance</title>
+      <link>https://martin.varela.fi/publication/varela-qomex2015-1/</link>
+      <pubDate>Sun, 03 May 2015 06:40:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qomex2015-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QuoTe — An Extensible Platform for QoE Monitoring and Benchmarking of Telemedicine Applications</title>
+      <link>https://martin.varela.fi/publication/varela-ssh14/</link>
+      <pubDate>Fri, 03 Oct 2014 06:40:44 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-ssh14/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chamber QoE - A Multi-instrumental Apporach to Explore Affective Aspects in relation to Quality of Experience</title>
+      <link>https://martin.varela.fi/publication/varela-spie/</link>
+      <pubDate>Fri, 03 Jan 2014 06:40:44 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-spie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Increasing Payments in Crowdsourcing: Don’t Look a Gift Horse in the Mouth!</title>
+      <link>https://martin.varela.fi/publication/varela-pqs13/</link>
+      <pubDate>Tue, 03 Sep 2013 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-pqs13/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Reduced-Reference Parametric Model for Audiovisual Quality of IPTV Services</title>
+      <link>https://martin.varela.fi/publication/varela-qomex13-1/</link>
+      <pubDate>Wed, 03 Jul 2013 06:40:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qomex13-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Towards an Understanding of Visual Appeal in Website Design</title>
+      <link>https://martin.varela.fi/publication/varela-qomex13-2/</link>
+      <pubDate>Wed, 03 Jul 2013 06:40:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qomex13-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Estimating the Effect of Context on QoE of Audiovisual Services: Laboratory vs. Public Places</title>
+      <link>https://martin.varela.fi/publication/varela-iwqm2013/</link>
+      <pubDate>Mon, 03 Jun 2013 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-iwqm2013/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Analysis of Managed and Over-the-Top Streaming Services in Mobile Networks</title>
+      <link>https://martin.varela.fi/publication/varela-pik-proof/</link>
+      <pubDate>Thu, 03 May 2012 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-pik-proof/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

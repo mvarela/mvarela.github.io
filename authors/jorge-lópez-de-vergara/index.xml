@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jorge López de Vergara on Martín Varela</title>
+    <link>https://martin.varela.fi/authors/jorge-l%C3%B3pez-de-vergara/</link>
+    <description>Recent content in Jorge López de Vergara on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Tue, 03 Jul 2012 06:40:39 +0300</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/authors/jorge-l%C3%B3pez-de-vergara/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Global Customer Experience Management Architecture</title>
+      <link>https://martin.varela.fi/publication/varela-cems/</link>
+      <pubDate>Tue, 03 Jul 2012 06:40:39 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-cems/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

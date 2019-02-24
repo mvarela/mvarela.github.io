@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Juho Merilahti on Martín Varela</title>
+    <link>https://martin.varela.fi/authors/juho-merilahti/</link>
+    <description>Recent content in Juho Merilahti on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Fri, 03 Oct 2014 06:40:44 +0300</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/authors/juho-merilahti/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>QuoTe — An Extensible Platform for QoE Monitoring and Benchmarking of Telemedicine Applications</title>
+      <link>https://martin.varela.fi/publication/varela-ssh14/</link>
+      <pubDate>Fri, 03 Oct 2014 06:40:44 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-ssh14/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

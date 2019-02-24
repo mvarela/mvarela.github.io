@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Martín Varela</title>
+    <link>https://martin.varela.fi/authors/mart%C3%ADn-varela/</link>
+    <description>Recent content on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Mon, 18 Feb 2019 06:40:42 +0300</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/authors/mart%C3%ADn-varela/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Interplay between QoE, User Behavior and System Blocking in QoE Management</title>
+      <link>https://martin.varela.fi/publication/varela-qoem-2019/</link>
+      <pubDate>Mon, 18 Feb 2019 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qoem-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Some Observations on Emerging Aspects in QoE Modeling and Their Impact on QoE Management</title>
+      <link>https://martin.varela.fi/publication/varela-qoem-2018/</link>
+      <pubDate>Sat, 26 May 2018 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qoem-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Survey of Emerging Concepts and Challenges for QoE Management of Multimedia Services </title>
+      <link>https://martin.varela.fi/publication/varela-tomm18/</link>
+      <pubDate>Tue, 01 May 2018 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-tomm18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>What You Pay Is What You Get? — Fundamentals of Charging Internet Services Based on End User Quality of Experience</title>
+      <link>https://martin.varela.fi/publication/varela-quex18-2/</link>
+      <pubDate>Mon, 09 Apr 2018 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-quex18-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE Analysis of the Setup of Different Internet Services for FIFO Server Systems</title>
+      <link>https://martin.varela.fi/publication/varela-mmb18/</link>
+      <pubDate>Mon, 26 Feb 2018 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-mmb18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A New QoE Fairness Index for QoE Management</title>
+      <link>https://martin.varela.fi/publication/varela-quex18/</link>
+      <pubDate>Fri, 09 Feb 2018 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-quex18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>No Silver Bullet: QoE Metrics, QoE Fairness, and User Diversity in the Context of QoE Management</title>
+      <link>https://martin.varela.fi/publication/varela-qomex17/</link>
+      <pubDate>Wed, 03 May 2017 06:40:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qomex17/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Embracing Uncertainty: A Probabilistic View of HTTP Video Quality</title>
+      <link>https://martin.varela.fi/publication/varela-qoem-2017/</link>
+      <pubDate>Wed, 03 May 2017 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qoem-2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Definition of QoE Fairness in Shared Systems</title>
+      <link>https://martin.varela.fi/publication/varela-qoe-fairness/</link>
+      <pubDate>Tue, 03 Jan 2017 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qoe-fairness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE beyond the MOS: an in-depth look at QoE via better metrics and their relation to MOS</title>
+      <link>https://martin.varela.fi/publication/varela-quex-beyond-the-mos/</link>
+      <pubDate>Sat, 03 Sep 2016 06:40:44 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-quex-beyond-the-mos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On Additive and Multiplicative QoS-QoE Models for Multiple QoS Parameters</title>
+      <link>https://martin.varela.fi/publication/varela-pqs16/</link>
+      <pubDate>Wed, 03 Aug 2016 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-pqs16/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Generating Realistic YouTube-like Stall Patterns for HTTP Video Streaming Assessment</title>
+      <link>https://martin.varela.fi/publication/varela-qomex16/</link>
+      <pubDate>Fri, 03 Jun 2016 06:40:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qomex16/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Network Quality Differentiation: Regional Effects, Market Entrance, and Empirical Testability</title>
+      <link>https://martin.varela.fi/publication/varela-networking16/</link>
+      <pubDate>Sun, 03 Apr 2016 06:40:41 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-networking16/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Layered Model for Quality Estimation of HTTP Video from QoS Measurements</title>
+      <link>https://martin.varela.fi/publication/varela-quamus15/</link>
+      <pubDate>Tue, 03 Nov 2015 06:40:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-quamus15/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On the Analysis of QoE in Cellular Networks: from Subjective Tests to Large-scale Traffic Measurements</title>
+      <link>https://martin.varela.fi/publication/varela-trac2015/</link>
+      <pubDate>Mon, 03 Aug 2015 06:40:44 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-trac2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dagstuhl Manifesto: Quality of Experience: from Assessment to Application</title>
+      <link>https://martin.varela.fi/publication/varela-dagstuhl/</link>
+      <pubDate>Mon, 03 Aug 2015 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-dagstuhl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE-Driven Admission Control for Video Streams</title>
+      <link>https://martin.varela.fi/publication/varela-iisa2015/</link>
+      <pubDate>Fri, 03 Jul 2015 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-iisa2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>From Service Level Agreements (SLA) to Experience Level Agreements (ELA): The Challenges of Selling QoE to the User</title>
+      <link>https://martin.varela.fi/publication/varela-qoe-fi-2015/</link>
+      <pubDate>Wed, 03 Jun 2015 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qoe-fi-2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE-Aware Routing for Video Streaming (short paper)</title>
+      <link>https://martin.varela.fi/publication/varela-iwqos2015/</link>
+      <pubDate>Wed, 03 Jun 2015 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-iwqos2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE Beyond the MOS: Added Value Using Quantiles and Distributions</title>
+      <link>https://martin.varela.fi/publication/varela-qomex2015-2/</link>
+      <pubDate>Sun, 03 May 2015 06:40:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qomex2015-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE in the Web: A Dance of Design and Performance</title>
+      <link>https://martin.varela.fi/publication/varela-qomex2015-1/</link>
+      <pubDate>Sun, 03 May 2015 06:40:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qomex2015-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Network Information Service for Quality-Driven Mobility</title>
+      <link>https://martin.varela.fi/publication/varela-ccnc15/</link>
+      <pubDate>Sat, 03 Jan 2015 06:40:39 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-ccnc15/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Meta-Modeling QoE — Towards a Generic Methodology for Building QoE Models</title>
+      <link>https://martin.varela.fi/publication/varela-meta-modeling-qoe/</link>
+      <pubDate>Wed, 03 Dec 2014 06:40:41 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-meta-modeling-qoe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QuoTe — An Extensible Platform for QoE Monitoring and Benchmarking of Telemedicine Applications</title>
+      <link>https://martin.varela.fi/publication/varela-ssh14/</link>
+      <pubDate>Fri, 03 Oct 2014 06:40:44 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-ssh14/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quality-Driven Optimal SLA Selection for Enterprise Cloud Communications</title>
+      <link>https://martin.varela.fi/publication/varela-qoenam14/</link>
+      <pubDate>Tue, 03 Jun 2014 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qoenam14/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An Autonomous QoE-driven Network Management Framework</title>
+      <link>https://martin.varela.fi/publication/varela-jvcir-preprint/</link>
+      <pubDate>Thu, 03 Apr 2014 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-jvcir-preprint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chamber QoE - A Multi-instrumental Apporach to Explore Affective Aspects in relation to Quality of Experience</title>
+      <link>https://martin.varela.fi/publication/varela-spie/</link>
+      <pubDate>Fri, 03 Jan 2014 06:40:44 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-spie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Increasing Payments in Crowdsourcing: Don’t Look a Gift Horse in the Mouth!</title>
+      <link>https://martin.varela.fi/publication/varela-pqs13/</link>
+      <pubDate>Tue, 03 Sep 2013 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-pqs13/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Reduced-Reference Parametric Model for Audiovisual Quality of IPTV Services</title>
+      <link>https://martin.varela.fi/publication/varela-qomex13-1/</link>
+      <pubDate>Wed, 03 Jul 2013 06:40:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qomex13-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Towards an Understanding of Visual Appeal in Website Design</title>
+      <link>https://martin.varela.fi/publication/varela-qomex13-2/</link>
+      <pubDate>Wed, 03 Jul 2013 06:40:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qomex13-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ecosystem for Customer Experience Assurance</title>
+      <link>https://martin.varela.fi/publication/varela-iwqm2013-2/</link>
+      <pubDate>Mon, 03 Jun 2013 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-iwqm2013-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Estimating the Effect of Context on QoE of Audiovisual Services: Laboratory vs. Public Places</title>
+      <link>https://martin.varela.fi/publication/varela-iwqm2013/</link>
+      <pubDate>Mon, 03 Jun 2013 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-iwqm2013/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE-Driven Network Management For Real-Time Over-the-top Multimedia Services </title>
+      <link>https://martin.varela.fi/publication/varela-wcnc13/</link>
+      <pubDate>Wed, 03 Apr 2013 06:40:44 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-wcnc13/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Video Quality as a Driver for Traffic Management with Multiple Subscriber Classes</title>
+      <link>https://martin.varela.fi/publication/varela-mmtc/</link>
+      <pubDate>Sun, 03 Mar 2013 06:40:41 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-mmtc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Global Customer Experience Management Architecture</title>
+      <link>https://martin.varela.fi/publication/varela-cems/</link>
+      <pubDate>Tue, 03 Jul 2012 06:40:39 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-cems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Analysis of Managed and Over-the-Top Streaming Services in Mobile Networks</title>
+      <link>https://martin.varela.fi/publication/varela-pik-proof/</link>
+      <pubDate>Thu, 03 May 2012 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-pik-proof/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Multi-Dimensional View of QoE: the ARCU Model</title>
+      <link>https://martin.varela.fi/publication/varela-mipro12/</link>
+      <pubDate>Thu, 03 May 2012 06:40:41 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-mipro12/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Challenges of QoE Management for Cloud Applications</title>
+      <link>https://martin.varela.fi/publication/varela-commag12-preprint/</link>
+      <pubDate>Tue, 03 Apr 2012 06:40:39 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-commag12-preprint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Some Musings on QoE Definitions - Philosophy and Practice</title>
+      <link>https://martin.varela.fi/publication/varela-musings-on-qoe-definitions/</link>
+      <pubDate>Tue, 03 Jan 2012 06:40:41 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-musings-on-qoe-definitions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gilbert-model Loss Trace Generator for Instrumentation of Subjective Assessment Campaigns</title>
+      <link>https://martin.varela.fi/publication/varela-gilbert/</link>
+      <pubDate>Tue, 03 Jan 2012 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-gilbert/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE-Driven Mobility Management - Integrating the Users&#39; Quality Perception into Network-level Decision Making</title>
+      <link>https://martin.varela.fi/publication/varela-qomex2011/</link>
+      <pubDate>Sat, 03 Sep 2011 06:40:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qomex2011/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terminal–side QoE Estimations for Cross–Layer Network Control</title>
+      <link>https://martin.varela.fi/publication/varela-wwic2011/</link>
+      <pubDate>Fri, 03 Jun 2011 06:40:44 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-wwic2011/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Understanding Quality Issues In The Cloud</title>
+      <link>https://martin.varela.fi/publication/varela-quality-issues-in-the-cloud/</link>
+      <pubDate>Wed, 03 Nov 2010 06:40:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-quality-issues-in-the-cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Single–sided Real–time PESQ Score Estimation</title>
+      <link>https://martin.varela.fi/publication/varela-mesaqin09/</link>
+      <pubDate>Wed, 03 Jun 2009 06:40:41 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-mesaqin09/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Some Experiences with VoIP Over Converging Networks</title>
+      <link>https://martin.varela.fi/publication/varela-mesaqin07/</link>
+      <pubDate>Sun, 03 Jun 2007 06:40:41 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-mesaqin07/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quality Assessment of Interactive Voice Applications</title>
+      <link>https://martin.varela.fi/publication/varela-comnet-local/</link>
+      <pubDate>Tue, 03 Apr 2007 06:40:39 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-comnet-local/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A New Way of Thinking Utility in Pricing Mechanisms: A Neural Network Approach</title>
+      <link>https://martin.varela.fi/publication/varela-claio06/</link>
+      <pubDate>Fri, 03 Nov 2006 06:40:39 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-claio06/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Metric for Single-ended Speech Quality Estimation</title>
+      <link>https://martin.varela.fi/publication/varela-sncnw06/</link>
+      <pubDate>Tue, 03 Oct 2006 06:40:44 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-sncnw06/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Evaluating Users’ Satisfaction in Packet Networks Using Random Neural Networks</title>
+      <link>https://martin.varela.fi/publication/varela-icann06/</link>
+      <pubDate>Sun, 03 Sep 2006 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-icann06/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Controlling Multimedia QoS in the Future Home Network Using the PSQA Metric</title>
+      <link>https://martin.varela.fi/publication/varela-control-draft/</link>
+      <pubDate>Mon, 03 Jul 2006 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-control-draft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Systematic Study of PESQ’s Behavior (From a Networking Perspective)</title>
+      <link>https://martin.varela.fi/publication/varela-mesaqin06/</link>
+      <pubDate>Sat, 03 Jun 2006 06:40:41 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-mesaqin06/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pseudo-subjective Quality Assessment of Multimedia Streams and its Applications in Control</title>
+      <link>https://martin.varela.fi/publication/varela-phd/</link>
+      <pubDate>Thu, 03 Nov 2005 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-phd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wireless VoIP at Home: Are We There Yet?</title>
+      <link>https://martin.varela.fi/publication/varela-mesaqin05/</link>
+      <pubDate>Tue, 03 May 2005 06:40:41 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-mesaqin05/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Studying the Effects of FEC on Voice Traffic Using PSQA (short paper)</title>
+      <link>https://martin.varela.fi/publication/varela-stw05/</link>
+      <pubDate>Thu, 03 Mar 2005 06:40:44 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-stw05/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Évaluation Pseudo-Subjective de la Qualité des Flux VoIP: une Approche par Réseaux de Neurones Aléatoires</title>
+      <link>https://martin.varela.fi/publication/varela-jdir04/</link>
+      <pubDate>Wed, 03 Nov 2004 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-jdir04/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A New Approach for the Prediction of End-to-End Performance of Multimedia Streams</title>
+      <link>https://martin.varela.fi/publication/varela-qest04/</link>
+      <pubDate>Fri, 03 Sep 2004 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qest04/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Evaluating the Utility of Media–Dependent FEC in VoIP Flows</title>
+      <link>https://martin.varela.fi/publication/varela-qofis04/</link>
+      <pubDate>Fri, 03 Sep 2004 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qofis04/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A method for quantitative evaluation of audio quality over packet networks and its comparison with existing techniques</title>
+      <link>https://martin.varela.fi/publication/varela-mesaqin04-1/</link>
+      <pubDate>Thu, 03 Jun 2004 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-mesaqin04-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Subjective Audio Tests: Quality of a Selection of Codecs When Used in IP Networks</title>
+      <link>https://martin.varela.fi/publication/varela-mesaqin04-2/</link>
+      <pubDate>Thu, 03 Jun 2004 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-mesaqin04-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Performance Evaluation of Real-time Speech Through a Packet Network: a Random Neural Networks-based Approach</title>
+      <link>https://martin.varela.fi/publication/varela-performance-evaluation/</link>
+      <pubDate>Sat, 03 Apr 2004 06:40:41 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-performance-evaluation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Historias Clínicas en Tarjetas Inteligentes</title>
+      <link>https://martin.varela.fi/publication/varela-historias_clinicas/</link>
+      <pubDate>Mon, 03 Sep 2001 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-historias_clinicas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Simple Methodology for Secure Object Sharing</title>
+      <link>https://martin.varela.fi/publication/varela-a_simple_methodology_for_secure_object_sharing/</link>
+      <pubDate>Wed, 20 Jun 2001 00:00:00 +0000</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-a_simple_methodology_for_secure_object_sharing/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

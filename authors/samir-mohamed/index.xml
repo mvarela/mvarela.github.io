@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Samir Mohamed on Martín Varela</title>
+    <link>https://martin.varela.fi/authors/samir-mohamed/</link>
+    <description>Recent content in Samir Mohamed on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Thu, 03 Jun 2004 06:40:40 +0300</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/authors/samir-mohamed/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A method for quantitative evaluation of audio quality over packet networks and its comparison with existing techniques</title>
+      <link>https://martin.varela.fi/publication/varela-mesaqin04-1/</link>
+      <pubDate>Thu, 03 Jun 2004 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-mesaqin04-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Performance Evaluation of Real-time Speech Through a Packet Network: a Random Neural Networks-based Approach</title>
+      <link>https://martin.varela.fi/publication/varela-performance-evaluation/</link>
+      <pubDate>Sat, 03 Apr 2004 06:40:41 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-performance-evaluation/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

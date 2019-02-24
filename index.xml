@@ -1,74 +1,113 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title></title>
-    <link>http://martin.varela.fi/</link>
-    <description>Recent content on </description>
+    <title>Martín Varela on Martín Varela</title>
+    <link>https://martin.varela.fi/</link>
+    <description>Recent content in Martín Varela on Martín Varela</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Mon, 18 Feb 2019 09:00:00 +0100</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Some things we might have missed along the way (keynote speech)</title>
+      <link>https://martin.varela.fi/talk/talk-26/</link>
+      <pubDate>Mon, 18 Feb 2019 09:00:00 +0100</pubDate>
+      
+      <guid>https://martin.varela.fi/talk/talk-26/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Interplay between QoE, User Behavior and System Blocking in QoE Management</title>
+      <link>https://martin.varela.fi/publication/varela-qoem-2019/</link>
+      <pubDate>Mon, 18 Feb 2019 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qoem-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Example Page</title>
+      <link>https://martin.varela.fi/tutorial/example/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/tutorial/example/</guid>
+      <description>
+
+&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Some Observations on Emerging Aspects in QoE Modeling and Their Impact on QoE Management</title>
-      <link>http://martin.varela.fi/publication/varela-qoem-2018/</link>
+      <link>https://martin.varela.fi/publication/varela-qoem-2018/</link>
       <pubDate>Sat, 26 May 2018 06:40:42 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/publication/varela-qoem-2018/</guid>
+      <guid>https://martin.varela.fi/publication/varela-qoem-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A Survey of Emerging Concepts and Challenges for QoE Management of Multimedia Services </title>
-      <link>http://martin.varela.fi/publication/varela-tomm18/</link>
+      <link>https://martin.varela.fi/publication/varela-tomm18/</link>
       <pubDate>Tue, 01 May 2018 06:40:42 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/publication/varela-tomm18/</guid>
+      <guid>https://martin.varela.fi/publication/varela-tomm18/</guid>
       <description></description>
     </item>
     
     <item>
       <title>QoE Vadis</title>
-      <link>http://martin.varela.fi/publication/varela-dagstuhl-perspectives/</link>
+      <link>https://martin.varela.fi/publication/varela-dagstuhl-perspectives/</link>
       <pubDate>Tue, 17 Apr 2018 06:40:42 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/publication/varela-dagstuhl-perspectives/</guid>
+      <guid>https://martin.varela.fi/publication/varela-dagstuhl-perspectives/</guid>
       <description></description>
     </item>
     
     <item>
       <title>What You Pay Is What You Get? — Fundamentals of Charging Internet Services Based on End User Quality of Experience</title>
-      <link>http://martin.varela.fi/publication/varela-quex18-2/</link>
+      <link>https://martin.varela.fi/publication/varela-quex18-2/</link>
       <pubDate>Mon, 09 Apr 2018 06:40:42 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/publication/varela-quex18-2/</guid>
+      <guid>https://martin.varela.fi/publication/varela-quex18-2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>QoE Analysis of the Setup of Different Internet Services for FIFO Server Systems</title>
-      <link>http://martin.varela.fi/publication/varela-mmb18/</link>
+      <link>https://martin.varela.fi/publication/varela-mmb18/</link>
       <pubDate>Mon, 26 Feb 2018 06:40:42 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/publication/varela-mmb18/</guid>
+      <guid>https://martin.varela.fi/publication/varela-mmb18/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A New QoE Fairness Index for QoE Management</title>
-      <link>http://martin.varela.fi/publication/varela-quex18/</link>
+      <link>https://martin.varela.fi/publication/varela-quex18/</link>
       <pubDate>Fri, 09 Feb 2018 06:40:42 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/publication/varela-quex18/</guid>
+      <guid>https://martin.varela.fi/publication/varela-quex18/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fractals — Complexity from Simplicity — Part 2</title>
-      <link>http://martin.varela.fi/post/fractals-complexity-from-simplicity-part2/</link>
+      <link>https://martin.varela.fi/2017/10/02/fractals-complexity-from-simplicity-part-2/</link>
       <pubDate>Mon, 02 Oct 2017 19:23:43 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/post/fractals-complexity-from-simplicity-part2/</guid>
+      <guid>https://martin.varela.fi/2017/10/02/fractals-complexity-from-simplicity-part-2/</guid>
       <description>&lt;!-- -*- org-export-babel-evaluate: nil -*- --&gt;
 
 &lt;h1 id=&#34;beyond-l-systems&#34;&gt;Beyond L-Systems&lt;/h1&gt;
@@ -193,8 +232,7 @@ famous&#34; fractal out there, and for good reason, as it it really fascinating.
 &lt;p&gt;We can start putting this to code, by defining the transformations and their
 application:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
-(ns fractals.barnsley
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(ns fractals.barnsley
   (:require [fractals.util :as util]    ;; We&#39;ll use a helper to scale the plot to the canvas
             [hiccup.core :as hiccup]))  ;; And hiccup to generate the HTML/SVG
 
@@ -217,8 +255,7 @@ application:&lt;/p&gt;
 &lt;p&gt;With that done, we can proceed to implement the actual Barnsley fern fractal.
 First, we pick the transformations with the given probability distribution&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
-(defn- transform-probs [i]
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(defn- transform-probs [i]
   (cond
     (&amp;lt;= i 0.01) :f1
     (&amp;lt;= i (+ 0.01 0.85)) :f2
@@ -229,8 +266,7 @@ First, we pick the transformations with the given probability distribution&lt;/p
 &lt;p&gt;We can now iterate on our starting point, for however many iterations we want to
 do.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
-(defn barnsley-fern [num-points]
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(defn barnsley-fern [num-points]
   (let [probs (repeatedly num-points rand)
         coeflist (map (comp transforms transform-probs) probs)]
     (reductions apply-transform [0 0] coeflist)))
@@ -246,8 +282,7 @@ f_{i_3}(f_{i_2}(f_{i_1}(0,0))), \cdots)$, where each $i_j \in {1,2,3,4}$.&lt;/p&
 tiny SVG circles, similar to how we did with polylines for the L-system fractals
 in the previous post.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
-(defn- render-svg-points [plot-points size]
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(defn- render-svg-points [plot-points size]
   (let [xmlns &amp;quot;http://www.w3.org/2000/svg&amp;quot;
         style &amp;quot;stroke:#5f7f5fBB; fill:#5f7f5fBB;&amp;quot;
         scale-bf (fn [[x y]] [(* 100 x) (* 100 y)])
@@ -271,7 +306,7 @@ in the previous post.&lt;/p&gt;
 
 &lt;p&gt;Running this with 40K points renders the following.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/barnsley.png&#34; alt=&#34;/img/fractals/barnsley.png&#34; title=&#34;/img/fractals/barnsley.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/barnsley.png&#34; alt=&#34;/img/fractals/barnsley.png&#34; title=&#34;/img/fractals/barnsley.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The actual SVG can be found &lt;a href=&#34;http:/html/fractals/barnsley-fern.html&#34; title=&#34;here&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
@@ -307,8 +342,7 @@ set. This allows for a bit more nuanced representation when we render it.&lt;/p&
 
 &lt;p&gt;In code:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
-(ns fractals.mandelbrot
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(ns fractals.mandelbrot
   (:require [com.evocomputing.colors :as c]  ;; we&#39;ll use the HSV space for coloring
             [clojure.string :refer [join]])
   (:import [java.io File]
@@ -365,7 +399,7 @@ define the mapping of our view-port to a section of the complex plane.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;With these two functions, we have now a representation we can use for plotting.
-We can map the view-port to a section of the plane with the &lt;code&gt;scale-to-bounds&lt;/code&gt; 
+We can map the view-port to a section of the plane with the ~scale-to-bounds~
 function, and then for each point in the view-port, calculate the number of
 iterations it took to diverge. This code is simple to understand, but not really
 efficient. I suspect there&#39;s a bit of stream fusion that could be applied here
@@ -377,8 +411,7 @@ now.&lt;/p&gt;
 ASCII format&#34; target=&#34;_blank&#34;&gt;PPM
 ASCII format&lt;/a&gt;, which is trivial to implement without any external library:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
-(defn do-ppm [points size depth name]
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(defn do-ppm [points size depth name]
   (let [[x y] size
         contents (-&amp;gt;&amp;gt; points
                       (partition x)
@@ -396,7 +429,7 @@ ASCII format&lt;/a&gt;, which is trivial to implement without any external libra
 &lt;p&gt;The above code is nothing fancy, but it gets us something to look at (and even
 within Emacs!):&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/full-ppm.png&#34; alt=&#34;/img/fractals/full-ppm.png&#34; title=&#34;/img/fractals/full-ppm.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/full-ppm.png&#34; alt=&#34;/img/fractals/full-ppm.png&#34; title=&#34;/img/fractals/full-ppm.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This is pretty cool! However, we can easily do better. We will use a bit of our
 host platform to render color PNGs. This will require two things, firstly,
@@ -407,8 +440,7 @@ fixed hue and saturation, and scaling the number of iterations to the value of
 the color. This will render the points in the set in black, and those not in it
 in different shades.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
-(defn do-color [i depth]
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(defn do-color [i depth]
   (let [icorr (/ (* i 100.0) depth)
         [r g b] (c/hsl-to-rgb 205 100 icorr)]
     (bit-or (bit-shift-left r 16)
@@ -436,7 +468,7 @@ in different shades.&lt;/p&gt;
 
 &lt;p&gt;Now we have some colors, but to be honest, the result is a bit underwhelming...&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/full-simple.png&#34; alt=&#34;/img/fractals/full-simple.png&#34; title=&#34;/img/fractals/full-simple.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/full-simple.png&#34; alt=&#34;/img/fractals/full-simple.png&#34; title=&#34;/img/fractals/full-simple.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;One thing we can realize, is that most of the &#34;interesting&#34; parts of the render
 happen around the limits of the set, so we can modify our coloring function to
@@ -445,8 +477,7 @@ brightest, and then decrease the value as we move towards the edges of the
 range. For a bit more &#34;drama&#34;, we also treat the saturation similarly. We redefine
 then our &lt;code&gt;do-color&lt;/code&gt; function:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
-(defn do-color
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(defn do-color
   &amp;quot;Maps a new color with the value based on the number of iterations it took
   for the point to escape the set. The plain mapping is rather dull, so here we
   focus on the points which are in the boundaries (intuitively, those that took
@@ -467,7 +498,7 @@ then our &lt;code&gt;do-color&lt;/code&gt; function:&lt;/p&gt;
 early could be made lighter, but I like the aesthetics this coloring function
 gives. In any case, there are a huge number of possible ways to apply color.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/full.png&#34; alt=&#34;/img/fractals/full.png&#34; title=&#34;/img/fractals/full.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/full.png&#34; alt=&#34;/img/fractals/full.png&#34; title=&#34;/img/fractals/full.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;With a suitable rendering mechanism, now we can explore a bit the set, and start
 looking into interesting portions. We can &#34;zoom in&#34; as much as we want, by
@@ -475,14 +506,14 @@ defining suitable bounding boxes, and we can increase the detail by increasing
 the depth. For example, we can take a closer look at the so-called &lt;em&gt;Seahorse
 valley&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/seahorse-left.png&#34; alt=&#34;/img/fractals/seahorse-left.png&#34; title=&#34;/img/fractals/seahorse-left.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/seahorse-left.png&#34; alt=&#34;/img/fractals/seahorse-left.png&#34; title=&#34;/img/fractals/seahorse-left.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I find this area of the plane truly fascinating, the patterns and depth of it
 are quite something. To give you an idea, here is a 24 megapixel render, with a
 depth of 2000 iterations. Go on, click on it, and zoom in to its full size. I&#39;ll
 wait for you here.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://martin.varela.fi/img/fractals/seahorse.png&#34; target=&#34;_blank&#34;&gt; &lt;img src=&#34;http://martin.varela.fi/img/fractals/seahorse.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://martin.varela.fi/img/fractals/seahorse.png&#34; target=&#34;_blank&#34;&gt; &lt;img src=&#34;https://martin.varela.fi/img/fractals/seahorse.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Is that wonderful, or what?&lt;/p&gt;
 
@@ -500,8 +531,7 @@ frame will be centered. All we need to do now is to create the required number
 of bounding boxes, interpolating position and size over the number of frames to
 render. Going back to our code:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
-(ns fractals.animate
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(ns fractals.animate
   (:require [fractals.mandelbrot :as m]
             [clojure.math.numeric-tower :as nt]))
 
@@ -572,10 +602,10 @@ GitHub&lt;/a&gt; if you want to play with it.&lt;/p&gt;
     
     <item>
       <title>Fractals — Complexity from Simplicity (and a bit of Clojure)</title>
-      <link>http://martin.varela.fi/post/fractals-complexity-from-simplicity/</link>
+      <link>https://martin.varela.fi/2017/09/26/fractals-complexity-from-simplicity-and-a-bit-of-clojure/</link>
       <pubDate>Tue, 26 Sep 2017 09:43:43 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/post/fractals-complexity-from-simplicity/</guid>
+      <guid>https://martin.varela.fi/2017/09/26/fractals-complexity-from-simplicity-and-a-bit-of-clojure/</guid>
       <description>&lt;!-- -*- org-export-babel-evaluate: nil -*- --&gt;
 
 &lt;h1 id=&#34;enter-the-dragon&#34;&gt;Enter the Dragon&lt;/h1&gt;
@@ -598,8 +628,7 @@ GitHub&lt;/a&gt; if you want to play with it.&lt;/p&gt;
 &lt;p&gt;In the case of the dragon curve, it can be represented by the following
   L-system (described nicely in &lt;a href=&#34;https://en.wikipedia.org/wiki/L-system#Example_6:_Dragon_curve&#34; title=&#34;the wiki&#34; target=&#34;_blank&#34;&gt;the wiki&lt;/a&gt;):&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;
-    variables : X Y
+&lt;pre&gt;&lt;code&gt;    variables : X Y
     constants : F + −
     start : FX
     rules : X → X+YF+
@@ -656,8 +685,7 @@ by hand is extremely tedious, so we can automate it with a bit of &lt;a href=&#3
 
 &lt;p&gt;We can start by defining the axiom, and the re-writing rules.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
-  (ns dragon.core
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;  (ns dragon.core
     (:require [hiccup.core :as hiccup]))
 
   (def start [:F :X])
@@ -672,8 +700,7 @@ by hand is extremely tedious, so we can automate it with a bit of &lt;a href=&#3
 
 &lt;p&gt;We can now see what happens when we apply the rules to the axiom:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
-(map rewrite start)
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(map rewrite start)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;example&#34;&gt;
 ([:F] [:X :+ :Y :F :+])
@@ -682,8 +709,7 @@ by hand is extremely tedious, so we can automate it with a bit of &lt;a href=&#3
 &lt;p&gt;This is a bit noisy due to the brackets, but we can see it&#39;s the same result we
 got by iterating by hand. Let&#39;s add a bit more functionality:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
-(defn dragon [segments iter]
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(defn dragon [segments iter]
   (if (zero? iter)
     segments
     (let [segs (vec (mapcat rewrite segments))]
@@ -692,8 +718,7 @@ got by iterating by hand. Let&#39;s add a bit more functionality:&lt;/p&gt;
 
 &lt;p&gt;Now we can get rid of the extra brackets, and do some more iterations.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
-(map (partial dragon start) (range 4))
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(map (partial dragon start) (range 4))
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;example&#34;&gt;
 ([:F :X] 
@@ -718,8 +743,7 @@ it (for now, anyway).&lt;/p&gt;
 
 &lt;p&gt;We can again automate this quite easily:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
-(def pi:2 (/ Math/PI 2))
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(def pi:2 (/ Math/PI 2))
 (def vec:size 3)
 
 (defn points [segments theta acc x y]
@@ -742,8 +766,7 @@ rules described above (ignore constants, draw when we find an &lt;code&gt;F&lt;/
 the indicated direction when we find a &lt;code&gt;+&lt;/code&gt; or a &lt;code&gt;-&lt;/code&gt;. This gives us a list of
 points which we can then use to build an SVG &lt;code&gt;polyline&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
-  (defn render-svg [plot-points]
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;  (defn render-svg [plot-points]
     (let [width 1000
           height 1000
           xmlns &amp;quot;http://www.w3.org/2000/svg&amp;quot;
@@ -762,14 +785,13 @@ above.&lt;/p&gt;
 
 &lt;p&gt;Now we can render our dragon and enjoy it in all its glory!&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;
-  (let [d    (dragon start 15)
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;  (let [d    (dragon start 15)
         pts  (points d 0 [] 500 500)
         html (render-svg pts)]
     (spit &amp;quot;dragon15.html&amp;quot; html)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/dragon15.png&#34; alt=&#34;/img/fractals/dragon15.png&#34; title=&#34;/img/fractals/dragon15.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/dragon15.png&#34; alt=&#34;/img/fractals/dragon15.png&#34; title=&#34;/img/fractals/dragon15.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;If you are reading this in a modern browser with proper SVG support, you can
 also open the generated &lt;a href=&#34;http:/html/fractals/dragon15.html&#34; title=&#34;HTML output&#34; target=&#34;_blank&#34;&gt;HTML output&lt;/a&gt;.&lt;/p&gt;
@@ -793,35 +815,32 @@ some of these.&lt;/p&gt;
 
 &lt;h2 id=&#34;box-fractal&#34;&gt;Box Fractal&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;
-axiom : F+F+F+F
+&lt;pre&gt;&lt;code&gt;axiom : F+F+F+F
 rules : F → FF+F+F+F+FF
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Five iterations of this system yield this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/box5.png&#34; alt=&#34;/img/fractals/box5.png&#34; title=&#34;/img/fractals/box5.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/box5.png&#34; alt=&#34;/img/fractals/box5.png&#34; title=&#34;/img/fractals/box5.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http:/html/fractals/box-05.html&#34; title=&#34;HTML/SVG version&#34; target=&#34;_blank&#34;&gt;HTML/SVG version&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;crystal-fractal&#34;&gt;Crystal Fractal&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;
-axiom : F+F+F+F
+&lt;pre&gt;&lt;code&gt;axiom : F+F+F+F
 rules : F → FF+F++F+F
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Like the Box above, this one also starts with a square (F+F+F+F).
 Six iterations yield:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/crystal6.png&#34; alt=&#34;/img/fractals/crystal6.png&#34; title=&#34;/img/fractals/crystal6.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/crystal6.png&#34; alt=&#34;/img/fractals/crystal6.png&#34; title=&#34;/img/fractals/crystal6.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http:/html/fractals/crystal-06.html&#34; title=&#34;HTML/SVG version&#34; target=&#34;_blank&#34;&gt;HTML/SVG version&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;hilbert-curve&#34;&gt;Hilbert Curve&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;
-axiom : X
+&lt;pre&gt;&lt;code&gt;axiom : X
 rules : X → +YF-XFX-FY+
         Y → -XF+YFY+FX-
 &lt;/code&gt;&lt;/pre&gt;
@@ -829,57 +848,53 @@ rules : X → +YF-XFX-FY+
 &lt;p&gt;The &lt;a href=&#34;https://en.wikipedia.org/wiki/Hilbert_curve&#34; title=&#34;Hilbert curve&#34; target=&#34;_blank&#34;&gt;Hilbert curve&lt;/a&gt; is a well-known space-filling fractal. It does get quite dense
 rather quickly. After only 9 iterations, it looks like this.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/hilbert9.png&#34; alt=&#34;/img/fractals/hilbert9.png&#34; title=&#34;/img/fractals/hilbert9.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/hilbert9.png&#34; alt=&#34;/img/fractals/hilbert9.png&#34; title=&#34;/img/fractals/hilbert9.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http:/html/fractals/hilbert-09.html&#34; title=&#34;HTML/SVG version (LARGE FILE!)&#34; target=&#34;_blank&#34;&gt;HTML/SVG version (LARGE FILE!)&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Zooming in a bit, we can better discern the structure:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/hilbert9zoom.png&#34; alt=&#34;/img/fractals/hilbert9zoom.png&#34; title=&#34;/img/fractals/hilbert9zoom.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/hilbert9zoom.png&#34; alt=&#34;/img/fractals/hilbert9zoom.png&#34; title=&#34;/img/fractals/hilbert9zoom.png&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;koch-curve&#34;&gt;Koch Curve&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;
-axiom : F+F+F+F
+&lt;pre&gt;&lt;code&gt;axiom : F+F+F+F
 rules : F → FF+F+F+F+FF
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;This one also becomes complex very quickly. At four iterations, it looks like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/koch4.png&#34; alt=&#34;/img/fractals/koch4.png&#34; title=&#34;/img/fractals/koch4.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/koch4.png&#34; alt=&#34;/img/fractals/koch4.png&#34; title=&#34;/img/fractals/koch4.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http:/html/fractals/koch-curve-04.html&#34; title=&#34;HTML/SVG version&#34; target=&#34;_blank&#34;&gt;HTML/SVG version&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;koch-snowflake&#34;&gt;Koch Snowflake&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;
-axiom : F--F--F
+&lt;pre&gt;&lt;code&gt;axiom : F--F--F
 rules : F → F+F--F+F
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;This is another well-known fractal.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/snowflake9.png&#34; alt=&#34;/img/fractals/snowflake9.png&#34; title=&#34;/img/fractals/snowflake9.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/snowflake9.png&#34; alt=&#34;/img/fractals/snowflake9.png&#34; title=&#34;/img/fractals/snowflake9.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http:/html/fractals/koch-snowflake-09.html&#34; title=&#34;HTML/SVG version&#34; target=&#34;_blank&#34;&gt;HTML/SVG version&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;rings&#34;&gt;Rings&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;
-axiom : F+F+F+F
+&lt;pre&gt;&lt;code&gt;axiom : F+F+F+F
 rules : F → FF+F+F+F+F+F-F
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;This one is quite eye-catching. After six itertations, we get:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/rings6.png&#34; alt=&#34;/img/fractals/rings6.png&#34; title=&#34;/img/fractals/rings6.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/rings6.png&#34; alt=&#34;/img/fractals/rings6.png&#34; title=&#34;/img/fractals/rings6.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http:/html/fractals/rings-06.html&#34; title=&#34;HTML/SVG version&#34; target=&#34;_blank&#34;&gt;HTML/SVG version&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;sierpiński-triangle&#34;&gt;Sierpiński Triangle&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;
-axiom : F-G-G
+&lt;pre&gt;&lt;code&gt;axiom : F-G-G
 rules : F → F-G+F+G-F
         G → GG
 &lt;/code&gt;&lt;/pre&gt;
@@ -888,7 +903,7 @@ rules : F → F-G+F+G-F
 above, it has two &lt;code&gt;forward&lt;/code&gt; variables, &lt;code&gt;F&lt;/code&gt; and &lt;code&gt;G&lt;/code&gt;. After 8 iterations, it
 results in this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/fractals/sierpinski8.png&#34; alt=&#34;/img/fractals/sierpinski8.png&#34; title=&#34;/img/fractals/sierpinski8.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/fractals/sierpinski8.png&#34; alt=&#34;/img/fractals/sierpinski8.png&#34; title=&#34;/img/fractals/sierpinski8.png&#34; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;more-to-come&#34;&gt;More to Come!&lt;/h1&gt;
 
@@ -908,10 +923,10 @@ transformations and stochastic processes, and the second one is the famous
     
     <item>
       <title>Simple Binary Data Visualization</title>
-      <link>http://martin.varela.fi/post/simple-binary-data-visualization/</link>
+      <link>https://martin.varela.fi/2017/09/09/simple-binary-data-visualization/</link>
       <pubDate>Sat, 09 Sep 2017 09:33:46 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/post/simple-binary-data-visualization/</guid>
+      <guid>https://martin.varela.fi/2017/09/09/simple-binary-data-visualization/</guid>
       <description>&lt;!-- -*- org-export-babel-evaluate: nil -*- --&gt;
 
 &lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
@@ -958,8 +973,7 @@ an offset of one for each repetition. This is a common pattern for example in
 Haskell and Lisp, basically &lt;code&gt;zip&lt;/code&gt; &#39;ping a list with its own tail. In R, we can
 use the &lt;code&gt;lead&lt;/code&gt; or &lt;code&gt;lag&lt;/code&gt; functions provided in Hadley Wickham&#39;s &lt;code&gt;dplyr&lt;/code&gt; package.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
-  library(tidyverse)
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;  library(tidyverse)
 
   a &amp;lt;- 1:10
   lead(a)
@@ -980,8 +994,7 @@ lag():    dplyr, stats
 &lt;p&gt;We can see that &lt;code&gt;lead&lt;/code&gt; has shifted &lt;code&gt;a&lt;/code&gt; to the left, introducing a &lt;code&gt;NA&lt;/code&gt; value at
 the end. If we create a dataframe or tibble with &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;lead(a)&lt;/code&gt; and &lt;code&gt;lead(lead(a))&lt;/code&gt; , we will obtain a table of trigrams.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
- zipped &amp;lt;- as.tibble(cbind(a, lead(a), lead(a,2)))
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt; zipped &amp;lt;- as.tibble(cbind(a, lead(a), lead(a,2)))
  glimpse(zipped)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;example&#34;&gt;
@@ -995,8 +1008,7 @@ $ `` &lt;int&gt; 3, 4, 5, 6, 7, 8, 9, 10, NA, NA
 &lt;p&gt;This is close to what we need, except for the &lt;code&gt;NA&lt;/code&gt; values, which we can easily
 remove with &lt;code&gt;drop_na&lt;/code&gt;, &lt;code&gt;na.omit&lt;/code&gt;, or &lt;code&gt;filter&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
- zipped %&amp;gt;% drop_na()
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt; zipped %&amp;gt;% drop_na()
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;example&#34;&gt;
 # A tibble: 8 x 3
@@ -1029,8 +1041,7 @@ will see, it would be simple to add this information as well.&lt;/p&gt;
 
 &lt;p&gt;Let us quickly see how we can setup the visualization.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
-  x &amp;lt;- sample(0:255, size=50000, replace = TRUE)
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;  x &amp;lt;- sample(0:255, size=50000, replace = TRUE)
   y &amp;lt;- lead(x)
   z &amp;lt;- lead(x,2)
   data &amp;lt;- cbind(x,y,z) %&amp;gt;% as.tibble() %&amp;gt;% na.omit()
@@ -1045,15 +1056,14 @@ Saving 7 x 7 in image
 
 &lt;p&gt;We can now look at the resulting plot:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/binViz/testplot.png&#34; alt=&#34;/img/binViz/testplot.png&#34; title=&#34;/img/binViz/testplot.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/testplot.png&#34; alt=&#34;/img/binViz/testplot.png&#34; title=&#34;/img/binViz/testplot.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The plot does not look like much, because we sampled uniformly distributed
 random data. However, if we read a file with some structure, we will see
 something more interesting. For some extra &#34;meta-ness&#34;, we&#39;ll use the source for
 this post as an input.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
-  filesize &amp;lt;- file.size(&amp;quot;post_draft.org&amp;quot;)
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;  filesize &amp;lt;- file.size(&amp;quot;post_draft.org&amp;quot;)
   x &amp;lt;- readBin(&amp;quot;post_draft.org&amp;quot;, integer(), n=filesize, size = 1, signed = FALSE)
   y &amp;lt;- lead(x)
   z &amp;lt;- lead(x,2)
@@ -1068,7 +1078,7 @@ this post as an input.&lt;/p&gt;
 Saving 7 x 7 in image
 &lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/binViz/testplot2.png&#34; alt=&#34;/img/binViz/testplot2.png&#34; title=&#34;/img/binViz/testplot2.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/testplot2.png&#34; alt=&#34;/img/binViz/testplot2.png&#34; title=&#34;/img/binViz/testplot2.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now this is a bit more interesting! What we can see here, is that most of the
 data is confined to a small section of our space. In particular, we can see both
@@ -1083,15 +1093,14 @@ and org-mode mark-up.&lt;/p&gt;
 &lt;p&gt;In some cases, using a different coordinate system may be useful in
 distinguishing structure. We can use, for instance, polar coordinates.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
-   polar_plot &amp;lt;- binplot + coord_polar()
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;   polar_plot &amp;lt;- binplot + coord_polar()
    ggsave(&amp;quot;testplot2_polar.png&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;example&#34;&gt;
 Saving 7 x 7 in image
 &lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/binViz/testplot2_polar.png&#34; alt=&#34;/img/binViz/testplot2_polar.png&#34; title=&#34;/img/binViz/testplot2_polar.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/testplot2_polar.png&#34; alt=&#34;/img/binViz/testplot2_polar.png&#34; title=&#34;/img/binViz/testplot2_polar.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Here we can also clearly see the predominance of digrams in the &lt;code&gt;[A-z]&lt;/code&gt; range,
 and of combinations of those and spaces (the line pointing towards 32 in the NE
@@ -1112,7 +1121,7 @@ quadrant, and the segment of arc at 32 in the NW quadrant).&lt;/p&gt;
 Saving 7 x 7 in image
 &lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/binViz/testplot2_density.png&#34; alt=&#34;/img/binViz/testplot2_density.png&#34; title=&#34;/img/binViz/testplot2_density.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/testplot2_density.png&#34; alt=&#34;/img/binViz/testplot2_density.png&#34; title=&#34;/img/binViz/testplot2_density.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In this case, the density plot does not provide much additional information, but
 it could be useful if we were for instance to facet the plot based on where in
@@ -1134,8 +1143,7 @@ kinds of visualizations, and output the plots with an automated and systematic
 naming scheme, which we could use for automatic report generation or some such
 at a later stage.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
-library(tidyverse)
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;library(tidyverse)
 
 # binviz Veles-like binary visualizaiton
 binViz2d &amp;lt;- function(filename, alpha = 1/100, maxsize = 5000000,
@@ -1238,8 +1246,7 @@ plot may be &lt;code&gt;NA&lt;/code&gt;) in a list (this list can be easily dest
 
 &lt;p&gt;The main plotting functions are as follows.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
-binViz2d_do_plot &amp;lt;- function(data, alpha, polar){
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;binViz2d_do_plot &amp;lt;- function(data, alpha, polar){
   theplot &amp;lt;- data  %&amp;gt;% ggplot(mapping = aes(x,y)) +
     geom_point(mapping = aes(color=z), alpha = alpha, size = 0.75) +
     scale_color_gradient(low=&amp;quot;blue&amp;quot;, high=&amp;quot;orange&amp;quot;) +
@@ -1321,8 +1328,7 @@ file on top of each other.&lt;/p&gt;
 above, we have added some meta-data in the form of an index column. We can use
 that column to create a &lt;em&gt;cut&lt;/em&gt; of the data, and then facet on this.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
-#let&#39;s load the code we wrote above 
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;#let&#39;s load the code we wrote above 
 source(&amp;quot;binViz2d/binViz2d.r&amp;quot;)
 library(zeallot)
 c(p,d) %&amp;lt;-% binViz2d(&amp;quot;post_draft.org&amp;quot;, save=FALSE)
@@ -1341,7 +1347,7 @@ filter(): dplyr, stats
 lag():    dplyr, stats
 &lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/binViz/testplot2_faceted_idx.png&#34; alt=&#34;/img/binViz/testplot2_faceted_idx.png&#34; title=&#34;/img/binViz/testplot2_faceted_idx.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/testplot2_faceted_idx.png&#34; alt=&#34;/img/binViz/testplot2_faceted_idx.png&#34; title=&#34;/img/binViz/testplot2_faceted_idx.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Adding the facets to the plot allows us to see how the structure of the file
 varies along its length. For this case, there isn&#39;t a noticeable difference,
@@ -1351,13 +1357,12 @@ since the file is just text.&lt;/p&gt;
 the trigram, and that will show us the densities of different levels in the file
 contents. In the case of this post draft, we should be able to see areas with&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
-c(p,d) %&amp;lt;-% binViz2d(&amp;quot;post_draft.org&amp;quot;, save=FALSE)
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;c(p,d) %&amp;lt;-% binViz2d(&amp;quot;post_draft.org&amp;quot;, save=FALSE)
 lp &amp;lt;- p + facet_wrap(~cut(z, 10))
 ggsave(&amp;quot;testplot2_faceted_value.png&amp;quot;, width = 20, height = 20, units = &amp;quot;cm&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/binViz/testplot2_faceted_value.png&#34; alt=&#34;/img/binViz/testplot2_faceted_value.png&#34; title=&#34;/img/binViz/testplot2_faceted_value.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/testplot2_faceted_value.png&#34; alt=&#34;/img/binViz/testplot2_faceted_value.png&#34; title=&#34;/img/binViz/testplot2_faceted_value.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Here we can clearly see again that most of the file&#39;s contents seems to fall in the
 ASCII range, with concentrations of space characters, and other characters in
@@ -1372,17 +1377,16 @@ looking at more complex files. Below we show a few of these.&lt;/p&gt;
 
 &lt;p&gt;The plots below show the structure of (Darwin) executable and library files.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
- binViz2d(&amp;quot;emacsclient&amp;quot;, alpha=1/20)
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt; binViz2d(&amp;quot;emacsclient&amp;quot;, alpha=1/20)
  binViz2d(&amp;quot;libasan.4.dylib&amp;quot;, alpha=1/150)
  binViz2d(&amp;quot;libR.dylib&amp;quot;, alpha=1/150)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/binViz/plot___emacsclient.png&#34; alt=&#34;/img/binViz/plot___emacsclient.png&#34; title=&#34;/img/binViz/plot___emacsclient.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/plot___emacsclient.png&#34; alt=&#34;/img/binViz/plot___emacsclient.png&#34; title=&#34;/img/binViz/plot___emacsclient.png&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/binViz/plot___libR:dylib.png&#34; alt=&#34;/img/binViz/plot___libR:dylib.png&#34; title=&#34;/img/binViz/plot___libR:dylib.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/plot___libR:dylib.png&#34; alt=&#34;/img/binViz/plot___libR:dylib.png&#34; title=&#34;/img/binViz/plot___libR:dylib.png&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/binViz/plot___libasan:4:dylib.png&#34; alt=&#34;/img/binViz/plot___libasan:4:dylib.png&#34; title=&#34;/img/binViz/plot___libasan:4:dylib.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/plot___libasan:4:dylib.png&#34; alt=&#34;/img/binViz/plot___libasan:4:dylib.png&#34; title=&#34;/img/binViz/plot___libasan:4:dylib.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We can see that these files have more structure to them, and exhibit some common
 patterns, such as much higher frequencies for low values and values
@@ -1394,36 +1398,33 @@ messages, which help explain the observed value distribution.&lt;/p&gt;
 &lt;p&gt;For a different perspective, we can look at the polar projection of one of these
 plots.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
- binViz2d(&amp;quot;libR.dylib&amp;quot;, alpha=1/150, polar=TRUE)
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt; binViz2d(&amp;quot;libR.dylib&amp;quot;, alpha=1/150, polar=TRUE)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/binViz/plot_polar__libR:dylib.png&#34; alt=&#34;/img/binViz/plot_polar__libR:dylib.png&#34; title=&#34;/img/binViz/plot_polar__libR:dylib.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/plot_polar__libR:dylib.png&#34; alt=&#34;/img/binViz/plot_polar__libR:dylib.png&#34; title=&#34;/img/binViz/plot_polar__libR:dylib.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We can also look at a faceted version of a plot, looking at how the trigrams
 change throughout the file.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
-c(p,d) %&amp;lt;-% binViz2d(&amp;quot;emacsclient&amp;quot;, save=FALSE)
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;c(p,d) %&amp;lt;-% binViz2d(&amp;quot;emacsclient&amp;quot;, save=FALSE)
 lp &amp;lt;- p + facet_wrap(~cut(idx, 20))
 ggsave(&amp;quot;emacsclient_faceted_idx.png&amp;quot;, width = 20, height = 20, units = &amp;quot;cm&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/binViz/emacsclient_faceted_idx.png&#34; alt=&#34;/img/binViz/emacsclient_faceted_idx.png&#34; title=&#34;/img/binViz/emacsclient_faceted_idx.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/emacsclient_faceted_idx.png&#34; alt=&#34;/img/binViz/emacsclient_faceted_idx.png&#34; title=&#34;/img/binViz/emacsclient_faceted_idx.png&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;pdf-content&#34;&gt;PDF Content&lt;/h2&gt;
 
 &lt;p&gt;PDF files show very distinctive properties as well. Here we look at a
 scientific paper and a programming book.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
- binViz2d(&amp;quot;tommSurvey.pdf&amp;quot;, alpha=1/150)
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt; binViz2d(&amp;quot;tommSurvey.pdf&amp;quot;, alpha=1/150)
  binViz2d(&amp;quot;cookbook.pdf&amp;quot;, alpha=1/150)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/binViz/plot___tommSurvey:pdf.png&#34; alt=&#34;/img/binViz/plot___tommSurvey:pdf.png&#34; title=&#34;/img/binViz/plot___tommSurvey:pdf.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/plot___tommSurvey:pdf.png&#34; alt=&#34;/img/binViz/plot___tommSurvey:pdf.png&#34; title=&#34;/img/binViz/plot___tommSurvey:pdf.png&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/binViz/plot___cookbook:pdf.png&#34; alt=&#34;/img/binViz/plot___cookbook:pdf.png&#34; title=&#34;/img/binViz/plot___cookbook:pdf.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/plot___cookbook:pdf.png&#34; alt=&#34;/img/binViz/plot___cookbook:pdf.png&#34; title=&#34;/img/binViz/plot___cookbook:pdf.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We notice that there are quite striking
 similarities among the plots. In particular, a set of &#34;lines&#34; appear along the
@@ -1434,15 +1435,14 @@ trigrams in the character parts of the ASCII range.&lt;/p&gt;
 &lt;p&gt;We can look at a faceted view of the plot to see if the distribution changes
 either on the index or the values observed.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
-c(p,d) %&amp;lt;-% binViz2d(&amp;quot;tommSurvey.pdf&amp;quot;, save=FALSE)
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;c(p,d) %&amp;lt;-% binViz2d(&amp;quot;tommSurvey.pdf&amp;quot;, save=FALSE)
 lp &amp;lt;- p + facet_wrap(~cut(z, 12))
 ggsave(&amp;quot;tommSurvey_faceted_value.png&amp;quot;, width = 20, height = 20, units = &amp;quot;cm&amp;quot;)
 ip &amp;lt;- p + facet_wrap(~cut(idx, 12))
 ggsave(&amp;quot;tommSurvey_faceted_idx.png&amp;quot;, width = 20, height = 20, units = &amp;quot;cm&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/binViz/tommSurvey_faceted_idx.png&#34; alt=&#34;/img/binViz/tommSurvey_faceted_idx.png&#34; title=&#34;/img/binViz/tommSurvey_faceted_idx.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/tommSurvey_faceted_idx.png&#34; alt=&#34;/img/binViz/tommSurvey_faceted_idx.png&#34; title=&#34;/img/binViz/tommSurvey_faceted_idx.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;When looking at how the line structure is noticeable throughout the file, we can see
 that there are portions of the file in which it vanishes, whereas in others it
@@ -1454,7 +1454,7 @@ noticeable for all the value ranges, but the secondary ones are visible only in
 certain value ranges. Finding out the actual meaning of this would probably be a
 non-trivial task, left as an exercise to the reader ;).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/binViz/tommSurvey_faceted_value.png&#34; alt=&#34;/img/binViz/tommSurvey_faceted_value.png&#34; title=&#34;/img/binViz/tommSurvey_faceted_value.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/tommSurvey_faceted_value.png&#34; alt=&#34;/img/binViz/tommSurvey_faceted_value.png&#34; title=&#34;/img/binViz/tommSurvey_faceted_value.png&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;audio&#34;&gt;Audio&lt;/h2&gt;
 
@@ -1463,8 +1463,7 @@ the content, in order to reduce the time (and memory) required for creating the
 visualizations. We will look at a music clip, uncompressed, and then encoded as
 MP3 and FLAC.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
- binViz2d(&amp;quot;Test_File_2_0_STEREO_PCM.wav&amp;quot;, alpha=1/100,
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt; binViz2d(&amp;quot;Test_File_2_0_STEREO_PCM.wav&amp;quot;, alpha=1/100,
                                           sample = TRUE, sample_size = 400000)
  binViz2d(&amp;quot;Test_File_2_0_STEREO_MP3.mp3&amp;quot;, alpha=1/100,
                                           sample = TRUE, sample_size = 400000)
@@ -1479,11 +1478,11 @@ whereas for the FLAC it&#39;s a bit under 5 percent, and for the MP3 version it 
 almost 20 percent. Still, the patterns observed in the plots are quite constant,
 even varying the sampling size between 25% and 500% of the value chosen here.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_PCM:wav.png&#34; alt=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_PCM:wav.png&#34; title=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_PCM:wav.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_PCM:wav.png&#34; alt=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_PCM:wav.png&#34; title=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_PCM:wav.png&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_FLAC:flac.png&#34; alt=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_FLAC:flac.png&#34; title=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_FLAC:flac.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_FLAC:flac.png&#34; alt=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_FLAC:flac.png&#34; title=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_FLAC:flac.png&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://martin.varela.fi/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_MP3:mp3.png&#34; alt=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_MP3:mp3.png&#34; title=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_MP3:mp3.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://martin.varela.fi/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_MP3:mp3.png&#34; alt=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_MP3:mp3.png&#34; title=&#34;/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_MP3:mp3.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;It&#39;s interesting to note that while the uncompressed file has a very clear
 structure, the compressed versions seem almost random. This pattern is also
@@ -1508,55 +1507,28 @@ free to be used.
     
     <item>
       <title>No Silver Bullet: QoE Metrics, QoE Fairness, and User Diversity in the Context of QoE Management</title>
-      <link>http://martin.varela.fi/publication/varela-qomex17/</link>
+      <link>https://martin.varela.fi/publication/varela-qomex17/</link>
       <pubDate>Wed, 03 May 2017 06:40:43 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/publication/varela-qomex17/</guid>
+      <guid>https://martin.varela.fi/publication/varela-qomex17/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Embracing Uncertainty: A Probabilistic View of HTTP Video Quality</title>
-      <link>http://martin.varela.fi/publication/varela-qoem-2017/</link>
+      <link>https://martin.varela.fi/publication/varela-qoem-2017/</link>
       <pubDate>Wed, 03 May 2017 06:40:42 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/publication/varela-qoem-2017/</guid>
+      <guid>https://martin.varela.fi/publication/varela-qoem-2017/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Definition of QoE Fairness in Shared Systems</title>
-      <link>http://martin.varela.fi/publication/varela-qoe-fairness/</link>
+      <link>https://martin.varela.fi/publication/varela-qoe-fairness/</link>
       <pubDate>Tue, 03 Jan 2017 06:40:42 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/publication/varela-qoe-fairness/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>QoE Management Out of the Lab and Into the Real World (invited lecture)</title>
-      <link>http://martin.varela.fi/talk/talk-25/</link>
-      <pubDate>Mon, 05 Sep 2016 13:54:53 +0300</pubDate>
-      
-      <guid>http://martin.varela.fi/talk/talk-25/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>QoE beyond the MOS: an in-depth look at QoE via better metrics and their relation to MOS</title>
-      <link>http://martin.varela.fi/publication/varela-quex-beyond-the-mos/</link>
-      <pubDate>Sat, 03 Sep 2016 06:40:44 +0300</pubDate>
-      
-      <guid>http://martin.varela.fi/publication/varela-quex-beyond-the-mos/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>On Additive and Multiplicative QoS-QoE Models for Multiple QoS Parameters</title>
-      <link>http://martin.varela.fi/publication/varela-pqs16/</link>
-      <pubDate>Wed, 03 Aug 2016 06:40:42 +0300</pubDate>
-      
-      <guid>http://martin.varela.fi/publication/varela-pqs16/</guid>
+      <guid>https://martin.varela.fi/publication/varela-qoe-fairness/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.0.0">
+  <meta name="generator" content="Hugo 0.54.0" />
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Martín Varela">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Enter the Dragon Fractals have always fascinated me. I remember seeing a render of a Mandelbrot set back in the early 90s (when color screens started being accessible back home), and being completely mesmerized by it. I remember being even more fascinated by seeing a code-golf version of such a renderer, implemented in some 300 bytes of C.
+Some days ago I came across the &#34;dragon curve&#34;, and decided to give it a go in Clojure, as a way to learn a bit more and have some fun.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://martin.varela.fi/2017/09/26/fractals-complexity-from-simplicity-and-a-bit-of-clojure/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css" crossorigin="anonymous">
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-107269456-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+  
+
+  
+  <link rel="alternate" href="https://martin.varela.fi/index.xml" type="application/rss+xml" title="Martín Varela">
+  <link rel="feed" href="https://martin.varela.fi/index.xml" type="application/rss+xml" title="Martín Varela">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://martin.varela.fi/2017/09/26/fractals-complexity-from-simplicity-and-a-bit-of-clojure/">
+
+  
+  
+  
+  
+    
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Martín Varela">
+  <meta property="og:url" content="https://martin.varela.fi/2017/09/26/fractals-complexity-from-simplicity-and-a-bit-of-clojure/">
+  <meta property="og:title" content="Fractals — Complexity from Simplicity (and a bit of Clojure) | Martín Varela">
+  <meta property="og:description" content="Enter the Dragon Fractals have always fascinated me. I remember seeing a render of a Mandelbrot set back in the early 90s (when color screens started being accessible back home), and being completely mesmerized by it. I remember being even more fascinated by seeing a code-golf version of such a renderer, implemented in some 300 bytes of C.
+Some days ago I came across the &#34;dragon curve&#34;, and decided to give it a go in Clojure, as a way to learn a bit more and have some fun."><meta property="og:image" content="https://martin.varela.fi/2017/09/26/fractals-complexity-from-simplicity-and-a-bit-of-clojure/featured.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2017-09-26T09:43:43&#43;03:00">
+  
+  <meta property="article:modified_time" content="2017-09-26T09:43:43&#43;03:00">
+  
+
+  
+
+  
+
+  <title>Fractals — Complexity from Simplicity (and a bit of Clojure) | Martín Varela</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Martín Varela</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#publications_featured">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#talks">
+            
+            <span>Talks</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-header d-xl-none">
+  <div class="featured-image" style="background-image: url('/2017/09/26/fractals-complexity-from-simplicity-and-a-bit-of-clojure/featured_hufc16d9534dc02639ae2e63d48f547128_46352_800x0_resize_lanczos_2.png');"></div>
+  
+</div>
+
+
+<div class="container-fluid split-header d-none d-xl-block">
+  <div class="row">
+    <div class="col-6">
+      <div class="split-header-content">
+        <h1 itemprop="name">Fractals — Complexity from Simplicity (and a bit of Clojure)</h1>
+
+        
+
+        
+
+
+
+<meta content="2017-09-26 09:43:43 &#43;0300 EEST" itemprop="datePublished">
+<meta content="2017-09-26 09:43:43 &#43;0300 EEST" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Sep 26, 2017</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+
+</div>
+
+
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+        
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Fractals%20%e2%80%94%20Complexity%20from%20Simplicity%20%28and%20a%20bit%20of%20Clojure%29&amp;url=https%3a%2f%2fmartin.varela.fi%2f2017%2f09%2f26%2ffractals-complexity-from-simplicity-and-a-bit-of-clojure%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmartin.varela.fi%2f2017%2f09%2f26%2ffractals-complexity-from-simplicity-and-a-bit-of-clojure%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmartin.varela.fi%2f2017%2f09%2f26%2ffractals-complexity-from-simplicity-and-a-bit-of-clojure%2f&amp;title=Fractals%20%e2%80%94%20Complexity%20from%20Simplicity%20%28and%20a%20bit%20of%20Clojure%29"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fmartin.varela.fi%2f2017%2f09%2f26%2ffractals-complexity-from-simplicity-and-a-bit-of-clojure%2f&amp;title=Fractals%20%e2%80%94%20Complexity%20from%20Simplicity%20%28and%20a%20bit%20of%20Clojure%29"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Fractals%20%e2%80%94%20Complexity%20from%20Simplicity%20%28and%20a%20bit%20of%20Clojure%29&amp;body=https%3a%2f%2fmartin.varela.fi%2f2017%2f09%2f26%2ffractals-complexity-from-simplicity-and-a-bit-of-clojure%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="split-header-image">
+        <img src="/2017/09/26/fractals-complexity-from-simplicity-and-a-bit-of-clojure/featured_hufc16d9534dc02639ae2e63d48f547128_46352_680x500_fill_q90_lanczos_smart1_2.png" itemprop="image" alt="">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-container d-xl-none">
+  <h1 itemprop="name">Fractals — Complexity from Simplicity (and a bit of Clojure)</h1>
+
+  
+
+  
+
+
+
+<meta content="2017-09-26 09:43:43 &#43;0300 EEST" itemprop="datePublished">
+<meta content="2017-09-26 09:43:43 &#43;0300 EEST" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Sep 26, 2017</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Fractals%20%e2%80%94%20Complexity%20from%20Simplicity%20%28and%20a%20bit%20of%20Clojure%29&amp;url=https%3a%2f%2fmartin.varela.fi%2f2017%2f09%2f26%2ffractals-complexity-from-simplicity-and-a-bit-of-clojure%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmartin.varela.fi%2f2017%2f09%2f26%2ffractals-complexity-from-simplicity-and-a-bit-of-clojure%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmartin.varela.fi%2f2017%2f09%2f26%2ffractals-complexity-from-simplicity-and-a-bit-of-clojure%2f&amp;title=Fractals%20%e2%80%94%20Complexity%20from%20Simplicity%20%28and%20a%20bit%20of%20Clojure%29"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fmartin.varela.fi%2f2017%2f09%2f26%2ffractals-complexity-from-simplicity-and-a-bit-of-clojure%2f&amp;title=Fractals%20%e2%80%94%20Complexity%20from%20Simplicity%20%28and%20a%20bit%20of%20Clojure%29"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Fractals%20%e2%80%94%20Complexity%20from%20Simplicity%20%28and%20a%20bit%20of%20Clojure%29&amp;body=https%3a%2f%2fmartin.varela.fi%2f2017%2f09%2f26%2ffractals-complexity-from-simplicity-and-a-bit-of-clojure%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <!-- -*- org-export-babel-evaluate: nil -*- -->
+
+<h1 id="enter-the-dragon">Enter the Dragon</h1>
+
+<p>Fractals have always fascinated me. I remember seeing a render of a Mandelbrot
+  set back in the early 90s (when color screens started being accessible back
+  home), and being completely mesmerized by it. I remember being even more
+  fascinated by seeing a code-golf version of such a renderer, implemented in
+  some 300 bytes of C.</p>
+
+<p>Some days ago I came across the "dragon curve", and decided to give it a go in
+  Clojure, as a way to learn a bit more and have some fun. I implemented it as a 
+  <a href="https://en.wikipedia.org/wiki/L-system" title="Lindenmayer system" target="_blank">Lindenmayer system</a>, which reveals the simplicity behind it.</p>
+
+<p>L-systems are string re-writing systems, and have a set of constants,
+  variables, rules, and a starting axiom. One starts with the axiom, and applies
+  the rules to it. Each rule maps a variable to a new string that substitutes
+  it. Constants are unaffected by the re-write, and remain in place.</p>
+
+<p>In the case of the dragon curve, it can be represented by the following
+  L-system (described nicely in <a href="https://en.wikipedia.org/wiki/L-system#Example_6:_Dragon_curve" title="the wiki" target="_blank">the wiki</a>):</p>
+
+<pre><code>    variables : X Y
+    constants : F + −
+    start : FX
+    rules : X → X+YF+
+            Y → −FX−Y
+</code></pre>
+
+<p>In order to "grow" the dragon, we iterate by applying the rules to the axiom,
+  and then to the result, and so on. For example, after two iterations on the
+  axiom, we have:</p>
+
+<table>
+<tbody>
+<tr>
+<td>Iteration 1</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Axiom</td>
+<td>FX</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Rule for X</td>
+<td>FX+YF+</td>
+</tr>
+
+<tr>
+<td>Iteration 2</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>Rule for X</td>
+<td>FX+YF++YF+</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Rule for Y</td>
+<td>FX+-FX-YF++-FX-YF+</td>
+</tr>
+</tbody>
+</table>
+
+<p>These simple rules, and the simple starting point lead to an increasingly
+complex string, where structure starts becoming visible. Of course, doing this
+by hand is extremely tedious, so we can automate it with a bit of <a href="https://clojure.org/" title="Clojure" target="_blank">Clojure</a>.</p>
+
+<p>We can start by defining the axiom, and the re-writing rules.</p>
+
+<pre><code class="language-clojure">  (ns dragon.core
+    (:require [hiccup.core :as hiccup]))
+
+  (def start [:F :X])
+
+  (defn rewrite [i]
+    (cond
+      (= :X i) [:X :+ :Y :F :+]
+      (= :Y i) [:- :F :X :- :Y]
+      :true [i]))
+
+</code></pre>
+
+<p>We can now see what happens when we apply the rules to the axiom:</p>
+
+<pre><code class="language-clojure">(map rewrite start)
+</code></pre>
+<pre class="example">
+([:F] [:X :+ :Y :F :+])
+</pre>
+
+<p>This is a bit noisy due to the brackets, but we can see it's the same result we
+got by iterating by hand. Let's add a bit more functionality:</p>
+
+<pre><code class="language-clojure">(defn dragon [segments iter]
+  (if (zero? iter)
+    segments
+    (let [segs (vec (mapcat rewrite segments))]
+      (recur segs (- iter 1)))))
+</code></pre>
+
+<p>Now we can get rid of the extra brackets, and do some more iterations.</p>
+
+<pre><code class="language-clojure">(map (partial dragon start) (range 4))
+</code></pre>
+<pre class="example">
+([:F :X] 
+ [:F :X :+ :Y :F :+] 
+ [:F :X :+ :Y :F :+ :+ :- :F :X :- :Y :F :+] 
+ [:F :X :+ :Y :F :+ :+ :- :F :X :- :Y :F :+ :+ :- 
+  :F :X :+ :Y :F :+ :- :- :F :X :- :Y :F :+])
+</pre>
+
+<p>As we can see in the (slightly reformatted) results, the string's size and
+complexity keeps increasing.</p>
+
+<p>In order to visualize this fractal, we need some rules on how to interpret it.
+This is also very simple, and in fact, it is pretty much the same as the
+<a href="https://en.wikipedia.org/wiki/Turtle_graphics" title="turtle graphics" target="_blank">turtle graphics</a> that were used in the <a href="https://en.wikipedia.org/wiki/Logo_(programming_language)" title="Logo language" target="_blank">Logo language</a>.</p>
+
+<p>In this case, we will interpret the <code>F</code> constant as <code>forward</code> (that is, draw a
+line in the direction the turtle is facing, and a fixed distance). The <code>+</code> and
+ <code>-</code> constants will respectively mean <code>right 90</code> and <code>left 90</code>, that is, to
+rotate the turtle by 90 degrees in a given direction. And that's all there is to
+it (for now, anyway).</p>
+
+<p>We can again automate this quite easily:</p>
+
+<pre><code class="language-clojure">(def pi:2 (/ Math/PI 2))
+(def vec:size 3)
+
+(defn points [segments theta acc x y]
+  (if (empty? segments)
+    acc
+    (let [s  (first segments)
+          xs (rest segments)]
+      (cond
+        (or (= s :X) (= s :Y)) (recur xs, theta, acc, x, y)
+        (= s :+) (recur xs, (+ theta pi:2), acc, x, y)
+        (= s :-) (recur xs, (- theta pi:2), acc, x, y)
+        (= s :F) (let [xx (+ x (* vec:size (Math/cos theta)))
+                       yy (+ y (* vec:size (Math/sin theta)))
+                       new-acc (conj acc (vector xx yy))]
+(recur xs, theta, new-acc, xx, yy))))))
+</code></pre>
+
+<p>We basically go over the generated string, and interpret it according to the
+rules described above (ignore constants, draw when we find an <code>F</code>, and turn in
+the indicated direction when we find a <code>+</code> or a <code>-</code>. This gives us a list of
+points which we can then use to build an SVG <code>polyline</code>.</p>
+
+<pre><code class="language-clojure">  (defn render-svg [plot-points]
+    (let [width 1000
+          height 1000
+          xmlns &quot;http://www.w3.org/2000/svg&quot;
+          style &quot;stroke:#474674; fill:white;&quot;
+          points (apply str (map #(str (first %) &quot;,&quot; (second %) &quot; &quot;) plot-points))]
+      (hiccup/html [:svg {:width width
+                          :height height
+                          :xmlns xmlns}
+                    [:polyline {:points points
+                                :style style}]])))
+</code></pre>
+
+<p>Here we are using the <a href="https://github.com/weavejester/hiccup" title="hiccup library" target="_blank">hiccup library</a> for rendering HTML, and creating a
+(potentially very large) <code>polyline</code> element with all the points we defined
+above.</p>
+
+<p>Now we can render our dragon and enjoy it in all its glory!</p>
+
+<pre><code class="language-clojure">  (let [d    (dragon start 15)
+        pts  (points d 0 [] 500 500)
+        html (render-svg pts)]
+    (spit &quot;dragon15.html&quot; html)
+</code></pre>
+
+<p><img src="/img/fractals/dragon15.png" alt="/img/fractals/dragon15.png" title="/img/fractals/dragon15.png" /></p>
+
+<p>If you are reading this in a modern browser with proper SVG support, you can
+also open the generated <a href="http:/html/fractals/dragon15.html" title="HTML output" target="_blank">HTML output</a>.</p>
+
+<h1 id="tidying-up">Tidying Up</h1>
+
+<p>The code snippets above are fun for playing in the Clojure REPL, but they're
+ don't generalize well, and can be improved upon significantly. In particular,
+ they require some fiddling with the SVG rendering view-port and the starting
+ point of the fractal drawing. I've cleaned up the code a bit, and made it
+ generic so it can support many other L-systems. It now lives on <a href="https://github.com/mvarela/Fractal-Playground" title="Github" target="_blank">Github</a>, along
+ with some other fractal code that we'll discuss in an upcoming post.</p>
+
+<p>The L-system code itself, if you are interested, lives <a href="https://github.com/mvarela/Fractal-Playground/blob/master/src/fractals/l_system.clj" title="here" target="_blank">here</a>.</p>
+
+<h1 id="more-fractal-goodness">More Fractal Goodness</h1>
+
+<p>Lindenmayer systems can give rise to very many interesting fractals, and many
+self-similar constructs can also be represented as L-systems. Below you can see
+some of these.</p>
+
+<h2 id="box-fractal">Box Fractal</h2>
+
+<pre><code>axiom : F+F+F+F
+rules : F → FF+F+F+F+FF
+</code></pre>
+
+<p>Five iterations of this system yield this:</p>
+
+<p><img src="/img/fractals/box5.png" alt="/img/fractals/box5.png" title="/img/fractals/box5.png" /></p>
+
+<p><a href="http:/html/fractals/box-05.html" title="HTML/SVG version" target="_blank">HTML/SVG version</a></p>
+
+<h2 id="crystal-fractal">Crystal Fractal</h2>
+
+<pre><code>axiom : F+F+F+F
+rules : F → FF+F++F+F
+</code></pre>
+
+<p>Like the Box above, this one also starts with a square (F+F+F+F).
+Six iterations yield:</p>
+
+<p><img src="/img/fractals/crystal6.png" alt="/img/fractals/crystal6.png" title="/img/fractals/crystal6.png" /></p>
+
+<p><a href="http:/html/fractals/crystal-06.html" title="HTML/SVG version" target="_blank">HTML/SVG version</a></p>
+
+<h2 id="hilbert-curve">Hilbert Curve</h2>
+
+<pre><code>axiom : X
+rules : X → +YF-XFX-FY+
+        Y → -XF+YFY+FX-
+</code></pre>
+
+<p>The <a href="https://en.wikipedia.org/wiki/Hilbert_curve" title="Hilbert curve" target="_blank">Hilbert curve</a> is a well-known space-filling fractal. It does get quite dense
+rather quickly. After only 9 iterations, it looks like this.</p>
+
+<p><img src="/img/fractals/hilbert9.png" alt="/img/fractals/hilbert9.png" title="/img/fractals/hilbert9.png" /></p>
+
+<p><a href="http:/html/fractals/hilbert-09.html" title="HTML/SVG version (LARGE FILE!)" target="_blank">HTML/SVG version (LARGE FILE!)</a></p>
+
+<p>Zooming in a bit, we can better discern the structure:</p>
+
+<p><img src="/img/fractals/hilbert9zoom.png" alt="/img/fractals/hilbert9zoom.png" title="/img/fractals/hilbert9zoom.png" /></p>
+
+<h2 id="koch-curve">Koch Curve</h2>
+
+<pre><code>axiom : F+F+F+F
+rules : F → FF+F+F+F+FF
+</code></pre>
+
+<p>This one also becomes complex very quickly. At four iterations, it looks like this:</p>
+
+<p><img src="/img/fractals/koch4.png" alt="/img/fractals/koch4.png" title="/img/fractals/koch4.png" /></p>
+
+<p><a href="http:/html/fractals/koch-curve-04.html" title="HTML/SVG version" target="_blank">HTML/SVG version</a></p>
+
+<h2 id="koch-snowflake">Koch Snowflake</h2>
+
+<pre><code>axiom : F--F--F
+rules : F → F+F--F+F
+</code></pre>
+
+<p>This is another well-known fractal.</p>
+
+<p><img src="/img/fractals/snowflake9.png" alt="/img/fractals/snowflake9.png" title="/img/fractals/snowflake9.png" /></p>
+
+<p><a href="http:/html/fractals/koch-snowflake-09.html" title="HTML/SVG version" target="_blank">HTML/SVG version</a></p>
+
+<h2 id="rings">Rings</h2>
+
+<pre><code>axiom : F+F+F+F
+rules : F → FF+F+F+F+F+F-F
+</code></pre>
+
+<p>This one is quite eye-catching. After six itertations, we get:</p>
+
+<p><img src="/img/fractals/rings6.png" alt="/img/fractals/rings6.png" title="/img/fractals/rings6.png" /></p>
+
+<p><a href="http:/html/fractals/rings-06.html" title="HTML/SVG version" target="_blank">HTML/SVG version</a></p>
+
+<h2 id="sierpiński-triangle">Sierpiński Triangle</h2>
+
+<pre><code>axiom : F-G-G
+rules : F → F-G+F+G-F
+        G → GG
+</code></pre>
+
+<p>The Sierpiński triangle is another very well known fractal. Unlike the ones seen
+above, it has two <code>forward</code> variables, <code>F</code> and <code>G</code>. After 8 iterations, it
+results in this:</p>
+
+<p><img src="/img/fractals/sierpinski8.png" alt="/img/fractals/sierpinski8.png" title="/img/fractals/sierpinski8.png" /></p>
+
+<h1 id="more-to-come">More to Come!</h1>
+
+<p>In this post we have covered the basics of L-system based fractals. There is a
+bit more to them, as more "commands" can be embedded in the fractal string, such
+as <code>moving</code> the turtle without drawing, and <code>pushing</code> and <code>popping</code> state onto a
+stack, to allow for the generation of more complex patterns. The L-system
+processing code on Github has some partial support for those, but the renderer
+doesn't, so some further work is needed there.</p>
+
+<p>A <a href="http://martin.varela.fi/post/fractals-complexity-from-simplicity-part2/" title="second part" target="_blank">second part</a> to this incursion into fractals is upcoming. There we'll look into
+two different types of fractals. The first type is based on affine
+transformations and stochastic processes, and the second one is the famous
+<a href="https://en.wikipedia.org/wiki/Mandelbrot_set" title="Mandelbrot set" target="_blank">Mandelbrot set</a>.</p>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/math/">math</a>
+  
+  <a class="badge badge-light" href="/tags/fractals/">fractals</a>
+  
+  <a class="badge badge-light" href="/tags/clojure/">Clojure</a>
+  
+  <a class="badge badge-light" href="/tags/just-for-fun/">just for fun</a>
+  
+</div>
+
+
+
+
+    
+      
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<div class="media author-card" itemscope itemtype="http://schema.org/Person">
+  
+  
+  <img class="portrait mr-3" src="/author/admin/avatar_hu3d151a54a167f5d81fb6f7b65d699e83_1778663_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+  
+
+  <div class="media-body">
+    <h5 class="card-title" itemprop="name"><a href="/authors/admin">Martín Varela</a></h5>
+    <h6 class="card-subtitle">QoE Guy</h6>
+    <p class="card-text" itemprop="description">I work mainly in Quality of Experience (QoE) for online services, and QoE management.</p>
+    <ul class="network-icon" aria-hidden="true">
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="/#contact" >
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://scholar.google.fi/citations?user=hetDWy0AAAAJ&amp;hl=en" target="_blank" rel="noopener">
+          <i class="ai ai-google-scholar"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://github.com/mvarela" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="/pdf/cv-martin_varela.pdf" >
+          <i class="ai ai-cv"></i>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    &copy; Martín Varela 2017- &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/clojure.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ruby.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.109caa4f51ff39522c6dfc25fb05b6e9.js"></script>
+
+  </body>
+</html>
+

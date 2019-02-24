@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Filippo Mazza on Martín Varela</title>
+    <link>https://martin.varela.fi/authors/filippo-mazza/</link>
+    <description>Recent content in Filippo Mazza on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Fri, 03 Jan 2014 06:40:44 +0300</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/authors/filippo-mazza/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Chamber QoE - A Multi-instrumental Apporach to Explore Affective Aspects in relation to Quality of Experience</title>
+      <link>https://martin.varela.fi/publication/varela-spie/</link>
+      <pubDate>Fri, 03 Jan 2014 06:40:44 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-spie/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

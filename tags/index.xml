@@ -1,84 +1,95 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on </title>
-    <link>http://martin.varela.fi/tags/</link>
-    <description>Recent content in Tags on </description>
+    <title>Tags on Martín Varela</title>
+    <link>https://martin.varela.fi/tags/</link>
+    <description>Recent content in Tags on Martín Varela</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Mon, 02 Oct 2017 19:23:43 +0300</lastBuildDate>
     
-    <item>
-      <title>Content tagged as &#39;Academic&#39;</title>
-      <link>http://martin.varela.fi/tags/academic/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://martin.varela.fi/tags/academic/</guid>
-      <description>&lt;p&gt;Here is a list of all the content that has been tagged as &lt;em&gt;academic&lt;/em&gt;.&lt;/p&gt;
-</description>
-    </item>
+	<atom:link href="https://martin.varela.fi/tags/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Clojure</title>
-      <link>http://martin.varela.fi/tags/clojure/</link>
+      <link>https://martin.varela.fi/tags/clojure/</link>
       <pubDate>Mon, 02 Oct 2017 19:23:43 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/tags/clojure/</guid>
+      <guid>https://martin.varela.fi/tags/clojure/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Data Analysis</title>
-      <link>http://martin.varela.fi/tags/data-analysis/</link>
-      <pubDate>Sat, 09 Sep 2017 09:33:46 +0300</pubDate>
+      <title>Deep Learning</title>
+      <link>https://martin.varela.fi/tags/deep-learning/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/tags/data-analysis/</guid>
+      <guid>https://martin.varela.fi/tags/deep-learning/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Fractals</title>
-      <link>http://martin.varela.fi/tags/fractals/</link>
-      <pubDate>Mon, 02 Oct 2017 19:23:43 +0300</pubDate>
+      <title>Demo</title>
+      <link>https://martin.varela.fi/tags/demo/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/tags/fractals/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Just for Fun</title>
-      <link>http://martin.varela.fi/tags/just-for-fun/</link>
-      <pubDate>Mon, 02 Oct 2017 19:23:43 +0300</pubDate>
-      
-      <guid>http://martin.varela.fi/tags/just-for-fun/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Math</title>
-      <link>http://martin.varela.fi/tags/math/</link>
-      <pubDate>Mon, 02 Oct 2017 19:23:43 +0300</pubDate>
-      
-      <guid>http://martin.varela.fi/tags/math/</guid>
+      <guid>https://martin.varela.fi/tags/demo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>http://martin.varela.fi/tags/r/</link>
+      <link>https://martin.varela.fi/tags/r/</link>
       <pubDate>Sat, 09 Sep 2017 09:33:46 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/tags/r/</guid>
+      <guid>https://martin.varela.fi/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Visualization</title>
-      <link>http://martin.varela.fi/tags/visualization/</link>
+      <title>data analysis</title>
+      <link>https://martin.varela.fi/tags/data-analysis/</link>
       <pubDate>Sat, 09 Sep 2017 09:33:46 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/tags/visualization/</guid>
+      <guid>https://martin.varela.fi/tags/data-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fractals</title>
+      <link>https://martin.varela.fi/tags/fractals/</link>
+      <pubDate>Mon, 02 Oct 2017 19:23:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/tags/fractals/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>just for fun</title>
+      <link>https://martin.varela.fi/tags/just-for-fun/</link>
+      <pubDate>Mon, 02 Oct 2017 19:23:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/tags/just-for-fun/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>math</title>
+      <link>https://martin.varela.fi/tags/math/</link>
+      <pubDate>Mon, 02 Oct 2017 19:23:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/tags/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>visualization</title>
+      <link>https://martin.varela.fi/tags/visualization/</link>
+      <pubDate>Sat, 09 Sep 2017 09:33:46 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/tags/visualization/</guid>
       <description></description>
     </item>
     

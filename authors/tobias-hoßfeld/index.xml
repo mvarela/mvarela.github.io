@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tobias Hoßfeld on Martín Varela</title>
+    <link>https://martin.varela.fi/authors/tobias-ho%C3%9Ffeld/</link>
+    <description>Recent content in Tobias Hoßfeld on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Mon, 18 Feb 2019 06:40:42 +0300</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/authors/tobias-ho%C3%9Ffeld/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Interplay between QoE, User Behavior and System Blocking in QoE Management</title>
+      <link>https://martin.varela.fi/publication/varela-qoem-2019/</link>
+      <pubDate>Mon, 18 Feb 2019 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qoem-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Some Observations on Emerging Aspects in QoE Modeling and Their Impact on QoE Management</title>
+      <link>https://martin.varela.fi/publication/varela-qoem-2018/</link>
+      <pubDate>Sat, 26 May 2018 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qoem-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Survey of Emerging Concepts and Challenges for QoE Management of Multimedia Services </title>
+      <link>https://martin.varela.fi/publication/varela-tomm18/</link>
+      <pubDate>Tue, 01 May 2018 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-tomm18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE Analysis of the Setup of Different Internet Services for FIFO Server Systems</title>
+      <link>https://martin.varela.fi/publication/varela-mmb18/</link>
+      <pubDate>Mon, 26 Feb 2018 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-mmb18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A New QoE Fairness Index for QoE Management</title>
+      <link>https://martin.varela.fi/publication/varela-quex18/</link>
+      <pubDate>Fri, 09 Feb 2018 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-quex18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>No Silver Bullet: QoE Metrics, QoE Fairness, and User Diversity in the Context of QoE Management</title>
+      <link>https://martin.varela.fi/publication/varela-qomex17/</link>
+      <pubDate>Wed, 03 May 2017 06:40:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qomex17/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Definition of QoE Fairness in Shared Systems</title>
+      <link>https://martin.varela.fi/publication/varela-qoe-fairness/</link>
+      <pubDate>Tue, 03 Jan 2017 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qoe-fairness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE beyond the MOS: an in-depth look at QoE via better metrics and their relation to MOS</title>
+      <link>https://martin.varela.fi/publication/varela-quex-beyond-the-mos/</link>
+      <pubDate>Sat, 03 Sep 2016 06:40:44 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-quex-beyond-the-mos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On Additive and Multiplicative QoS-QoE Models for Multiple QoS Parameters</title>
+      <link>https://martin.varela.fi/publication/varela-pqs16/</link>
+      <pubDate>Wed, 03 Aug 2016 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-pqs16/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE Beyond the MOS: Added Value Using Quantiles and Distributions</title>
+      <link>https://martin.varela.fi/publication/varela-qomex2015-2/</link>
+      <pubDate>Sun, 03 May 2015 06:40:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qomex2015-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE in the Web: A Dance of Design and Performance</title>
+      <link>https://martin.varela.fi/publication/varela-qomex2015-1/</link>
+      <pubDate>Sun, 03 May 2015 06:40:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qomex2015-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Increasing Payments in Crowdsourcing: Don’t Look a Gift Horse in the Mouth!</title>
+      <link>https://martin.varela.fi/publication/varela-pqs13/</link>
+      <pubDate>Tue, 03 Sep 2013 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-pqs13/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Towards an Understanding of Visual Appeal in Website Design</title>
+      <link>https://martin.varela.fi/publication/varela-qomex13-2/</link>
+      <pubDate>Wed, 03 Jul 2013 06:40:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qomex13-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Challenges of QoE Management for Cloud Applications</title>
+      <link>https://martin.varela.fi/publication/varela-commag12-preprint/</link>
+      <pubDate>Tue, 03 Apr 2012 06:40:39 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-commag12-preprint/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

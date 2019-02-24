@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Henning Schulzrinne on Martín Varela</title>
+    <link>https://martin.varela.fi/authors/henning-schulzrinne/</link>
+    <description>Recent content in Henning Schulzrinne on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Fri, 03 Jun 2016 06:40:43 +0300</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/authors/henning-schulzrinne/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Generating Realistic YouTube-like Stall Patterns for HTTP Video Streaming Assessment</title>
+      <link>https://martin.varela.fi/publication/varela-qomex16/</link>
+      <pubDate>Fri, 03 Jun 2016 06:40:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qomex16/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>From Service Level Agreements (SLA) to Experience Level Agreements (ELA): The Challenges of Selling QoE to the User</title>
+      <link>https://martin.varela.fi/publication/varela-qoe-fi-2015/</link>
+      <pubDate>Wed, 03 Jun 2015 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qoe-fi-2015/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

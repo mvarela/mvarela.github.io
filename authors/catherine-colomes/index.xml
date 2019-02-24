@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Catherine Colomes on Martín Varela</title>
+    <link>https://martin.varela.fi/authors/catherine-colomes/</link>
+    <description>Recent content in Catherine Colomes on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Thu, 03 Jun 2004 06:40:40 +0300</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/authors/catherine-colomes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Subjective Audio Tests: Quality of a Selection of Codecs When Used in IP Networks</title>
+      <link>https://martin.varela.fi/publication/varela-mesaqin04-2/</link>
+      <pubDate>Thu, 03 Jun 2004 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-mesaqin04-2/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

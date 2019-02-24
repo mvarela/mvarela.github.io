@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Poul E. Heegaard on Martín Varela</title>
+    <link>https://martin.varela.fi/authors/poul-e.-heegaard/</link>
+    <description>Recent content in Poul E. Heegaard on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Wed, 03 May 2017 06:40:43 +0300</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/authors/poul-e.-heegaard/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>No Silver Bullet: QoE Metrics, QoE Fairness, and User Diversity in the Context of QoE Management</title>
+      <link>https://martin.varela.fi/publication/varela-qomex17/</link>
+      <pubDate>Wed, 03 May 2017 06:40:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qomex17/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

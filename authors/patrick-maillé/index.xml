@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Patrick Maillé on Martín Varela</title>
+    <link>https://martin.varela.fi/authors/patrick-maill%C3%A9/</link>
+    <description>Recent content in Patrick Maillé on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Mon, 09 Apr 2018 06:40:42 +0300</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/authors/patrick-maill%C3%A9/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What You Pay Is What You Get? — Fundamentals of Charging Internet Services Based on End User Quality of Experience</title>
+      <link>https://martin.varela.fi/publication/varela-quex18-2/</link>
+      <pubDate>Mon, 09 Apr 2018 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-quex18-2/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

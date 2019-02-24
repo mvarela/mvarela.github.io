@@ -1,56 +1,50 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publication_types on </title>
-    <link>http://martin.varela.fi/publication_types/</link>
-    <description>Recent content in Publication_types on </description>
+    <title>Publication_types on Martín Varela</title>
+    <link>https://martin.varela.fi/publication_types/</link>
+    <description>Recent content in Publication_types on Martín Varela</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
     <lastBuildDate>Tue, 17 Apr 2018 06:40:42 +0300</lastBuildDate>
-    <atom:link href="/publication_types/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://martin.varela.fi/publication_types/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>0</title>
-      <link>http://martin.varela.fi/publication_types/0/</link>
+      <link>https://martin.varela.fi/publication_types/0/</link>
       <pubDate>Tue, 17 Apr 2018 06:40:42 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/publication_types/0/</guid>
+      <guid>https://martin.varela.fi/publication_types/0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>1</title>
-      <link>http://martin.varela.fi/publication_types/1/</link>
-      <pubDate>Sat, 26 May 2018 06:40:42 +0300</pubDate>
+      <link>https://martin.varela.fi/publication_types/1/</link>
+      <pubDate>Mon, 18 Feb 2019 06:40:42 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/publication_types/1/</guid>
+      <guid>https://martin.varela.fi/publication_types/1/</guid>
       <description></description>
     </item>
     
     <item>
       <title>2</title>
-      <link>http://martin.varela.fi/publication_types/2/</link>
+      <link>https://martin.varela.fi/publication_types/2/</link>
       <pubDate>Tue, 01 May 2018 06:40:42 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/publication_types/2/</guid>
+      <guid>https://martin.varela.fi/publication_types/2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>4</title>
-      <link>http://martin.varela.fi/publication_types/4/</link>
-      <pubDate>Mon, 04 May 2015 14:51:46 +0300</pubDate>
+      <link>https://martin.varela.fi/publication_types/4/</link>
+      <pubDate>Tue, 03 Jan 2012 06:40:40 +0300</pubDate>
       
-      <guid>http://martin.varela.fi/publication_types/4/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>6</title>
-      <link>http://martin.varela.fi/publication_types/6/</link>
-      <pubDate>Fri, 04 Dec 2015 15:25:39 +0300</pubDate>
-      
-      <guid>http://martin.varela.fi/publication_types/6/</guid>
+      <guid>https://martin.varela.fi/publication_types/4/</guid>
       <description></description>
     </item>
     

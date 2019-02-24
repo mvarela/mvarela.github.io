@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Doreid Ammar on Martín Varela</title>
+    <link>https://martin.varela.fi/authors/doreid-ammar/</link>
+    <description>Recent content in Doreid Ammar on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Tue, 03 Nov 2015 06:40:43 +0300</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/authors/doreid-ammar/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Layered Model for Quality Estimation of HTTP Video from QoS Measurements</title>
+      <link>https://martin.varela.fi/publication/varela-quamus15/</link>
+      <pubDate>Tue, 03 Nov 2015 06:40:43 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-quamus15/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE-Driven Admission Control for Video Streams</title>
+      <link>https://martin.varela.fi/publication/varela-iisa2015/</link>
+      <pubDate>Fri, 03 Jul 2015 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-iisa2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE-Aware Routing for Video Streaming (short paper)</title>
+      <link>https://martin.varela.fi/publication/varela-iwqos2015/</link>
+      <pubDate>Wed, 03 Jun 2015 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-iwqos2015/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

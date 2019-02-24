@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Björn Grönvall on Martín Varela</title>
+    <link>https://martin.varela.fi/authors/bj%C3%B6rn-gr%C3%B6nvall/</link>
+    <description>Recent content in Björn Grönvall on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Tue, 03 Oct 2006 06:40:44 +0300</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/authors/bj%C3%B6rn-gr%C3%B6nvall/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Metric for Single-ended Speech Quality Estimation</title>
+      <link>https://martin.varela.fi/publication/varela-sncnw06/</link>
+      <pubDate>Tue, 03 Oct 2006 06:40:44 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-sncnw06/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Systematic Study of PESQ’s Behavior (From a Networking Perspective)</title>
+      <link>https://martin.varela.fi/publication/varela-mesaqin06/</link>
+      <pubDate>Sat, 03 Jun 2006 06:40:41 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-mesaqin06/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pekka Perälä on Martín Varela</title>
+    <link>https://martin.varela.fi/authors/pekka-per%C3%A4l%C3%A4/</link>
+    <description>Recent content in Pekka Perälä on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Sun, 03 Jun 2007 06:40:41 +0300</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/authors/pekka-per%C3%A4l%C3%A4/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Some Experiences with VoIP Over Converging Networks</title>
+      <link>https://martin.varela.fi/publication/varela-mesaqin07/</link>
+      <pubDate>Sun, 03 Jun 2007 06:40:41 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-mesaqin07/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

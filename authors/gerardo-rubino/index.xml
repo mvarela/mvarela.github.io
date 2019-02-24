@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gerardo Rubino on Martín Varela</title>
+    <link>https://martin.varela.fi/authors/gerardo-rubino/</link>
+    <description>Recent content in Gerardo Rubino on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Tue, 03 Jun 2014 06:40:42 +0300</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/authors/gerardo-rubino/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Quality-Driven Optimal SLA Selection for Enterprise Cloud Communications</title>
+      <link>https://martin.varela.fi/publication/varela-qoenam14/</link>
+      <pubDate>Tue, 03 Jun 2014 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qoenam14/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Single–sided Real–time PESQ Score Estimation</title>
+      <link>https://martin.varela.fi/publication/varela-mesaqin09/</link>
+      <pubDate>Wed, 03 Jun 2009 06:40:41 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-mesaqin09/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quality Assessment of Interactive Voice Applications</title>
+      <link>https://martin.varela.fi/publication/varela-comnet-local/</link>
+      <pubDate>Tue, 03 Apr 2007 06:40:39 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-comnet-local/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A New Way of Thinking Utility in Pricing Mechanisms: A Neural Network Approach</title>
+      <link>https://martin.varela.fi/publication/varela-claio06/</link>
+      <pubDate>Fri, 03 Nov 2006 06:40:39 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-claio06/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Evaluating Users’ Satisfaction in Packet Networks Using Random Neural Networks</title>
+      <link>https://martin.varela.fi/publication/varela-icann06/</link>
+      <pubDate>Sun, 03 Sep 2006 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-icann06/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Controlling Multimedia QoS in the Future Home Network Using the PSQA Metric</title>
+      <link>https://martin.varela.fi/publication/varela-control-draft/</link>
+      <pubDate>Mon, 03 Jul 2006 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-control-draft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wireless VoIP at Home: Are We There Yet?</title>
+      <link>https://martin.varela.fi/publication/varela-mesaqin05/</link>
+      <pubDate>Tue, 03 May 2005 06:40:41 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-mesaqin05/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A New Approach for the Prediction of End-to-End Performance of Multimedia Streams</title>
+      <link>https://martin.varela.fi/publication/varela-qest04/</link>
+      <pubDate>Fri, 03 Sep 2004 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qest04/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Evaluating the Utility of Media–Dependent FEC in VoIP Flows</title>
+      <link>https://martin.varela.fi/publication/varela-qofis04/</link>
+      <pubDate>Fri, 03 Sep 2004 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qofis04/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A method for quantitative evaluation of audio quality over packet networks and its comparison with existing techniques</title>
+      <link>https://martin.varela.fi/publication/varela-mesaqin04-1/</link>
+      <pubDate>Thu, 03 Jun 2004 06:40:40 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-mesaqin04-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Performance Evaluation of Real-time Speech Through a Packet Network: a Random Neural Networks-based Approach</title>
+      <link>https://martin.varela.fi/publication/varela-performance-evaluation/</link>
+      <pubDate>Sat, 03 Apr 2004 06:40:41 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-performance-evaluation/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

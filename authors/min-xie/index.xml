@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Min Xie on Martín Varela</title>
+    <link>https://martin.varela.fi/authors/min-xie/</link>
+    <description>Recent content in Min Xie on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Wed, 03 Jun 2015 06:40:42 +0300</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/authors/min-xie/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>From Service Level Agreements (SLA) to Experience Level Agreements (ELA): The Challenges of Selling QoE to the User</title>
+      <link>https://martin.varela.fi/publication/varela-qoe-fi-2015/</link>
+      <pubDate>Wed, 03 Jun 2015 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qoe-fi-2015/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

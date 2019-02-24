@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.0.0">
+  <meta name="generator" content="Hugo 0.54.0" />
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Martín Varela">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Introduction A few days ago I ran across this discussion on Hacker News, which referred to this article on binary data visualization. The folks at Codisec have developed a tool called Veles for visualizing binary files. The idea is to help detect patterns in the data, which in some cases are useful for e.g,. security-related analysis.
+The technique described was surprisingly simple, in that it looks at digrams or trigrams in the file, and then it analyses their frequency and spatial distribution within the data.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://martin.varela.fi/2017/09/09/simple-binary-data-visualization/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css" crossorigin="anonymous">
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-107269456-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+  
+
+  
+  <link rel="alternate" href="https://martin.varela.fi/index.xml" type="application/rss+xml" title="Martín Varela">
+  <link rel="feed" href="https://martin.varela.fi/index.xml" type="application/rss+xml" title="Martín Varela">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://martin.varela.fi/2017/09/09/simple-binary-data-visualization/">
+
+  
+  
+  
+  
+    
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Martín Varela">
+  <meta property="og:url" content="https://martin.varela.fi/2017/09/09/simple-binary-data-visualization/">
+  <meta property="og:title" content="Simple Binary Data Visualization | Martín Varela">
+  <meta property="og:description" content="Introduction A few days ago I ran across this discussion on Hacker News, which referred to this article on binary data visualization. The folks at Codisec have developed a tool called Veles for visualizing binary files. The idea is to help detect patterns in the data, which in some cases are useful for e.g,. security-related analysis.
+The technique described was surprisingly simple, in that it looks at digrams or trigrams in the file, and then it analyses their frequency and spatial distribution within the data."><meta property="og:image" content="https://martin.varela.fi/2017/09/09/simple-binary-data-visualization/featured.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2017-09-09T09:33:46&#43;03:00">
+  
+  <meta property="article:modified_time" content="2017-09-09T09:33:46&#43;03:00">
+  
+
+  
+
+  
+
+  <title>Simple Binary Data Visualization | Martín Varela</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Martín Varela</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#publications_featured">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#talks">
+            
+            <span>Talks</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-header d-xl-none">
+  <div class="featured-image" style="background-image: url('/2017/09/09/simple-binary-data-visualization/featured_huc5f593883aaf5331780e849ca2e95ba9_853745_800x0_resize_lanczos_2.png');"></div>
+  
+</div>
+
+
+<div class="container-fluid split-header d-none d-xl-block">
+  <div class="row">
+    <div class="col-6">
+      <div class="split-header-content">
+        <h1 itemprop="name">Simple Binary Data Visualization</h1>
+
+        
+
+        
+
+
+
+<meta content="2017-09-09 09:33:46 &#43;0300 EEST" itemprop="datePublished">
+<meta content="2017-09-09 09:33:46 &#43;0300 EEST" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Sep 9, 2017</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    15 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+
+</div>
+
+
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+        
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Simple%20Binary%20Data%20Visualization&amp;url=https%3a%2f%2fmartin.varela.fi%2f2017%2f09%2f09%2fsimple-binary-data-visualization%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmartin.varela.fi%2f2017%2f09%2f09%2fsimple-binary-data-visualization%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmartin.varela.fi%2f2017%2f09%2f09%2fsimple-binary-data-visualization%2f&amp;title=Simple%20Binary%20Data%20Visualization"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fmartin.varela.fi%2f2017%2f09%2f09%2fsimple-binary-data-visualization%2f&amp;title=Simple%20Binary%20Data%20Visualization"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Simple%20Binary%20Data%20Visualization&amp;body=https%3a%2f%2fmartin.varela.fi%2f2017%2f09%2f09%2fsimple-binary-data-visualization%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="split-header-image">
+        <img src="/2017/09/09/simple-binary-data-visualization/featured_huc5f593883aaf5331780e849ca2e95ba9_853745_680x500_fill_q90_lanczos_smart1_2.png" itemprop="image" alt="">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-container d-xl-none">
+  <h1 itemprop="name">Simple Binary Data Visualization</h1>
+
+  
+
+  
+
+
+
+<meta content="2017-09-09 09:33:46 &#43;0300 EEST" itemprop="datePublished">
+<meta content="2017-09-09 09:33:46 &#43;0300 EEST" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Sep 9, 2017</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    15 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Simple%20Binary%20Data%20Visualization&amp;url=https%3a%2f%2fmartin.varela.fi%2f2017%2f09%2f09%2fsimple-binary-data-visualization%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmartin.varela.fi%2f2017%2f09%2f09%2fsimple-binary-data-visualization%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmartin.varela.fi%2f2017%2f09%2f09%2fsimple-binary-data-visualization%2f&amp;title=Simple%20Binary%20Data%20Visualization"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fmartin.varela.fi%2f2017%2f09%2f09%2fsimple-binary-data-visualization%2f&amp;title=Simple%20Binary%20Data%20Visualization"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Simple%20Binary%20Data%20Visualization&amp;body=https%3a%2f%2fmartin.varela.fi%2f2017%2f09%2f09%2fsimple-binary-data-visualization%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <!-- -*- org-export-babel-evaluate: nil -*- -->
+
+<h1 id="introduction">Introduction</h1>
+
+<p>A few days ago I ran across <a href="https://news.ycombinator.com/item?id=15164166" title="this discussion on Hacker News" target="_blank">this discussion on Hacker News</a>, which referred to
+<a href="https://codisec.com/binary-visualization-explained/" title="this article" target="_blank">this article</a> on binary data visualization. The folks at <a href="https://codisec.com" title="Codisec" target="_blank">Codisec</a> have developed a
+tool called Veles for visualizing binary files. The idea is to help detect
+patterns in the data, which in some cases are useful for e.g,. security-related
+analysis.</p>
+
+<p>The technique described was surprisingly simple, in that it looks at digrams or
+trigrams in the file, and then it analyses their frequency and spatial
+distribution within the data. This is not unlike the use of <em>n-grams</em> in
+computational linguistics, or <em>k-mers</em> in computational genomics. The idea is to
+analyze and model sequences of elements (be it words, phonemes, or DNA bases). A
+fun application of this type of analysis is the creation of Markov chain text
+generators, which use the probability distribution of n-grams in a text corpus to
+synthesize text with similar characteristics. A couple of popular examples of
+these generators is the creation of <a href="http://www.elsewhere.org/pomo/" title="parody post-modernist writings" target="_blank">parody post-modernist writings</a>, or <a href="https://pdos.csail.mit.edu/archive/scigen/#about" title="bogus
+scientific papers" target="_blank">bogus
+scientific papers</a> (many of which have been accepted to predatory conferences and
+journals, to the amusement and dismay of many).</p>
+
+<p>Basically, the approach taken in Veles is to take byte trigrams of the form $(i,
+i+1, i+2)$ from the file, and use them to represent points in a 3D space (a
+digram-based 2D version is also described). Being sequences of bytes, the space
+is limited to a 256x256x256 cube. The Veles visualization uses luminance to
+represent the (normalized) frequency of each point in the file, resulting in
+very nice-looking, and surprisingly structured visualizations. The tool also
+assigns different hues to points, based on their position in the file (which is
+divided into 256 equally-sized bins for this purpose).</p>
+
+<h1 id="a-simple-take-on-binary-visualization">A Simple Take on Binary Visualization</h1>
+
+<p>In this post, I'll show how a similar type of visualization can be simply
+created in a few lines of R, using <code>ggplot2</code>. We'll make 2d plots instead of the
+(admittedly nicer looking) 3d ones that Veles does, but similar information
+about the structure of the files can be gleaned from them.</p>
+
+<h2 id="getting-our-data-in-shape">Getting Our Data in Shape</h2>
+
+<p>Our data will be the bytes in the file, repeated twice next to each other with
+an offset of one for each repetition. This is a common pattern for example in
+Haskell and Lisp, basically <code>zip</code> 'ping a list with its own tail. In R, we can
+use the <code>lead</code> or <code>lag</code> functions provided in Hadley Wickham's <code>dplyr</code> package.</p>
+
+<pre><code class="language-R">  library(tidyverse)
+
+  a &lt;- 1:10
+  lead(a)
+</code></pre>
+<pre class="example">
+Loading tidyverse: ggplot2
+Loading tidyverse: tibble
+Loading tidyverse: tidyr
+Loading tidyverse: readr
+Loading tidyverse: purrr
+Loading tidyverse: dplyr
+Conflicts with tidy packages ---------------------------------------------------
+filter(): dplyr, stats
+lag():    dplyr, stats
+ [1]  2  3  4  5  6  7  8  9 10 NA
+</pre>
+
+<p>We can see that <code>lead</code> has shifted <code>a</code> to the left, introducing a <code>NA</code> value at
+the end. If we create a dataframe or tibble with <code>a</code>, <code>lead(a)</code> and <code>lead(lead(a))</code> , we will obtain a table of trigrams.</p>
+
+<pre><code class="language-R"> zipped &lt;- as.tibble(cbind(a, lead(a), lead(a,2)))
+ glimpse(zipped)
+</code></pre>
+<pre class="example">
+Observations: 10
+Variables: 3
+$ a  <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+$ `` <int> 2, 3, 4, 5, 6, 7, 8, 9, 10, NA
+$ `` <int> 3, 4, 5, 6, 7, 8, 9, 10, NA, NA
+</pre>
+
+<p>This is close to what we need, except for the <code>NA</code> values, which we can easily
+remove with <code>drop_na</code>, <code>na.omit</code>, or <code>filter</code>.</p>
+
+<pre><code class="language-R"> zipped %&gt;% drop_na()
+</code></pre>
+<pre class="example">
+# A tibble: 8 x 3
+      a    ``    ``
+  <int> <int> <int>
+1     1     2     3
+2     2     3     4
+3     3     4     5
+4     4     5     6
+5     5     6     7
+6     6     7     8
+7     7     8     9
+8     8     9    10
+</pre>
+
+<h2 id="plotting">Plotting</h2>
+
+<p>We will use a basic scatter plot to visualize our data. In order to make up for
+the lack of a third dimension in the plots, we will use a couple of tricks to
+add more information. First, we'll use a low alpha value, which will help us get
+a notion of density in the plot (we'll later add actual density plots, too). The
+more times an $(x,y)$ pair (corresponding to bytes $(i,i+1)$ in the file) is
+found in the data, the more opaque it'll show on the scatter plot. Second, we'll
+use the $z$ (corresponding to byte $i+2$) to determine the color of the point.
+In this way, we will pack more information into the plot. We will also discuss
+other possible alternatives for visualizing this information at the end of the post.</p>
+
+<p>For the time being, we won't consider the location within the file, though as we
+will see, it would be simple to add this information as well.</p>
+
+<p>Let us quickly see how we can setup the visualization.</p>
+
+<pre><code class="language-R">  x &lt;- sample(0:255, size=50000, replace = TRUE)
+  y &lt;- lead(x)
+  z &lt;- lead(x,2)
+  data &lt;- cbind(x,y,z) %&gt;% as.tibble() %&gt;% na.omit()
+  binplot &lt;- data %&gt;% ggplot(aes(x=x, y=y)) +
+             geom_point(mapping = aes(color = z), alpha = 1/20) + 
+             scale_color_gradient(low=&quot;blue&quot;, high=&quot;orange&quot;) +
+  ggsave(&quot;testplot.png&quot;)
+</code></pre>
+<pre class="example">
+Saving 7 x 7 in image
+</pre>
+
+<p>We can now look at the resulting plot:</p>
+
+<p><img src="/img/binViz/testplot.png" alt="/img/binViz/testplot.png" title="/img/binViz/testplot.png" /></p>
+
+<p>The plot does not look like much, because we sampled uniformly distributed
+random data. However, if we read a file with some structure, we will see
+something more interesting. For some extra "meta-ness", we'll use the source for
+this post as an input.</p>
+
+<pre><code class="language-R">  filesize &lt;- file.size(&quot;post_draft.org&quot;)
+  x &lt;- readBin(&quot;post_draft.org&quot;, integer(), n=filesize, size = 1, signed = FALSE)
+  y &lt;- lead(x)
+  z &lt;- lead(x,2)
+  data &lt;- as.tibble(cbind(x,y,z)) %&gt;% na.omit()
+  binplot &lt;- data %&gt;% ggplot(aes(x=x, y=y)) +
+             geom_point(mapping = aes(color = z), alpha = 1/20) + 
+             scale_color_gradient(low=&quot;blue&quot;, high=&quot;orange&quot;, limits = c(0,255)) +
+             coord_cartesian(xlim = c(0,255), ylim = c(0, 255))
+  ggsave(&quot;testplot2.png&quot;)
+</code></pre>
+<pre class="example">
+Saving 7 x 7 in image
+</pre>
+
+<p><img src="/img/binViz/testplot2.png" alt="/img/binViz/testplot2.png" title="/img/binViz/testplot2.png" /></p>
+
+<p>Now this is a bit more interesting! What we can see here, is that most of the
+data is confined to a small section of our space. In particular, we can see both
+from the points' color, and areas where points appear, that most values are in
+the ASCII range (which is to be expected, this mostly being English text, and
+ASCII codes stay the same even in an UTF-8 encoded file), with most trigrams
+comprising characters in the (97—122) range, corresponding to <code>[a-z]</code> (and to a
+lesser degree those in <code>[A-z]</code> ) and spaces (32). Where we see more transparent
+points, we can infer the presence of punctuation and tokens found in the R code
+and org-mode mark-up.</p>
+
+<p>In some cases, using a different coordinate system may be useful in
+distinguishing structure. We can use, for instance, polar coordinates.</p>
+
+<pre><code class="language-R">   polar_plot &lt;- binplot + coord_polar()
+   ggsave(&quot;testplot2_polar.png&quot;)
+</code></pre>
+<pre class="example">
+Saving 7 x 7 in image
+</pre>
+
+<p><img src="/img/binViz/testplot2_polar.png" alt="/img/binViz/testplot2_polar.png" title="/img/binViz/testplot2_polar.png" /></p>
+
+<p>Here we can also clearly see the predominance of digrams in the <code>[A-z]</code> range,
+and of combinations of those and spaces (the line pointing towards 32 in the NE
+quadrant, and the segment of arc at 32 in the NW quadrant).</p>
+
+<p>We can also think about looking purely at the density of digrams. To this end,
+ we use a different geometry and stat in our plot.</p>
+
+<pre><code class="language-R">
+
+  dens_plot &lt;- data %&gt;% ggplot(mapping = aes(x,y)) +
+               stat_density2d(aes(fill = ..density..), geom=&quot;raster&quot;, contour = FALSE) +
+               scale_fill_gradient(low=&quot;steelblue4&quot;, high=&quot;sienna2&quot;) +
+               coord_fixed(ratio = 1)
+  ggsave(&quot;testplot2_density.png&quot;)
+</code></pre>
+<pre class="example">
+Saving 7 x 7 in image
+</pre>
+
+<p><img src="/img/binViz/testplot2_density.png" alt="/img/binViz/testplot2_density.png" title="/img/binViz/testplot2_density.png" /></p>
+
+<p>In this case, the density plot does not provide much additional information, but
+it could be useful if we were for instance to facet the plot based on where in
+the file the digrams occur, or in more complex files, where the trigram-based
+coloring may obscure some of the structure.</p>
+
+<p>The density plot is also more resource-intensive, and when dealing with large
+files, it may be desirable to work only on parts of the data, even for the basic
+trigram-based plots. In order to do this, we can uniformly sample the data, and
+thus obtain a lower resolution, but still informative view of it.</p>
+
+<h1 id="a-more-complete-solution">A More Complete Solution</h1>
+
+<p>Before putting this to practice with larger, more complex files, let us put the
+ideas for processing and visualizing the data into a bit more complete form in R code.</p>
+
+<p>We will create a small set of functions that allow us to play around with these
+kinds of visualizations, and output the plots with an automated and systematic
+naming scheme, which we could use for automatic report generation or some such
+at a later stage.</p>
+
+<pre><code class="language-R">library(tidyverse)
+
+# binviz Veles-like binary visualizaiton
+binViz2d &lt;- function(filename, alpha = 1/100, maxsize = 5000000,
+                    save = TRUE, polar = FALSE, sample = FALSE,
+                    sample_size = 2000000, do_density = FALSE){
+
+  # setting dens_plot as NA simplifies the logic below a bit
+  dens_plot = NA
+
+  # we read the file as a stream of bytes, and prepare our tibble
+  # We'll add a column indexing the trigram position in the file
+  # This will come in handy later if we want to facet the plot by position
+  # as done in the Veles article. We'll just mutate binViz here, to save memory.
+  rawdata          &lt;- readBin(filename, integer(), n=maxsize, size = 1, signed = FALSE)
+  size             &lt;- rawdata %&gt;% as.tibble %&gt;% nrow
+  binViz           &lt;- cbind(0:(size - 1),rawdata, lead(rawdata), lead(rawdata,n=2L))
+  colnames(binViz) &lt;- c('idx', 'x', 'y', 'z')
+
+
+  # We then remove any missing values from the dataset
+  toplot &lt;- binViz %&gt;% as.tibble %&gt;% na.omit
+
+  # If sampling is required, we do it now. Sampling is important
+  # if doing the density plots, as going beyond 1M points gets SLOW
+  if(sample){
+   toplot &lt;- toplot %&gt;% sample_n(min(count(toplot), sample_size))
+  }
+
+  # The actual plotting
+  theplot &lt;- binViz2d_do_plot(toplot, alpha, polar) +
+    ggtitle(title_spec(filename, sample, sample_size))
+  if(do_density){
+    dens_plot &lt;- binViz2d_do_density_plot(toplot, polar)
+  }
+
+  # Saving the plots
+  if(save){
+    namespec &lt;- name_spec(filename, sample, sample_size, polar)
+    binViz2d_save(namespec, theplot, dens_plot)
+  }
+  return(list(binViz_plot = theplot, dens_plot = dens_plot))
+}
+</code></pre>
+
+<p>The main functionality of our code is succinctly described in the <code>binViz2d</code> function above. It takes a number of parameters, summarized in the table below:</p>
+
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>filename</code></td>
+<td>File to visualize</td>
+</tr>
+
+<tr>
+<td><code>alpha</code></td>
+<td>Alpha level (transparency) of the dots (lower values are useful for larger files)</td>
+</tr>
+
+<tr>
+<td><code>maxsize</code></td>
+<td>Maximum number of bytes to read from the file, if not sampling</td>
+</tr>
+
+<tr>
+<td><code>save</code></td>
+<td>Determines whether the plot should be saved to a file</td>
+</tr>
+
+<tr>
+<td><code>polar</code></td>
+<td>Determines whether the plot should use polar coordinates</td>
+</tr>
+
+<tr>
+<td><code>sample</code></td>
+<td>Determines whether the file should be sampled</td>
+</tr>
+
+<tr>
+<td><code>sample_size</code></td>
+<td>The number of samples to take, if sampling</td>
+</tr>
+
+<tr>
+<td><code>do_density</code></td>
+<td>Whether to do an additional density plot (sampling is <em>strongly advised</em></td>
+</tr>
+</tbody>
+</table>
+
+<p>The function returns the visualization and density plots (note that the density
+plot may be <code>NA</code>) in a list (this list can be easily destructured using the
+ <code>zeallot</code> package).</p>
+
+<p>The main plotting functions are as follows.</p>
+
+<pre><code class="language-R">binViz2d_do_plot &lt;- function(data, alpha, polar){
+  theplot &lt;- data  %&gt;% ggplot(mapping = aes(x,y)) +
+    geom_point(mapping = aes(color=z), alpha = alpha, size = 0.75) +
+    scale_color_gradient(low=&quot;blue&quot;, high=&quot;orange&quot;) +
+    coord_fixed(ratio = 1)+
+    labs(x=&quot;i&quot;, y=&quot;i+1&quot;, z=&quot;i+2&quot;)
+
+  if(polar){
+    theplot &lt;- theplot + coord_polar()
+  }
+  return(theplot)
+}
+
+binViz2d_do_density_plot &lt;- function(toplot, polar){
+  dens_plot &lt;- toplot  %&gt;% ggplot(mapping = aes(x,y)) +
+    stat_density2d(aes(fill = ..density..), geom=&quot;raster&quot;, contour = FALSE) +
+    scale_fill_gradient(low=&quot;steelblue4&quot;, high=&quot;sienna2&quot;) +
+    coord_fixed(ratio = 1)+
+    labs(x=&quot;i&quot;, y=&quot;i+1&quot;)
+  return(dens_plot)
+}
+</code></pre>
+
+<p>These are pretty much the same as we had done above, only in function form.</p>
+
+<p>The remaining auxiliary functions take care of generating suitable titles and
+filenames, as well as saving the plots.</p>
+
+<pre><code class="language-R">
+
+title_spec &lt;- function(name, sampled, nsamples){
+  if(sampled){
+    title &lt;- paste(name, &quot;-&quot;, nsamples, &quot;samples.&quot;)
+  }else{
+    title &lt;- name
+  }
+  return(title)
+}
+
+# We create a name separated by underscores, this simplifies later parsing
+# of file names, if needed, to automate e.g., reports creation
+name_spec &lt;- function(name, sampled, nsamples, polar){
+  polar_str     &lt;- &quot;&quot;
+  if(polar){
+    polar_str   &lt;- &quot;polar&quot;
+  }
+  sampled_str   &lt;- &quot;&quot;
+  if(sampled){
+    sampled_str &lt;- paste(&quot;sampled&quot;, nsamples, sep=&quot;_&quot;)
+  }
+  basename &lt;- chartr('/.', '::',
+                     paste(&quot;plot&quot;, polar_str, sampled_str, name, sep = &quot;_&quot;))
+  return(paste(basename, &quot;.png&quot;, sep=&quot;&quot;))
+}
+
+binViz2d_save &lt;- function(namespec, binViz_plot, dens_plot){
+    png(namespec, width = 15, height = 15, units = &quot;cm&quot;, res = 300)
+    print(binViz_plot)
+    dev.off()
+    if(!is.na(dens_plot)){
+      png(paste(&quot;density&quot;,namespec,sep=&quot;_&quot;), width = 15, height = 15,
+          units = &quot;cm&quot;, res = 300)
+      print(dens_plot)
+      dev.off()
+    }
+}
+</code></pre>
+
+<p>Like this, in under 100 lines of R (under 75 if removing comments and blank
+lines), we can create nice and informative visualization for binary data.</p>
+
+<h1 id="going-a-bit-further">Going a Bit Further</h1>
+
+<p>As mentioned above, the Veles solution does some nice things, such as coloring
+points based on their location in the file, and also they do a tomography-like
+view of the 2d digram plot, by layering the plots for different parts of the
+file on top of each other.</p>
+
+<p>We can achieve comparable effects by adding facets to our plots. In the code
+above, we have added some meta-data in the form of an index column. We can use
+that column to create a <em>cut</em> of the data, and then facet on this.</p>
+
+<pre><code class="language-R">#let's load the code we wrote above 
+source(&quot;binViz2d/binViz2d.r&quot;)
+library(zeallot)
+c(p,d) %&lt;-% binViz2d(&quot;post_draft.org&quot;, save=FALSE)
+fp &lt;- p + facet_wrap(~cut(idx, 10, labels=FALSE))
+ggsave(&quot;testplot2_faceted_idx.png&quot;, width = 20, height = 20, units = &quot;cm&quot;)
+</code></pre>
+<pre class="example">
+Loading tidyverse: ggplot2
+Loading tidyverse: tibble
+Loading tidyverse: tidyr
+Loading tidyverse: readr
+Loading tidyverse: purrr
+Loading tidyverse: dplyr
+Conflicts with tidy packages ---------------------------------------------------
+filter(): dplyr, stats
+lag():    dplyr, stats
+</pre>
+
+<p><img src="/img/binViz/testplot2_faceted_idx.png" alt="/img/binViz/testplot2_faceted_idx.png" title="/img/binViz/testplot2_faceted_idx.png" /></p>
+
+<p>Adding the facets to the plot allows us to see how the structure of the file
+varies along its length. For this case, there isn't a noticeable difference,
+since the file is just text.</p>
+
+<p>We can do another neat thing, which is to facet on the value of the <code>z</code> byte in
+the trigram, and that will show us the densities of different levels in the file
+contents. In the case of this post draft, we should be able to see areas with</p>
+
+<pre><code class="language-R">c(p,d) %&lt;-% binViz2d(&quot;post_draft.org&quot;, save=FALSE)
+lp &lt;- p + facet_wrap(~cut(z, 10))
+ggsave(&quot;testplot2_faceted_value.png&quot;, width = 20, height = 20, units = &quot;cm&quot;)
+</code></pre>
+
+<p><img src="/img/binViz/testplot2_faceted_value.png" alt="/img/binViz/testplot2_faceted_value.png" title="/img/binViz/testplot2_faceted_value.png" /></p>
+
+<p>Here we can clearly see again that most of the file's contents seems to fall in the
+ASCII range, with concentrations of space characters, and other characters in
+the <code>[A-z]</code> range, plus some occurrences of punctuation.</p>
+
+<h1 id="more-interesting-examples">More Interesting Examples</h1>
+
+<p>More interesting examples of this type of visualization are possible when
+looking at more complex files. Below we show a few of these.</p>
+
+<h2 id="executable-code-and-libraries">Executable Code and Libraries</h2>
+
+<p>The plots below show the structure of (Darwin) executable and library files.</p>
+
+<pre><code class="language-R"> binViz2d(&quot;emacsclient&quot;, alpha=1/20)
+ binViz2d(&quot;libasan.4.dylib&quot;, alpha=1/150)
+ binViz2d(&quot;libR.dylib&quot;, alpha=1/150)
+</code></pre>
+
+<p><img src="/img/binViz/plot___emacsclient.png" alt="/img/binViz/plot___emacsclient.png" title="/img/binViz/plot___emacsclient.png" /></p>
+
+<p><img src="/img/binViz/plot___libR:dylib.png" alt="/img/binViz/plot___libR:dylib.png" title="/img/binViz/plot___libR:dylib.png" /></p>
+
+<p><img src="/img/binViz/plot___libasan:4:dylib.png" alt="/img/binViz/plot___libasan:4:dylib.png" title="/img/binViz/plot___libasan:4:dylib.png" /></p>
+
+<p>We can see that these files have more structure to them, and exhibit some common
+patterns, such as much higher frequencies for low values and values
+corresponding to upper-case ASCII characters, as well as a significant amount of
+points in the <code>[a-z]</code> range, as well. Looking at the strings in those binaries,
+we can find very many upper-case constant names, along with e.g., error
+messages, which help explain the observed value distribution.</p>
+
+<p>For a different perspective, we can look at the polar projection of one of these
+plots.</p>
+
+<pre><code class="language-R"> binViz2d(&quot;libR.dylib&quot;, alpha=1/150, polar=TRUE)
+</code></pre>
+
+<p><img src="/img/binViz/plot_polar__libR:dylib.png" alt="/img/binViz/plot_polar__libR:dylib.png" title="/img/binViz/plot_polar__libR:dylib.png" /></p>
+
+<p>We can also look at a faceted version of a plot, looking at how the trigrams
+change throughout the file.</p>
+
+<pre><code class="language-R">c(p,d) %&lt;-% binViz2d(&quot;emacsclient&quot;, save=FALSE)
+lp &lt;- p + facet_wrap(~cut(idx, 20))
+ggsave(&quot;emacsclient_faceted_idx.png&quot;, width = 20, height = 20, units = &quot;cm&quot;)
+</code></pre>
+
+<p><img src="/img/binViz/emacsclient_faceted_idx.png" alt="/img/binViz/emacsclient_faceted_idx.png" title="/img/binViz/emacsclient_faceted_idx.png" /></p>
+
+<h2 id="pdf-content">PDF Content</h2>
+
+<p>PDF files show very distinctive properties as well. Here we look at a
+scientific paper and a programming book.</p>
+
+<pre><code class="language-R"> binViz2d(&quot;tommSurvey.pdf&quot;, alpha=1/150)
+ binViz2d(&quot;cookbook.pdf&quot;, alpha=1/150)
+</code></pre>
+
+<p><img src="/img/binViz/plot___tommSurvey:pdf.png" alt="/img/binViz/plot___tommSurvey:pdf.png" title="/img/binViz/plot___tommSurvey:pdf.png" /></p>
+
+<p><img src="/img/binViz/plot___cookbook:pdf.png" alt="/img/binViz/plot___cookbook:pdf.png" title="/img/binViz/plot___cookbook:pdf.png" /></p>
+
+<p>We notice that there are quite striking
+similarities among the plots. In particular, a set of "lines" appear along the
+main diagonal of the plot, and from the (0,0) and (255,255) points towards the
+mid-range of each axis. As expected, there's also a large concentration of
+trigrams in the character parts of the ASCII range.</p>
+
+<p>We can look at a faceted view of the plot to see if the distribution changes
+either on the index or the values observed.</p>
+
+<pre><code class="language-R">c(p,d) %&lt;-% binViz2d(&quot;tommSurvey.pdf&quot;, save=FALSE)
+lp &lt;- p + facet_wrap(~cut(z, 12))
+ggsave(&quot;tommSurvey_faceted_value.png&quot;, width = 20, height = 20, units = &quot;cm&quot;)
+ip &lt;- p + facet_wrap(~cut(idx, 12))
+ggsave(&quot;tommSurvey_faceted_idx.png&quot;, width = 20, height = 20, units = &quot;cm&quot;)
+</code></pre>
+
+<p><img src="/img/binViz/tommSurvey_faceted_idx.png" alt="/img/binViz/tommSurvey_faceted_idx.png" title="/img/binViz/tommSurvey_faceted_idx.png" /></p>
+
+<p>When looking at how the line structure is noticeable throughout the file, we can see
+that there are portions of the file in which it vanishes, whereas in others it
+(or a part of it) becomes more prominent.</p>
+
+<p>Looking at the values below, however, shows that a) all the range of values is
+nearly uniformly represented throughout the file, and b) the main diagonal line structure is
+noticeable for all the value ranges, but the secondary ones are visible only in
+certain value ranges. Finding out the actual meaning of this would probably be a
+non-trivial task, left as an exercise to the reader ;).</p>
+
+<p><img src="/img/binViz/tommSurvey_faceted_value.png" alt="/img/binViz/tommSurvey_faceted_value.png" title="/img/binViz/tommSurvey_faceted_value.png" /></p>
+
+<h2 id="audio">Audio</h2>
+
+<p>When looking at media files, which tend to be large, it is good to try sampling
+the content, in order to reduce the time (and memory) required for creating the
+visualizations. We will look at a music clip, uncompressed, and then encoded as
+MP3 and FLAC.</p>
+
+<pre><code class="language-R"> binViz2d(&quot;Test_File_2_0_STEREO_PCM.wav&quot;, alpha=1/100,
+                                          sample = TRUE, sample_size = 400000)
+ binViz2d(&quot;Test_File_2_0_STEREO_MP3.mp3&quot;, alpha=1/100,
+                                          sample = TRUE, sample_size = 400000)
+ binViz2d(&quot;Test_File_2_0_STEREO_FLAC.flac&quot;, alpha=1/100, 
+                                          sample = TRUE, sample_size = 400000)
+</code></pre>
+
+<p>We note that the relative resolution of each plot will be different, as we are
+sampling the same amount of data out of files of very different size. In the
+case of the uncompressed audio, the sample is less than 1% of the total file,
+whereas for the FLAC it's a bit under 5 percent, and for the MP3 version it is
+almost 20 percent. Still, the patterns observed in the plots are quite constant,
+even varying the sampling size between 25% and 500% of the value chosen here.</p>
+
+<p><img src="/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_PCM:wav.png" alt="/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_PCM:wav.png" title="/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_PCM:wav.png" /></p>
+
+<p><img src="/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_FLAC:flac.png" alt="/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_FLAC:flac.png" title="/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_FLAC:flac.png" /></p>
+
+<p><img src="/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_MP3:mp3.png" alt="/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_MP3:mp3.png" title="/img/binViz/plot__sampled_4e+05_Test_File_2_0_STEREO_MP3:mp3.png" /></p>
+
+<p>It's interesting to note that while the uncompressed file has a very clear
+structure, the compressed versions seem almost random. This pattern is also
+visible for compressed images, and of course, for encrypted files. Between the
+compressed versions, it seems like the FLAC-encoded one shows less structure
+than the MP3-encoded one, where some patches of the space are denser. I suspect
+that this is probably related to the lossy nature of MP3 encoding, but haven't
+yet delved into it.</p>
+
+<h1 id="conclusions">Conclusions</h1>
+
+<p>I hope you have found this post interesting, and maybe caught an idea or two
+about how this type of approach could be useful, and more importantly, how a
+simple visualization technique can yield interesting plots that reveal "hidden"
+structure in data.</p>
+
+<p>The code used to generate the plots can be found in the gist below, and it's
+free to be used.
+<script src="https://gist.github.com/mvarela/e3b868fe36d232a39bf5d87796c8ac28.js"></script></p>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/data-analysis/">data analysis</a>
+  
+  <a class="badge badge-light" href="/tags/visualization/">visualization</a>
+  
+  <a class="badge badge-light" href="/tags/r/">R</a>
+  
+</div>
+
+
+
+
+    
+      
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<div class="media author-card" itemscope itemtype="http://schema.org/Person">
+  
+  
+  <img class="portrait mr-3" src="/author/admin/avatar_hu3d151a54a167f5d81fb6f7b65d699e83_1778663_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+  
+
+  <div class="media-body">
+    <h5 class="card-title" itemprop="name"><a href="/authors/admin">Martín Varela</a></h5>
+    <h6 class="card-subtitle">QoE Guy</h6>
+    <p class="card-text" itemprop="description">I work mainly in Quality of Experience (QoE) for online services, and QoE management.</p>
+    <ul class="network-icon" aria-hidden="true">
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="/#contact" >
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://scholar.google.fi/citations?user=hetDWy0AAAAJ&amp;hl=en" target="_blank" rel="noopener">
+          <i class="ai ai-google-scholar"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://github.com/mvarela" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="/pdf/cv-martin_varela.pdf" >
+          <i class="ai ai-cv"></i>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    &copy; Martín Varela 2017- &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/clojure.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ruby.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.109caa4f51ff39522c6dfc25fb05b6e9.js"></script>
+
+  </body>
+</html>
+

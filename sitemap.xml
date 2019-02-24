@@ -2,1077 +2,1675 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     
+    <url>
+    
+      <loc>https://martin.varela.fi/talk/talk-26/</loc>
+      <lastmod>2019-02-18T09:00:00+01:00</lastmod>
+    </url>
+    
+  
     
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-qoem-2018/</loc>
+      <loc>https://martin.varela.fi/publication/varela-qoem-2019/</loc>
+      <lastmod>2019-02-18T06:40:42+03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/tutorial/example/</loc>
+      <lastmod>2018-09-09T00:00:00+03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/tutorial/</loc>
+      <lastmod>2018-09-09T00:00:00+03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/publication/varela-qoem-2018/</loc>
       <lastmod>2018-05-26T06:40:42+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-tomm18/</loc>
+      <loc>https://martin.varela.fi/publication/varela-tomm18/</loc>
       <lastmod>2018-05-01T06:40:42+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-dagstuhl-perspectives/</loc>
+      <loc>https://martin.varela.fi/publication/varela-dagstuhl-perspectives/</loc>
       <lastmod>2018-04-17T06:40:42+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-quex18-2/</loc>
+      <loc>https://martin.varela.fi/publication/varela-quex18-2/</loc>
       <lastmod>2018-04-09T06:40:42+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-mmb18/</loc>
+      <loc>https://martin.varela.fi/publication/varela-mmb18/</loc>
       <lastmod>2018-02-26T06:40:42+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-quex18/</loc>
+      <loc>https://martin.varela.fi/publication/varela-quex18/</loc>
       <lastmod>2018-02-09T06:40:42+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/post/fractals-complexity-from-simplicity-part2/</loc>
+      <loc>https://martin.varela.fi/2017/10/02/fractals-complexity-from-simplicity-part-2/</loc>
       <lastmod>2017-10-02T19:23:43+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/post/fractals-complexity-from-simplicity/</loc>
+      <loc>https://martin.varela.fi/2017/09/26/fractals-complexity-from-simplicity-and-a-bit-of-clojure/</loc>
       <lastmod>2017-09-26T09:43:43+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/post/simple-binary-data-visualization/</loc>
+      <loc>https://martin.varela.fi/2017/09/09/simple-binary-data-visualization/</loc>
       <lastmod>2017-09-09T09:33:46+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-qomex17/</loc>
+      <loc>https://martin.varela.fi/publication/varela-qomex17/</loc>
       <lastmod>2017-05-03T06:40:43+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-qoem-2017/</loc>
+      <loc>https://martin.varela.fi/publication/varela-qoem-2017/</loc>
       <lastmod>2017-05-03T06:40:42+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-qoe-fairness/</loc>
+      <loc>https://martin.varela.fi/publication/varela-qoe-fairness/</loc>
       <lastmod>2017-01-03T06:40:42+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/tags/academic/</loc>
+      <loc>https://martin.varela.fi/publication/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/post/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://martin.varela.fi/publication/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://martin.varela.fi/talk/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://martin.varela.fi/talk/talk-25/</loc>
+      <loc>https://martin.varela.fi/talk/talk-25/</loc>
       <lastmod>2016-09-05T13:54:53+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-quex-beyond-the-mos/</loc>
+      <loc>https://martin.varela.fi/publication/varela-quex-beyond-the-mos/</loc>
       <lastmod>2016-09-03T06:40:44+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-pqs16/</loc>
+      <loc>https://martin.varela.fi/publication/varela-pqs16/</loc>
       <lastmod>2016-08-03T06:40:42+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-qomex16/</loc>
+      <loc>https://martin.varela.fi/publication/varela-qomex16/</loc>
       <lastmod>2016-06-03T06:40:43+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-23/</loc>
+      <loc>https://martin.varela.fi/talk/talk-23/</loc>
       <lastmod>2016-05-05T13:54:53+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-24/</loc>
+      <loc>https://martin.varela.fi/talk/talk-24/</loc>
       <lastmod>2016-05-05T13:54:53+03:00</lastmod>
     </url>
     
   
     
+    <url>
+    
+      <loc>https://martin.varela.fi/project/external-project/</loc>
+      <lastmod>2016-04-27T00:00:00+03:00</lastmod>
+    </url>
+    
+  
     
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-networking16/</loc>
+      <loc>https://martin.varela.fi/project/internal-project/</loc>
+      <lastmod>2016-04-27T00:00:00+03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/publication/varela-networking16/</loc>
       <lastmod>2016-04-03T06:40:41+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-22/</loc>
+      <loc>https://martin.varela.fi/talk/talk-22/</loc>
       <lastmod>2015-12-05T13:54:53+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/chapter-qoe-defining/</loc>
-      <lastmod>2015-12-04T15:25:39+03:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://martin.varela.fi/publication/varela-quamus15/</loc>
+      <loc>https://martin.varela.fi/publication/varela-quamus15/</loc>
       <lastmod>2015-11-03T06:40:43+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-21/</loc>
+      <loc>https://martin.varela.fi/talk/talk-21/</loc>
       <lastmod>2015-10-05T13:54:53+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-20/</loc>
+      <loc>https://martin.varela.fi/talk/talk-20/</loc>
       <lastmod>2015-09-05T13:54:53+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-19/</loc>
+      <loc>https://martin.varela.fi/talk/talk-19/</loc>
       <lastmod>2015-08-05T13:54:53+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-trac2015/</loc>
+      <loc>https://martin.varela.fi/publication/varela-trac2015/</loc>
       <lastmod>2015-08-03T06:40:44+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-dagstuhl/</loc>
+      <loc>https://martin.varela.fi/publication/varela-dagstuhl/</loc>
       <lastmod>2015-08-03T06:40:40+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-iisa2015/</loc>
+      <loc>https://martin.varela.fi/publication/varela-iisa2015/</loc>
       <lastmod>2015-07-03T06:40:40+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-qoe-fi-2015/</loc>
+      <loc>https://martin.varela.fi/publication/varela-qoe-fi-2015/</loc>
       <lastmod>2015-06-03T06:40:42+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-iwqos2015/</loc>
+      <loc>https://martin.varela.fi/publication/varela-iwqos2015/</loc>
       <lastmod>2015-06-03T06:40:40+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/dagstuhl_report/</loc>
-      <lastmod>2015-05-04T14:51:46+03:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://martin.varela.fi/publication/varela-qomex2015-2/</loc>
+      <loc>https://martin.varela.fi/publication/varela-qomex2015-2/</loc>
       <lastmod>2015-05-03T06:40:43+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-qomex2015-1/</loc>
+      <loc>https://martin.varela.fi/publication/varela-qomex2015-1/</loc>
       <lastmod>2015-05-03T06:40:43+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-18/</loc>
+      <loc>https://martin.varela.fi/talk/talk-18/</loc>
       <lastmod>2015-02-05T13:54:53+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-ccnc15/</loc>
+      <loc>https://martin.varela.fi/publication/varela-ccnc15/</loc>
       <lastmod>2015-01-03T06:40:39+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/etsi-ts-103294/</loc>
-      <lastmod>2014-12-04T15:00:19+03:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://martin.varela.fi/publication/varela-meta-modeling-qoe/</loc>
+      <loc>https://martin.varela.fi/publication/varela-meta-modeling-qoe/</loc>
       <lastmod>2014-12-03T06:40:41+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-17/</loc>
+      <loc>https://martin.varela.fi/talk/talk-17/</loc>
       <lastmod>2014-10-05T13:54:53+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-ssh14/</loc>
+      <loc>https://martin.varela.fi/publication/varela-ssh14/</loc>
       <lastmod>2014-10-03T06:40:44+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-16/</loc>
+      <loc>https://martin.varela.fi/talk/talk-16/</loc>
       <lastmod>2014-07-05T13:54:53+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/chapter-qos-qoe/</loc>
-      <lastmod>2014-07-04T15:38:59+03:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://martin.varela.fi/publication/chapter-ecosystem/</loc>
-      <lastmod>2014-07-04T15:32:59+03:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://martin.varela.fi/publication/chapter-queen/</loc>
-      <lastmod>2014-07-04T15:32:59+03:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://martin.varela.fi/publication/varela-qoenam14/</loc>
+      <loc>https://martin.varela.fi/publication/varela-qoenam14/</loc>
       <lastmod>2014-06-03T06:40:42+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-jvcir-preprint/</loc>
+      <loc>https://martin.varela.fi/publication/varela-jvcir-preprint/</loc>
       <lastmod>2014-04-03T06:40:40+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-spie/</loc>
+      <loc>https://martin.varela.fi/publication/varela-spie/</loc>
       <lastmod>2014-01-03T06:40:44+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-pqs13/</loc>
+      <loc>https://martin.varela.fi/publication/varela-pqs13/</loc>
       <lastmod>2013-09-03T06:40:42+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-15/</loc>
+      <loc>https://martin.varela.fi/talk/talk-15/</loc>
       <lastmod>2013-07-05T13:54:53+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-14/</loc>
+      <loc>https://martin.varela.fi/talk/talk-14/</loc>
       <lastmod>2013-07-05T13:54:53+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/lost-in-cloud/</loc>
-      <lastmod>2013-07-04T15:10:06+03:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://martin.varela.fi/publication/varela-qomex13-1/</loc>
+      <loc>https://martin.varela.fi/publication/varela-qomex13-1/</loc>
       <lastmod>2013-07-03T06:40:43+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-qomex13-2/</loc>
+      <loc>https://martin.varela.fi/publication/varela-qomex13-2/</loc>
       <lastmod>2013-07-03T06:40:43+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-iwqm2013-2/</loc>
+      <loc>https://martin.varela.fi/publication/varela-iwqm2013-2/</loc>
       <lastmod>2013-06-03T06:40:40+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-iwqm2013/</loc>
+      <loc>https://martin.varela.fi/publication/varela-iwqm2013/</loc>
       <lastmod>2013-06-03T06:40:40+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-13/</loc>
+      <loc>https://martin.varela.fi/talk/talk-13/</loc>
       <lastmod>2013-05-05T13:54:53+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-wcnc13/</loc>
+      <loc>https://martin.varela.fi/publication/varela-wcnc13/</loc>
       <lastmod>2013-04-03T06:40:44+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-mmtc/</loc>
+      <loc>https://martin.varela.fi/publication/varela-mmtc/</loc>
       <lastmod>2013-03-03T06:40:41+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-11/</loc>
+      <loc>https://martin.varela.fi/talk/talk-11/</loc>
       <lastmod>2012-07-05T13:54:52+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-cems/</loc>
+      <loc>https://martin.varela.fi/publication/varela-cems/</loc>
       <lastmod>2012-07-03T06:40:39+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-10/</loc>
+      <loc>https://martin.varela.fi/talk/talk-10/</loc>
       <lastmod>2012-06-05T13:54:52+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/qualinet-white-paper/</loc>
-      <lastmod>2012-06-04T15:17:52+03:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://martin.varela.fi/publication/varela-pik-proof/</loc>
+      <loc>https://martin.varela.fi/publication/varela-pik-proof/</loc>
       <lastmod>2012-05-03T06:40:42+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-mipro12/</loc>
+      <loc>https://martin.varela.fi/publication/varela-mipro12/</loc>
       <lastmod>2012-05-03T06:40:41+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-commag12-preprint/</loc>
+      <loc>https://martin.varela.fi/publication/varela-commag12-preprint/</loc>
       <lastmod>2012-04-03T06:40:39+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-musings-on-qoe-definitions/</loc>
+      <loc>https://martin.varela.fi/publication/varela-musings-on-qoe-definitions/</loc>
       <lastmod>2012-01-03T06:40:41+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-gilbert/</loc>
+      <loc>https://martin.varela.fi/publication/varela-gilbert/</loc>
       <lastmod>2012-01-03T06:40:40+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-12/</loc>
+      <loc>https://martin.varela.fi/talk/talk-12/</loc>
       <lastmod>2011-11-05T13:54:53+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-9/</loc>
+      <loc>https://martin.varela.fi/talk/talk-9/</loc>
       <lastmod>2011-09-05T13:54:52+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-qomex2011/</loc>
+      <loc>https://martin.varela.fi/publication/varela-qomex2011/</loc>
       <lastmod>2011-09-03T06:40:43+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-wwic2011/</loc>
+      <loc>https://martin.varela.fi/publication/varela-wwic2011/</loc>
       <lastmod>2011-06-03T06:40:44+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-quality-issues-in-the-cloud/</loc>
+      <loc>https://martin.varela.fi/publication/varela-quality-issues-in-the-cloud/</loc>
       <lastmod>2010-11-03T06:40:43+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-8/</loc>
+      <loc>https://martin.varela.fi/talk/talk-8/</loc>
       <lastmod>2009-12-05T13:54:52+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-mesaqin09/</loc>
+      <loc>https://martin.varela.fi/publication/varela-mesaqin09/</loc>
       <lastmod>2009-06-03T06:40:41+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-7/</loc>
+      <loc>https://martin.varela.fi/talk/talk-7/</loc>
       <lastmod>2008-04-05T13:54:52+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-mesaqin07/</loc>
+      <loc>https://martin.varela.fi/publication/varela-mesaqin07/</loc>
       <lastmod>2007-06-03T06:40:41+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-comnet-local/</loc>
+      <loc>https://martin.varela.fi/publication/varela-comnet-local/</loc>
       <lastmod>2007-04-03T06:40:39+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-6/</loc>
+      <loc>https://martin.varela.fi/talk/talk-6/</loc>
       <lastmod>2006-12-05T13:54:52+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-claio06/</loc>
+      <loc>https://martin.varela.fi/publication/varela-claio06/</loc>
       <lastmod>2006-11-03T06:40:39+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-sncnw06/</loc>
+      <loc>https://martin.varela.fi/publication/varela-sncnw06/</loc>
       <lastmod>2006-10-03T06:40:44+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-icann06/</loc>
+      <loc>https://martin.varela.fi/publication/varela-icann06/</loc>
       <lastmod>2006-09-03T06:40:40+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-control-draft/</loc>
+      <loc>https://martin.varela.fi/publication/varela-control-draft/</loc>
       <lastmod>2006-07-03T06:40:40+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-mesaqin06/</loc>
+      <loc>https://martin.varela.fi/publication/varela-mesaqin06/</loc>
       <lastmod>2006-06-03T06:40:41+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-phd/</loc>
+      <loc>https://martin.varela.fi/publication/varela-phd/</loc>
       <lastmod>2005-11-03T06:40:42+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-mesaqin05/</loc>
+      <loc>https://martin.varela.fi/publication/varela-mesaqin05/</loc>
       <lastmod>2005-05-03T06:40:41+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-stw05/</loc>
+      <loc>https://martin.varela.fi/publication/varela-stw05/</loc>
       <lastmod>2005-03-03T06:40:44+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-jdir04/</loc>
+      <loc>https://martin.varela.fi/publication/varela-jdir04/</loc>
       <lastmod>2004-11-03T06:40:40+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-qest04/</loc>
+      <loc>https://martin.varela.fi/publication/varela-qest04/</loc>
       <lastmod>2004-09-03T06:40:42+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-qofis04/</loc>
+      <loc>https://martin.varela.fi/publication/varela-qofis04/</loc>
       <lastmod>2004-09-03T06:40:42+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-mesaqin04-1/</loc>
+      <loc>https://martin.varela.fi/publication/varela-mesaqin04-1/</loc>
       <lastmod>2004-06-03T06:40:40+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-mesaqin04-2/</loc>
+      <loc>https://martin.varela.fi/publication/varela-mesaqin04-2/</loc>
       <lastmod>2004-06-03T06:40:40+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-performance-evaluation/</loc>
+      <loc>https://martin.varela.fi/publication/varela-performance-evaluation/</loc>
       <lastmod>2004-04-03T06:40:41+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-4/</loc>
+      <loc>https://martin.varela.fi/talk/talk-4/</loc>
       <lastmod>2003-07-05T13:54:52+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-5/</loc>
+      <loc>https://martin.varela.fi/talk/talk-5/</loc>
       <lastmod>2003-05-05T13:54:52+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-3/</loc>
+      <loc>https://martin.varela.fi/talk/talk-3/</loc>
       <lastmod>2003-03-05T13:54:52+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-2/</loc>
+      <loc>https://martin.varela.fi/talk/talk-2/</loc>
       <lastmod>2002-10-05T13:54:52+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/talk/talk-1/</loc>
+      <loc>https://martin.varela.fi/talk/talk-1/</loc>
       <lastmod>2002-08-05T13:54:52+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-historias_clinicas/</loc>
+      <loc>https://martin.varela.fi/publication/varela-historias_clinicas/</loc>
       <lastmod>2001-09-03T06:40:40+03:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication/varela-a_simple_methodology_for_secure_object_sharing/</loc>
+      <loc>https://martin.varela.fi/publication/varela-a_simple_methodology_for_secure_object_sharing/</loc>
       <lastmod>2001-06-20T00:00:00+00:00</lastmod>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/</loc>
-      <lastmod>2016-04-20T00:00:00+00:00</lastmod>
-      <priority>0</priority>
+      <loc>https://martin.varela.fi/author/admin/</loc>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication_types/0/</loc>
+      <loc>https://martin.varela.fi/publication_types/0/</loc>
       <lastmod>2018-04-17T06:40:42+03:00</lastmod>
       <priority>0</priority>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication_types/1/</loc>
-      <lastmod>2018-05-26T06:40:42+03:00</lastmod>
+      <loc>https://martin.varela.fi/publication_types/1/</loc>
+      <lastmod>2019-02-18T06:40:42+03:00</lastmod>
       <priority>0</priority>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication_types/2/</loc>
+      <loc>https://martin.varela.fi/publication_types/2/</loc>
       <lastmod>2018-05-01T06:40:42+03:00</lastmod>
       <priority>0</priority>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication_types/4/</loc>
-      <lastmod>2015-05-04T14:51:46+03:00</lastmod>
+      <loc>https://martin.varela.fi/publication_types/4/</loc>
+      <lastmod>2012-01-03T06:40:40+03:00</lastmod>
       <priority>0</priority>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/publication_types/6/</loc>
-      <lastmod>2015-12-04T15:25:39+03:00</lastmod>
+      <loc>https://martin.varela.fi/authors/aggeliki-sgora/</loc>
+      <lastmod>2014-06-03T06:40:42+03:00</lastmod>
       <priority>0</priority>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/categories/</loc>
+      <loc>https://martin.varela.fi/authors/ana-cavalli/</loc>
+      <lastmod>2013-06-03T06:40:40+03:00</lastmod>
       <priority>0</priority>
     </url>
     
   
     
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/ana-paula-couto-da-silva/</loc>
+      <lastmod>2007-04-03T06:40:39+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
     
     <url>
     
-      <loc>http://martin.varela.fi/tags/clojure/</loc>
+      <loc>https://martin.varela.fi/authors/anderson-morais/</loc>
+      <lastmod>2013-06-03T06:40:40+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/andreas-aurelius/</loc>
+      <lastmod>2013-06-03T06:40:40+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/antonio-cuadra/</loc>
+      <lastmod>2013-06-03T06:40:40+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/antonio-cuadra-s%C3%A1nchez/</loc>
+      <lastmod>2012-07-03T06:40:39+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/arnaud-runge/</loc>
+      <lastmod>2014-10-03T06:40:44+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/author/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/</loc>
+      <lastmod>2014-06-03T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/bj%C3%B6rn-gr%C3%B6nvall/</loc>
+      <lastmod>2006-10-03T06:40:44+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/bruno-tuffin/</loc>
+      <lastmod>2006-11-03T06:40:39+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/categories/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/catherine-colomes/</loc>
+      <lastmod>2004-06-03T06:40:40+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/christian-timmerer/</loc>
+      <lastmod>2012-04-03T06:40:39+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/tags/clojure/</loc>
       <lastmod>2017-10-02T19:23:43+03:00</lastmod>
       <priority>0</priority>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/tags/data-analysis/</loc>
-      <lastmod>2017-09-09T09:33:46+03:00</lastmod>
+      <loc>https://martin.varela.fi/authors/daniel-perovich/</loc>
+      <lastmod>2001-09-03T06:40:40+03:00</lastmod>
       <priority>0</priority>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/tags/fractals/</loc>
-      <lastmod>2017-10-02T19:23:43+03:00</lastmod>
+      <loc>https://martin.varela.fi/tags/deep-learning/</loc>
+      <lastmod>2016-04-27T00:00:00+03:00</lastmod>
       <priority>0</priority>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/tags/just-for-fun/</loc>
-      <lastmod>2017-10-02T19:23:43+03:00</lastmod>
+      <loc>https://martin.varela.fi/tags/demo/</loc>
+      <lastmod>2016-04-27T00:00:00+03:00</lastmod>
       <priority>0</priority>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/tags/math/</loc>
-      <lastmod>2017-10-02T19:23:43+03:00</lastmod>
+      <loc>https://martin.varela.fi/authors/doreid-ammar/</loc>
+      <lastmod>2015-11-03T06:40:43+03:00</lastmod>
       <priority>0</priority>
     </url>
     
   
     
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/dragan-kukolj/</loc>
+      <lastmod>2013-07-03T06:40:43+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
     
     <url>
     
-      <loc>http://martin.varela.fi/publication_types/</loc>
+      <loc>https://martin.varela.fi/authors/dragana-%C3%B0ordevi%C4%87/</loc>
+      <lastmod>2013-07-03T06:40:43+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/edmundo-de-souza-e-silva/</loc>
+      <lastmod>2007-04-03T06:40:39+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/esa-piri/</loc>
+      <lastmod>2015-01-03T06:40:39+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/eva-rodr%C3%ADguez/</loc>
+      <lastmod>2014-10-03T06:40:44+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/filippo-mazza/</loc>
+      <lastmod>2014-01-03T06:40:44+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/florian-hammer/</loc>
+      <lastmod>2006-10-03T06:40:44+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/fr%C3%A9d%C3%A9ric-guyard/</loc>
+      <lastmod>2014-12-03T06:40:41+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/gerardo-rubino/</loc>
+      <lastmod>2014-06-03T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/gerhard-kuhn/</loc>
+      <lastmod>2012-05-03T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/helena-rivas/</loc>
+      <lastmod>2015-08-03T06:40:44+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/henning-schulzrinne/</loc>
+      <lastmod>2016-06-03T06:40:43+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/hyunwoo-nam/</loc>
+      <lastmod>2016-06-03T06:40:43+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/ian-marsh/</loc>
+      <lastmod>2006-10-03T06:40:44+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/isabelle-hupont/</loc>
+      <lastmod>2014-01-03T06:40:44+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/ismael-perez-mateos/</loc>
+      <lastmod>2013-06-03T06:40:40+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/ismael-p%C3%A9rez-mateos/</loc>
+      <lastmod>2012-07-03T06:40:39+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/janne-sepp%C3%A4nen/</loc>
+      <lastmod>2014-04-03T06:40:40+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/jarmo-prokkola/</loc>
+      <lastmod>2015-01-03T06:40:39+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/jean-charles-gicquel/</loc>
+      <lastmod>2004-06-03T06:40:40+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/jean-marie-bonnin/</loc>
+      <lastmod>2006-07-03T06:40:40+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/jochen-eisl/</loc>
+      <lastmod>2012-05-03T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/jorge-lopez-de-vergara/</loc>
+      <lastmod>2013-06-03T06:40:40+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/jorge-l%C3%B3pez-de-vergara/</loc>
+      <lastmod>2012-07-03T06:40:39+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/jouko-sankala/</loc>
+      <lastmod>2010-11-03T06:40:43+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/juho-merilahti/</loc>
+      <lastmod>2014-10-03T06:40:44+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/jukka-pekka-laulajainen/</loc>
+      <lastmod>2013-06-03T06:40:40+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/katrien-de-moor/</loc>
+      <lastmod>2015-08-03T06:40:40+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/kjell-brunstr%C3%B6mm/</loc>
+      <lastmod>2013-06-03T06:40:40+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/kuan-ta-chen/</loc>
+      <lastmod>2018-05-01T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/lea-skorin-kapov/</loc>
+      <lastmod>2019-02-18T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/leonardo-rodr%C3%ADguez/</loc>
+      <lastmod>2001-09-03T06:40:40+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/luigi-atzori/</loc>
+      <lastmod>2019-02-18T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/luis-mart%C3%ADnez/</loc>
+      <lastmod>2001-09-03T06:40:40+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/mar-cutanda/</loc>
+      <lastmod>2013-06-03T06:40:40+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/mar-cutanda-rodr%C3%ADguez/</loc>
+      <lastmod>2012-07-03T06:40:39+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/markus-fiedler/</loc>
       <lastmod>2018-04-17T06:40:42+03:00</lastmod>
       <priority>0</priority>
     </url>
     
   
     
+    <url>
+    
+      <loc>https://martin.varela.fi/</loc>
+      <lastmod>2019-02-18T09:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
     
     <url>
     
-      <loc>http://martin.varela.fi/tags/r/</loc>
+      <loc>https://martin.varela.fi/authors/mart%C3%ADn-varela/</loc>
+      <lastmod>2019-02-18T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/matthias-lott/</loc>
+      <lastmod>2012-05-03T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/min-xie/</loc>
+      <lastmod>2015-06-03T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/min-xie-eds./</loc>
+      <lastmod>2018-04-17T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/miquel-r%C3%ADos-quintero/</loc>
+      <lastmod>2014-01-03T06:40:44+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/mirko-schiavone/</loc>
+      <lastmod>2015-08-03T06:40:44+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/pantelis-a.-frangoudis/</loc>
+      <lastmod>2014-06-03T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/patrick-maill%C3%A9/</loc>
+      <lastmod>2018-04-09T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/patrick-zwickl/</loc>
+      <lastmod>2018-04-09T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/pedro-casas/</loc>
+      <lastmod>2015-08-03T06:40:44+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/pekka-per%C3%A4l%C3%A4/</loc>
+      <lastmod>2007-06-03T06:40:41+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/peter-reichl/</loc>
+      <lastmod>2018-04-17T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/pierdomenico-fiadino/</loc>
+      <lastmod>2015-08-03T06:40:44+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/pierre-tirilly/</loc>
+      <lastmod>2006-09-03T06:40:40+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/post/</loc>
+      <lastmod>2017-10-02T19:23:43+03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/poul-e.-heegaard/</loc>
+      <lastmod>2017-05-03T06:40:43+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/poul-einar-heegaard/</loc>
+      <lastmod>2019-02-18T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/project/</loc>
+      <lastmod>2016-04-27T00:00:00+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/publication_types/</loc>
+      <lastmod>2018-04-17T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/tags/r/</loc>
       <lastmod>2017-09-09T09:33:46+03:00</lastmod>
       <priority>0</priority>
     </url>
     
   
     
-    
     <url>
     
-      <loc>http://martin.varela.fi/tags/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+      <loc>https://martin.varela.fi/authors/raimund-schatz/</loc>
+      <lastmod>2015-08-03T06:40:44+03:00</lastmod>
       <priority>0</priority>
     </url>
     
   
     
+    <url>
+    
+      <loc>https://martin.varela.fi/talk/</loc>
+      <lastmod>2019-02-18T09:00:00+01:00</lastmod>
+    </url>
+    
+  
     
     <url>
     
-      <loc>http://martin.varela.fi/tags/visualization/</loc>
+      <loc>https://martin.varela.fi/authors/rosa-maria-le%C3%A3o/</loc>
+      <lastmod>2007-04-03T06:40:39+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/samir-mohamed/</loc>
+      <lastmod>2004-06-03T06:40:40+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/sebastian-m%C3%B6ller/</loc>
+      <lastmod>2018-04-17T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/sebasti%C3%A1n-basterrech/</loc>
+      <lastmod>2009-06-03T06:40:41+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/slides/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/slides/example-slides/</loc>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/tags/</loc>
+      <lastmod>2017-10-02T19:23:43+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/tobias-ho%C3%9Ffeld/</loc>
+      <lastmod>2019-02-18T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/toni-m%C3%A4ki/</loc>
+      <lastmod>2017-05-03T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/yezekael-hayel/</loc>
+      <lastmod>2006-11-03T06:40:39+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/admin/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/tags/data-analysis/</loc>
+      <lastmod>2017-09-09T09:33:46+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/tags/fractals/</loc>
+      <lastmod>2017-10-02T19:23:43+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/tags/just-for-fun/</loc>
+      <lastmod>2017-10-02T19:23:43+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/tags/math/</loc>
+      <lastmod>2017-10-02T19:23:43+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/tags/visualization/</loc>
       <lastmod>2017-09-09T09:33:46+03:00</lastmod>
       <priority>0</priority>
     </url>
