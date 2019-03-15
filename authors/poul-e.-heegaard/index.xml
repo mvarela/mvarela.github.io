@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Martín Varela 2017-</copyright>
-    <lastBuildDate>Wed, 03 May 2017 06:40:43 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 03 Mar 2019 18:22:44 +0300</lastBuildDate>
     
 	<atom:link href="https://martin.varela.fi/authors/poul-e.-heegaard/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Fundamental Relationships for Deriving QoE in Systems</title>
+      <link>https://martin.varela.fi/publication/varela-qomex19/</link>
+      <pubDate>Sun, 03 Mar 2019 18:22:44 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qomex19/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>No Silver Bullet: QoE Metrics, QoE Fairness, and User Diversity in the Context of QoE Management</title>
