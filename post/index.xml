@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Martín Varela 2017-</copyright>
-    <lastBuildDate>Mon, 02 Oct 2017 19:23:43 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 23 Apr 2019 22:48:23 +0300</lastBuildDate>
     
 	<atom:link href="https://martin.varela.fi/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Coming Full Circle</title>
+      <link>https://martin.varela.fi/2019/04/23/coming-full-circle/</link>
+      <pubDate>Tue, 23 Apr 2019 22:48:23 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/2019/04/23/coming-full-circle/</guid>
+      <description>In the Beginning... QoE sits at a confluence point between several disciplines, and one of those is QoS. Back when I started working on these topics, &#34;QoE&#34; was not a thing, we (networking people) would talk about &#34;QoS from the user&#39;s perspective&#34;, or similar kludgy terms, for lack of a proper one. The underlying concept, however, was clear: how does QoS in the network affect the user&#39;s perception of media quality.</description>
+    </item>
     
     <item>
       <title>Fractals — Complexity from Simplicity — Part 2</title>

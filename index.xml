@@ -7,8 +7,115 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Martín Varela 2017-</copyright>
-    <lastBuildDate>Sun, 03 Mar 2019 18:22:44 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 23 Apr 2019 22:48:23 +0300</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Coming Full Circle</title>
+      <link>https://martin.varela.fi/2019/04/23/coming-full-circle/</link>
+      <pubDate>Tue, 23 Apr 2019 22:48:23 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/2019/04/23/coming-full-circle/</guid>
+      <description>&lt;!-- -*- org-export-babel-evaluate: nil -*- --&gt;
+
+&lt;h1 id=&#34;in-the-beginning&#34;&gt;In the Beginning...&lt;/h1&gt;
+
+&lt;p&gt;QoE sits at a confluence point between several disciplines, and one of those
+  is QoS. Back when I started working on these topics, &#34;QoE&#34; was not a thing, we
+  (networking people) would talk about &#34;QoS from the user&#39;s perspective&#34;, or
+  similar kludgy terms, for lack of a proper one. The underlying concept,
+  however, was clear: how does QoS in the network affect the user&#39;s perception
+  of media quality.&lt;/p&gt;
+
+&lt;p&gt;Back then, media quality had an implicit narrower meaning, too. VoIP was a new
+  thing, and doing real-time video was mostly a research topic. Times change,
+  technology advances, and QoE has taken a life of its own, evolving into a
+  wider, much more inclusive concept spanning a much wider range of application
+  domains.&lt;/p&gt;
+
+&lt;p&gt;For some applications of QoE, however, the link to QoS, and more generally,
+  performance, remains strong. In particular, when dealing with monitoring and
+  management, we are most often interested in understanding how the performance
+  of the network and other resources affect the users&#39; QoE.&lt;/p&gt;
+
+&lt;p&gt;We typically see QoS as a lower-level construct, which in practice provides
+  one of the foundations of QoE; hence the plethora of so-called QoS to QoE
+  models in the literature. These map stuff we can measure (e.g., network QoS),
+  and stuff we know (encoding parameters, buffer sizes, etc.) into an
+  approximation of how an ideal, average user (or if we did our homework and put
+  some effort, a population of users) might experience the quality of a given
+  service. It seems clear that, in a sense, QoE sits atop QoS, but is it really
+  so?&lt;/p&gt;
+
+&lt;h1 id=&#34;a-different-perspective&#34;&gt;A Different Perspective&lt;/h1&gt;
+
+&lt;p&gt;Over the last few years I have often worked on QoE management ideas, and over
+  the past year in particular, I have focused on quality monitoring for WebRTC
+  platforms. One common idea that comes up in this context, is that of
+  &#34;service-level QoE&#34;, or &#34;the QoE of the system&#34;, or similar terms. Like in the
+  old times, we seem to lack a proper term to describe what we are after,
+  despite it being a rather intuitive thing.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, based on the definition of QoE, it seems rather absurd to
+  speak of &#34;the system&#39;s QoE&#34;, since QoE is all about &lt;em&gt;the user&lt;/em&gt;. A system (or a
+  service) cannot experience anything, it has neither expectations, nor an
+  emotional state, nor a sensory system, for that matter.&lt;/p&gt;
+
+&lt;p&gt;So when we speak about &#34;service-level QoE&#34;, we are, at best abusing the
+  language, or at worst, severely confused about what QoE is. Since most of the
+  people I know who work on these topics are pretty knowledgeable about QoE,
+  I&#39;ll go with the first explanation. We are abusing the language, because we
+  lack a suitable term for what we are working on.&lt;/p&gt;
+
+&lt;p&gt;Let us illustrate this a bit with WebRTC. At &lt;a href=&#34;https://www.callstats.io/&#34; title=&#34;callstats.io&#34; target=&#34;_blank&#34;&gt;callstats.io&lt;/a&gt; we provide a WebRTC
+  monitoring service; our users often have several WebRTC applications, and each
+  application often sees hundreds, or thousands of calls a day. Calls can have
+  many users, and each of those users will experience a certain quality while in
+  the call. So far, so good, we have users, and each user&#39;s QoE can be estimated
+  to some degree (remember kids, WebRTC is a &lt;em&gt;hard&lt;/em&gt; problem, QoE-wise!).&lt;/p&gt;
+
+&lt;p&gt;But our goal is to provide a &lt;em&gt;call QoE&lt;/em&gt; value, and furthermore, an
+  &lt;em&gt;application QoE&lt;/em&gt; value to our users (who are not the actual users on the
+  call, but the service providers). While the terms themselves are rather
+  nonsensical when going by the &lt;a href=&#34;http://www.qualinet.eu/images/stories/QoE_whitepaper_v1.2.pdf&#34; title=&#34;QoE definition&#34; target=&#34;_blank&#34;&gt;QoE definition&lt;/a&gt;, their intent seems quite clear:
+  we want to know if a call was good or bad for the users, and we want to know
+  this for all calls across a given WebRTC service, to see if the service itself
+  is performing as expected (i.e., providing its users with a good experience!).&lt;/p&gt;
+
+&lt;h2 id=&#34;troubles-ahead&#34;&gt;Troubles ahead&lt;/h2&gt;
+
+&lt;p&gt;This pattern repeats itself in most, if not all of the QoE management
+  literature, where the goal is to understand, and improve the performance of a
+  service, and said performance is dependent on the quality experienced by
+  the service&#39;s users.&lt;/p&gt;
+
+&lt;p&gt;Behind this seemingly innocent idea, there lies a mountain of complications,
+  unfortunately. Our understanding of this &#34;Service-level QoE&#34; can take different
+  forms, depending on the type of service, our goals, and a host of other
+  factors.&lt;/p&gt;
+
+&lt;p&gt;The main idea boils down to figuring out how to create &lt;em&gt;quality aggregates&lt;/em&gt; that
+   allow us to build a notion of service quality on top of the individual
+  users&#39; QoE. When digging a bit deeper, we soon encounter temporal issues
+  (pooling QoE over varying time scales), modeling issues &lt;a href=&#34;https://link.springer.com/article/10.1007/s41233-016-0002-1&#34; title=&#34;(MOS vs.
+  quantiles/distributions)&#34; target=&#34;_blank&#34;&gt;(MOS vs.
+  quantiles/distributions)&lt;/a&gt;, finding trends in distribution variations, etc.&lt;/p&gt;
+
+&lt;h1 id=&#34;what-s-next&#34;&gt;What&#39;s next?&lt;/h1&gt;
+
+&lt;p&gt;I suspect (and hope) we will see more work on this topic over the coming
+  years, eventually converging towards a proper definition for this idea of
+  &lt;em&gt;Quality of Service&lt;/em&gt; (nice term, but too loaded to use, isn&#39;t it?).&lt;/p&gt;
+
+&lt;p&gt;Working on WebRTC has yielded some insight on aggregating quality, but it&#39;s
+  not yet mature enough, nor general enough to put it out there as a solution
+  candidate for this problem.&lt;/p&gt;
+
+&lt;p&gt;For the time being, &lt;em&gt;service-level QoE aggregates&lt;/em&gt; might be a good first-order
+  approximation to putting a name to this idea, though a bit lacking in the
+  marketing department.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Fundamental Relationships for Deriving QoE in Systems</title>
@@ -1520,15 +1627,6 @@ free to be used.
       <pubDate>Wed, 03 May 2017 06:40:43 +0300</pubDate>
       
       <guid>https://martin.varela.fi/publication/varela-qomex17/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Embracing Uncertainty: A Probabilistic View of HTTP Video Quality</title>
-      <link>https://martin.varela.fi/publication/varela-qoem-2017/</link>
-      <pubDate>Wed, 03 May 2017 06:40:42 +0300</pubDate>
-      
-      <guid>https://martin.varela.fi/publication/varela-qoem-2017/</guid>
       <description></description>
     </item>
     

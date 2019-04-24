@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>QoE on Martín Varela</title>
+    <link>https://martin.varela.fi/tags/qoe/</link>
+    <description>Recent content in QoE on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Tue, 23 Apr 2019 22:48:23 +0300</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/tags/qoe/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Coming Full Circle</title>
+      <link>https://martin.varela.fi/2019/04/23/coming-full-circle/</link>
+      <pubDate>Tue, 23 Apr 2019 22:48:23 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/2019/04/23/coming-full-circle/</guid>
+      <description>In the Beginning... QoE sits at a confluence point between several disciplines, and one of those is QoS. Back when I started working on these topics, &#34;QoE&#34; was not a thing, we (networking people) would talk about &#34;QoS from the user&#39;s perspective&#34;, or similar kludgy terms, for lack of a proper one. The underlying concept, however, was clear: how does QoS in the network affect the user&#39;s perception of media quality.</description>
+    </item>
+    
+  </channel>
+</rss>

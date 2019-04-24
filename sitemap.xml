@@ -4,6 +4,14 @@
     
     <url>
     
+      <loc>https://martin.varela.fi/2019/04/23/coming-full-circle/</loc>
+      <lastmod>2019-04-23T22:48:23+03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://martin.varela.fi/publication/varela-qomex19/</loc>
       <lastmod>2019-03-03T18:22:44+03:00</lastmod>
     </url>
@@ -1343,7 +1351,7 @@
     <url>
     
       <loc>https://martin.varela.fi/</loc>
-      <lastmod>2019-03-03T18:22:44+03:00</lastmod>
+      <lastmod>2019-04-23T22:48:23+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1478,7 +1486,7 @@
     <url>
     
       <loc>https://martin.varela.fi/post/</loc>
-      <lastmod>2017-10-02T19:23:43+03:00</lastmod>
+      <lastmod>2019-04-23T22:48:23+03:00</lastmod>
     </url>
     
   
@@ -1514,6 +1522,24 @@
     
       <loc>https://martin.varela.fi/publication_types/</loc>
       <lastmod>2018-04-17T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/tags/qoe/</loc>
+      <lastmod>2019-04-23T22:48:23+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/tags/qos/</loc>
+      <lastmod>2019-04-23T22:48:23+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1671,6 +1697,15 @@
     
       <loc>https://martin.varela.fi/tags/math/</loc>
       <lastmod>2017-10-02T19:23:43+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/tags/philosophy/</loc>
+      <lastmod>2019-04-23T22:48:23+03:00</lastmod>
       <priority>0</priority>
     </url>
     
