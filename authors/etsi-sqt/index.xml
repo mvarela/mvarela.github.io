@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ETSI SQT on Martín Varela</title>
+    <link>https://martin.varela.fi/authors/etsi-sqt/</link>
+    <description>Recent content in ETSI SQT on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Thu, 04 Dec 2014 15:00:19 +0300</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/authors/etsi-sqt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ETSI TS 103 294 — Quality of Experience: A Monitoring Architecture</title>
+      <link>https://martin.varela.fi/publication/etsi-ts-103294/</link>
+      <pubDate>Thu, 04 Dec 2014 15:00:19 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/etsi-ts-103294/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

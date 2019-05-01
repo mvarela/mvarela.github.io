@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Martín Varela 2017-</copyright>
-    <lastBuildDate>Mon, 03 Aug 2015 06:40:40 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 04 Dec 2015 15:25:39 +0300</lastBuildDate>
     
 	<atom:link href="https://martin.varela.fi/authors/katrien-de-moor/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>QoE - Defining a User-centric Concept for Service Quality</title>
+      <link>https://martin.varela.fi/publication/chapter-qoe-defining/</link>
+      <pubDate>Fri, 04 Dec 2015 15:25:39 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/chapter-qoe-defining/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Dagstuhl Manifesto: Quality of Experience: from Assessment to Application</title>
@@ -18,6 +27,15 @@
       <pubDate>Mon, 03 Aug 2015 06:40:40 +0300</pubDate>
       
       <guid>https://martin.varela.fi/publication/varela-dagstuhl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quality of Experience: From Assessment to Application (Dagstuhl Seminar 15022)</title>
+      <link>https://martin.varela.fi/publication/dagstuhl_report/</link>
+      <pubDate>Mon, 04 May 2015 14:51:46 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/dagstuhl_report/</guid>
       <description></description>
     </item>
     

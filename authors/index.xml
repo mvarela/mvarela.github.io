@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Martín Varela 2017-</copyright>
-    <lastBuildDate>Tue, 03 Jun 2014 06:40:42 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 04 Jul 2014 15:32:59 +0300</lastBuildDate>
     
 	<atom:link href="https://martin.varela.fi/authors/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Abdelhamid Mellouk</title>
+      <link>https://martin.varela.fi/authors/abdelhamid-mellouk/</link>
+      <pubDate>Fri, 04 Jul 2014 15:32:59 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/authors/abdelhamid-mellouk/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Aggeliki Sgora</title>
@@ -24,7 +33,7 @@
     <item>
       <title>Ana Cavalli</title>
       <link>https://martin.varela.fi/authors/ana-cavalli/</link>
-      <pubDate>Mon, 03 Jun 2013 06:40:40 +0300</pubDate>
+      <pubDate>Fri, 04 Jul 2014 15:32:59 +0300</pubDate>
       
       <guid>https://martin.varela.fi/authors/ana-cavalli/</guid>
       <description></description>
@@ -42,7 +51,7 @@
     <item>
       <title>Anderson Morais</title>
       <link>https://martin.varela.fi/authors/anderson-morais/</link>
-      <pubDate>Mon, 03 Jun 2013 06:40:40 +0300</pubDate>
+      <pubDate>Fri, 04 Jul 2014 15:32:59 +0300</pubDate>
       
       <guid>https://martin.varela.fi/authors/anderson-morais/</guid>
       <description></description>
@@ -51,16 +60,25 @@
     <item>
       <title>Andreas Aurelius</title>
       <link>https://martin.varela.fi/authors/andreas-aurelius/</link>
-      <pubDate>Mon, 03 Jun 2013 06:40:40 +0300</pubDate>
+      <pubDate>Fri, 04 Jul 2014 15:32:59 +0300</pubDate>
       
       <guid>https://martin.varela.fi/authors/andreas-aurelius/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Andrew Perkis (eds)</title>
+      <link>https://martin.varela.fi/authors/andrew-perkis-eds/</link>
+      <pubDate>Mon, 04 Jun 2012 15:17:52 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/authors/andrew-perkis-eds/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Antonio Cuadra</title>
       <link>https://martin.varela.fi/authors/antonio-cuadra/</link>
-      <pubDate>Mon, 03 Jun 2013 06:40:40 +0300</pubDate>
+      <pubDate>Fri, 04 Jul 2014 15:32:59 +0300</pubDate>
       
       <guid>https://martin.varela.fi/authors/antonio-cuadra/</guid>
       <description></description>
@@ -90,6 +108,15 @@
       <pubDate>Tue, 03 Oct 2006 06:40:44 +0300</pubDate>
       
       <guid>https://martin.varela.fi/authors/bj%C3%B6rn-gr%C3%B6nvall/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Brice Augustin</title>
+      <link>https://martin.varela.fi/authors/brice-augustin/</link>
+      <pubDate>Fri, 04 Jul 2014 15:32:59 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/authors/brice-augustin/</guid>
       <description></description>
     </item>
     
@@ -157,6 +184,15 @@
     </item>
     
     <item>
+      <title>ETSI SQT</title>
+      <link>https://martin.varela.fi/authors/etsi-sqt/</link>
+      <pubDate>Thu, 04 Dec 2014 15:00:19 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/authors/etsi-sqt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Edmundo de Souza e Silva</title>
       <link>https://martin.varela.fi/authors/edmundo-de-souza-e-silva/</link>
       <pubDate>Tue, 03 Apr 2007 06:40:39 +0300</pubDate>
@@ -207,6 +243,15 @@
       <pubDate>Wed, 03 Dec 2014 06:40:41 +0300</pubDate>
       
       <guid>https://martin.varela.fi/authors/fr%C3%A9d%C3%A9ric-guyard/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GA Cushen</title>
+      <link>https://martin.varela.fi/authors/ga-cushen/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/authors/ga-cushen/</guid>
       <description></description>
     </item>
     
@@ -283,6 +328,15 @@
     </item>
     
     <item>
+      <title>Ismael Pérez Mateos</title>
+      <link>https://martin.varela.fi/authors/ismael-p%C3%A9rez-mateos/</link>
+      <pubDate>Fri, 04 Jul 2014 15:32:59 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/authors/ismael-p%C3%A9rez-mateos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Ismael Pérez-Mateos</title>
       <link>https://martin.varela.fi/authors/ismael-p%C3%A9rez-mateos/</link>
       <pubDate>Tue, 03 Jul 2012 06:40:39 +0300</pubDate>
@@ -348,7 +402,7 @@
     <item>
       <title>Jorge López de Vergara</title>
       <link>https://martin.varela.fi/authors/jorge-l%C3%B3pez-de-vergara/</link>
-      <pubDate>Tue, 03 Jul 2012 06:40:39 +0300</pubDate>
+      <pubDate>Fri, 04 Jul 2014 15:32:59 +0300</pubDate>
       
       <guid>https://martin.varela.fi/authors/jorge-l%C3%B3pez-de-vergara/</guid>
       <description></description>
@@ -375,7 +429,7 @@
     <item>
       <title>Jukka-Pekka Laulajainen</title>
       <link>https://martin.varela.fi/authors/jukka-pekka-laulajainen/</link>
-      <pubDate>Mon, 03 Jun 2013 06:40:40 +0300</pubDate>
+      <pubDate>Fri, 04 Jul 2014 15:32:59 +0300</pubDate>
       
       <guid>https://martin.varela.fi/authors/jukka-pekka-laulajainen/</guid>
       <description></description>
@@ -384,7 +438,7 @@
     <item>
       <title>Katrien De Moor</title>
       <link>https://martin.varela.fi/authors/katrien-de-moor/</link>
-      <pubDate>Mon, 03 Aug 2015 06:40:40 +0300</pubDate>
+      <pubDate>Fri, 04 Dec 2015 15:25:39 +0300</pubDate>
       
       <guid>https://martin.varela.fi/authors/katrien-de-moor/</guid>
       <description></description>
@@ -393,7 +447,7 @@
     <item>
       <title>Kjell Brunströmm</title>
       <link>https://martin.varela.fi/authors/kjell-brunstr%C3%B6mm/</link>
-      <pubDate>Mon, 03 Jun 2013 06:40:40 +0300</pubDate>
+      <pubDate>Fri, 04 Jul 2014 15:32:59 +0300</pubDate>
       
       <guid>https://martin.varela.fi/authors/kjell-brunstr%C3%B6mm/</guid>
       <description></description>
@@ -447,7 +501,7 @@
     <item>
       <title>Mar Cutanda</title>
       <link>https://martin.varela.fi/authors/mar-cutanda/</link>
-      <pubDate>Mon, 03 Jun 2013 06:40:40 +0300</pubDate>
+      <pubDate>Fri, 04 Jul 2014 15:32:59 +0300</pubDate>
       
       <guid>https://martin.varela.fi/authors/mar-cutanda/</guid>
       <description></description>
@@ -477,6 +531,15 @@
       <pubDate>Sun, 03 Mar 2019 18:22:44 +0300</pubDate>
       
       <guid>https://martin.varela.fi/authors/mart%C3%ADn-varela/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Martín Varela (eds.)</title>
+      <link>https://martin.varela.fi/authors/mart%C3%ADn-varela-eds./</link>
+      <pubDate>Mon, 04 May 2015 14:51:46 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/authors/mart%C3%ADn-varela-eds./</guid>
       <description></description>
     </item>
     
@@ -535,6 +598,15 @@
     </item>
     
     <item>
+      <title>Patrick Le Callet</title>
+      <link>https://martin.varela.fi/authors/patrick-le-callet/</link>
+      <pubDate>Mon, 04 Jun 2012 15:17:52 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/authors/patrick-le-callet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Patrick Maillé</title>
       <link>https://martin.varela.fi/authors/patrick-maill%C3%A9/</link>
       <pubDate>Mon, 09 Apr 2018 06:40:42 +0300</pubDate>
@@ -558,6 +630,15 @@
       <pubDate>Mon, 03 Aug 2015 06:40:44 +0300</pubDate>
       
       <guid>https://martin.varela.fi/authors/pedro-casas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pedro Sevilla</title>
+      <link>https://martin.varela.fi/authors/pedro-sevilla/</link>
+      <pubDate>Fri, 04 Jul 2014 15:32:59 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/authors/pedro-sevilla/</guid>
       <description></description>
     </item>
     
@@ -675,6 +756,15 @@
       <pubDate>Wed, 03 May 2017 06:40:42 +0300</pubDate>
       
       <guid>https://martin.varela.fi/authors/toni-m%C3%A4ki/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Touradj Ebrahimi</title>
+      <link>https://martin.varela.fi/authors/touradj-ebrahimi/</link>
+      <pubDate>Fri, 04 Jul 2014 15:38:59 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/authors/touradj-ebrahimi/</guid>
       <description></description>
     </item>
     

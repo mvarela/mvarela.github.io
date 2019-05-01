@@ -236,6 +236,14 @@
     
     <url>
     
+      <loc>https://martin.varela.fi/publication/chapter-qoe-defining/</loc>
+      <lastmod>2015-12-04T15:25:39+03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://martin.varela.fi/publication/varela-quamus15/</loc>
       <lastmod>2015-11-03T06:40:43+03:00</lastmod>
     </url>
@@ -254,6 +262,14 @@
     
       <loc>https://martin.varela.fi/talk/talk-20/</loc>
       <lastmod>2015-09-05T13:54:53+03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/publication/person-re-id/</loc>
+      <lastmod>2015-09-01T00:00:00+03:00</lastmod>
     </url>
     
   
@@ -308,6 +324,14 @@
     
     <url>
     
+      <loc>https://martin.varela.fi/publication/dagstuhl_report/</loc>
+      <lastmod>2015-05-04T14:51:46+03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://martin.varela.fi/publication/varela-qomex2015-2/</loc>
       <lastmod>2015-05-03T06:40:43+03:00</lastmod>
     </url>
@@ -340,6 +364,14 @@
     
     <url>
     
+      <loc>https://martin.varela.fi/publication/etsi-ts-103294/</loc>
+      <lastmod>2014-12-04T15:00:19+03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://martin.varela.fi/publication/varela-meta-modeling-qoe/</loc>
       <lastmod>2014-12-03T06:40:41+03:00</lastmod>
     </url>
@@ -366,6 +398,30 @@
     
       <loc>https://martin.varela.fi/talk/talk-16/</loc>
       <lastmod>2014-07-05T13:54:53+03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/publication/chapter-qos-qoe/</loc>
+      <lastmod>2014-07-04T15:38:59+03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/publication/chapter-ecosystem/</loc>
+      <lastmod>2014-07-04T15:32:59+03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/publication/chapter-queen/</loc>
+      <lastmod>2014-07-04T15:32:59+03:00</lastmod>
     </url>
     
   
@@ -414,6 +470,14 @@
     
       <loc>https://martin.varela.fi/talk/talk-14/</loc>
       <lastmod>2013-07-05T13:54:53+03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/publication/lost-in-cloud/</loc>
+      <lastmod>2013-07-04T15:10:06+03:00</lastmod>
     </url>
     
   
@@ -494,6 +558,14 @@
     
       <loc>https://martin.varela.fi/talk/talk-10/</loc>
       <lastmod>2012-06-05T13:54:52+03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/publication/qualinet-white-paper/</loc>
+      <lastmod>2012-06-04T15:17:52+03:00</lastmod>
     </url>
     
   
@@ -831,7 +903,25 @@
     <url>
     
       <loc>https://martin.varela.fi/publication_types/4/</loc>
-      <lastmod>2012-01-03T06:40:40+03:00</lastmod>
+      <lastmod>2015-05-04T14:51:46+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/publication_types/6/</loc>
+      <lastmod>2015-12-04T15:25:39+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/abdelhamid-mellouk/</loc>
+      <lastmod>2014-07-04T15:32:59+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -849,7 +939,7 @@
     <url>
     
       <loc>https://martin.varela.fi/authors/ana-cavalli/</loc>
-      <lastmod>2013-06-03T06:40:40+03:00</lastmod>
+      <lastmod>2014-07-04T15:32:59+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -867,7 +957,7 @@
     <url>
     
       <loc>https://martin.varela.fi/authors/anderson-morais/</loc>
-      <lastmod>2013-06-03T06:40:40+03:00</lastmod>
+      <lastmod>2014-07-04T15:32:59+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -876,7 +966,16 @@
     <url>
     
       <loc>https://martin.varela.fi/authors/andreas-aurelius/</loc>
-      <lastmod>2013-06-03T06:40:40+03:00</lastmod>
+      <lastmod>2014-07-04T15:32:59+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/andrew-perkis-eds/</loc>
+      <lastmod>2012-06-04T15:17:52+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -885,7 +984,7 @@
     <url>
     
       <loc>https://martin.varela.fi/authors/antonio-cuadra/</loc>
-      <lastmod>2013-06-03T06:40:40+03:00</lastmod>
+      <lastmod>2014-07-04T15:32:59+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -920,7 +1019,7 @@
     <url>
     
       <loc>https://martin.varela.fi/authors/</loc>
-      <lastmod>2014-06-03T06:40:42+03:00</lastmod>
+      <lastmod>2014-07-04T15:32:59+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -930,6 +1029,15 @@
     
       <loc>https://martin.varela.fi/authors/bj%C3%B6rn-gr%C3%B6nvall/</loc>
       <lastmod>2006-10-03T06:40:44+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/brice-augustin/</loc>
+      <lastmod>2014-07-04T15:32:59+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1035,6 +1143,15 @@
     
     <url>
     
+      <loc>https://martin.varela.fi/authors/etsi-sqt/</loc>
+      <lastmod>2014-12-04T15:00:19+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://martin.varela.fi/authors/edmundo-de-souza-e-silva/</loc>
       <lastmod>2007-04-03T06:40:39+03:00</lastmod>
       <priority>0</priority>
@@ -1082,6 +1199,15 @@
     
       <loc>https://martin.varela.fi/authors/fr%C3%A9d%C3%A9ric-guyard/</loc>
       <lastmod>2014-12-03T06:40:41+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/ga-cushen/</loc>
+      <lastmod>2015-09-01T00:00:00+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1162,6 +1288,15 @@
     <url>
     
       <loc>https://martin.varela.fi/authors/ismael-p%C3%A9rez-mateos/</loc>
+      <lastmod>2014-07-04T15:32:59+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/ismael-p%C3%A9rez-mateos/</loc>
       <lastmod>2012-07-03T06:40:39+03:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1225,7 +1360,7 @@
     <url>
     
       <loc>https://martin.varela.fi/authors/jorge-l%C3%B3pez-de-vergara/</loc>
-      <lastmod>2012-07-03T06:40:39+03:00</lastmod>
+      <lastmod>2014-07-04T15:32:59+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1252,7 +1387,7 @@
     <url>
     
       <loc>https://martin.varela.fi/authors/jukka-pekka-laulajainen/</loc>
-      <lastmod>2013-06-03T06:40:40+03:00</lastmod>
+      <lastmod>2014-07-04T15:32:59+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1261,7 +1396,7 @@
     <url>
     
       <loc>https://martin.varela.fi/authors/katrien-de-moor/</loc>
-      <lastmod>2015-08-03T06:40:40+03:00</lastmod>
+      <lastmod>2015-12-04T15:25:39+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1270,7 +1405,7 @@
     <url>
     
       <loc>https://martin.varela.fi/authors/kjell-brunstr%C3%B6mm/</loc>
-      <lastmod>2013-06-03T06:40:40+03:00</lastmod>
+      <lastmod>2014-07-04T15:32:59+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1324,7 +1459,7 @@
     <url>
     
       <loc>https://martin.varela.fi/authors/mar-cutanda/</loc>
-      <lastmod>2013-06-03T06:40:40+03:00</lastmod>
+      <lastmod>2014-07-04T15:32:59+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1361,6 +1496,15 @@
     
       <loc>https://martin.varela.fi/authors/mart%C3%ADn-varela/</loc>
       <lastmod>2019-03-03T18:22:44+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/mart%C3%ADn-varela-eds./</loc>
+      <lastmod>2015-05-04T14:51:46+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1422,6 +1566,15 @@
     
     <url>
     
+      <loc>https://martin.varela.fi/authors/patrick-le-callet/</loc>
+      <lastmod>2012-06-04T15:17:52+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://martin.varela.fi/authors/patrick-maill%C3%A9/</loc>
       <lastmod>2018-04-09T06:40:42+03:00</lastmod>
       <priority>0</priority>
@@ -1442,6 +1595,15 @@
     
       <loc>https://martin.varela.fi/authors/pedro-casas/</loc>
       <lastmod>2015-08-03T06:40:44+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/pedro-sevilla/</loc>
+      <lastmod>2014-07-04T15:32:59+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1644,6 +1806,15 @@
     
       <loc>https://martin.varela.fi/authors/toni-m%C3%A4ki/</loc>
       <lastmod>2017-05-03T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/touradj-ebrahimi/</loc>
+      <lastmod>2014-07-04T15:38:59+03:00</lastmod>
       <priority>0</priority>
     </url>
     
