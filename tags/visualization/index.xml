@@ -18,8 +18,7 @@
       <pubDate>Sat, 09 Sep 2017 09:33:46 +0300</pubDate>
       
       <guid>https://martin.varela.fi/2017/09/09/simple-binary-data-visualization/</guid>
-      <description>Introduction A few days ago I ran across this discussion on Hacker News, which referred to this article on binary data visualization. The folks at Codisec have developed a tool called Veles for visualizing binary files. The idea is to help detect patterns in the data, which in some cases are useful for e.g,. security-related analysis.
-The technique described was surprisingly simple, in that it looks at digrams or trigrams in the file, and then it analyses their frequency and spatial distribution within the data.</description>
+      <description>Introduction   A few days ago I ran across this discussion on Hacker News, which referred to this article on binary data visualization. The folks at Codisec have developed a tool called Veles for visualizing binary files. The idea is to help detect patterns in the data, which in some cases are useful for e.g,. security-related analysis.  The technique described was surprisingly simple, in that it looks at digrams or trigrams in the file, and then it analyses their frequency and spatial distribution within the data.</description>
     </item>
     
   </channel>

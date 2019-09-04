@@ -18,7 +18,7 @@
       <pubDate>Mon, 02 Oct 2017 19:23:43 +0300</pubDate>
       
       <guid>https://martin.varela.fi/2017/10/02/fractals-complexity-from-simplicity-part-2/</guid>
-      <description>Beyond L-Systems In the first part of this post, we went over Lindenmayer systems, and saw how from small sets of very simple rules, complexity emerged in the form of intricate patterns. In this part, we will look at two other types of fractals. The first one, is called the Barnsley fern, and unlike the L-systems in the previous post, it is based not on string substitution, but on the repeated iteration of affine transformations to a starting point.</description>
+      <description>Beyond L-Systems   In the first part of this post, we went over Lindenmayer systems, and saw how from small sets of very simple rules, complexity emerged in the form of intricate patterns. In this part, we will look at two other types of fractals. The first one, is called the Barnsley fern, and unlike the L-systems in the previous post, it is based not on string substitution, but on the repeated iteration of affine transformations to a starting point.</description>
     </item>
     
     <item>
@@ -27,8 +27,7 @@
       <pubDate>Tue, 26 Sep 2017 09:43:43 +0300</pubDate>
       
       <guid>https://martin.varela.fi/2017/09/26/fractals-complexity-from-simplicity-and-a-bit-of-clojure/</guid>
-      <description>Enter the Dragon Fractals have always fascinated me. I remember seeing a render of a Mandelbrot set back in the early 90s (when color screens started being accessible back home), and being completely mesmerized by it. I remember being even more fascinated by seeing a code-golf version of such a renderer, implemented in some 300 bytes of C.
-Some days ago I came across the &#34;dragon curve&#34;, and decided to give it a go in Clojure, as a way to learn a bit more and have some fun.</description>
+      <description>Enter the Dragon   Fractals have always fascinated me. I remember seeing a render of a Mandelbrot set back in the early 90s (when color screens started being accessible back home), and being completely mesmerized by it. I remember being even more fascinated by seeing a code-golf version of such a renderer, implemented in some 300 bytes of C.  Some days ago I came across the &amp;#34;dragon curve&amp;#34;, and decided to give it a go in Clojure, as a way to learn a bit more and have some fun.</description>
     </item>
     
   </channel>

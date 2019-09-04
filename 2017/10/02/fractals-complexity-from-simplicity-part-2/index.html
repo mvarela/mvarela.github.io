@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Source Themes Academic 4.0.0">
-  <meta name="generator" content="Hugo 0.55.6" />
+  <meta name="generator" content="Hugo 0.56.3" />
 
   
 
@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="Beyond L-Systems In the first part of this post, we went over Lindenmayer systems, and saw how from small sets of very simple rules, complexity emerged in the form of intricate patterns. In this part, we will look at two other types of fractals. The first one, is called the Barnsley fern, and unlike the L-systems in the previous post, it is based not on string substitution, but on the repeated iteration of affine transformations to a starting point.">
+  <meta name="description" content="Beyond L-Systems   In the first part of this post, we went over Lindenmayer systems, and saw how from small sets of very simple rules, complexity emerged in the form of intricate patterns. In this part, we will look at two other types of fractals. The first one, is called the Barnsley fern, and unlike the L-systems in the previous post, it is based not on string substitution, but on the repeated iteration of affine transformations to a starting point.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://martin.varela.fi/2017/10/02/fractals-complexity-from-simplicity-part-2/">
@@ -130,7 +130,7 @@
   <meta property="og:site_name" content="Martín Varela">
   <meta property="og:url" content="https://martin.varela.fi/2017/10/02/fractals-complexity-from-simplicity-part-2/">
   <meta property="og:title" content="Fractals — Complexity from Simplicity — Part 2 | Martín Varela">
-  <meta property="og:description" content="Beyond L-Systems In the first part of this post, we went over Lindenmayer systems, and saw how from small sets of very simple rules, complexity emerged in the form of intricate patterns. In this part, we will look at two other types of fractals. The first one, is called the Barnsley fern, and unlike the L-systems in the previous post, it is based not on string substitution, but on the repeated iteration of affine transformations to a starting point."><meta property="og:image" content="https://martin.varela.fi/img/headers/fractals2.png">
+  <meta property="og:description" content="Beyond L-Systems   In the first part of this post, we went over Lindenmayer systems, and saw how from small sets of very simple rules, complexity emerged in the form of intricate patterns. In this part, we will look at two other types of fractals. The first one, is called the Barnsley fern, and unlike the L-systems in the previous post, it is based not on string substitution, but on the repeated iteration of affine transformations to a starting point."><meta property="og:image" content="https://martin.varela.fi/img/headers/fractals2.png">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2017-10-02T19:23:43&#43;03:00">
@@ -464,225 +464,233 @@
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      <!-- -*- org-export-babel-evaluate: nil -*- -->
-
-<h1 id="beyond-l-systems">Beyond L-Systems</h1>
-
-<p>In the <a href="http://martin.varela.fi/post/fractals-complexity-from-simplicity/" title="first part of this post" target="_blank">first part of this post</a>, we went over Lindenmayer systems, and saw how
+      
+<h1 id="headline-1">
+Beyond L-Systems
+</h1>
+<p>
+In the <a href="http://martin.varela.fi/post/fractals-complexity-from-simplicity/">first part of this post</a>, we went over Lindenmayer systems, and saw how
 from small sets of very simple rules, complexity emerged in the form of
 intricate patterns. In this part, we will look at two other types of fractals.
-The first one, is called the <a href="https://en.wikipedia.org/wiki/Barnsley_fern" title="Barnsley fern" target="_blank">Barnsley fern</a>, and unlike the L-systems in the
+The first one, is called the <a href="https://en.wikipedia.org/wiki/Barnsley_fern">Barnsley fern</a>, and unlike the L-systems in the
 previous post, it is based not on string substitution, but on the repeated
 iteration of affine transformations to a starting point. The second fractal
-we'll cover in this post is the <a href="https://en.wikipedia.org/wiki/Mandelbrot_set" title="Mandelbrot set" target="_blank">Mandelbrot set</a>, which may well be the "most
-famous" fractal out there, and for good reason, as it it really fascinating.</p>
-
-<h1 id="between-many-ferns">Between Many Ferns</h1>
-
-<p>The Barnsley fern is built by applying, in an iterative fashion, a series of
-  affine transformations to a point. The transformations are chosen randomly
-  between four possible ones, and the probability of choosing each one at each
-  iteration is given by a fixed distribution, as follows.</p>
-
+we&#39;ll cover in this post is the <a href="https://en.wikipedia.org/wiki/Mandelbrot_set">Mandelbrot set</a>, which may well be the &#34;most
+famous&#34; fractal out there, and for good reason, as it it really fascinating.
+</p>
+<h1 id="headline-2">
+Between Many Ferns
+</h1>
+<p>
+The Barnsley fern is built by applying, in an iterative fashion, a series of
+affine transformations to a point. The transformations are chosen randomly
+between four possible ones, and the probability of choosing each one at each
+iteration is given by a fixed distribution, as follows.
+</p>
 <table>
+<thead>
+<tr>
+<th>Transformation</th>
+<th class="align-right">Probability</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td>Transformation</td>
-<td>Probability</td>
-</tr>
-
-<tr>
 <td>$f1$</td>
-<td>0.01</td>
+<td class="align-right">0.01</td>
 </tr>
-
 <tr>
 <td>$f2$</td>
-<td>0.85</td>
+<td class="align-right">0.85</td>
 </tr>
-
 <tr>
 <td>$f3$</td>
-<td>0.07</td>
+<td class="align-right">0.07</td>
 </tr>
-
 <tr>
 <td>$f4$</td>
-<td>0.07</td>
+<td class="align-right">0.07</td>
 </tr>
 </tbody>
 </table>
-
-<p>Each transformation has the form $Av^\intercal + w$, where $A$ is a $2\times2$ matrix,
-  $v=(x,y)$ is the point being transformed, and $w$ is a constant vector. If $A$ is of
-  the form $$ \begin{pmatrix} a&b \\ c&d \end{pmatrix}$$ and $w$ is of the form
-  $$ \begin{pmatrix} e \\ f\end{pmatrix}$$ then we have
-  $$f(x,y) = \begin{pmatrix} ax + by + e \\ cx + dy + f \end{pmatrix} $$</p>
-
-<p>The coefficients for the $f1\cdots f4$ transformations are as follows:</p>
-
+<p>
+Each transformation has the form $Av^∫ercal + w$, where $A$ is a $2×2$ matrix,
+$v=(x,y)$ is the point being transformed, and $w$ is a constant vector. If $A$ is of
+the form $$ \begin{pmatrix} a&amp;b \\ c&amp;d \end{pmatrix}$$ and $w$ is of the form
+$$ \begin{pmatrix} e \\ f\end{pmatrix}$$ then we have
+$$f(x,y) = \begin{pmatrix} ax + by + e \\ cx + dy + f \end{pmatrix} $$
+</p>
+<p>
+The coefficients for the $f1⋯ f4$ transformations are as follows:
+</p>
 <table>
 <tbody>
 <tr>
 <td>Transforms</td>
-<td></td>
-<td></td>
-<td>Coeff.</td>
-<td></td>
-<td></td>
-<td></td>
+<td class="align-right"></td>
+<td class="align-right"></td>
+<td class="align-right">Coeff.</td>
+<td class="align-right"></td>
+<td class="align-right"></td>
+<td class="align-right"></td>
 </tr>
-
 <tr>
 <td></td>
-<td>a</td>
-<td>b</td>
-<td>c</td>
-<td>d</td>
-<td>e</td>
-<td>f</td>
+<td class="align-right">a</td>
+<td class="align-right">b</td>
+<td class="align-right">c</td>
+<td class="align-right">d</td>
+<td class="align-right">e</td>
+<td class="align-right">f</td>
 </tr>
-
 <tr>
 <td>$f1$</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0.16</td>
-<td>0</td>
-<td>0</td>
+<td class="align-right">0</td>
+<td class="align-right">0</td>
+<td class="align-right">0</td>
+<td class="align-right">0.16</td>
+<td class="align-right">0</td>
+<td class="align-right">0</td>
 </tr>
-
 <tr>
 <td>$f2$</td>
-<td>0.85</td>
-<td>0.04</td>
-<td>-0.04</td>
-<td>0.85</td>
-<td>0</td>
-<td>1.6</td>
+<td class="align-right">0.85</td>
+<td class="align-right">0.04</td>
+<td class="align-right">-0.04</td>
+<td class="align-right">0.85</td>
+<td class="align-right">0</td>
+<td class="align-right">1.6</td>
 </tr>
-
 <tr>
 <td>$f3$</td>
-<td>0.2</td>
-<td>-0.26</td>
-<td>0.23</td>
-<td>0.22</td>
-<td>0</td>
-<td>1.6</td>
+<td class="align-right">0.2</td>
+<td class="align-right">-0.26</td>
+<td class="align-right">0.23</td>
+<td class="align-right">0.22</td>
+<td class="align-right">0</td>
+<td class="align-right">1.6</td>
 </tr>
-
 <tr>
 <td>$f4$</td>
-<td>-0.15</td>
-<td>0.28</td>
-<td>0.26</td>
-<td>0.24</td>
-<td>0</td>
-<td>0.44</td>
+<td class="align-right">-0.15</td>
+<td class="align-right">0.28</td>
+<td class="align-right">0.26</td>
+<td class="align-right">0.24</td>
+<td class="align-right">0</td>
+<td class="align-right">0.44</td>
 </tr>
 </tbody>
 </table>
+<p>
+We can start putting this to code, by defining the transformations and their
+application:
+</p>
+<div class="src src-clojure">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">ns </span>fractals.barnsley
+  (<span style="color:#e6db74">:require</span> [fractals.util <span style="color:#e6db74">:as</span> util]    <span style="color:#75715e">;; We&#39;ll use a helper to scale the plot to the canvas</span>
+            [hiccup.core <span style="color:#e6db74">:as</span> hiccup]))  <span style="color:#75715e">;; And hiccup to generate the HTML/SVG</span>
 
-<p>We can start putting this to code, by defining the transformations and their
-application:</p>
-
-<pre><code class="language-clojure">(ns fractals.barnsley
-  (:require [fractals.util :as util]    ;; We'll use a helper to scale the plot to the canvas
-            [hiccup.core :as hiccup]))  ;; And hiccup to generate the HTML/SVG
-
-(def transforms {:f1 [0 0 0 0.16 0 0]
-                 :f2 [0.85 0.04 -0.04 0.85 0 1.6]
-                 :f3 [0.2 -0.26 0.23 0.22 0 1.6]
-                 :f4 [-0.15 0.28 0.26 0.24 0 0.44]})
+(<span style="color:#66d9ef">def </span>transforms {<span style="color:#e6db74">:f1</span> [<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0.16</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>]
+                 <span style="color:#e6db74">:f2</span> [<span style="color:#ae81ff">0.85</span> <span style="color:#ae81ff">0.04</span> <span style="color:#ae81ff">-0.04</span> <span style="color:#ae81ff">0.85</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1.6</span>]
+                 <span style="color:#e6db74">:f3</span> [<span style="color:#ae81ff">0.2</span> <span style="color:#ae81ff">-0.26</span> <span style="color:#ae81ff">0.23</span> <span style="color:#ae81ff">0.22</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1.6</span>]
+                 <span style="color:#e6db74">:f4</span> [<span style="color:#ae81ff">-0.15</span> <span style="color:#ae81ff">0.28</span> <span style="color:#ae81ff">0.26</span> <span style="color:#ae81ff">0.24</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0.44</span>]})
 
 
-(defn- apply-transform [point coeffs]
-  (if (empty? coeffs)
-    [0 0]
-    (let [[x y] point
+(<span style="color:#66d9ef">defn- </span>apply-transform [point coeffs]
+  (<span style="color:#66d9ef">if </span>(<span style="color:#a6e22e">empty?</span> coeffs)
+    [<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>]
+    (<span style="color:#66d9ef">let </span>[[x y] point
           [a b c d e f] coeffs
           xx  (+ (* a x) (* b y) e)
           yy  (+ (* c x) (* d y) f)]
-      [xx yy])))
-</code></pre>
-
-<p>With that done, we can proceed to implement the actual Barnsley fern fractal.
-First, we pick the transformations with the given probability distribution</p>
-
-<pre><code class="language-clojure">(defn- transform-probs [i]
-  (cond
-    (&lt;= i 0.01) :f1
-    (&lt;= i (+ 0.01 0.85)) :f2
-    (&lt;= i (+ 0.01 0.85 0.07)) :f3
-    :true :f4))
-</code></pre>
-
-<p>We can now iterate on our starting point, for however many iterations we want to
-do.</p>
-
-<pre><code class="language-clojure">(defn barnsley-fern [num-points]
-  (let [probs (repeatedly num-points rand)
+      [xx yy])))</code></pre></div>
+</div>
+<p>
+With that done, we can proceed to implement the actual Barnsley fern fractal.
+First, we pick the transformations with the given probability distribution
+</p>
+<div class="src src-clojure">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">defn- </span>transform-probs [i]
+  (<span style="color:#a6e22e">cond</span>
+    (&lt;= i <span style="color:#ae81ff">0.01</span>) <span style="color:#e6db74">:f1</span>
+    (&lt;= i (+ <span style="color:#ae81ff">0.01</span> <span style="color:#ae81ff">0.85</span>)) <span style="color:#e6db74">:f2</span>
+    (&lt;= i (+ <span style="color:#ae81ff">0.01</span> <span style="color:#ae81ff">0.85</span> <span style="color:#ae81ff">0.07</span>)) <span style="color:#e6db74">:f3</span>
+    <span style="color:#e6db74">:true</span> <span style="color:#e6db74">:f4</span>))</code></pre></div>
+</div>
+<p>
+We can now iterate on our starting point, for however many iterations we want to
+do.
+</p>
+<div class="src src-clojure">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">defn </span>barnsley-fern [num-points]
+  (<span style="color:#66d9ef">let </span>[probs (<span style="color:#a6e22e">repeatedly</span> num-points rand)
         coeflist (map (comp transforms transform-probs) probs)]
-    (reductions apply-transform [0 0] coeflist)))
-</code></pre>
-
-<p>Basically, what we are doing is choosing a sequence of transformations to apply
+    (<span style="color:#a6e22e">reductions</span> apply-transform [<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>] coeflist)))</code></pre></div>
+</div>
+<p>
+Basically, what we are doing is choosing a sequence of transformations to apply
 (randomly, according to the given distribution), and then reducing the actual
 transformation, starting on the origin, and keeping all intermediate results.
-This gives us a list of points of the form $(f_{i_1}(0,0),f_{i_2}(f_{i_1}(0,0)),
-f_{i_3}(f_{i_2}(f_{i_1}(0,0))), \cdots)$, where each $i_j \in {1,2,3,4}$.</p>
-
-<p>All that is left to do now is render this series of points. We'll do them as
+This gives us a list of points of the form $(f<sub>i_1</sub>(0,0),f<sub>i_2</sub>(f<sub>i_1</sub>(0,0)),
+f<sub>i_3</sub>(f<sub>i_2</sub>(f<sub>i_1</sub>(0,0))), ⋯)$, where each $i_j ∈ {1,2,3,4}$.
+</p>
+<p>
+All that is left to do now is render this series of points. We&#39;ll do them as
 tiny SVG circles, similar to how we did with polylines for the L-system fractals
-in the previous post.</p>
-
-<pre><code class="language-clojure">(defn- render-svg-points [plot-points size]
-  (let [xmlns &quot;http://www.w3.org/2000/svg&quot;
-        style &quot;stroke:#5f7f5fBB; fill:#5f7f5fBB;&quot;
-        scale-bf (fn [[x y]] [(* 100 x) (* 100 y)])
-        points (util/fix-coords (map scale-bf plot-points) size)
-        do-circle (fn [pt] (let [[x y] pt]
-                             [:circle {:cx (str x)
-                                       :cy (str y)
-                                       :r &quot;0.2&quot;
-                                       :style style}]))
-        circles (vec (conj (map do-circle  points) :g))]
-    (hiccup/html [:html
-                  [:div {:padding 25}
-                   [:svg {:width size
-                          :height size
-                          :xmlns xmlns}
+in the previous post.
+</p>
+<div class="src src-clojure">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">defn- </span>render-svg-points [plot-points size]
+  (<span style="color:#66d9ef">let </span>[xmlns <span style="color:#e6db74">&#34;http://www.w3.org/2000/svg&#34;</span>
+        style <span style="color:#e6db74">&#34;stroke:#5f7f5fBB; fill:#5f7f5fBB;&#34;</span>
+        scale-bf (<span style="color:#66d9ef">fn </span>[[x y]] [(* <span style="color:#ae81ff">100</span> x) (* <span style="color:#ae81ff">100</span> y)])
+        points (<span style="color:#a6e22e">util/fix-coords</span> (map scale-bf plot-points) size)
+        do-circle (<span style="color:#66d9ef">fn </span>[pt] (<span style="color:#66d9ef">let </span>[[x y] pt]
+                             [<span style="color:#e6db74">:circle</span> {<span style="color:#e6db74">:cx</span> (str x)
+                                       <span style="color:#e6db74">:cy</span> (str y)
+                                       <span style="color:#e6db74">:r</span> <span style="color:#e6db74">&#34;0.2&#34;</span>
+                                       <span style="color:#e6db74">:style</span> style}]))
+        circles (<span style="color:#a6e22e">vec</span> (conj (map do-circle  points) <span style="color:#e6db74">:g</span>))]
+    (<span style="color:#a6e22e">hiccup/html</span> [<span style="color:#e6db74">:html</span>
+                  [<span style="color:#e6db74">:div</span> {<span style="color:#e6db74">:padding</span> <span style="color:#ae81ff">25</span>}
+                   [<span style="color:#e6db74">:svg</span> {<span style="color:#e6db74">:width</span> size
+                          <span style="color:#e6db74">:height</span> size
+                          <span style="color:#e6db74">:xmlns</span> xmlns}
                     circles]]])))
 
-(defn do-BF [num-points]
-  (spit &quot;barnsley-fern.html&quot; (render-svg-points (barnsley-fern num-points) 40000)))
-</code></pre>
-
-<p>Running this with 40K points renders the following.</p>
-
-<p><img src="/img/fractals/barnsley.png" alt="/img/fractals/barnsley.png" title="/img/fractals/barnsley.png" /></p>
-
-<p>The actual SVG can be found <a href="http:/html/fractals/barnsley-fern.html" title="here" target="_blank">here</a>.</p>
-
-<p>It is interesting to see how the whole pattern repeats in each leaf portion.
-Looking closer, we can find the whole fern leaf repeated in each part of itself.</p>
-
-<h1 id="and-now-for-the-main-attraction">And Now for the Main Attraction...</h1>
-
-<p>The Mandelbrot set is a favorite of mine, and I have to admit that when writing
+(<span style="color:#66d9ef">defn </span>do-BF [num-points]
+  (<span style="color:#a6e22e">spit</span> <span style="color:#e6db74">&#34;barnsley-fern.html&#34;</span> (<span style="color:#a6e22e">render-svg-points</span> (<span style="color:#a6e22e">barnsley-fern</span> num-points) <span style="color:#ae81ff">40000</span>)))</code></pre></div>
+</div>
+<p>
+Running this with 40K points renders the following.
+</p>
+<img src="/img/fractals/barnsley.png" alt="/img/fractals/barnsley.png" title="/img/fractals/barnsley.png" width="1200px"/>
+<p>
+The actual SVG can be found <a href="http:/html/fractals/barnsley-fern.html">here</a>.
+</p>
+<p>
+It is interesting to see how the whole pattern repeats in each leaf portion.
+Looking closer, we can find the whole fern leaf repeated in each part of itself.
+</p>
+<h1 id="headline-3">
+And Now for the Main Attraction…
+</h1>
+<p>
+The Mandelbrot set is a favorite of mine, and I have to admit that when writing
 the code for this renderer, I spent much more time than I had expected just
-playing with it, really fascinated by its complexity and beauty.</p>
-
-<p>The Mandelbrot set $M$ is defined on the complex plane, as those points $c$ for which
+playing with it, really fascinated by its complexity and beauty.
+</p>
+<p>
+The Mandelbrot set $M$ is defined on the complex plane, as those points $c$ for which
 the following recurrence remains bounded:
-$$ z_{n+1} = z^2_n + c$$ with $z_0 = 0$.</p>
-
-<p>In particular, $c \in M$ if $\limsup\limits_{n\rightarrow
-\infty}\left|z_n\right| \leq 2$.</p>
-
-<p>In software, we can only approximate the limit of this recurrence with a given
+$$ z<sub>n+1</sub> = z^2_n + c$$ with $z_0 = 0$.
+</p>
+<p>
+In particular, $c ∈ M$ if $limsuplimits<sub>n→
+∞</sub>≤ft|z_n\right| ≤q 2$.
+</p>
+<p>
+In software, we can only approximate the limit of this recurrence with a given
 number of iterations, which we refer to as <em>depth</em>. The deeper we iterate, the
 more detail we will obtain in our rendering of the set. A basic approach to
 generating the set would consist of defining a depth, a section of the complex
@@ -690,235 +698,247 @@ plane where the points we consider will be, and a mapping from a set of pixels
 to these points. We then calculate, for each pixel, whether the recurrence
 diverges or remains bounded within the given number of iterations, and then
 assign a boolean value to whether the point represented by the pixel belongs to
-the set.</p>
-
-<p>We can do a bit better, by considering, instead of a binary value, the number of
+the set.
+</p>
+<p>
+We can do a bit better, by considering, instead of a binary value, the number of
 iterations that it took for the recurrence to diverge at each point not in the
-set. This allows for a bit more nuanced representation when we render it.</p>
-
-<p>In code:</p>
-
-<pre><code class="language-clojure">(ns fractals.mandelbrot
-  (:require [com.evocomputing.colors :as c]  ;; we'll use the HSV space for coloring
-            [clojure.string :refer [join]])
-  (:import [java.io File]
+set. This allows for a bit more nuanced representation when we render it.
+</p>
+<p>
+In code:
+</p>
+<div class="src src-clojure">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">ns </span>fractals.mandelbrot
+  (<span style="color:#e6db74">:require</span> [com.evocomputing.colors <span style="color:#e6db74">:as</span> c]  <span style="color:#75715e">;; we&#39;ll use the HSV space for coloring</span>
+            [clojure.string <span style="color:#e6db74">:refer</span> [join]])
+  (<span style="color:#e6db74">:import</span> [java.io File]
            [javax.imageio ImageIO]
            [java.awt Color]
-           [java.awt.image BufferedImage]))  ;; some java interop for rendering PNGs
+           [java.awt.image BufferedImage]))  <span style="color:#75715e">;; some java interop for rendering PNGs</span>
 
-(defn- square-z [r i]
-  [(- (* r r) (* i i)) (* 2 r i)])
+(<span style="color:#66d9ef">defn- </span>square-z [r i]
+  [(- (* r r) (* i i)) (* <span style="color:#ae81ff">2</span> r i)])
 
-(defn- in-mandelbrot? [point iter]
-  &quot;This function will return 0 if the point is in the set, and otherwise, the
-  number of remaining iterations remaining (out of the original maximum), if the
-  point 'escapes' from the set&quot;
-  (let [values (iterate #(map + point (square-z (first %) (second %))) [0 0])
-        test  (fn[acc [r i]]
-                (if (or (&gt;= acc iter) (&gt; (+ (* r r)(* i i)) 4))
-                  (reduced acc)
+(<span style="color:#66d9ef">defn- </span>in-mandelbrot? [point iter]
+  <span style="color:#e6db74">&#34;This function will return 0 if the point is in the set, and otherwise, the
+</span><span style="color:#e6db74">  number of remaining iterations remaining (out of the original maximum), if the
+</span><span style="color:#e6db74">  point &#39;escapes&#39; from the set&#34;</span>
+  (<span style="color:#66d9ef">let </span>[values (iterate <span style="color:#f92672">#</span>(map + point (<span style="color:#a6e22e">square-z</span> (first %) (second %))) [<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>])
+        test  (<span style="color:#a6e22e">fn</span>[acc [r i]]
+                (<span style="color:#66d9ef">if </span>(or (&gt;= acc iter) (&gt; (+ (* r r)(* i i)) <span style="color:#ae81ff">4</span>))
+                  (<span style="color:#a6e22e">reduced</span> acc)
                   (inc acc)))
-        counted (reduce test 0 values)]
-    (- iter counted)))
-</code></pre>
-
-<p>In order to actually render the set, we need a bit more work, as we need to
-define the mapping of our view-port to a section of the complex plane.</p>
-
-<pre><code class="language-clojure">
-
-(defn- scale-to-bounds
-&quot;This function takes a point [x y] in an plot area [[0 0] [xmax ymax]],
-  and maps it to a bounding box in the real plane where the plotting will be
-  done. The bounding box is defined by its lower left and upper right corners,
-  and in practice, should not be much larger than [[-2.5 -1] [1 1]], which is
-  where the fun stuff happens&quot;
+        counted (reduce test <span style="color:#ae81ff">0</span> values)]
+    (- iter counted)))</code></pre></div>
+</div>
+<p>
+In order to actually render the set, we need a bit more work, as we need to
+define the mapping of our view-port to a section of the complex plane.
+</p>
+<div class="src src-clojure">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">
+(<span style="color:#66d9ef">defn- </span>scale-to-bounds
+<span style="color:#e6db74">&#34;This function takes a point [x y] in an plot area [[0 0] [xmax ymax]],
+</span><span style="color:#e6db74">  and maps it to a bounding box in the real plane where the plotting will be
+</span><span style="color:#e6db74">  done. The bounding box is defined by its lower left and upper right corners,
+</span><span style="color:#e6db74">  and in practice, should not be much larger than [[-2.5 -1] [1 1]], which is
+</span><span style="color:#e6db74">  where the fun stuff happens&#34;</span>
   [point img-size bounding-box]
-  (let [[x y] point
+  (<span style="color:#66d9ef">let </span>[[x y] point
         [xmax ymax] img-size
         [[b-x-min b-y-min][b-x-max b-y-max]] bounding-box
         bx-span (- b-x-max b-x-min)
         by-span (- b-y-max b-y-min)
-        xx (- (* bx-span (/ x xmax)) (Math/abs b-x-min))
-        yy (- (* by-span (/ y ymax)) (Math/abs b-y-min))]
+        xx (- (* bx-span (/ x xmax)) (<span style="color:#a6e22e">Math/abs</span> b-x-min))
+        yy (- (* by-span (/ y ymax)) (<span style="color:#a6e22e">Math/abs</span> b-y-min))]
     [xx yy]))
 
-(defn mandelbrot [size bounding-box depth]
-  (let [[xmax ymax] size
+(<span style="color:#66d9ef">defn </span>mandelbrot [size bounding-box depth]
+  (<span style="color:#66d9ef">let </span>[[xmax ymax] size
         points (for [y (range ymax)
                      x (range xmax)]
                  [x y])
-        f (fn[i](-&gt; i
-                   (scale-to-bounds size bounding-box)
-                   (in-mandelbrot? depth)))]
-    (pmap f points)))
-</code></pre>
-
-<p>With these two functions, we have now a representation we can use for plotting.
-We can map the view-port to a section of the plane with the ~scale-to-bounds~
+        f (<span style="color:#a6e22e">fn</span>[i](-&gt; i
+                   (<span style="color:#a6e22e">scale-to-bounds</span> size bounding-box)
+                   (<span style="color:#a6e22e">in-mandelbrot?</span> depth)))]
+    (<span style="color:#a6e22e">pmap</span> f points)))</code></pre></div>
+</div>
+<p>
+With these two functions, we have now a representation we can use for plotting.
+We can map the view-port to a section of the plane with the <code>scale-to-bounds</code>
 function, and then for each point in the view-port, calculate the number of
 iterations it took to diverge. This code is simple to understand, but not really
-efficient. I suspect there's a bit of stream fusion that could be applied here
+efficient. I suspect there&#39;s a bit of stream fusion that could be applied here
 (possibly using transducers in Clojure), or otherwise switch to using mutable
-state, but for the sake of simplicity, I'd rather have this pure version for
-now.</p>
-
-<p>Now we can render our set. As a first approach, we could simply use the <a href="https://en.wikipedia.org/wiki/Netpbm_format" title="PPM
-ASCII format" target="_blank">PPM
-ASCII format</a>, which is trivial to implement without any external library:</p>
-
-<pre><code class="language-clojure">(defn do-ppm [points size depth name]
-  (let [[x y] size
-        contents (-&gt;&gt; points
-                      (partition x)
-                      (reverse) ;; otherwise we mirror on the x axis
-                      (map #(join &quot; &quot; (map str %)))
-                      (interpose &quot;\n&quot;)
+state, but for the sake of simplicity, I&#39;d rather have this pure version for
+now.
+</p>
+<p>
+Now we can render our set. As a first approach, we could simply use the <a href="https://en.wikipedia.org/wiki/Netpbm_format">PPM
+ASCII format</a>, which is trivial to implement without any external library:
+</p>
+<div class="src src-clojure">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">defn </span>do-ppm [points size depth name]
+  (<span style="color:#66d9ef">let </span>[[x y] size
+        contents (<span style="color:#a6e22e">-&gt;&gt;</span> points
+                      (<span style="color:#a6e22e">partition</span> x)
+                      (<span style="color:#a6e22e">reverse</span>) <span style="color:#75715e">;; otherwise we mirror on the x axis</span>
+                      (map <span style="color:#f92672">#</span>(join <span style="color:#e6db74">&#34; &#34;</span> (map str %)))
+                      (<span style="color:#a6e22e">interpose</span> <span style="color:#e6db74">&#34;\n&#34;</span>)
                       (apply str)
                       )
-        header (str &quot;P2\n&quot; (str x) &quot; &quot;
-                    (str y) &quot;\n&quot;
-                    (str depth) &quot;\n&quot;)]
-    (spit name (str header contents))))
-</code></pre>
-
-<p>The above code is nothing fancy, but it gets us something to look at (and even
-within Emacs!):</p>
-
-<p><img src="/img/fractals/full-ppm.png" alt="/img/fractals/full-ppm.png" title="/img/fractals/full-ppm.png" /></p>
-
-<p>This is pretty cool! However, we can easily do better. We will use a bit of our
+        header (str <span style="color:#e6db74">&#34;P2\n&#34;</span> (str x) <span style="color:#e6db74">&#34; &#34;</span>
+                    (str y) <span style="color:#e6db74">&#34;\n&#34;</span>
+                    (str depth) <span style="color:#e6db74">&#34;\n&#34;</span>)]
+    (<span style="color:#a6e22e">spit</span> name (str header contents))))</code></pre></div>
+</div>
+<p>
+The above code is nothing fancy, but it gets us something to look at (and even
+within Emacs!):
+</p>
+<img src="/img/fractals/full-ppm.png" alt="/img/fractals/full-ppm.png" title="/img/fractals/full-ppm.png" width="1200px"/>
+<p>
+This is pretty cool! However, we can easily do better. We will use a bit of our
 host platform to render color PNGs. This will require two things, firstly,
 mapping the values we have to color values, and secondly, rendering the PNG
-itself. Since we have a sort of "intensity" value for each pixel, in the form of
+itself. Since we have a sort of &#34;intensity&#34; value for each pixel, in the form of
 the number of iterations, we will calculate the color in the HSV space, using a
 fixed hue and saturation, and scaling the number of iterations to the value of
 the color. This will render the points in the set in black, and those not in it
-in different shades.</p>
-
-<pre><code class="language-clojure">(defn do-color [i depth]
-  (let [icorr (/ (* i 100.0) depth)
-        [r g b] (c/hsl-to-rgb 205 100 icorr)]
-    (bit-or (bit-shift-left r 16)
-            (bit-shift-left g 8)
+in different shades.
+</p>
+<div class="src src-clojure">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">defn </span>do-color [i depth]
+  (<span style="color:#66d9ef">let </span>[icorr (/ (* i <span style="color:#ae81ff">100.0</span>) depth)
+        [r g b] (<span style="color:#a6e22e">c/hsl-to-rgb</span> <span style="color:#ae81ff">205</span> <span style="color:#ae81ff">100</span> icorr)]
+    (bit-or (bit-shift-left r <span style="color:#ae81ff">16</span>)
+            (bit-shift-left g <span style="color:#ae81ff">8</span>)
             b)))
 
 
-(defn do-png [points size depth name]
-  (ImageIO/write
-   (let [width (first size)
+(<span style="color:#66d9ef">defn </span>do-png [points size depth name]
+  (<span style="color:#a6e22e">ImageIO/write</span>
+   (<span style="color:#66d9ef">let </span>[width (first size)
          height (second size)
-         pts (-&gt;&gt; points
-                  (partition width)
-                  (reverse)  ;; the y axies grows &quot;downwards&quot; in the PNG
+         pts (<span style="color:#a6e22e">-&gt;&gt;</span> points
+                  (<span style="color:#a6e22e">partition</span> width)
+                  (<span style="color:#a6e22e">reverse</span>)  <span style="color:#75715e">;; the y axies grows &#34;downwards&#34; in the PNG</span>
                   (map vec)
-                  (vec))
-         out (new BufferedImage width height  BufferedImage/TYPE_3BYTE_BGR)]
+                  (<span style="color:#a6e22e">vec</span>))
+         out (<span style="color:#66d9ef">new </span>BufferedImage width height  BufferedImage/TYPE_3BYTE_BGR)]
      (doseq [x (range width)
              y (range height)]
-       (.setRGB out x y (do-color (get-in pts [y x]) depth)))
+       (<span style="color:#a6e22e">.setRGB</span> out x y (<span style="color:#a6e22e">do-color</span> (<span style="color:#a6e22e">get-in</span> pts [y x]) depth)))
      out)
-   &quot;png&quot;
-   (new File name )))
-</code></pre>
-
-<p>Now we have some colors, but to be honest, the result is a bit underwhelming...</p>
-
-<p><img src="/img/fractals/full-simple.png" alt="/img/fractals/full-simple.png" title="/img/fractals/full-simple.png" /></p>
-
-<p>One thing we can realize, is that most of the "interesting" parts of the render
+   <span style="color:#e6db74">&#34;png&#34;</span>
+   (<span style="color:#66d9ef">new </span>File name )))</code></pre></div>
+</div>
+<p>
+Now we have some colors, but to be honest, the result is a bit underwhelming…
+</p>
+<img src="/img/fractals/full-simple.png" alt="/img/fractals/full-simple.png" title="/img/fractals/full-simple.png" width="1200px"/>
+<p>
+One thing we can realize, is that most of the &#34;interesting&#34; parts of the render
 happen around the limits of the set, so we can modify our coloring function to
 reflect that. We do this by making the middle of the iteration range the
 brightest, and then decrease the value as we move towards the edges of the
-range. For a bit more "drama", we also treat the saturation similarly. We redefine
-then our <code>do-color</code> function:</p>
-
-<pre><code class="language-clojure">(defn do-color
-  &quot;Maps a new color with the value based on the number of iterations it took
-  for the point to escape the set. The plain mapping is rather dull, so here we
-  focus on the points which are in the boundaries (intuitively, those that took
-  long to escape, but not longest). We calculate the value as the distance
-  to the middle value, which results in a nice 'electric' look around the edges
-  of the set&quot;
+range. For a bit more &#34;drama&#34;, we also treat the saturation similarly. We redefine
+then our <code>do-color</code> function:
+</p>
+<div class="src src-clojure">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">defn </span>do-color
+  <span style="color:#e6db74">&#34;Maps a new color with the value based on the number of iterations it took
+</span><span style="color:#e6db74">  for the point to escape the set. The plain mapping is rather dull, so here we
+</span><span style="color:#e6db74">  focus on the points which are in the boundaries (intuitively, those that took
+</span><span style="color:#e6db74">  long to escape, but not longest). We calculate the value as the distance
+</span><span style="color:#e6db74">  to the middle value, which results in a nice &#39;electric&#39; look around the edges
+</span><span style="color:#e6db74">  of the set&#34;</span>
   [i depth]
-  (let [ icorr (/ (* i 100.0) depth)
-        l (- 100 (* 2 (Math/abs (- 50 icorr))))
-        s (- 100 (* 1.3 (Math/abs (- 50 icorr))))
-        [r g b] (c/hsl-to-rgb 205 s l)]
-    (bit-or (bit-shift-left r 16)
-            (bit-shift-left g 8)
-            b)))
-</code></pre>
-
-<p>Now this looks much better! Arguably, the color of the points that diverge very
+  (<span style="color:#66d9ef">let </span>[ icorr (/ (* i <span style="color:#ae81ff">100.0</span>) depth)
+        l (- <span style="color:#ae81ff">100</span> (* <span style="color:#ae81ff">2</span> (<span style="color:#a6e22e">Math/abs</span> (- <span style="color:#ae81ff">50</span> icorr))))
+        s (- <span style="color:#ae81ff">100</span> (* <span style="color:#ae81ff">1.3</span> (<span style="color:#a6e22e">Math/abs</span> (- <span style="color:#ae81ff">50</span> icorr))))
+        [r g b] (<span style="color:#a6e22e">c/hsl-to-rgb</span> <span style="color:#ae81ff">205</span> s l)]
+    (bit-or (bit-shift-left r <span style="color:#ae81ff">16</span>)
+            (bit-shift-left g <span style="color:#ae81ff">8</span>)
+            b)))</code></pre></div>
+</div>
+<p>
+Now this looks much better! Arguably, the color of the points that diverge very
 early could be made lighter, but I like the aesthetics this coloring function
-gives. In any case, there are a huge number of possible ways to apply color.</p>
-
-<p><img src="/img/fractals/full.png" alt="/img/fractals/full.png" title="/img/fractals/full.png" /></p>
-
-<p>With a suitable rendering mechanism, now we can explore a bit the set, and start
-looking into interesting portions. We can "zoom in" as much as we want, by
+gives. In any case, there are a huge number of possible ways to apply color.
+</p>
+<img src="/img/fractals/full.png" alt="/img/fractals/full.png" title="/img/fractals/full.png" width="1200px"/>
+<p>
+With a suitable rendering mechanism, now we can explore a bit the set, and start
+looking into interesting portions. We can &#34;zoom in&#34; as much as we want, by
 defining suitable bounding boxes, and we can increase the detail by increasing
 the depth. For example, we can take a closer look at the so-called <em>Seahorse
-valley</em>.</p>
-
-<p><img src="/img/fractals/seahorse-left.png" alt="/img/fractals/seahorse-left.png" title="/img/fractals/seahorse-left.png" /></p>
-
-<p>I find this area of the plane truly fascinating, the patterns and depth of it
+valley</em>.
+</p>
+<img src="/img/fractals/seahorse-left.png" alt="/img/fractals/seahorse-left.png" title="/img/fractals/seahorse-left.png" width="1200px"/>
+<p>
+I find this area of the plane truly fascinating, the patterns and depth of it
 are quite something. To give you an idea, here is a 24 megapixel render, with a
-depth of 2000 iterations. Go on, click on it, and zoom in to its full size. I'll
-wait for you here.</p>
-
-<p><a href="/img/fractals/seahorse.png" target="_blank"> <img src="/img/fractals/seahorse.png"></a></p>
-
-<p>Is that wonderful, or what?</p>
-
-<h1 id="just-one-more-thing">Just One More Thing</h1>
-
-<p>In order to appreciate the Mandelbrot set in all its splendor, it would be nice
-to be able to "fall" into it, with an animation. Given that we have a way to
-render a view-port onto any area of the plane, it's not much more effort to
-do it for a set of areas along a path, with different magnification levels.</p>
-
-<p>We will basically start with a target image size (and implied aspect ratio),
+depth of 2000 iterations. Go on, click on it, and zoom in to its full size. I&#39;ll
+wait for you here.
+</p>
+<p>
+&lt;a href=&#34;/img/fractals/seahorse.png&#34; target=&#34;_blank&#34;&gt; &lt;img src=&#34;/img/fractals/seahorse.png&#34;&gt;&lt;/a&gt;
+</p>
+<p>
+Is that wonderful, or what?
+</p>
+<h1 id="headline-4">
+Just One More Thing
+</h1>
+<p>
+In order to appreciate the Mandelbrot set in all its splendor, it would be nice
+to be able to &#34;fall&#34; into it, with an animation. Given that we have a way to
+render a view-port onto any area of the plane, it&#39;s not much more effort to
+do it for a set of areas along a path, with different magnification levels.
+</p>
+<p>
+We will basically start with a target image size (and implied aspect ratio),
 centered around a point, and with a given surface area on the complex plane. We
 will then choose another point and another target surface area where the last
 frame will be centered. All we need to do now is to create the required number
 of bounding boxes, interpolating position and size over the number of frames to
-render. Going back to our code:</p>
+render. Going back to our code:
+</p>
+<div class="src src-clojure">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">ns </span>fractals.animate
+  (<span style="color:#e6db74">:require</span> [fractals.mandelbrot <span style="color:#e6db74">:as</span> m]
+            [clojure.math.numeric-tower <span style="color:#e6db74">:as</span> nt]))
 
-<pre><code class="language-clojure">(ns fractals.animate
-  (:require [fractals.mandelbrot :as m]
-            [clojure.math.numeric-tower :as nt]))
-
-(defn interpolate-centers [start-point end-point nframes]
-  (let [[xs ys] start-point
+(<span style="color:#66d9ef">defn </span>interpolate-centers [start-point end-point nframes]
+  (<span style="color:#66d9ef">let </span>[[xs ys] start-point
         [xe ye] end-point
         delta-x (- xe xs)
         delta-y (- ye ys)
-        step (/ (Math/sqrt (+ (nt/expt delta-x 2)
-                              (nt/expt delta-y 2)))
+        step (/ (<span style="color:#a6e22e">Math/sqrt</span> (+ (<span style="color:#a6e22e">nt/expt</span> delta-x <span style="color:#ae81ff">2</span>)
+                              (<span style="color:#a6e22e">nt/expt</span> delta-y <span style="color:#ae81ff">2</span>)))
                 nframes)
-        theta (Math/atan2  delta-y delta-x)
-        next-center (fn [[x y]] [(+ x (* step (Math/cos theta)))
-                                 (+ y (* step (Math/sin theta)))])]
+        theta (<span style="color:#a6e22e">Math/atan2</span>  delta-y delta-x)
+        next-center (<span style="color:#66d9ef">fn </span>[[x y]] [(+ x (* step (<span style="color:#a6e22e">Math/cos</span> theta)))
+                                 (+ y (* step (<span style="color:#a6e22e">Math/sin</span> theta)))])]
     (take (inc nframes) (iterate next-center start-point))))
 
-(defn interpolate-areas [start-area ratio nframes]
-  (let [step (nt/expt ratio (/ 1.0 nframes))]
+(<span style="color:#66d9ef">defn </span>interpolate-areas [start-area ratio nframes]
+  (<span style="color:#66d9ef">let </span>[step (<span style="color:#a6e22e">nt/expt</span> ratio (/ <span style="color:#ae81ff">1.0</span> nframes))]
     (take (inc nframes)
-          (iterate #(/ % step) start-area))))
+          (iterate <span style="color:#f92672">#</span>(/ % step) start-area))))
 
-(defn bounding-box [aspect-ratio area center]
-  (let [[x y] center
-        dim-y (nt/sqrt (/ area aspect-ratio))
+(<span style="color:#66d9ef">defn </span>bounding-box [aspect-ratio area center]
+  (<span style="color:#66d9ef">let </span>[[x y] center
+        dim-y (<span style="color:#a6e22e">nt/sqrt</span> (/ area aspect-ratio))
         dim-x (* dim-y aspect-ratio)
-        delta-y (/ dim-y 2)
-        delta-x (/ dim-x 2)]
+        delta-y (/ dim-y <span style="color:#ae81ff">2</span>)
+        delta-x (/ dim-x <span style="color:#ae81ff">2</span>)]
     [[(- x delta-x) (- y delta-y)]
      [(+ x delta-x) (+ y delta-y)]]))
 
-(defn animate-mandelbrot [img-width
+(<span style="color:#66d9ef">defn </span>animate-mandelbrot [img-width
                           img-height
                           depth
                           start-point
@@ -926,33 +946,36 @@ render. Going back to our code:</p>
                           start-area
                           zoom-factor
                           nframes]
-  (let [centers (interpolate-centers start-point end-point nframes)
-        areas (interpolate-areas start-area zoom-factor nframes)
+  (<span style="color:#66d9ef">let </span>[centers (<span style="color:#a6e22e">interpolate-centers</span> start-point end-point nframes)
+        areas (<span style="color:#a6e22e">interpolate-areas</span> start-area zoom-factor nframes)
         aspect-ratio (/ img-width img-height)
         size [img-width img-height]
         b-boxes (map (partial bounding-box aspect-ratio) areas centers)
-        names (map (partial format &quot;mb-frame-%04d.png&quot;) (range))
-        fracs (map #(m/mandelbrot size % depth) b-boxes)]
-    (dorun (pmap #(m/do-png %1 size depth %2) fracs names))))
-</code></pre>
-
-<p>This code technically has a bug, in that when the center position moves across
+        names (map (partial format <span style="color:#e6db74">&#34;mb-frame-%04d.png&#34;</span>) (<span style="color:#a6e22e">range</span>))
+        fracs (map <span style="color:#f92672">#</span>(<span style="color:#a6e22e">m/mandelbrot</span> size % depth) b-boxes)]
+    (dorun (<span style="color:#a6e22e">pmap</span> <span style="color:#f92672">#</span>(<span style="color:#a6e22e">m/do-png</span> %1 size depth %2) fracs names))))</code></pre></div>
+</div>
+<p>
+This code technically has a bug, in that when the center position moves across
 the x axis, the movement mirrors in the rendering (because of how the y axis
-increases "downwards" on the PNG render), resulting in an angled path,
-instead of a straight one. Despite this being simple to fix, I'll call this a
+increases &#34;downwards&#34; on the PNG render), resulting in an angled path,
+instead of a straight one. Despite this being simple to fix, I&#39;ll call this a
 feature, and leave it in, as it allows for some interesting zooms that would
-otherwise require a more generic approach to constructing paths .</p>
-
-<p>Here is a full-HD clip of us "falling into the Seahorse Valley". The
+otherwise require a more generic approach to constructing paths .
+</p>
+<p>
+Here is a full-HD clip of us &#34;falling into the Seahorse Valley&#34;. The
 magnification factor here is 2400x.
-<iframe width="853" height="480" src="https://www.youtube.com/embed/FptVUuB4qWI" frameborder="0" allowfullscreen></iframe></p>
-
-<h1 id="that-s-all-folks">That's All, Folks!</h1>
-
-<p>I hope you have enjoyed these posts on fractals as much as I enjoyed writing
-them, they were really a lot of fun to play with! The code can be found <a href="https://github.com/mvarela/Fractal-Playground" title="on
-GitHub" target="_blank">on
-GitHub</a> if you want to play with it.</p>
+&lt;iframe width=&#34;853&#34; height=&#34;480&#34; src=&#34;<a href="https://www.youtube.com/embed/FptVUuB4qWI">https://www.youtube.com/embed/FptVUuB4qWI</a>&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</p>
+<h1 id="headline-5">
+That&#39;s All, Folks!
+</h1>
+<p>
+I hope you have enjoyed these posts on fractals as much as I enjoyed writing
+them, they were really a lot of fun to play with! The code can be found <a href="https://github.com/mvarela/Fractal-Playground">on
+GitHub</a> if you want to play with it.
+</p>
 
     </div>
 
@@ -1251,7 +1274,7 @@ GitHub</a> if you want to play with it.</p>
     
     
     
-    <script src="/js/academic.min.109caa4f51ff39522c6dfc25fb05b6e9.js"></script>
+    <script src="/js/academic.min.6e3f6df706f5e1819f516bc13278decb.js"></script>
 
   </body>
 </html>

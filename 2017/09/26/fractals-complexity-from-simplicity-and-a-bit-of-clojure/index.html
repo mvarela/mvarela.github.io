@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Source Themes Academic 4.0.0">
-  <meta name="generator" content="Hugo 0.55.6" />
+  <meta name="generator" content="Hugo 0.56.3" />
 
   
 
@@ -28,8 +28,7 @@
   
     
   
-  <meta name="description" content="Enter the Dragon Fractals have always fascinated me. I remember seeing a render of a Mandelbrot set back in the early 90s (when color screens started being accessible back home), and being completely mesmerized by it. I remember being even more fascinated by seeing a code-golf version of such a renderer, implemented in some 300 bytes of C.
-Some days ago I came across the &#34;dragon curve&#34;, and decided to give it a go in Clojure, as a way to learn a bit more and have some fun.">
+  <meta name="description" content="Enter the Dragon   Fractals have always fascinated me. I remember seeing a render of a Mandelbrot set back in the early 90s (when color screens started being accessible back home), and being completely mesmerized by it. I remember being even more fascinated by seeing a code-golf version of such a renderer, implemented in some 300 bytes of C.  Some days ago I came across the &#34;dragon curve&#34;, and decided to give it a go in Clojure, as a way to learn a bit more and have some fun.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://martin.varela.fi/2017/09/26/fractals-complexity-from-simplicity-and-a-bit-of-clojure/">
@@ -131,8 +130,7 @@ Some days ago I came across the &#34;dragon curve&#34;, and decided to give it a
   <meta property="og:site_name" content="Martín Varela">
   <meta property="og:url" content="https://martin.varela.fi/2017/09/26/fractals-complexity-from-simplicity-and-a-bit-of-clojure/">
   <meta property="og:title" content="Fractals — Complexity from Simplicity (and a bit of Clojure) | Martín Varela">
-  <meta property="og:description" content="Enter the Dragon Fractals have always fascinated me. I remember seeing a render of a Mandelbrot set back in the early 90s (when color screens started being accessible back home), and being completely mesmerized by it. I remember being even more fascinated by seeing a code-golf version of such a renderer, implemented in some 300 bytes of C.
-Some days ago I came across the &#34;dragon curve&#34;, and decided to give it a go in Clojure, as a way to learn a bit more and have some fun."><meta property="og:image" content="https://martin.varela.fi/2017/09/26/fractals-complexity-from-simplicity-and-a-bit-of-clojure/featured.png">
+  <meta property="og:description" content="Enter the Dragon   Fractals have always fascinated me. I remember seeing a render of a Mandelbrot set back in the early 90s (when color screens started being accessible back home), and being completely mesmerized by it. I remember being even more fascinated by seeing a code-golf version of such a renderer, implemented in some 300 bytes of C.  Some days ago I came across the &#34;dragon curve&#34;, and decided to give it a go in Clojure, as a way to learn a bit more and have some fun."><meta property="og:image" content="https://martin.varela.fi/2017/09/26/fractals-complexity-from-simplicity-and-a-bit-of-clojure/featured.png">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2017-09-26T09:43:43&#43;03:00">
@@ -577,71 +575,73 @@ Some days ago I came across the &#34;dragon curve&#34;, and decided to give it a
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      <!-- -*- org-export-babel-evaluate: nil -*- -->
-
-<h1 id="enter-the-dragon">Enter the Dragon</h1>
-
-<p>Fractals have always fascinated me. I remember seeing a render of a Mandelbrot
-  set back in the early 90s (when color screens started being accessible back
-  home), and being completely mesmerized by it. I remember being even more
-  fascinated by seeing a code-golf version of such a renderer, implemented in
-  some 300 bytes of C.</p>
-
-<p>Some days ago I came across the "dragon curve", and decided to give it a go in
-  Clojure, as a way to learn a bit more and have some fun. I implemented it as a 
-  <a href="https://en.wikipedia.org/wiki/L-system" title="Lindenmayer system" target="_blank">Lindenmayer system</a>, which reveals the simplicity behind it.</p>
-
-<p>L-systems are string re-writing systems, and have a set of constants,
-  variables, rules, and a starting axiom. One starts with the axiom, and applies
-  the rules to it. Each rule maps a variable to a new string that substitutes
-  it. Constants are unaffected by the re-write, and remain in place.</p>
-
-<p>In the case of the dragon curve, it can be represented by the following
-  L-system (described nicely in <a href="https://en.wikipedia.org/wiki/L-system#Example_6:_Dragon_curve" title="the wiki" target="_blank">the wiki</a>):</p>
-
-<pre><code>    variables : X Y
+      
+<h1 id="headline-1">
+Enter the Dragon
+</h1>
+<p>
+Fractals have always fascinated me. I remember seeing a render of a Mandelbrot
+set back in the early 90s (when color screens started being accessible back
+home), and being completely mesmerized by it. I remember being even more
+fascinated by seeing a code-golf version of such a renderer, implemented in
+some 300 bytes of C.
+</p>
+<p>
+Some days ago I came across the &#34;dragon curve&#34;, and decided to give it a go in
+Clojure, as a way to learn a bit more and have some fun. I implemented it as a 
+<a href="https://en.wikipedia.org/wiki/L-system">Lindenmayer system</a>, which reveals the simplicity behind it.
+</p>
+<p>
+L-systems are string re-writing systems, and have a set of constants,
+variables, rules, and a starting axiom. One starts with the axiom, and applies
+the rules to it. Each rule maps a variable to a new string that substitutes
+it. Constants are unaffected by the re-write, and remain in place.
+</p>
+<p>
+In the case of the dragon curve, it can be represented by the following
+L-system (described nicely in <a href="https://en.wikipedia.org/wiki/L-system#Example_6:_Dragon_curve">the wiki</a>):
+</p>
+<pre class="example">
+    variables : X Y
     constants : F + −
     start : FX
     rules : X → X+YF+
             Y → −FX−Y
-</code></pre>
-
-<p>In order to "grow" the dragon, we iterate by applying the rules to the axiom,
-  and then to the result, and so on. For example, after two iterations on the
-  axiom, we have:</p>
-
+</pre>
+<p>
+In order to &#34;grow&#34; the dragon, we iterate by applying the rules to the axiom,
+and then to the result, and so on. For example, after two iterations on the
+axiom, we have:
+</p>
 <table>
-<tbody>
+<thead>
 <tr>
-<td>Iteration 1</td>
-<td></td>
-<td></td>
+<th>Iteration 1</th>
+<th></th>
+<th></th>
 </tr>
-
+</thead>
+<tbody>
 <tr>
 <td></td>
 <td>Axiom</td>
 <td>FX</td>
 </tr>
-
 <tr>
 <td></td>
 <td>Rule for X</td>
 <td>FX+YF+</td>
 </tr>
-
 <tr>
 <td>Iteration 2</td>
 <td></td>
 <td></td>
 </tr>
-
 <tr>
 <td></td>
 <td>Rule for X</td>
 <td>FX+YF++YF+</td>
 </tr>
-
 <tr>
 <td></td>
 <td>Rule for Y</td>
@@ -649,48 +649,52 @@ Some days ago I came across the &#34;dragon curve&#34;, and decided to give it a
 </tr>
 </tbody>
 </table>
-
-<p>These simple rules, and the simple starting point lead to an increasingly
+<p>
+These simple rules, and the simple starting point lead to an increasingly
 complex string, where structure starts becoming visible. Of course, doing this
-by hand is extremely tedious, so we can automate it with a bit of <a href="https://clojure.org/" title="Clojure" target="_blank">Clojure</a>.</p>
+by hand is extremely tedious, so we can automate it with a bit of <a href="https://clojure.org/">Clojure</a>.
+</p>
+<p>
+We can start by defining the axiom, and the re-writing rules. 
+</p>
+<div class="src src-clojure">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">  (<span style="color:#66d9ef">ns </span>dragon.core
+    (<span style="color:#e6db74">:require</span> [hiccup.core <span style="color:#e6db74">:as</span> hiccup]))
 
-<p>We can start by defining the axiom, and the re-writing rules.</p>
+  (<span style="color:#66d9ef">def </span>start [<span style="color:#e6db74">:F</span> <span style="color:#e6db74">:X</span>])
 
-<pre><code class="language-clojure">  (ns dragon.core
-    (:require [hiccup.core :as hiccup]))
-
-  (def start [:F :X])
-
-  (defn rewrite [i]
-    (cond
-      (= :X i) [:X :+ :Y :F :+]
-      (= :Y i) [:- :F :X :- :Y]
-      :true [i]))
-
-</code></pre>
-
-<p>We can now see what happens when we apply the rules to the axiom:</p>
-
-<pre><code class="language-clojure">(map rewrite start)
-</code></pre>
+  (<span style="color:#66d9ef">defn </span>rewrite [i]
+    (<span style="color:#a6e22e">cond</span>
+      (= <span style="color:#e6db74">:X</span> i) [<span style="color:#e6db74">:X</span> <span style="color:#e6db74">:+</span> <span style="color:#e6db74">:Y</span> <span style="color:#e6db74">:F</span> <span style="color:#e6db74">:+</span>]
+      (= <span style="color:#e6db74">:Y</span> i) [<span style="color:#e6db74">:-</span> <span style="color:#e6db74">:F</span> <span style="color:#e6db74">:X</span> <span style="color:#e6db74">:-</span> <span style="color:#e6db74">:Y</span>]
+      <span style="color:#e6db74">:true</span> [i]))</code></pre></div>
+</div>
+<p>
+We can now see what happens when we apply the rules to the axiom:
+</p>
+<div class="src src-clojure">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(map rewrite start)</code></pre></div>
+</div>
 <pre class="example">
 ([:F] [:X :+ :Y :F :+])
 </pre>
-
-<p>This is a bit noisy due to the brackets, but we can see it's the same result we
-got by iterating by hand. Let's add a bit more functionality:</p>
-
-<pre><code class="language-clojure">(defn dragon [segments iter]
-  (if (zero? iter)
+<p>
+This is a bit noisy due to the brackets, but we can see it&#39;s the same result we
+got by iterating by hand. Let&#39;s add a bit more functionality:
+</p>
+<div class="src src-clojure">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">defn </span>dragon [segments iter]
+  (<span style="color:#66d9ef">if </span>(zero? iter)
     segments
-    (let [segs (vec (mapcat rewrite segments))]
-      (recur segs (- iter 1)))))
-</code></pre>
-
-<p>Now we can get rid of the extra brackets, and do some more iterations.</p>
-
-<pre><code class="language-clojure">(map (partial dragon start) (range 4))
-</code></pre>
+    (<span style="color:#66d9ef">let </span>[segs (<span style="color:#a6e22e">vec</span> (mapcat rewrite segments))]
+      (<span style="color:#a6e22e">recur</span> segs (- iter <span style="color:#ae81ff">1</span>)))))</code></pre></div>
+</div>
+<p>
+Now we can get rid of the extra brackets, and do some more iterations.
+</p>
+<div class="src src-clojure">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(map (partial dragon start) (range <span style="color:#ae81ff">4</span>))</code></pre></div>
+</div>
 <pre class="example">
 ([:F :X] 
  [:F :X :+ :Y :F :+] 
@@ -698,197 +702,225 @@ got by iterating by hand. Let's add a bit more functionality:</p>
  [:F :X :+ :Y :F :+ :+ :- :F :X :- :Y :F :+ :+ :- 
   :F :X :+ :Y :F :+ :- :- :F :X :- :Y :F :+])
 </pre>
-
-<p>As we can see in the (slightly reformatted) results, the string's size and
-complexity keeps increasing.</p>
-
-<p>In order to visualize this fractal, we need some rules on how to interpret it.
+<p>
+As we can see in the (slightly reformatted) results, the string&#39;s size and
+complexity keeps increasing. 
+</p>
+<p>
+In order to visualize this fractal, we need some rules on how to interpret it.
 This is also very simple, and in fact, it is pretty much the same as the
-<a href="https://en.wikipedia.org/wiki/Turtle_graphics" title="turtle graphics" target="_blank">turtle graphics</a> that were used in the <a href="https://en.wikipedia.org/wiki/Logo_(programming_language)" title="Logo language" target="_blank">Logo language</a>.</p>
+<a href="https://en.wikipedia.org/wiki/Turtle_graphics">turtle graphics</a> that were used in the <a href="https://en.wikipedia.org/wiki/Logo_(programming_language)">Logo language</a>.
+</p>
+<p>
+In this case, we will interpret the <code class="verbatim">F</code> constant as <code class="verbatim">forward</code> (that is, draw a
+line in the direction the turtle is facing, and a fixed distance). The <code class="verbatim">+</code> and
+<code class="verbatim">-</code> constants will respectively mean <code class="verbatim">right 90</code> and <code class="verbatim">left 90</code>, that is, to
+rotate the turtle by 90 degrees in a given direction. And that&#39;s all there is to
+it (for now, anyway).
+</p>
+<p>
+We can again automate this quite easily:
+</p>
+<div class="src src-clojure">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">def </span>pi<span style="color:#e6db74">:2</span> (/ Math/PI <span style="color:#ae81ff">2</span>))
+(<span style="color:#66d9ef">def </span>vec<span style="color:#e6db74">:size</span> <span style="color:#ae81ff">3</span>)
 
-<p>In this case, we will interpret the <code>F</code> constant as <code>forward</code> (that is, draw a
-line in the direction the turtle is facing, and a fixed distance). The <code>+</code> and
- <code>-</code> constants will respectively mean <code>right 90</code> and <code>left 90</code>, that is, to
-rotate the turtle by 90 degrees in a given direction. And that's all there is to
-it (for now, anyway).</p>
-
-<p>We can again automate this quite easily:</p>
-
-<pre><code class="language-clojure">(def pi:2 (/ Math/PI 2))
-(def vec:size 3)
-
-(defn points [segments theta acc x y]
-  (if (empty? segments)
+(<span style="color:#66d9ef">defn </span>points [segments theta acc x y]
+  (<span style="color:#66d9ef">if </span>(<span style="color:#a6e22e">empty?</span> segments)
     acc
-    (let [s  (first segments)
+    (<span style="color:#66d9ef">let </span>[s  (first segments)
           xs (rest segments)]
-      (cond
-        (or (= s :X) (= s :Y)) (recur xs, theta, acc, x, y)
-        (= s :+) (recur xs, (+ theta pi:2), acc, x, y)
-        (= s :-) (recur xs, (- theta pi:2), acc, x, y)
-        (= s :F) (let [xx (+ x (* vec:size (Math/cos theta)))
-                       yy (+ y (* vec:size (Math/sin theta)))
+      (<span style="color:#a6e22e">cond</span>
+        (or (= s <span style="color:#e6db74">:X</span>) (= s <span style="color:#e6db74">:Y</span>)) (<span style="color:#a6e22e">recur</span> xs, theta, acc, x, y)
+        (= s <span style="color:#e6db74">:+</span>) (<span style="color:#a6e22e">recur</span> xs, (+ theta pi<span style="color:#e6db74">:2</span>), acc, x, y)
+        (= s <span style="color:#e6db74">:-</span>) (<span style="color:#a6e22e">recur</span> xs, (- theta pi<span style="color:#e6db74">:2</span>), acc, x, y)
+        (= s <span style="color:#e6db74">:F</span>) (<span style="color:#66d9ef">let </span>[xx (+ x (* vec<span style="color:#e6db74">:size</span> (<span style="color:#a6e22e">Math/cos</span> theta)))
+                       yy (+ y (* vec<span style="color:#e6db74">:size</span> (<span style="color:#a6e22e">Math/sin</span> theta)))
                        new-acc (conj acc (vector xx yy))]
-(recur xs, theta, new-acc, xx, yy))))))
-</code></pre>
-
-<p>We basically go over the generated string, and interpret it according to the
-rules described above (ignore constants, draw when we find an <code>F</code>, and turn in
-the indicated direction when we find a <code>+</code> or a <code>-</code>. This gives us a list of
-points which we can then use to build an SVG <code>polyline</code>.</p>
-
-<pre><code class="language-clojure">  (defn render-svg [plot-points]
-    (let [width 1000
-          height 1000
-          xmlns &quot;http://www.w3.org/2000/svg&quot;
-          style &quot;stroke:#474674; fill:white;&quot;
-          points (apply str (map #(str (first %) &quot;,&quot; (second %) &quot; &quot;) plot-points))]
-      (hiccup/html [:svg {:width width
-                          :height height
-                          :xmlns xmlns}
-                    [:polyline {:points points
-                                :style style}]])))
-</code></pre>
-
-<p>Here we are using the <a href="https://github.com/weavejester/hiccup" title="hiccup library" target="_blank">hiccup library</a> for rendering HTML, and creating a
-(potentially very large) <code>polyline</code> element with all the points we defined
-above.</p>
-
-<p>Now we can render our dragon and enjoy it in all its glory!</p>
-
-<pre><code class="language-clojure">  (let [d    (dragon start 15)
-        pts  (points d 0 [] 500 500)
-        html (render-svg pts)]
-    (spit &quot;dragon15.html&quot; html)
-</code></pre>
-
-<p><img src="/img/fractals/dragon15.png" alt="/img/fractals/dragon15.png" title="/img/fractals/dragon15.png" /></p>
-
-<p>If you are reading this in a modern browser with proper SVG support, you can
-also open the generated <a href="http:/html/fractals/dragon15.html" title="HTML output" target="_blank">HTML output</a>.</p>
-
-<h1 id="tidying-up">Tidying Up</h1>
-
-<p>The code snippets above are fun for playing in the Clojure REPL, but they're
- don't generalize well, and can be improved upon significantly. In particular,
- they require some fiddling with the SVG rendering view-port and the starting
- point of the fractal drawing. I've cleaned up the code a bit, and made it
- generic so it can support many other L-systems. It now lives on <a href="https://github.com/mvarela/Fractal-Playground" title="Github" target="_blank">Github</a>, along
- with some other fractal code that we'll discuss in an upcoming post.</p>
-
-<p>The L-system code itself, if you are interested, lives <a href="https://github.com/mvarela/Fractal-Playground/blob/master/src/fractals/l_system.clj" title="here" target="_blank">here</a>.</p>
-
-<h1 id="more-fractal-goodness">More Fractal Goodness</h1>
-
-<p>Lindenmayer systems can give rise to very many interesting fractals, and many
+(<span style="color:#a6e22e">recur</span> xs, theta, new-acc, xx, yy))))))</code></pre></div>
+</div>
+<p>
+We basically go over the generated string, and interpret it according to the
+rules described above (ignore constants, draw when we find an <code class="verbatim">F</code>, and turn in
+the indicated direction when we find a <code class="verbatim">+</code> or a <code class="verbatim">-</code>. This gives us a list of
+points which we can then use to build an SVG <code class="verbatim">polyline</code>. 
+</p>
+<div class="src src-clojure">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">  (<span style="color:#66d9ef">defn </span>render-svg [plot-points]
+    (<span style="color:#66d9ef">let </span>[width <span style="color:#ae81ff">1000</span>
+          height <span style="color:#ae81ff">1000</span>
+          xmlns <span style="color:#e6db74">&#34;http://www.w3.org/2000/svg&#34;</span>
+          style <span style="color:#e6db74">&#34;stroke:#474674; fill:white;&#34;</span>
+          points (apply str (map <span style="color:#f92672">#</span>(str (first %) <span style="color:#e6db74">&#34;,&#34;</span> (second %) <span style="color:#e6db74">&#34; &#34;</span>) plot-points))]
+      (<span style="color:#a6e22e">hiccup/html</span> [<span style="color:#e6db74">:svg</span> {<span style="color:#e6db74">:width</span> width
+                          <span style="color:#e6db74">:height</span> height
+                          <span style="color:#e6db74">:xmlns</span> xmlns}
+                    [<span style="color:#e6db74">:polyline</span> {<span style="color:#e6db74">:points</span> points
+                                <span style="color:#e6db74">:style</span> style}]])))</code></pre></div>
+</div>
+<p>
+Here we are using the <a href="https://github.com/weavejester/hiccup">hiccup library</a> for rendering HTML, and creating a
+(potentially very large) <code class="verbatim">polyline</code> element with all the points we defined
+above.
+</p>
+<p>
+Now we can render our dragon and enjoy it in all its glory! 
+</p>
+<div class="src src-clojure">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">  (<span style="color:#66d9ef">let </span>[d    (<span style="color:#a6e22e">dragon</span> start <span style="color:#ae81ff">15</span>)
+        pts  (<span style="color:#a6e22e">points</span> d <span style="color:#ae81ff">0</span> [] <span style="color:#ae81ff">500</span> <span style="color:#ae81ff">500</span>)
+        html (<span style="color:#a6e22e">render-svg</span> pts)]
+    (<span style="color:#a6e22e">spit</span> <span style="color:#e6db74">&#34;dragon15.html&#34;</span> html)</code></pre></div>
+</div>
+<img src="/img/fractals/dragon15.png" alt="/img/fractals/dragon15.png" title="/img/fractals/dragon15.png" width="1200px"/>
+<p>
+If you are reading this in a modern browser with proper SVG support, you can
+also open the generated <a href="http:/html/fractals/dragon15.html">HTML output</a>.
+</p>
+<h1 id="headline-2">
+Tidying Up
+</h1>
+<p>
+The code snippets above are fun for playing in the Clojure REPL, but they&#39;re
+don&#39;t generalize well, and can be improved upon significantly. In particular,
+they require some fiddling with the SVG rendering view-port and the starting
+point of the fractal drawing. I&#39;ve cleaned up the code a bit, and made it
+generic so it can support many other L-systems. It now lives on <a href="https://github.com/mvarela/Fractal-Playground">Github</a>, along
+with some other fractal code that we&#39;ll discuss in an upcoming post.
+</p>
+<p>
+The L-system code itself, if you are interested, lives <a href="https://github.com/mvarela/Fractal-Playground/blob/master/src/fractals/l_system.clj">here</a>.
+</p>
+<h1 id="headline-3">
+More Fractal Goodness
+</h1>
+<p>
+Lindenmayer systems can give rise to very many interesting fractals, and many
 self-similar constructs can also be represented as L-systems. Below you can see
-some of these.</p>
-
-<h2 id="box-fractal">Box Fractal</h2>
-
-<pre><code>axiom : F+F+F+F
+some of these.
+</p>
+<h2 id="headline-4">
+Box Fractal
+</h2>
+<pre class="example">
+axiom : F+F+F+F
 rules : F → FF+F+F+F+FF
-</code></pre>
-
-<p>Five iterations of this system yield this:</p>
-
-<p><img src="/img/fractals/box5.png" alt="/img/fractals/box5.png" title="/img/fractals/box5.png" /></p>
-
-<p><a href="http:/html/fractals/box-05.html" title="HTML/SVG version" target="_blank">HTML/SVG version</a></p>
-
-<h2 id="crystal-fractal">Crystal Fractal</h2>
-
-<pre><code>axiom : F+F+F+F
+</pre>
+<p>
+Five iterations of this system yield this:
+</p>
+<img src="/img/fractals/box5.png" alt="/img/fractals/box5.png" title="/img/fractals/box5.png" width="1200px"/>
+<p>
+<a href="http:/html/fractals/box-05.html">HTML/SVG version</a>
+</p>
+<h2 id="headline-5">
+Crystal Fractal
+</h2>
+<pre class="example">
+axiom : F+F+F+F
 rules : F → FF+F++F+F
-</code></pre>
-
-<p>Like the Box above, this one also starts with a square (F+F+F+F).
-Six iterations yield:</p>
-
-<p><img src="/img/fractals/crystal6.png" alt="/img/fractals/crystal6.png" title="/img/fractals/crystal6.png" /></p>
-
-<p><a href="http:/html/fractals/crystal-06.html" title="HTML/SVG version" target="_blank">HTML/SVG version</a></p>
-
-<h2 id="hilbert-curve">Hilbert Curve</h2>
-
-<pre><code>axiom : X
+</pre>
+<p>
+Like the Box above, this one also starts with a square (F+F+F+F).
+Six iterations yield:
+</p>
+<img src="/img/fractals/crystal6.png" alt="/img/fractals/crystal6.png" title="/img/fractals/crystal6.png" width="1200px"/>
+<p>
+<a href="http:/html/fractals/crystal-06.html">HTML/SVG version</a>
+</p>
+<h2 id="headline-6">
+Hilbert Curve
+</h2>
+<pre class="example">
+axiom : X
 rules : X → +YF-XFX-FY+
         Y → -XF+YFY+FX-
-</code></pre>
-
-<p>The <a href="https://en.wikipedia.org/wiki/Hilbert_curve" title="Hilbert curve" target="_blank">Hilbert curve</a> is a well-known space-filling fractal. It does get quite dense
-rather quickly. After only 9 iterations, it looks like this.</p>
-
-<p><img src="/img/fractals/hilbert9.png" alt="/img/fractals/hilbert9.png" title="/img/fractals/hilbert9.png" /></p>
-
-<p><a href="http:/html/fractals/hilbert-09.html" title="HTML/SVG version (LARGE FILE!)" target="_blank">HTML/SVG version (LARGE FILE!)</a></p>
-
-<p>Zooming in a bit, we can better discern the structure:</p>
-
-<p><img src="/img/fractals/hilbert9zoom.png" alt="/img/fractals/hilbert9zoom.png" title="/img/fractals/hilbert9zoom.png" /></p>
-
-<h2 id="koch-curve">Koch Curve</h2>
-
-<pre><code>axiom : F+F+F+F
+</pre>
+<p>
+The <a href="https://en.wikipedia.org/wiki/Hilbert_curve">Hilbert curve</a> is a well-known space-filling fractal. It does get quite dense
+rather quickly. After only 9 iterations, it looks like this.
+</p>
+<img src="/img/fractals/hilbert9.png" alt="/img/fractals/hilbert9.png" title="/img/fractals/hilbert9.png" width="1200px"/>
+<p>
+<a href="http:/html/fractals/hilbert-09.html">HTML/SVG version (LARGE FILE!)</a>
+</p>
+<p>
+Zooming in a bit, we can better discern the structure:
+</p>
+<img src="/img/fractals/hilbert9zoom.png" alt="/img/fractals/hilbert9zoom.png" title="/img/fractals/hilbert9zoom.png" width="1200px"/>
+<h2 id="headline-7">
+Koch Curve
+</h2>
+<pre class="example">
+axiom : F+F+F+F
 rules : F → FF+F+F+F+FF
-</code></pre>
-
-<p>This one also becomes complex very quickly. At four iterations, it looks like this:</p>
-
-<p><img src="/img/fractals/koch4.png" alt="/img/fractals/koch4.png" title="/img/fractals/koch4.png" /></p>
-
-<p><a href="http:/html/fractals/koch-curve-04.html" title="HTML/SVG version" target="_blank">HTML/SVG version</a></p>
-
-<h2 id="koch-snowflake">Koch Snowflake</h2>
-
-<pre><code>axiom : F--F--F
+</pre>
+<p>
+This one also becomes complex very quickly. At four iterations, it looks like this:
+</p>
+<img src="/img/fractals/koch4.png" alt="/img/fractals/koch4.png" title="/img/fractals/koch4.png" width="1200px"/>
+<p>
+<a href="http:/html/fractals/koch-curve-04.html">HTML/SVG version</a>
+</p>
+<h2 id="headline-8">
+Koch Snowflake
+</h2>
+<pre class="example">
+axiom : F--F--F
 rules : F → F+F--F+F
-</code></pre>
-
-<p>This is another well-known fractal.</p>
-
-<p><img src="/img/fractals/snowflake9.png" alt="/img/fractals/snowflake9.png" title="/img/fractals/snowflake9.png" /></p>
-
-<p><a href="http:/html/fractals/koch-snowflake-09.html" title="HTML/SVG version" target="_blank">HTML/SVG version</a></p>
-
-<h2 id="rings">Rings</h2>
-
-<pre><code>axiom : F+F+F+F
+</pre>
+<p>
+This is another well-known fractal.
+</p>
+<img src="/img/fractals/snowflake9.png" alt="/img/fractals/snowflake9.png" title="/img/fractals/snowflake9.png" width="1200px"/>
+<p>
+<a href="http:/html/fractals/koch-snowflake-09.html">HTML/SVG version</a>
+</p>
+<h2 id="headline-9">
+Rings
+</h2>
+<pre class="example">
+axiom : F+F+F+F
 rules : F → FF+F+F+F+F+F-F
-</code></pre>
-
-<p>This one is quite eye-catching. After six itertations, we get:</p>
-
-<p><img src="/img/fractals/rings6.png" alt="/img/fractals/rings6.png" title="/img/fractals/rings6.png" /></p>
-
-<p><a href="http:/html/fractals/rings-06.html" title="HTML/SVG version" target="_blank">HTML/SVG version</a></p>
-
-<h2 id="sierpiński-triangle">Sierpiński Triangle</h2>
-
-<pre><code>axiom : F-G-G
+</pre>
+<p>
+This one is quite eye-catching. After six itertations, we get:
+</p>
+<img src="/img/fractals/rings6.png" alt="/img/fractals/rings6.png" title="/img/fractals/rings6.png" width="1200px"/>
+<p>
+<a href="http:/html/fractals/rings-06.html">HTML/SVG version</a>
+</p>
+<h2 id="headline-10">
+Sierpiński Triangle
+</h2>
+<pre class="example">
+axiom : F-G-G
 rules : F → F-G+F+G-F
         G → GG
-</code></pre>
-
-<p>The Sierpiński triangle is another very well known fractal. Unlike the ones seen
-above, it has two <code>forward</code> variables, <code>F</code> and <code>G</code>. After 8 iterations, it
-results in this:</p>
-
-<p><img src="/img/fractals/sierpinski8.png" alt="/img/fractals/sierpinski8.png" title="/img/fractals/sierpinski8.png" /></p>
-
-<h1 id="more-to-come">More to Come!</h1>
-
-<p>In this post we have covered the basics of L-system based fractals. There is a
-bit more to them, as more "commands" can be embedded in the fractal string, such
-as <code>moving</code> the turtle without drawing, and <code>pushing</code> and <code>popping</code> state onto a
+</pre>
+<p>
+The Sierpiński triangle is another very well known fractal. Unlike the ones seen
+above, it has two <code class="verbatim">forward</code> variables, <code class="verbatim">F</code> and <code class="verbatim">G</code>. After 8 iterations, it
+results in this:
+</p>
+<img src="/img/fractals/sierpinski8.png" alt="/img/fractals/sierpinski8.png" title="/img/fractals/sierpinski8.png" width="1200px"/>
+<h1 id="headline-11">
+More to Come!
+</h1>
+<p>
+In this post we have covered the basics of L-system based fractals. There is a
+bit more to them, as more &#34;commands&#34; can be embedded in the fractal string, such
+as <code class="verbatim">moving</code> the turtle without drawing, and <code class="verbatim">pushing</code> and <code class="verbatim">popping</code> state onto a
 stack, to allow for the generation of more complex patterns. The L-system
 processing code on Github has some partial support for those, but the renderer
-doesn't, so some further work is needed there.</p>
-
-<p>A <a href="http://martin.varela.fi/post/fractals-complexity-from-simplicity-part2/" title="second part" target="_blank">second part</a> to this incursion into fractals is upcoming. There we'll look into
+doesn&#39;t, so some further work is needed there.
+</p>
+<p>
+A <a href="http://martin.varela.fi/post/fractals-complexity-from-simplicity-part2/">second part</a> to this incursion into fractals is upcoming. There we&#39;ll look into
 two different types of fractals. The first type is based on affine
 transformations and stochastic processes, and the second one is the famous
-<a href="https://en.wikipedia.org/wiki/Mandelbrot_set" title="Mandelbrot set" target="_blank">Mandelbrot set</a>.</p>
+<a href="https://en.wikipedia.org/wiki/Mandelbrot_set">Mandelbrot set</a>.
+</p>
 
     </div>
 
@@ -1177,7 +1209,7 @@ transformations and stochastic processes, and the second one is the famous
     
     
     
-    <script src="/js/academic.min.109caa4f51ff39522c6dfc25fb05b6e9.js"></script>
+    <script src="/js/academic.min.6e3f6df706f5e1819f516bc13278decb.js"></script>
 
   </body>
 </html>
