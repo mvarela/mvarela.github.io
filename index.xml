@@ -7,8 +7,142 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Martín Varela 2017-</copyright>
-    <lastBuildDate>Tue, 23 Apr 2019 22:48:23 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 01 Nov 2019 22:18:23 +0200</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>WebGL, React, and no JavaScript</title>
+      <link>https://martin.varela.fi/2019/11/01/webgl-react-and-no-javascript/</link>
+      <pubDate>Fri, 01 Nov 2019 22:18:23 +0200</pubDate>
+      
+      <guid>https://martin.varela.fi/2019/11/01/webgl-react-and-no-javascript/</guid>
+      <description>&lt;!-- -*- org-export-babel-evaluate: nil -*- --&gt;
+
+&lt;h1 id=&#34;web-dev-me-a-non-story&#34;&gt;Web-dev &amp; Me: a non-story&lt;/h1&gt;
+
+&lt;p&gt;As much as I enjoy programming, and also spending (arguably too much) time on
+  the web, I&#39;ve never really got into web development. I think part of the
+  reason is that I associate it with JavaScript, which I just can&#39;t force myself
+  to like, and all its associated tooling, which is monstrously complex.&lt;/p&gt;
+
+&lt;p&gt;So, except for tiny bits of js (typically some jQuery thing, and a couple of
+  Rails apps done for some &lt;a href=&#34;https://martin.varela.fi/publication/varela-qomex13-2/&#34; title=&#34;subjective&#34; target=&#34;_blank&#34;&gt;subjective&lt;/a&gt; test campaigns for &lt;a href=&#34;https://martin.varela.fi/publication/varela-qomex2015-1/&#34; title=&#34;web QoE&#34; target=&#34;_blank&#34;&gt;web QoE&lt;/a&gt; a few years
+  back) here and there, I&#39;ve mostly stayed away from web applications.&lt;/p&gt;
+
+&lt;p&gt;A few weeks ago, however, I needed to prototype some audio analysis stuff for
+  work, and being that I work with WebRTC, the analysis needed to be done in the
+  browser. So I finally had a compelling reason to properly use some
+  &lt;a href=&#34;https://clojurescript.org/&#34; title=&#34;Clojurescript&#34; target=&#34;_blank&#34;&gt;Clojurescript&lt;/a&gt;, and learn a bit about &lt;a href=&#34;https://reagent-project.github.io/&#34; title=&#34;Reagent&#34; target=&#34;_blank&#34;&gt;Reagent&lt;/a&gt; and &lt;a href=&#34;https://github.com/Day8/re-frame&#34; title=&#34;re-frame&#34; target=&#34;_blank&#34;&gt;re-frame&lt;/a&gt;, which I&#39;d been
+  meaning to look into for a while.&lt;/p&gt;
+
+&lt;p&gt;Long story short, I found the re-frame approach conceptually very nice, and
+  quite simple to pick up. The prototype for work, which had started as a couple
+  of simple reagent components was a suitable case study for a few hours over
+  the weekend, and all was well... Except now I&#39;d been bitten by the web bug.&lt;/p&gt;
+
+&lt;p&gt;Browsing around on YouTube, I came across &lt;a href=&#34;https://youtu.be/myigRnZHhTw&#34; title=&#34;this cool talk&#34; target=&#34;_blank&#34;&gt;this cool talk&lt;/a&gt; by Douglas Hamilton,
+  showcasing his &lt;a href=&#34;https://github.com/DougHamil/threeagent&#34; title=&#34;threeagent&#34; target=&#34;_blank&#34;&gt;threeagent&lt;/a&gt; project, which provides a reagent-like API wrapper
+  for &lt;a href=&#34;https://threejs.org/&#34; title=&#34;three.js&#34; target=&#34;_blank&#34;&gt;three.js&lt;/a&gt;. So, we can use the same approach for the &#34;web page&#34; parts, and the
+  3D ones, which is super neat.&lt;/p&gt;
+
+&lt;p&gt;Since I&#39;m not a gifted 3D designer, I chose to do a toy project that&#39;s almost,
+  but not quite 2d: a clock.&lt;/p&gt;
+
+&lt;p&gt;&lt;div id=&#34;app&#34;&gt;&lt;/div&gt;
+    &lt;canvas id=&#34;root&#34; style=&#34;width:100%;height:100%&#34;&gt;&lt;/canvas&gt;
+    &lt;script src=&#34;https://martin.varela.fi/app-js/app.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Voilà, the unnecessarily-3d clock! It&#39;s built in parts: there&#39;s the face, the
+ hands, the little knob in the middle, and the ticks on the face. Each of those
+ components is based on a few three.js primitives provided by threeagent. So the
+ ticks are built like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;  (defn ticks [props-in radius length pos-z]
+    (let [props (merge {:color &amp;quot;black&amp;quot;
+                        :opacity 0.8
+                        :transparent true} props-in)
+          positions (mapv (fn[i]
+                            (let [angle (subs/hand-angle (* 5 i))
+                                  pos-x (* radius (js/Math.cos angle))
+                                  pos-y (* radius (js/Math.sin angle))]
+                              [:box {:position [pos-x pos-y pos-z]
+                                     :rotation [0 0 (+ (/ js/Math.PI 2) angle)]
+                                     :width 0.2
+                                     :depth 0.1
+                                     :height length
+                                     :material props}]))
+                          (range 12))]
+      `[:object
+       ~@positions]))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The hours and minutes hands are handled by this function:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(defn hand [material-props unit-key length]
+  (let [props (merge {:color &amp;quot;black&amp;quot;
+                      :opacity 0.8
+                      :transparent true} material-props)
+        units (re-frame/subscribe [unit-key])
+        angle (subs/hand-angle @units)
+        [pos-x pos-y] (subs/hand-offsets length angle)]
+        [:object {:position [pos-x pos-y]
+                  :rotation [0 0 angle]}
+         [:box {:position [0 0 -10.5]
+                :width 0.4
+                :height length
+                :depth 0.1
+                :material props}]]))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We can manage the state of the 3D bits in the same way (re-frame&#39;s &lt;code&gt;app-db&lt;/code&gt;) as
+we manage the state of the app itself. This is pretty cool! The full source is
+up &lt;a href=&#34;https://github.com/mvarela/unnecessarily-3d-clock&#34; title=&#34;on GitHub&#34; target=&#34;_blank&#34;&gt;on GitHub&lt;/a&gt;, if you&#39;re curious.&lt;/p&gt;
+
+&lt;h2 id=&#34;some-re-frame-bits-the-30-000ft-view&#34;&gt;Some re-frame bits (the 30,000ft. view)&lt;/h2&gt;
+
+&lt;p&gt;Re-frame brings order into the app, allowing us to cleanly separate the state
+ (which is centralized in the &lt;code&gt;app-db&lt;/code&gt;), the views (which are along the lines of
+ the code above), and events, which make things happen. Events are triggered (in
+ this toy example, there&#39;s only one event type, and it&#39;s triggered by a timer),
+ and are handled by &lt;em&gt;pure&lt;/em&gt; functions (&lt;em&gt;event-handlers&lt;/em&gt;), usually changing the
+ state of the application. If side-effects are needed (e.g., either as a result
+ of the event, or as in input to the event handler), they are handled separately,
+ via &lt;em&gt;effects&lt;/em&gt; and &lt;em&gt;coeffects&lt;/em&gt;, respectively. This sounds a bit overly
+ complicated, but keeping the event handlers pure does make it easier to reason
+ about and test the application. In order to update the UI, the views
+ &lt;em&gt;subscribe&lt;/em&gt; to bits of the app state (or values derived from them, via
+ so-called &lt;em&gt;reactive subscriptions&lt;/em&gt;). When those are updated by an event
+ handler, the views are re-rendered as needed.&lt;/p&gt;
+
+&lt;p&gt;So basically, the different concerns in the app are neatly separated, and there
+ is a clear way in which information flows: components can trigger events, which
+ affect the state of the application (and potentially also trigger further events),
+ and that state is propagated, via subscriptions, to the components, which can
+ then update themselves.&lt;/p&gt;
+
+&lt;p&gt;If you haven&#39;t looked into re-frame before, you can have a go at &lt;a href=&#34;https://github.com/day8/re-frame/blob/master/docs/README.md&#34; title=&#34;its docs&#34; target=&#34;_blank&#34;&gt;its docs&lt;/a&gt;,
+ there&#39;s a lot of info to get started there.&lt;/p&gt;
+
+&lt;h2 id=&#34;interactive-development&#34;&gt;Interactive development&lt;/h2&gt;
+
+&lt;p&gt;A nice thing about Clojurescript is that it has good tooling for live coding.
+ Besides the REPL, you can get live hot reloading of your app, while maintaining
+ application state. For this, I used Thomas Heller&#39;s &lt;a href=&#34;https://shadow-cljs.org/&#34; title=&#34;shadow-cljs&#34; target=&#34;_blank&#34;&gt;shadow-cljs&lt;/a&gt;, which handles
+ this neatly (as well as the rest of the build process, and provides easy
+ integration with the node.js ecosystem).&lt;/p&gt;
+
+&lt;p&gt;This is particularly handy when developing the views, as you can simply save
+ the file and the app will be reloaded automatically, so your changes are
+ immediately visible.&lt;/p&gt;
+
+&lt;p&gt;It&#39;s nice to have the same type of workflow as when working on Clojure, it
+ greatly helps boost your productivity.&lt;/p&gt;
+
+&lt;p&gt;&lt;video width=&#34;100%&#34; autoplay loop controls&gt; 
+&lt;source src=&#34;https://martin.varela.fi/video/shadow-reload.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Coming Full Circle</title>
@@ -1619,15 +1753,6 @@ structure in data.&lt;/p&gt;
 free to be used.
 &lt;script src=&#34;https://gist.github.com/mvarela/e3b868fe36d232a39bf5d87796c8ac28.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>No Silver Bullet: QoE Metrics, QoE Fairness, and User Diversity in the Context of QoE Management</title>
-      <link>https://martin.varela.fi/publication/varela-qomex17/</link>
-      <pubDate>Wed, 03 May 2017 06:40:43 +0300</pubDate>
-      
-      <guid>https://martin.varela.fi/publication/varela-qomex17/</guid>
-      <description></description>
     </item>
     
   </channel>

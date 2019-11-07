@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>re-frame on Martín Varela</title>
+    <link>https://martin.varela.fi/tags/re-frame/</link>
+    <description>Recent content in re-frame on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Fri, 01 Nov 2019 22:18:23 +0200</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/tags/re-frame/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>WebGL, React, and no JavaScript</title>
+      <link>https://martin.varela.fi/2019/11/01/webgl-react-and-no-javascript/</link>
+      <pubDate>Fri, 01 Nov 2019 22:18:23 +0200</pubDate>
+      
+      <guid>https://martin.varela.fi/2019/11/01/webgl-react-and-no-javascript/</guid>
+      <description>Web-dev &amp; Me: a non-story As much as I enjoy programming, and also spending (arguably too much) time on the web, I&#39;ve never really got into web development. I think part of the reason is that I associate it with JavaScript, which I just can&#39;t force myself to like, and all its associated tooling, which is monstrously complex.
+So, except for tiny bits of js (typically some jQuery thing, and a couple of Rails apps done for some subjective test campaigns for web QoE a few years back) here and there, I&#39;ve mostly stayed away from web applications.</description>
+    </item>
+    
+  </channel>
+</rss>
