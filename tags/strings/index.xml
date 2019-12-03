@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>strings on Martín Varela</title>
+    <link>https://martin.varela.fi/tags/strings/</link>
+    <description>Recent content in strings on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Mon, 02 Dec 2019 21:01:22 +0200</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/tags/strings/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>String Similarity Made Easy</title>
+      <link>https://martin.varela.fi/2019/12/02/string-similarity-made-easy/</link>
+      <pubDate>Mon, 02 Dec 2019 21:01:22 +0200</pubDate>
+      
+      <guid>https://martin.varela.fi/2019/12/02/string-similarity-made-easy/</guid>
+      <description>The setting For a few years now I&#39;ve had an itch to scratch, namely, finding a nice way of keeping a normalized bibliographic database to use with LaTeX 1.
+BibTeX unfortunately lends itself to a lot of variability in how entries are stored, and in my experience, it&#39;s always been slightly painful to work with, especially when collaborating with other authors. Very often entries are incomplete, or repeated under different keys, or use inconsistent formatting (e.</description>
+    </item>
+    
+  </channel>
+</rss>

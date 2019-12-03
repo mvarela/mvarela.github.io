@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.0.0">
+  <meta name="generator" content="Hugo 0.54.0" />
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Martín Varela">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="The setting For a few years now I&#39;ve had an itch to scratch, namely, finding a nice way of keeping a normalized bibliographic database to use with LaTeX 1.
+BibTeX unfortunately lends itself to a lot of variability in how entries are stored, and in my experience, it&#39;s always been slightly painful to work with, especially when collaborating with other authors. Very often entries are incomplete, or repeated under different keys, or use inconsistent formatting (e.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://martin.varela.fi/2019/12/02/string-similarity-made-easy/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css" crossorigin="anonymous">
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-107269456-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+  
+
+  
+  <link rel="alternate" href="https://martin.varela.fi/index.xml" type="application/rss+xml" title="Martín Varela">
+  <link rel="feed" href="https://martin.varela.fi/index.xml" type="application/rss+xml" title="Martín Varela">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://martin.varela.fi/2019/12/02/string-similarity-made-easy/">
+
+  
+  
+  
+  
+    
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Martín Varela">
+  <meta property="og:url" content="https://martin.varela.fi/2019/12/02/string-similarity-made-easy/">
+  <meta property="og:title" content="String Similarity Made Easy | Martín Varela">
+  <meta property="og:description" content="The setting For a few years now I&#39;ve had an itch to scratch, namely, finding a nice way of keeping a normalized bibliographic database to use with LaTeX 1.
+BibTeX unfortunately lends itself to a lot of variability in how entries are stored, and in my experience, it&#39;s always been slightly painful to work with, especially when collaborating with other authors. Very often entries are incomplete, or repeated under different keys, or use inconsistent formatting (e."><meta property="og:image" content="https://martin.varela.fi/2019/12/02/string-similarity-made-easy/featured.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2019-12-02T21:01:22&#43;02:00">
+  
+  <meta property="article:modified_time" content="2019-12-02T21:01:22&#43;02:00">
+  
+
+  
+
+  
+
+  <title>String Similarity Made Easy | Martín Varela</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Martín Varela</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#publications_featured">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#talks">
+            
+            <span>Talks</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-header d-xl-none">
+  <div class="featured-image" style="background-image: url('/2019/12/02/string-similarity-made-easy/featured_hu28c2909a1db376f86fb69a13e4ac1126_643145_800x0_resize_lanczos_2.png');"></div>
+  
+</div>
+
+
+<div class="container-fluid split-header d-none d-xl-block">
+  <div class="row">
+    <div class="col-6">
+      <div class="split-header-content">
+        <h1 itemprop="name">String Similarity Made Easy</h1>
+
+        
+
+        
+
+
+
+<meta content="2019-12-02 21:01:22 &#43;0200 EET" itemprop="datePublished">
+<meta content="2019-12-02 21:01:22 &#43;0200 EET" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Dec 2, 2019</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    6 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+
+</div>
+
+
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+        
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=String%20Similarity%20Made%20Easy&amp;url=https%3a%2f%2fmartin.varela.fi%2f2019%2f12%2f02%2fstring-similarity-made-easy%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmartin.varela.fi%2f2019%2f12%2f02%2fstring-similarity-made-easy%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmartin.varela.fi%2f2019%2f12%2f02%2fstring-similarity-made-easy%2f&amp;title=String%20Similarity%20Made%20Easy"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fmartin.varela.fi%2f2019%2f12%2f02%2fstring-similarity-made-easy%2f&amp;title=String%20Similarity%20Made%20Easy"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=String%20Similarity%20Made%20Easy&amp;body=https%3a%2f%2fmartin.varela.fi%2f2019%2f12%2f02%2fstring-similarity-made-easy%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="split-header-image">
+        <img src="/2019/12/02/string-similarity-made-easy/featured_hu28c2909a1db376f86fb69a13e4ac1126_643145_680x500_fill_q90_lanczos_smart1_2.png" itemprop="image" alt="">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-container d-xl-none">
+  <h1 itemprop="name">String Similarity Made Easy</h1>
+
+  
+
+  
+
+
+
+<meta content="2019-12-02 21:01:22 &#43;0200 EET" itemprop="datePublished">
+<meta content="2019-12-02 21:01:22 &#43;0200 EET" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Dec 2, 2019</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    6 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=String%20Similarity%20Made%20Easy&amp;url=https%3a%2f%2fmartin.varela.fi%2f2019%2f12%2f02%2fstring-similarity-made-easy%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmartin.varela.fi%2f2019%2f12%2f02%2fstring-similarity-made-easy%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmartin.varela.fi%2f2019%2f12%2f02%2fstring-similarity-made-easy%2f&amp;title=String%20Similarity%20Made%20Easy"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fmartin.varela.fi%2f2019%2f12%2f02%2fstring-similarity-made-easy%2f&amp;title=String%20Similarity%20Made%20Easy"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=String%20Similarity%20Made%20Easy&amp;body=https%3a%2f%2fmartin.varela.fi%2f2019%2f12%2f02%2fstring-similarity-made-easy%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <!-- -*- org-export-babel-evaluate: nil -*- -->
+
+<h1 id="the-setting">The setting</h1>
+
+<p>For a few years now I've had an itch to scratch, namely, finding a nice way of
+  keeping a normalized bibliographic database to use with LaTeX <sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>.</p>
+
+<p><a href="https://www.ctan.org/pkg/bibtex" title="BibTeX" target="_blank">BibTeX</a> unfortunately lends itself to a lot of variability in how entries are
+  stored, and in my experience, it's always been slightly painful to work with,
+  especially when collaborating with other authors. Very often entries are
+  incomplete, or repeated under different keys, or use inconsistent formatting
+  (e.g., in how author names are handled, or titles capitalized).</p>
+
+<p>I've been thinking a bit about how to lower the friction of dealing with these
+  issues (and also finding a practical motivation to get some extra-curricular
+  coding done), and part of the solution I have in mind is <a href="https://github.com/mvarela/clj-bibtex" title="clj-bibtex" target="_blank">clj-bibtex</a>, a small
+  library for operating on BibTeX data.</p>
+
+<p>Basically, the use case I have in mind for this is to load up a bunch of
+  bibliography data, do some basic normalization on it (in particular author
+  names), and load it into a <a href="https://github.com/tonsky/datascript" title="Datascript" target="_blank">Datascript</a> DB, where I can easily query the data.</p>
+
+<p>It is often the case that author names in BibTeX entries are misspelled, or
+  that a <em>"Last, F."</em> format is used instead of <em>"Last, First"</em>, etc. I would like
+  to quickly identify these cases, and later be able to merge those entities (in
+  the DB) so that a canonical name is available for each author. Likewise, it is
+  common for duplicate entries to find their way into <code>.bib</code> files, with
+  different keys and small differences in the title fields (different
+  capitalization styles is a typical issue).</p>
+
+<p>In order to solve these two issues, I had to look at string similarity
+  metrics.</p>
+
+<h1 id="the-problem">The problem</h1>
+
+<p>What I needed to do then is find a way, given two strings, to see how similar
+  they are. This is a problem that has been solved many times over, so I was not
+  about to invent a new similarity metric, but rather find one that worked well
+  in this particular context, and was simple (and preferably easy!) to implement.</p>
+
+<p>The canonical string similarity (or distance) metric is the
+  <a href="https://en.wikipedia.org/wiki/Levenshtein_distance" title="Levenshtein distance" target="_blank">Levenshtein distance</a>, which is a so-called <em>edit distance</em> metric. Quoting the
+  wiki, this metric is</p>
+
+<p><em>"the minimum number of single-character edits (insertions, deletions or substitutions) required to change one word into the other."</em></p>
+
+<p>There are a number of other <em>edit distance</em> metrics, which allow different
+  operations to be considered, and hence work better or worse for different use
+  cases. For this use case, the <a href="https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance" title="Damerau-Levenshtein" target="_blank">Damerau-Levenshtein</a> metric could be a better
+  fit, since it also allows for letter transposition (which is a common typo).</p>
+
+<p>Upon closer inspection, I noticed that none of these algorithms lent itself to
+  a nice, efficient and TCO-friendly implementation. They can of course be
+  implemented with <code>loop</code> or as a reduction, carrying a rather large
+  accumulator, but I was feeling a bit lazy, and I suspected the end result
+  would not be very nice to look at, so I decided to look around a bit
+  more. A few more minutes of googling brought me to the
+  <a href="https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient" title="Sørensen-Dice coefficient" target="_blank">Sørensen-Dice coefficient</a>, which is, per the wiki:</p>
+
+<p><em>"a statistic used to gauge the similarity of two samples"</em></p>
+
+<p>and is defined as, given two sets $X$ and $Y$</p>
+
+<p>$$ SDC = \frac{2\vert X \cap Y \vert}{\vert X \vert + \vert Y \vert} $$</p>
+
+<h1 id="the-solution">The solution</h1>
+
+<p>In order to make this work for strings, we need to somehow tokenize them.
+  Using single letters, or words, is unlikely to yield the results we want, but
+  if we consider <em>digrams</em> <sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>, it produces very good results for the problem we are
+  trying to solve. As a bonus, the implementation is trivial.</p>
+
+<p>First, we need to turn our strings into a set of digrams:</p>
+
+<pre><code class="language-clojure">  (require '[net.cgrand.xforms :as x])
+
+  (defn digrams
+    &quot;Creates a set of all digrams in `s`&quot;
+    [s]
+    (let [xform (comp
+                 (x/partition 2 1)
+                 (map #(apply str %)))]
+       (into #{} xform s)))
+
+
+</code></pre>
+
+<p>Then, we can simply use the resulting sets in the definition of the
+  Sørensen-Dice coefficient (noting that it's undefined if both strings are
+  empty, and that when either string is of length 1, the coefficient will either
+  be 0, if the strings are different, or 1)</p>
+
+<pre><code class="language-clojure">  (require '[clojure.set :as set])
+
+  (defn sorensen-dice
+      &quot;Computes the Sørenson-Dice coefficient between `s1` and `s2`.
+      At least one of the arguments must have length &gt; 0.&quot;
+    [s1 s2]
+    {:pre [(or (&gt; (count s1) 0)
+               (&gt; (count s2) 0))]}
+    (if (or (= 1 (count s1))
+            (= 1 (count s2)))
+      (if (= s1 s2) 1.0 0.0)
+      (let [b1 (digrams s1)
+            b2 (digrams s2)]
+        (/ (* 2.0 (count (set/intersection b1 b2)))
+           (+ (count b1) (count b2))))))
+</code></pre>
+
+<p>We can put this to use on <a href="https://github.com/mvarela/clj-bibtex/blob/master/resources/samples/literature.bib" title="an actual &lt;code&gt;.bib&lt;/code&gt; file" target="_blank">an actual <code>.bib</code> file</a> that has some of the
+aforementioned problems. Assuming we have all the author names and all the paper
+titles in <code>all-authors</code> and <code>all-titles</code>, respectively:</p>
+
+<pre><code class="language-clojure">  (defn find-similar [coll]
+    (let [ xform (comp
+                  (x/sort)
+                  (x/partition 2 1)
+                  (map (fn[[s1 s2]] [s1 s2 (sorensen-dice s1 s2)]))
+                  (filter (fn[[_ _ sd]] (&gt; sd 0.7))))]
+      (into [] xform coll)))
+
+  (find-similar all-authors)
+  ;;=&gt;
+  ;;[[&quot;Agapiou, G.&quot; &quot;Agapiou, S.&quot; 0.8]
+  ;; [&quot;Alcaraz-Calero, J. M.&quot; &quot;Alcaraz-Calero, Jose M&quot; 0.8292682926829268]
+  ;; [&quot;Awobuluyi, O.&quot; &quot;Awobuluyi, Olatunde&quot; 0.7333333333333333]
+  ;; [&quot;Chen, Zhan&quot; &quot;Chen, Zhibo&quot; 0.7368421052631579]
+  ;; [&quot;Ghinea, George&quot; &quot;Ghinea, Gheorghita&quot; 0.7857142857142857]
+  ;; [&quot;Gong, Yan&quot; &quot;Gong, Yi&quot; 0.8]
+  ;; [&quot;Guyard, Frederic&quot; &quot;Guyard, Frédéric&quot; 0.7333333333333333]
+  ;; [&quot;Heegaard, P. E.&quot; &quot;Heegaard, Poul&quot; 0.7407407407407407]
+  ;; [&quot;Heegaard, Poul&quot; &quot;Heegaard, Poul E&quot; 0.9285714285714286]
+  ;; [&quot;Heegaard, Poul E&quot; &quot;Heegaard, Poul E.&quot; 0.967741935483871]
+  ;; [&quot;Hoßfeld, T.&quot; &quot;Hoßfeld, Tobias&quot; 0.75]
+  ;; [&quot;Kara, Peter A&quot; &quot;Kara, Peter A.&quot; 0.96]
+  ;; [&quot;Liu, Xi&quot; &quot;Liu, Xin&quot; 0.9230769230769231]
+  ;; [&quot;Martini, Maria G&quot; &quot;Martini, Maria G.&quot; 0.9629629629629629]
+  ;; [&quot;Metzger, F.&quot; &quot;Metzger, Florian&quot; 0.72]
+  ;; [&quot;Nightingale, Edmund B&quot; &quot;Nightingale, J.&quot; 0.7058823529411765]
+  ;; [&quot;Nightingale, J.&quot; &quot;Nightingale, James&quot; 0.8387096774193549]
+  ;; [&quot;Schatz, R&quot; &quot;Schatz, Raimund&quot; 0.7272727272727273]
+  ;; [&quot;Schatz, Raimund&quot; &quot;Schatz, Raimund.&quot; 0.9655172413793104]
+  ;; [&quot;Shafiq, M. Zubair&quot; &quot;Shafiq, Muhammad Zubair&quot; 0.7567567567567568]
+  ;; [&quot;Skorin-Kapov, L.&quot; &quot;Skorin-Kapov, Lea&quot; 0.9032258064516129]
+  ;; [&quot;Varela, M.&quot; &quot;Varela, Martin&quot; 0.7619047619047619]
+  ;; [&quot;Varela, Martin&quot; &quot;Varela, Martn&quot; 0.8695652173913043]
+  ;; [&quot;Wang, Ning&quot; &quot;Wang, Ping&quot; 0.75]
+  ;; [&quot;Wang, Q.&quot; &quot;Wang, Qi&quot; 0.8571428571428571]
+  ;; [&quot;Yang, Zhe&quot; &quot;Yang, Zhen&quot; 0.9411764705882353]
+  ;; [&quot;Zhang, Lin&quot; &quot;Zhang, Ping&quot; 0.7777777777777778]]
+
+  (find-similar all-titles)
+  ;;=&gt;
+  ;;[[&quot;Adaptive psychometric scaling for video quality assessment&quot;
+  ;;  &quot;Adaptive testing for video quality assessment&quot;
+  ;;  0.8085106382978723]
+  ;; [&quot;OTT-ISP Joint Service Management: A Customer Lifetime Value Based Approach&quot;
+  ;;  &quot;OTT-ISP Joint service management: a customer lifetime value based approach&quot;
+  ;;  0.7786259541984732]
+  ;; [&quot;OTT-ISP Joint service management: a customer lifetime value based approach&quot;
+  ;;  &quot;OTT-ISP joint service management: a Customer Lifetime Value based approach &quot;
+  ;;  0.8702290076335878]
+  ;; [&quot;Understanding the impact of network dynamics on mobile video user engagement&quot;
+  ;;  &quot;Understanding the impact of video quality on user engagement&quot;
+  ;;  0.743801652892562]]
+</code></pre>
+
+<p>Even though there are some false positives, it does seem to capture the
+problematic fields pretty well. Actually, we can play a bit with the threshold,
+since based on my testing so far, titles and authors could use different
+thresholds, so the actual functions in <code>clj-bibtex</code> that take care of this take
+an optional fuzziness argument.</p>
+
+<h1 id="footnotes">Footnotes</h1>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">I am aware of Zotero, and other similar tools, but they never seem to stick, for some reason, and they definitely don't satisfy my NIH syndrome. I should try it again, though... <a class="footnote-return" href="#fnref:1"><sup>^</sup></a></li>
+
+<li id="fn:2">This is the standard way to implement Sørensen-Dice for string similarity, by the way.  <a class="footnote-return" href="#fnref:2"><sup>^</sup></a></li>
+</ol>
+</div>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/clojure/">clojure</a>
+  
+  <a class="badge badge-light" href="/tags/algorithms/">algorithms</a>
+  
+  <a class="badge badge-light" href="/tags/strings/">strings</a>
+  
+</div>
+
+
+
+
+    
+      
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<div class="media author-card" itemscope itemtype="http://schema.org/Person">
+  
+  
+  <img class="portrait mr-3" src="/author/admin/avatar_hu3d151a54a167f5d81fb6f7b65d699e83_1778663_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+  
+
+  <div class="media-body">
+    <h5 class="card-title" itemprop="name"><a href="/authors/admin">Martín Varela</a></h5>
+    <h6 class="card-subtitle">QoE Guy</h6>
+    <p class="card-text" itemprop="description">I work mainly in Quality of Experience (QoE) for online services, and QoE management.</p>
+    <ul class="network-icon" aria-hidden="true">
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      <li>
+        <a itemprop="sameAs" href="mailto:martin@varela.fi" >
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://scholar.google.fi/citations?user=hetDWy0AAAAJ&amp;hl=en" target="_blank" rel="noopener">
+          <i class="ai ai-google-scholar"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://github.com/mvarela" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="/pdf/cv-martin_varela.pdf" >
+          <i class="ai ai-cv"></i>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    &copy; Martín Varela 2017- &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/clojure.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ruby.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.109caa4f51ff39522c6dfc25fb05b6e9.js"></script>
+
+  </body>
+</html>
+

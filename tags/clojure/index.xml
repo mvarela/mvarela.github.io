@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Clojure on Martín Varela</title>
+    <title>clojure on Martín Varela</title>
     <link>https://martin.varela.fi/tags/clojure/</link>
-    <description>Recent content in Clojure on Martín Varela</description>
+    <description>Recent content in clojure on Martín Varela</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Martín Varela 2017-</copyright>
