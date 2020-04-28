@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Martín Varela 2017-</copyright>
-    <lastBuildDate>Sun, 03 Mar 2019 18:22:44 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 28 Mar 2020 18:22:44 +0300</lastBuildDate>
     
 	<atom:link href="https://martin.varela.fi/authors/mart%C3%ADn-varela/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>From QoS Distributions to QoE Distributions: a System&#39;s Perspective</title>
+      <link>https://martin.varela.fi/publication/varela-qoe-management20/</link>
+      <pubDate>Sat, 28 Mar 2020 18:22:44 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qoe-management20/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Fundamental Relationships for Deriving QoE in Systems</title>
