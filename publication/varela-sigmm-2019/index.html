@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="QoE Guy">
+  <meta name="description" content="With Quality of Experience (QoE) research having made significant advances over the years, increased attention is being put on exploiting this knowledge from a service/network provider perspective in the context of the user-centric evaluation of systems. Current research investigates the impact of system/service mechanisms, their implementation or configurations on the service performance and how it affects the corresponding QoE of its users. Prominent examples address adaptive video streaming services, as well as enabling technologies for QoE-aware service management and monitoring, such as SDN/NFV and machine learning. When considering the whole service, the question arises of how to properly evaluate QoE in a systems context, i.e., how to quantify system-centric QoE. The paper [1] provides fundamental relationships for deriving system-centric QoE,which are the basis for this article.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://martin.varela.fi/authors/lea-skorin-kapov/">
+  <link rel="alternate" hreflang="en-us" href="https://martin.varela.fi/publication/varela-sigmm-2019/">
 
   
 
@@ -109,39 +109,40 @@
   
 
   
-  <link rel="alternate" href="https://martin.varela.fi/authors/lea-skorin-kapov/index.xml" type="application/rss+xml" title="Martín Varela">
-  <link rel="feed" href="https://martin.varela.fi/authors/lea-skorin-kapov/index.xml" type="application/rss+xml" title="Martín Varela">
+  <link rel="alternate" href="https://martin.varela.fi/index.xml" type="application/rss+xml" title="Martín Varela">
+  <link rel="feed" href="https://martin.varela.fi/index.xml" type="application/rss+xml" title="Martín Varela">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://martin.varela.fi/authors/lea-skorin-kapov/">
+  <link rel="canonical" href="https://martin.varela.fi/publication/varela-sigmm-2019/">
 
   
   
   
   
     
-    
   
-  <meta property="twitter:card" content="summary">
+  <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Martín Varela">
-  <meta property="og:url" content="https://martin.varela.fi/authors/lea-skorin-kapov/">
-  <meta property="og:title" content="Lea Skorin-Kapov | Martín Varela">
-  <meta property="og:description" content="QoE Guy"><meta property="og:image" content="https://martin.varela.fi/img/icon-192.png">
+  <meta property="og:url" content="https://martin.varela.fi/publication/varela-sigmm-2019/">
+  <meta property="og:title" content="On System QoE: Merging the system and the QoE perspectives | Martín Varela">
+  <meta property="og:description" content="With Quality of Experience (QoE) research having made significant advances over the years, increased attention is being put on exploiting this knowledge from a service/network provider perspective in the context of the user-centric evaluation of systems. Current research investigates the impact of system/service mechanisms, their implementation or configurations on the service performance and how it affects the corresponding QoE of its users. Prominent examples address adaptive video streaming services, as well as enabling technologies for QoE-aware service management and monitoring, such as SDN/NFV and machine learning. When considering the whole service, the question arises of how to properly evaluate QoE in a systems context, i.e., how to quantify system-centric QoE. The paper [1] provides fundamental relationships for deriving system-centric QoE,which are the basis for this article."><meta property="og:image" content="https://martin.varela.fi/img/headers/sigmm-2019.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2023-02-07T06:40:42&#43;03:00">
+  <meta property="article:published_time" content="2019-09-14T06:40:42&#43;03:00">
+  
+  <meta property="article:modified_time" content="2019-09-14T06:40:42&#43;03:00">
   
 
   
 
   
 
-  <title>Lea Skorin-Kapov | Martín Varela</title>
+  <title>On System QoE: Merging the system and the QoE perspectives | Martín Varela</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -319,122 +320,293 @@
   </div>
 </nav>
 
+<div class="pub" itemscope itemtype="http://schema.org/CreativeWork">
+
+  
 
 
 
-<div class="universal-wrapper pt-3">
-  <h1 itemprop="name">Lea Skorin-Kapov</h1>
+
+
+
+
+
+
+<div class="article-header">
+  
+  
+  <img src="/img/headers/sigmm-2019.png" class="article-banner" itemprop="image" alt="">
+  
+
+  <span class="article-header-caption">By <a href='https://unsplash.com/@chrislinnett'>Chris Linnett</a></span>
 </div>
 
 
-<section id="about" class="pt-5">
-  <div class="container">
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">On System QoE: Merging the system and the QoE perspectives</h1>
+
+  
+
+  
+    
+
+
+
+<meta content="2019-09-14 06:40:42 &#43;0300 EEST" itemprop="datePublished">
+<meta content="2019-09-14 06:40:42 &#43;0300 EEST" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/tobias-ho%C3%9Ffeld/">Tobias Hoßfeld</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/poul-einar-heegaard/">Poul Einar Heegaard</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/lea-skorin-kapov/">Lea Skorin-Kapov</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/mart%C3%ADn-varela/">Martín Varela</a></span></span>
+  
+
+
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
     
     
+      
     
+    <time>September 2019</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=On%20System%20QoE%3a%20Merging%20the%20system%20and%20the%20QoE%20perspectives&amp;url=https%3a%2f%2fmartin.varela.fi%2fpublication%2fvarela-sigmm-2019%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmartin.varela.fi%2fpublication%2fvarela-sigmm-2019%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmartin.varela.fi%2fpublication%2fvarela-sigmm-2019%2f&amp;title=On%20System%20QoE%3a%20Merging%20the%20system%20and%20the%20QoE%20perspectives"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fmartin.varela.fi%2fpublication%2fvarela-sigmm-2019%2f&amp;title=On%20System%20QoE%3a%20Merging%20the%20system%20and%20the%20QoE%20perspectives"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=On%20System%20QoE%3a%20Merging%20the%20system%20and%20the%20QoE%20perspectives&amp;body=https%3a%2f%2fmartin.varela.fi%2fpublication%2fvarela-sigmm-2019%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+  
+    
+  
+
+
+<a class="btn btn-outline-primary my-1 mr-1" href="https://sigmm.hosting.acm.org/2019/05/12/on-system-qoe-merging-the-system-and-the-qoe-perspectives/" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    
+    <h3>Abstract</h3>
+    <p class="pub-abstract" itemprop="text">With Quality of Experience (QoE) research having made significant advances over the years, increased attention is being put on exploiting this knowledge from a service/network provider perspective in the context of the user-centric evaluation of systems. Current research investigates the impact of system/service mechanisms, their implementation or configurations on the service performance and how it affects the corresponding QoE of its users. Prominent examples address adaptive video streaming services, as well as enabling technologies for QoE-aware service management and monitoring, such as SDN/NFV and machine learning. When considering the whole service, the question arises of how to properly evaluate QoE in a systems context, i.e., how to quantify system-centric QoE. The paper [1] provides fundamental relationships for deriving system-centric QoE,which are the basis for this article.</p>
     
 
     
-    
-    
-    <div class="article-widget">
-      <div class="hr-light"></div>
-      <h3>Latest</h3>
-      <ul>
-        
-        <li>
-          <a href="/publication/varela-commag2023/">A Greener Experience: Trade-offs between QoE and CO2 Emissions in Today&#39;s and 6G Networks</a>
-        </li>
-        
-        <li>
-          <a href="/publication/varela-sigmm-2022/">What is the trade-off between CO2 emission and video-conferencing QoE?</a>
-        </li>
-        
-        <li>
-          <a href="/publication/varela-qoem-2020/">From QoS Distributions to QoE Distributions: A Systems Perspective</a>
-        </li>
-        
-        <li>
-          <a href="/publication/varela-qoe-management20/">From QoS Distributions to QoE Distributions: a System&#39;s Perspective</a>
-        </li>
-        
-        <li>
-          <a href="/publication/varela-sigmm-2019/">On System QoE: Merging the system and the QoE perspectives</a>
-        </li>
-        
-        <li>
-          <a href="/publication/varela-qomex19/">Fundamental Relationships for Deriving QoE in Systems</a>
-        </li>
-        
-        <li>
-          <a href="/publication/varela-qoem-2019/">The Interplay between QoE, User Behavior and System Blocking in QoE Management</a>
-        </li>
-        
-        <li>
-          <a href="/publication/varela-qoem-2018/">Some Observations on Emerging Aspects in QoE Modeling and Their Impact on QoE Management</a>
-        </li>
-        
-        <li>
-          <a href="/publication/varela-tomm18/">A Survey of Emerging Concepts and Challenges for QoE Management of Multimedia Services </a>
-        </li>
-        
-        <li>
-          <a href="/publication/varela-mmb18/">QoE Analysis of the Setup of Different Internet Services for FIFO Server Systems</a>
-        </li>
-        
-        <li>
-          <a href="/publication/varela-quex18/">A New QoE Fairness Index for QoE Management</a>
-        </li>
-        
-        <li>
-          <a href="/publication/varela-qomex17/">No Silver Bullet: QoE Metrics, QoE Fairness, and User Diversity in the Context of QoE Management</a>
-        </li>
-        
-        <li>
-          <a href="/publication/varela-qoe-fairness/">Definition of QoE Fairness in Shared Systems</a>
-        </li>
-        
-        <li>
-          <a href="/publication/varela-pqs16/">On Additive and Multiplicative QoS-QoE Models for Multiple QoS Parameters</a>
-        </li>
-        
-        <li>
-          <a href="/publication/chapter-qoe-defining/">QoE - Defining a User-centric Concept for Service Quality</a>
-        </li>
-        
-        <li>
-          <a href="/publication/varela-qomex2015-1/">QoE in the Web: A Dance of Design and Performance</a>
-        </li>
-        
-        <li>
-          <a href="/publication/varela-meta-modeling-qoe/">Meta-Modeling QoE — Towards a Generic Methodology for Building QoE Models</a>
-        </li>
-        
-        <li>
-          <a href="/publication/chapter-qos-qoe/">Quality of Service vs. Quality of Experience</a>
-        </li>
-        
-        <li>
-          <a href="/publication/chapter-queen/">Quality of Experience Estimators in Networks</a>
-        </li>
-        
-        <li>
-          <a href="/publication/varela-pqs13/">Increasing Payments in Crowdsourcing: Don’t Look a Gift Horse in the Mouth!</a>
-        </li>
-        
-        <li>
-          <a href="/publication/varela-qomex13-2/">Towards an Understanding of Visual Appeal in Website Design</a>
-        </li>
-        
-        <li>
-          <a href="/publication/varela-mipro12/">A Multi-Dimensional View of QoE: the ARCU Model</a>
-        </li>
-        
-      </ul>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Type</div>
+          <div class="col-12 col-md-9">
+            
+
+            
+            
+            <a href="/publication/#0">
+              Uncategorized
+            </a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
     </div>
-  </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Publication</div>
+          <div class="col-12 col-md-9">ACM SIGMM Records, 2019</div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style"></div>
+
+    
+
+    
+
+
+
+
+
+
   
-</section>
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
 
 
 <div class="container">
