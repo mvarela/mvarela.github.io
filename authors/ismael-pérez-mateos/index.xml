@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ismael Pérez-Mateos on Martín Varela</title>
+    <title>Ismael Pérez Mateos on Martín Varela</title>
     <link>https://martin.varela.fi/authors/ismael-p%C3%A9rez-mateos/</link>
-    <description>Recent content in Ismael Pérez-Mateos on Martín Varela</description>
+    <description>Recent content in Ismael Pérez Mateos on Martín Varela</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Martín Varela 2017-</copyright>
-    <lastBuildDate>Tue, 03 Jul 2012 06:40:39 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 04 Jul 2014 15:32:59 +0300</lastBuildDate>
     
 	<atom:link href="https://martin.varela.fi/authors/ismael-p%C3%A9rez-mateos/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>A Global Customer Experience Management Architecture</title>
-      <link>https://martin.varela.fi/publication/varela-cems/</link>
-      <pubDate>Tue, 03 Jul 2012 06:40:39 +0300</pubDate>
+      <title>Ecosystem for Customer Experience Management</title>
+      <link>https://martin.varela.fi/publication/chapter-ecosystem/</link>
+      <pubDate>Fri, 04 Jul 2014 15:32:59 +0300</pubDate>
       
-      <guid>https://martin.varela.fi/publication/varela-cems/</guid>
+      <guid>https://martin.varela.fi/publication/chapter-ecosystem/</guid>
       <description></description>
     </item>
     
