@@ -7,12 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Martín Varela 2017-</copyright>
+<<<<<<< HEAD
     <lastBuildDate>Tue, 07 Feb 2023 06:40:42 +0300</lastBuildDate>
+=======
+    <lastBuildDate>Mon, 29 Jun 2020 06:40:42 +0300</lastBuildDate>
+>>>>>>> d47c9d73aa8a70b2258fd5ba422a4825be6887ad
     
 	<atom:link href="https://martin.varela.fi/authors/tobias-ho%C3%9Ffeld/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+<<<<<<< HEAD
       <title>A Greener Experience: Trade-offs between QoE and CO2 Emissions in Today&#39;s and 6G Networks</title>
       <link>https://martin.varela.fi/publication/varela-commag2023/</link>
       <pubDate>Tue, 07 Feb 2023 06:40:42 +0300</pubDate>
@@ -52,8 +57,13 @@
       <title>From QoS Distributions to QoE Distributions: a System&#39;s Perspective</title>
       <link>https://martin.varela.fi/publication/varela-qoe-management20/</link>
       <pubDate>Sat, 28 Mar 2020 18:22:44 +0300</pubDate>
+=======
+      <title>From QoS Distributions to QoE Distributions: A Systems Perspective</title>
+      <link>https://martin.varela.fi/publication/varela-qoem-2020/</link>
+      <pubDate>Mon, 29 Jun 2020 06:40:42 +0300</pubDate>
+>>>>>>> d47c9d73aa8a70b2258fd5ba422a4825be6887ad
       
-      <guid>https://martin.varela.fi/publication/varela-qoe-management20/</guid>
+      <guid>https://martin.varela.fi/publication/varela-qoem-2020/</guid>
       <description></description>
     </item>
     

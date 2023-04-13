@@ -7,6 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Martín Varela 2017-</copyright>
+<<<<<<< HEAD
     <lastBuildDate>Thu, 13 Apr 2023 21:01:22 +0200</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
@@ -211,8 +212,26 @@ happens at once, in the same place.&lt;/p&gt;
       <title>From QoS Distributions to QoE Distributions: a System&#39;s Perspective</title>
       <link>https://martin.varela.fi/publication/varela-qoe-management20/</link>
       <pubDate>Sat, 28 Mar 2020 18:22:44 +0300</pubDate>
+=======
+    <lastBuildDate>Fri, 08 Apr 2022 06:40:42 +0300</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Pinpointing Anomaly Events in Logs from Stability Testing - N-Grams vs. Deep-Learning</title>
+      <link>https://martin.varela.fi/publication/varela-nexta-2022/</link>
+      <pubDate>Fri, 08 Apr 2022 06:40:42 +0300</pubDate>
+>>>>>>> d47c9d73aa8a70b2258fd5ba422a4825be6887ad
       
-      <guid>https://martin.varela.fi/publication/varela-qoe-management20/</guid>
+      <guid>https://martin.varela.fi/publication/varela-nexta-2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>From QoS Distributions to QoE Distributions: A Systems Perspective</title>
+      <link>https://martin.varela.fi/publication/varela-qoem-2020/</link>
+      <pubDate>Mon, 29 Jun 2020 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qoem-2020/</guid>
       <description></description>
     </item>
     
@@ -677,5 +696,82 @@ up &lt;a href=&#34;https://github.com/mvarela/unnecessarily-3d-clock&#34; title=
       <description></description>
     </item>
     
+<<<<<<< HEAD
+=======
+    <item>
+      <title>Example Page</title>
+      <link>https://martin.varela.fi/tutorial/example/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/tutorial/example/</guid>
+      <description>
+
+&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Some Observations on Emerging Aspects in QoE Modeling and Their Impact on QoE Management</title>
+      <link>https://martin.varela.fi/publication/varela-qoem-2018/</link>
+      <pubDate>Sat, 26 May 2018 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qoem-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Survey of Emerging Concepts and Challenges for QoE Management of Multimedia Services </title>
+      <link>https://martin.varela.fi/publication/varela-tomm18/</link>
+      <pubDate>Tue, 01 May 2018 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-tomm18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE Vadis</title>
+      <link>https://martin.varela.fi/publication/varela-dagstuhl-perspectives/</link>
+      <pubDate>Tue, 17 Apr 2018 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-dagstuhl-perspectives/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>What You Pay Is What You Get? — Fundamentals of Charging Internet Services Based on End User Quality of Experience</title>
+      <link>https://martin.varela.fi/publication/varela-quex18-2/</link>
+      <pubDate>Mon, 09 Apr 2018 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-quex18-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QoE Analysis of the Setup of Different Internet Services for FIFO Server Systems</title>
+      <link>https://martin.varela.fi/publication/varela-mmb18/</link>
+      <pubDate>Mon, 26 Feb 2018 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-mmb18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A New QoE Fairness Index for QoE Management</title>
+      <link>https://martin.varela.fi/publication/varela-quex18/</link>
+      <pubDate>Fri, 09 Feb 2018 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-quex18/</guid>
+      <description></description>
+    </item>
+    
+>>>>>>> d47c9d73aa8a70b2258fd5ba422a4825be6887ad
   </channel>
 </rss>

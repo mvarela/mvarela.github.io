@@ -4,6 +4,7 @@
     
     <url>
     
+<<<<<<< HEAD
       <loc>https://martin.varela.fi/2023/04/13/immersive-development-living-in-the-clojure-repl/</loc>
       <lastmod>2023-04-13T21:01:22+02:00</lastmod>
     </url>
@@ -52,6 +53,8 @@
     
     <url>
     
+=======
+>>>>>>> d47c9d73aa8a70b2258fd5ba422a4825be6887ad
       <loc>https://martin.varela.fi/publication/varela-nexta-2022/</loc>
       <lastmod>2022-04-08T06:40:42+03:00</lastmod>
     </url>
@@ -62,6 +65,7 @@
     
       <loc>https://martin.varela.fi/publication/varela-qoem-2020/</loc>
       <lastmod>2020-06-29T06:40:42+03:00</lastmod>
+<<<<<<< HEAD
     </url>
     
   
@@ -70,6 +74,8 @@
     
       <loc>https://martin.varela.fi/publication/varela-qoe-management20/</loc>
       <lastmod>2020-03-28T18:22:44+03:00</lastmod>
+=======
+>>>>>>> d47c9d73aa8a70b2258fd5ba422a4825be6887ad
     </url>
     
   
@@ -965,7 +971,11 @@
     <url>
     
       <loc>https://martin.varela.fi/publication_types/1/</loc>
+<<<<<<< HEAD
       <lastmod>2022-10-03T06:40:42+03:00</lastmod>
+=======
+      <lastmod>2022-04-08T06:40:42+03:00</lastmod>
+>>>>>>> d47c9d73aa8a70b2258fd5ba422a4825be6887ad
       <priority>0</priority>
     </url>
     
@@ -1503,7 +1513,11 @@
     <url>
     
       <loc>https://martin.varela.fi/authors/lea-skorin-kapov/</loc>
+<<<<<<< HEAD
       <lastmod>2023-02-07T06:40:42+03:00</lastmod>
+=======
+      <lastmod>2020-06-29T06:40:42+03:00</lastmod>
+>>>>>>> d47c9d73aa8a70b2258fd5ba422a4825be6887ad
       <priority>0</priority>
     </url>
     
@@ -1566,7 +1580,11 @@
     <url>
     
       <loc>https://martin.varela.fi/</loc>
+<<<<<<< HEAD
       <lastmod>2023-04-13T21:01:22+02:00</lastmod>
+=======
+      <lastmod>2022-04-08T06:40:42+03:00</lastmod>
+>>>>>>> d47c9d73aa8a70b2258fd5ba422a4825be6887ad
       <priority>0</priority>
     </url>
     
@@ -1575,7 +1593,11 @@
     <url>
     
       <loc>https://martin.varela.fi/authors/mart%C3%ADn-varela/</loc>
+<<<<<<< HEAD
       <lastmod>2023-02-07T06:40:42+03:00</lastmod>
+=======
+      <lastmod>2022-04-08T06:40:42+03:00</lastmod>
+>>>>>>> d47c9d73aa8a70b2258fd5ba422a4825be6887ad
       <priority>0</priority>
     </url>
     
@@ -1601,6 +1623,7 @@
     
     <url>
     
+<<<<<<< HEAD
       <loc>https://martin.varela.fi/authors/michael-jarschel/</loc>
       <lastmod>2022-09-14T06:40:42+03:00</lastmod>
       <priority>0</priority>
@@ -1612,6 +1635,10 @@
     
       <loc>https://martin.varela.fi/authors/mika-mantyl%C3%A4/</loc>
       <lastmod>2022-10-03T06:40:42+03:00</lastmod>
+=======
+      <loc>https://martin.varela.fi/authors/mika-mantyl%C3%A4/</loc>
+      <lastmod>2022-04-08T06:40:42+03:00</lastmod>
+>>>>>>> d47c9d73aa8a70b2258fd5ba422a4825be6887ad
       <priority>0</priority>
     </url>
     
@@ -1754,7 +1781,7 @@
     <url>
     
       <loc>https://martin.varela.fi/authors/poul-e.-heegaard/</loc>
-      <lastmod>2020-03-28T18:22:44+03:00</lastmod>
+      <lastmod>2019-03-03T18:22:44+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1763,7 +1790,11 @@
     <url>
     
       <loc>https://martin.varela.fi/authors/poul-einar-heegaard/</loc>
+<<<<<<< HEAD
       <lastmod>2023-02-07T06:40:42+03:00</lastmod>
+=======
+      <lastmod>2020-06-29T06:40:42+03:00</lastmod>
+>>>>>>> d47c9d73aa8a70b2258fd5ba422a4825be6887ad
       <priority>0</priority>
     </url>
     
@@ -1921,7 +1952,11 @@
     <url>
     
       <loc>https://martin.varela.fi/authors/tobias-ho%C3%9Ffeld/</loc>
+<<<<<<< HEAD
       <lastmod>2023-02-07T06:40:42+03:00</lastmod>
+=======
+      <lastmod>2020-06-29T06:40:42+03:00</lastmod>
+>>>>>>> d47c9d73aa8a70b2258fd5ba422a4825be6887ad
       <priority>0</priority>
     </url>
     
