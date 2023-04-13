@@ -67,6 +67,24 @@
     </item>
     
     <item>
+      <title>RDD</title>
+      <link>https://martin.varela.fi/tags/rdd/</link>
+      <pubDate>Thu, 13 Apr 2023 21:01:22 +0200</pubDate>
+      
+      <guid>https://martin.varela.fi/tags/rdd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>REPL</title>
+      <link>https://martin.varela.fi/tags/repl/</link>
+      <pubDate>Thu, 13 Apr 2023 21:01:22 +0200</pubDate>
+      
+      <guid>https://martin.varela.fi/tags/repl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>algorithms</title>
       <link>https://martin.varela.fi/tags/algorithms/</link>
       <pubDate>Mon, 02 Dec 2019 21:01:22 +0200</pubDate>
@@ -135,6 +153,15 @@
       <pubDate>Tue, 23 Apr 2019 22:48:23 +0300</pubDate>
       
       <guid>https://martin.varela.fi/tags/philosophy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>https://martin.varela.fi/tags/programming/</link>
+      <pubDate>Thu, 13 Apr 2023 21:01:22 +0200</pubDate>
+      
+      <guid>https://martin.varela.fi/tags/programming/</guid>
       <description></description>
     </item>
     

@@ -7,10 +7,46 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Martín Varela 2017-</copyright>
-    <lastBuildDate>Sat, 28 Mar 2020 18:22:44 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 07 Feb 2023 06:40:42 +0300</lastBuildDate>
     
 	<atom:link href="https://martin.varela.fi/authors/tobias-ho%C3%9Ffeld/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A Greener Experience: Trade-offs between QoE and CO2 Emissions in Today&#39;s and 6G Networks</title>
+      <link>https://martin.varela.fi/publication/varela-commag2023/</link>
+      <pubDate>Tue, 07 Feb 2023 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-commag2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>User-Centric Markov Reward Model on the Example of Cloud Gaming</title>
+      <link>https://martin.varela.fi/publication/varela-itc-2022/</link>
+      <pubDate>Wed, 14 Sep 2022 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-itc-2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>What is the trade-off between CO2 emission and video-conferencing QoE?</title>
+      <link>https://martin.varela.fi/publication/varela-sigmm-2022/</link>
+      <pubDate>Wed, 14 Sep 2022 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-sigmm-2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>From QoS Distributions to QoE Distributions: A Systems Perspective</title>
+      <link>https://martin.varela.fi/publication/varela-qoem-2020/</link>
+      <pubDate>Mon, 29 Jun 2020 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-qoem-2020/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>From QoS Distributions to QoE Distributions: a System&#39;s Perspective</title>

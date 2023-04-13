@@ -4,6 +4,70 @@
     
     <url>
     
+      <loc>https://martin.varela.fi/2023/04/13/immersive-development-living-in-the-clojure-repl/</loc>
+      <lastmod>2023-04-13T21:01:22+02:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/publication/varela-commag2023/</loc>
+      <lastmod>2023-02-07T06:40:42+03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/publication/varela-icsme-2022/</loc>
+      <lastmod>2022-10-03T06:40:42+03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/talk/talk-27/</loc>
+      <lastmod>2022-09-22T09:00:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/publication/varela-itc-2022/</loc>
+      <lastmod>2022-09-14T06:40:42+03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/publication/varela-sigmm-2022/</loc>
+      <lastmod>2022-09-14T06:40:42+03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/publication/varela-nexta-2022/</loc>
+      <lastmod>2022-04-08T06:40:42+03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/publication/varela-qoem-2020/</loc>
+      <lastmod>2020-06-29T06:40:42+03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://martin.varela.fi/publication/varela-qoe-management20/</loc>
       <lastmod>2020-03-28T18:22:44+03:00</lastmod>
     </url>
@@ -892,7 +956,7 @@
     <url>
     
       <loc>https://martin.varela.fi/publication_types/0/</loc>
-      <lastmod>2018-04-17T06:40:42+03:00</lastmod>
+      <lastmod>2022-09-14T06:40:42+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -901,7 +965,7 @@
     <url>
     
       <loc>https://martin.varela.fi/publication_types/1/</loc>
-      <lastmod>2020-03-28T18:22:44+03:00</lastmod>
+      <lastmod>2022-10-03T06:40:42+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -910,7 +974,7 @@
     <url>
     
       <loc>https://martin.varela.fi/publication_types/2/</loc>
-      <lastmod>2018-05-01T06:40:42+03:00</lastmod>
+      <lastmod>2023-02-07T06:40:42+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1348,6 +1412,15 @@
     
     <url>
     
+      <loc>https://martin.varela.fi/authors/jesse-nyyss%C3%B6l%C3%A4/</loc>
+      <lastmod>2022-10-03T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://martin.varela.fi/authors/jochen-eisl/</loc>
       <lastmod>2012-05-03T06:40:42+03:00</lastmod>
       <priority>0</priority>
@@ -1430,7 +1503,7 @@
     <url>
     
       <loc>https://martin.varela.fi/authors/lea-skorin-kapov/</loc>
-      <lastmod>2020-03-28T18:22:44+03:00</lastmod>
+      <lastmod>2023-02-07T06:40:42+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1484,7 +1557,7 @@
     <url>
     
       <loc>https://martin.varela.fi/authors/markus-fiedler/</loc>
-      <lastmod>2020-03-28T18:22:44+03:00</lastmod>
+      <lastmod>2020-06-29T06:40:42+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1493,7 +1566,7 @@
     <url>
     
       <loc>https://martin.varela.fi/</loc>
-      <lastmod>2020-03-28T18:22:44+03:00</lastmod>
+      <lastmod>2023-04-13T21:01:22+02:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1502,7 +1575,7 @@
     <url>
     
       <loc>https://martin.varela.fi/authors/mart%C3%ADn-varela/</loc>
-      <lastmod>2020-03-28T18:22:44+03:00</lastmod>
+      <lastmod>2023-02-07T06:40:42+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1521,6 +1594,24 @@
     
       <loc>https://martin.varela.fi/authors/matthias-lott/</loc>
       <lastmod>2012-05-03T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/michael-jarschel/</loc>
+      <lastmod>2022-09-14T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/authors/mika-mantyl%C3%A4/</loc>
+      <lastmod>2022-10-03T06:40:42+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1655,7 +1746,7 @@
     <url>
     
       <loc>https://martin.varela.fi/post/</loc>
-      <lastmod>2019-12-02T21:01:22+02:00</lastmod>
+      <lastmod>2023-04-13T21:01:22+02:00</lastmod>
     </url>
     
   
@@ -1672,7 +1763,7 @@
     <url>
     
       <loc>https://martin.varela.fi/authors/poul-einar-heegaard/</loc>
-      <lastmod>2019-02-18T06:40:42+03:00</lastmod>
+      <lastmod>2023-02-07T06:40:42+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1690,7 +1781,7 @@
     <url>
     
       <loc>https://martin.varela.fi/publication_types/</loc>
-      <lastmod>2018-04-17T06:40:42+03:00</lastmod>
+      <lastmod>2022-09-14T06:40:42+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1725,6 +1816,24 @@
     
     <url>
     
+      <loc>https://martin.varela.fi/tags/rdd/</loc>
+      <lastmod>2023-04-13T21:01:22+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/tags/repl/</loc>
+      <lastmod>2023-04-13T21:01:22+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://martin.varela.fi/authors/raimund-schatz/</loc>
       <lastmod>2015-08-03T06:40:44+03:00</lastmod>
       <priority>0</priority>
@@ -1735,7 +1844,7 @@
     <url>
     
       <loc>https://martin.varela.fi/talk/</loc>
-      <lastmod>2019-02-18T09:00:00+01:00</lastmod>
+      <lastmod>2022-09-22T09:00:00+01:00</lastmod>
     </url>
     
   
@@ -1778,6 +1887,15 @@
     
     <url>
     
+      <loc>https://martin.varela.fi/authors/shayam-hashemi/</loc>
+      <lastmod>2022-04-08T06:40:42+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://martin.varela.fi/slides/</loc>
       <priority>0</priority>
     </url>
@@ -1803,7 +1921,7 @@
     <url>
     
       <loc>https://martin.varela.fi/authors/tobias-ho%C3%9Ffeld/</loc>
-      <lastmod>2020-03-28T18:22:44+03:00</lastmod>
+      <lastmod>2023-02-07T06:40:42+03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1911,6 +2029,15 @@
     
       <loc>https://martin.varela.fi/tags/philosophy/</loc>
       <lastmod>2019-04-23T22:48:23+03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://martin.varela.fi/tags/programming/</loc>
+      <lastmod>2023-04-13T21:01:22+02:00</lastmod>
       <priority>0</priority>
     </url>
     

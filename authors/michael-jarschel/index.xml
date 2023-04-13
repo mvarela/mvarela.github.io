@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Michael Jarschel on Martín Varela</title>
+    <link>https://martin.varela.fi/authors/michael-jarschel/</link>
+    <description>Recent content in Michael Jarschel on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Wed, 14 Sep 2022 06:40:42 +0300</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/authors/michael-jarschel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>User-Centric Markov Reward Model on the Example of Cloud Gaming</title>
+      <link>https://martin.varela.fi/publication/varela-itc-2022/</link>
+      <pubDate>Wed, 14 Sep 2022 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-itc-2022/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

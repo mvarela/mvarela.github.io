@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RDD on Martín Varela</title>
+    <link>https://martin.varela.fi/tags/rdd/</link>
+    <description>Recent content in RDD on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Thu, 13 Apr 2023 21:01:22 +0200</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/tags/rdd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Immersive Development — Living in the Clojure REPL</title>
+      <link>https://martin.varela.fi/2023/04/13/immersive-development-living-in-the-clojure-repl/</link>
+      <pubDate>Thu, 13 Apr 2023 21:01:22 +0200</pubDate>
+      
+      <guid>https://martin.varela.fi/2023/04/13/immersive-development-living-in-the-clojure-repl/</guid>
+      <description>Flow Anyone who has coded long enough has likely experienced what is commonly called flow, a state of intense focus, in which one is fully immersed in an activity. Being in a state of flow, one becomes more productive1, ideas become clearer, and good, elegant solutions to complex problems tend to come easily. Unfortunately, interruptions and changes of context can break this state of deep focus, and regaining it can take a (several minutes) long time.</description>
+    </item>
+    
+  </channel>
+</rss>
