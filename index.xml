@@ -7,8 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Martín Varela 2017-</copyright>
-    <lastBuildDate>Thu, 13 Apr 2023 21:01:22 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 07 Aug 2024 06:40:42 +0300</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>User-centric Markov reward model for state-dependent Erlang loss systems</title>
+      <link>https://martin.varela.fi/publication/varela-perfeval2024/</link>
+      <pubDate>Wed, 07 Aug 2024 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-perfeval2024/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Immersive Development — Living in the Clojure REPL</title>
@@ -665,15 +674,6 @@ up &lt;a href=&#34;https://github.com/mvarela/unnecessarily-3d-clock&#34; title=
       <pubDate>Sun, 03 Mar 2019 18:22:44 +0300</pubDate>
       
       <guid>https://martin.varela.fi/publication/varela-qomex19/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Some things we might have missed along the way (keynote speech)</title>
-      <link>https://martin.varela.fi/talk/talk-26/</link>
-      <pubDate>Mon, 18 Feb 2019 09:00:00 +0100</pubDate>
-      
-      <guid>https://martin.varela.fi/talk/talk-26/</guid>
       <description></description>
     </item>
     

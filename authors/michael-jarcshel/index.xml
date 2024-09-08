@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Michael Jarcshel on Martín Varela</title>
+    <link>https://martin.varela.fi/authors/michael-jarcshel/</link>
+    <description>Recent content in Michael Jarcshel on Martín Varela</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Martín Varela 2017-</copyright>
+    <lastBuildDate>Wed, 07 Aug 2024 06:40:42 +0300</lastBuildDate>
+    
+	<atom:link href="https://martin.varela.fi/authors/michael-jarcshel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>User-centric Markov reward model for state-dependent Erlang loss systems</title>
+      <link>https://martin.varela.fi/publication/varela-perfeval2024/</link>
+      <pubDate>Wed, 07 Aug 2024 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-perfeval2024/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

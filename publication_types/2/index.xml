@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Martín Varela 2017-</copyright>
-    <lastBuildDate>Tue, 07 Feb 2023 06:40:42 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 07 Aug 2024 06:40:42 +0300</lastBuildDate>
     
 	<atom:link href="https://martin.varela.fi/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>User-centric Markov reward model for state-dependent Erlang loss systems</title>
+      <link>https://martin.varela.fi/publication/varela-perfeval2024/</link>
+      <pubDate>Wed, 07 Aug 2024 06:40:42 +0300</pubDate>
+      
+      <guid>https://martin.varela.fi/publication/varela-perfeval2024/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>A Greener Experience: Trade-offs between QoE and CO2 Emissions in Today&#39;s and 6G Networks</title>
